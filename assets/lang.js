@@ -1,19 +1,25 @@
-/* Language routing: Israel (timezone or Hebrew browser) -> Hebrew, everywhere else -> English.
-   A choice made with the language switch is remembered in localStorage('sg-lang') and always wins.
-   Same key as jasale.app and sinaiclub.com. Each page sets data-alt on <html> = path of its other-language twin. */
+/* Language routing for SINAI Global sites (same rules as jasale.app and sinaiclub.com).
+   1. A language picked in the menu is saved (localStorage 'sg-lang') and always wins.
+   2. Otherwise the first browser language we support (he, en, ru, ar, es) is used;
+      an English browser in Israel (timezone Asia/Jerusalem) gets Hebrew.
+   3. No match: Israel -> Hebrew, everywhere else -> English.
+   Each page lists its twins as <link rel="alternate" hreflang="xx" href="..."> and sets <html lang>. */
 (function(){
-  var h=document.documentElement, lang=h.lang==='he'?'he':'en', alt=h.getAttribute('data-alt');
-  function isIL(){
-    try{if((Intl.DateTimeFormat().resolvedOptions().timeZone||'')==='Asia/Jerusalem')return true}catch(e){}
-    var ls=navigator.languages||[navigator.language||''];
-    for(var i=0;i<ls.length;i++){if(/^(he|iw)/i.test(ls[i]))return true}
-    return false;
+  var here=(document.documentElement.lang||'en').slice(0,2), P={};
+  var links=document.querySelectorAll('link[rel="alternate"][hreflang]');
+  for(var i=0;i<links.length;i++){var h=links[i].getAttribute('hreflang');if(h!=='x-default')P[h]=new URL(links[i].href).pathname}
+  function isIL(){try{return Intl.DateTimeFormat().resolvedOptions().timeZone==='Asia/Jerusalem'}catch(e){return false}}
+  function pick(){
+    var il=isIL(), ls=navigator.languages||[navigator.language||''];
+    for(var i=0;i<ls.length;i++){var c=(ls[i]||'').slice(0,2).toLowerCase();if(c==='iw')c='he';
+      if(P[c]){return (c==='en'&&il&&P.he)?'he':c}}
+    return il&&P.he?'he':'en';
   }
-  var saved=null; try{saved=localStorage.getItem('sg-lang')}catch(e){}
-  var want=saved||(isIL()?'he':'en');
-  if(alt&&want!==lang){location.replace(alt+location.search+location.hash);return}
+  var saved=null;try{saved=localStorage.getItem('sg-lang')}catch(e){}
+  var want=(saved&&P[saved])?saved:pick();
+  if(want!==here&&P[want]){location.replace(P[want]+location.search+location.hash);return}
   document.addEventListener('click',function(e){
-    var a=e.target.closest&&e.target.closest('a[data-setlang]');
+    var a=e.target.closest&&e.target.closest('[data-setlang]');
     if(a){try{localStorage.setItem('sg-lang',a.getAttribute('data-setlang'))}catch(err){}}
     var b=e.target.closest&&e.target.closest('[data-copy]');
     if(b){
