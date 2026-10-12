@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Downline HQ">
+  <title>Downline HQ</title>
+  <path d="M12 3.5H52L60.5 12V52L52 60.5H12L3.5 52V12Z" fill="none" stroke="#C9A96A" stroke-width="1.25"/>
+  <path d="M13.4 7H50.6L57 13.4V50.6L50.6 57H13.4L7 50.6V13.4Z" fill="none" stroke="#C9A96A" stroke-width=".55" opacity=".7"/>
+  <path fill="#C9A96A" d="M16 16.4H23.3V47.6H16V46.5H18.6V17.5H16Z"/>
+  <path fill="#C9A96A" d="M23.3 16.4H29.2C40.9 16.4 48.4 23.2 48.4 32C48.4 40.8 40.9 47.6 29.2 47.6H23.3V46.5H29.2C38.6 46.5 44.6 40.6 44.6 32C44.6 23.4 38.6 17.5 29.2 17.5H23.3Z"/>
+  <g stroke="#C9A96A" stroke-width=".85" fill="none"><path d="M28 32L35.6 23.6M28 32H39.4M28 32L35.6 40.4"/></g>
+  <path fill="#C9A96A" d="M28 29.6L30.4 32L28 34.4L25.6 32Z"/>
+  <g fill="#C9A96A"><circle cx="35.6" cy="23.6" r="1.75"/><circle cx="39.4" cy="32" r="1.75"/><circle cx="35.6" cy="40.4" r="1.75"/></g>
+</svg>
