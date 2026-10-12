@@ -5,6 +5,7 @@
    3. No match: Israel -> Hebrew, everywhere else -> English.
    Each page lists its twins as <link rel="alternate" hreflang="xx" href="..."> and sets <html lang>. */
 (function(){
+  document.documentElement.classList.add('js');
   var here=(document.documentElement.lang||'en').slice(0,2), P={};
   var links=document.querySelectorAll('link[rel="alternate"][hreflang]');
   for(var i=0;i<links.length;i++){var h=links[i].getAttribute('hreflang');if(h!=='x-default')P[h]=new URL(links[i].href).pathname}
@@ -28,5 +29,12 @@
       var fb=function(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r)};
       try{navigator.clipboard.writeText(el.textContent.trim()).then(done,fb)}catch(err){fb()}
     }
+  });
+  // Fade sections in as they scroll into view
+  document.addEventListener('DOMContentLoaded',function(){
+    if(!('IntersectionObserver' in window))return;
+    var els=document.querySelectorAll('.sec-head,.row,.method > div,.grid2 > *,.feats > div');
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    for(var i=0;i<els.length;i++){els[i].classList.add('rv');io.observe(els[i])}
   });
 })();
