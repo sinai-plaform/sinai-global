@@ -1,0 +1,181 @@
+/* Downline HQ — product identity (its own look, separate from the SINAI Global hub's site.css).
+   Dark-first: onyx ground, ivory type, champagne gold used sparingly for marks, rules and the one CTA.
+   Contrast (WCAG): ivory/onyx 15.9, pewter/onyx 7.4, champagne/onyx 8.3, onyx/champagne 8.3 — all AA+.
+   Type: Cormorant Garamond (display, Latin + Cyrillic) + Jost (body). Hebrew: Frank Ruhl Libre + Assistant.
+   Arabic: Amiri + IBM Plex Sans Arabic. */
+:root{
+  --onyx:#0E1316;        /* ground */
+  --graphite:#151B1F;    /* raised surface */
+  --ivory:#F2ECDF;       /* primary text */
+  --pewter:#A8A294;      /* secondary text */
+  --champagne:#C9A96A;   /* gold: marks, rules, CTA */
+  --champagne-hi:#E8D2A0;/* gold hover / highlight */
+  --hairline:rgba(201,169,106,.24);
+  --rule:rgba(242,236,223,.09);
+  --display:"Cormorant Garamond","Cormorant",Georgia,"Times New Roman",serif;
+  --body:"Jost","Helvetica Neue",Arial,system-ui,sans-serif;
+  --h1-weight:300; --h1-lh:1.02; --h1-track:-.012em;
+  color-scheme:dark;
+}
+html[lang="he"]{--display:"Frank Ruhl Libre","Cormorant Garamond",Georgia,serif;--body:"Assistant","Jost",Arial,system-ui,sans-serif;--h1-weight:300;--h1-lh:1.12;--h1-track:0}
+html[lang="ar"]{--display:"Amiri","Cormorant Garamond",Georgia,serif;--body:"IBM Plex Sans Arabic","Jost",Arial,system-ui,sans-serif;--h1-weight:400;--h1-lh:1.45;--h1-track:0}
+*{box-sizing:border-box}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--onyx);color:var(--ivory);font-family:var(--body);font-size:17px;line-height:1.7;font-weight:400;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+::selection{background:rgba(201,169,106,.35);color:var(--ivory)}
+.wrap{max-width:1160px;margin:0 auto;padding-inline:clamp(20px,5vw,56px)}
+a{color:var(--champagne);text-underline-offset:.22em;text-decoration-thickness:1px}
+a:hover{color:var(--champagne-hi)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:1px solid var(--champagne);outline-offset:4px;border-radius:2px}
+h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;line-height:1.1;text-wrap:balance}
+p{margin:0}
+
+/* ── header ── */
+.bar{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-block:28px;border-bottom:1px solid var(--rule);position:relative;z-index:3}
+.brand{display:flex;flex-direction:column;align-items:flex-start;gap:2px}
+.brand .logo{display:block;line-height:0}
+.brand .logo img{width:216px;height:auto;display:block}
+.brand .by{font-size:12px;letter-spacing:.04em;color:var(--pewter);text-decoration:none;display:block;text-align:left;padding-left:60px}
+.brand .by:hover{color:var(--champagne)}
+.bar nav{display:flex;gap:28px;align-items:center;font-size:14px;letter-spacing:.02em}
+.bar nav > a{color:var(--pewter);text-decoration:none;padding-block:4px;border-bottom:1px solid transparent}
+.bar nav > a:hover{color:var(--ivory);border-bottom-color:var(--hairline)}
+
+/* language menu (markup + behaviour shared with every SINAI Global page; restyled here) */
+.lng{position:relative}
+.lng summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:7px;border:1px solid var(--hairline);border-radius:999px;padding:4px 14px;color:var(--ivory);white-space:nowrap;user-select:none;font-size:13px}
+.lng summary::-webkit-details-marker{display:none}
+.lng summary::after{content:"";width:5px;height:5px;border-right:1px solid currentColor;border-bottom:1px solid currentColor;transform:translateY(-2px) rotate(45deg);margin-inline-start:2px;opacity:.7}
+.lng[open] summary::after{transform:translateY(1px) rotate(225deg)}
+.lng summary svg{width:13px;height:13px;fill:none;stroke:var(--champagne);stroke-width:1.1}
+.lng summary:hover,.lng[open] summary{border-color:var(--champagne)}
+.lng-list{position:absolute;top:calc(100% + 10px);inset-inline-end:0;z-index:20;min-width:160px;max-width:calc(100vw - 32px);display:flex;flex-direction:column;padding:6px;background:var(--graphite);border:1px solid var(--hairline);border-radius:4px;box-shadow:0 24px 48px -16px rgba(0,0,0,.7)}
+.bar nav .lng-list a{color:var(--ivory);text-decoration:none;padding:8px 12px;border-radius:2px;text-align:start;font-size:15px;line-height:1.3;border:0}
+.bar nav .lng-list a:hover{background:rgba(242,236,223,.05)}
+.bar nav .lng-list a[aria-current]{color:var(--champagne);background:rgba(201,169,106,.08)}
+.lng-list a[lang="ar"],.foot-lng [lang="ar"]{font-family:"IBM Plex Sans Arabic",system-ui,sans-serif}
+.lng-list a[lang="he"],.foot-lng [lang="he"]{font-family:"Assistant",system-ui,sans-serif}
+
+/* ── hero ── */
+.hero{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(32px,6vw,88px);align-items:center;padding-block:clamp(72px,11vw,140px) clamp(80px,11vw,148px);position:relative}
+.hero > div:first-child{position:relative;z-index:1}
+.eyebrow{display:inline-flex;align-items:center;gap:14px;font-size:13px;letter-spacing:.06em;color:var(--pewter)}
+.hero .eyebrow::before,#early .eyebrow::before{content:"";width:36px;height:1px;background:var(--champagne)}
+.hero h1{font-family:var(--display);font-size:clamp(46px,7.4vw,96px);font-weight:var(--h1-weight);line-height:var(--h1-lh);letter-spacing:var(--h1-track);margin-top:28px}
+.hero h1 em{font-style:italic;color:var(--champagne-hi)}
+html[lang="he"] .hero h1 em,html[lang="ar"] .hero h1 em{font-style:normal}
+.hero p{max-width:50ch;color:var(--pewter);font-size:18px;line-height:1.75;margin-top:30px;font-weight:300}
+html[lang="ar"] .hero p,html[lang="he"] .hero p{font-weight:400}
+.stats{display:flex;flex-wrap:wrap;gap:16px;margin-top:44px}
+
+/* buttons: the one solid gold surface on the page */
+.btn{font:500 14px/1 var(--body);letter-spacing:.06em;background:var(--champagne);color:var(--onyx);border:1px solid var(--champagne);border-radius:2px;padding:17px 30px;cursor:pointer;text-decoration:none;display:inline-block;transition:background .25s,color .25s,border-color .25s}
+.btn:hover{background:var(--champagne-hi);border-color:var(--champagne-hi);color:var(--onyx)}
+.btn.small{background:transparent;color:var(--champagne);border-color:var(--hairline);padding:9px 16px;font-size:12px}
+.btn.small:hover{background:transparent;border-color:var(--champagne);color:var(--champagne-hi)}
+html[lang="he"] .btn,html[lang="ar"] .btn{letter-spacing:0;font-size:15px}
+
+/* the network tree: drawn in gold hairline, owner node solid */
+.netcore{position:relative;justify-self:end;width:100%;max-width:400px}
+.netcore::before{content:"";position:absolute;left:50%;top:18%;width:1300px;height:1000px;transform:translate(-50%,-50%);
+  background:rgba(201,169,106,.075);-webkit-mask:url(/assets/network.svg) center/contain no-repeat;mask:url(/assets/network.svg) center/contain no-repeat;pointer-events:none}
+.netcore::after{content:"";position:absolute;left:50%;top:18%;width:760px;height:600px;transform:translate(-50%,-50%);
+  background:radial-gradient(closest-side,rgba(201,169,106,.10),transparent);pointer-events:none;z-index:-1}
+.tree{position:relative;width:100%;display:block;overflow:visible}
+.tree rect{fill:var(--onyx);stroke:var(--champagne);stroke-width:.8;rx:1px}
+.tree rect.me{fill:var(--champagne);stroke:var(--champagne)}
+.tree line{stroke:var(--champagne);stroke-width:.7;opacity:.6}
+.tree text{font-family:var(--display);font-size:13px;letter-spacing:.04em;fill:var(--ivory);font-variant-numeric:lining-nums}
+.tree rect.me + text{fill:var(--onyx);font-weight:600}
+.tree text:last-of-type{font-family:var(--body);font-size:9.5px;letter-spacing:.08em;fill:var(--pewter)}
+
+/* ── sections ── */
+section{padding-block:clamp(80px,10vw,128px);border-top:1px solid var(--rule)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px 32px;flex-wrap:wrap;margin-bottom:clamp(40px,5vw,64px)}
+.sec-head h2,.grid2 h2{font-size:clamp(36px,4.8vw,58px);font-weight:300;letter-spacing:-.005em}
+html[lang="ar"] .sec-head h2,html[lang="ar"] .grid2 h2{font-weight:400;line-height:1.35}
+.sec-head .eyebrow{font-style:italic;font-family:var(--display);font-size:20px;letter-spacing:0;color:var(--pewter)}
+html[lang="he"] .sec-head .eyebrow,html[lang="ar"] .sec-head .eyebrow{font-style:normal;font-size:18px}
+
+/* features: a ruled 3×2 ledger, gold hairlines between cells, no cards */
+.feats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--hairline)}
+.feats > div{padding:36px clamp(20px,2.6vw,36px) 40px;border-bottom:1px solid var(--hairline)}
+.feats > div:not(:nth-child(3n+1)){border-inline-start:1px solid var(--rule)}
+.feats > div:nth-child(3n+1){padding-inline-start:0}
+.feats h3{font-size:27px;font-weight:500;line-height:1.15;margin-bottom:14px;color:var(--ivory)}
+html[lang="ar"] .feats h3{font-size:24px;font-weight:700;line-height:1.5}
+html[lang="he"] .feats h3{font-size:24px;font-weight:500}
+.feats p{color:var(--pewter);font-size:15.5px;line-height:1.75;max-width:40ch}
+
+/* how it works: a real sequence, so it is numbered — in roman numerals, set in the display serif */
+.method{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(24px,3vw,44px);counter-reset:step}
+.method > div{position:relative;padding-top:28px;border-top:1px solid var(--hairline)}
+.method > div::before{counter-increment:step;content:counter(step,upper-roman);position:absolute;top:-1px;inset-inline-start:0;transform:translateY(-50%);background:var(--onyx);padding-inline-end:14px;font-family:"Cormorant Garamond",Georgia,serif;font-size:22px;font-style:italic;color:var(--champagne);line-height:1}
+.method h3{font-size:25px;font-weight:500;margin:10px 0 12px}
+html[lang="ar"] .method h3{font-size:22px;font-weight:700;line-height:1.5}
+.method p{color:var(--pewter);font-size:15.5px;line-height:1.75}
+
+/* FAQ */
+.faq details{border-bottom:1px solid var(--rule);padding-block:26px}
+.faq details:first-of-type{border-top:1px solid var(--hairline)}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:baseline;gap:24px;font-family:var(--display);font-size:clamp(22px,2.4vw,28px);font-weight:500;line-height:1.3}
+html[lang="ar"] .faq summary{font-size:clamp(20px,2.2vw,24px);font-weight:700;line-height:1.6}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:none;font-family:"Cormorant Garamond",Georgia,serif;font-weight:300;font-size:30px;line-height:1;color:var(--champagne);transition:transform .3s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{color:var(--pewter);margin-top:14px;max-width:64ch}
+.faq .sec-head{margin-bottom:28px}
+
+/* early access */
+.grid2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,7vw,96px);align-items:center}
+.grid2 h2{margin-top:22px}
+.grid2 p{color:var(--pewter);max-width:46ch;margin-top:20px}
+.card{border:1px solid var(--hairline);padding:clamp(28px,3.4vw,44px);display:flex;flex-direction:column;gap:0;position:relative;background:linear-gradient(180deg,rgba(242,236,223,.025),transparent)}
+.card::before{content:"";position:absolute;inset:6px;border:1px solid var(--rule);pointer-events:none}
+.card .line{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding-block:18px;border-bottom:1px solid var(--rule);position:relative}
+.card .val{font-family:var(--display);font-size:22px;letter-spacing:.01em;user-select:all;min-width:0;overflow-wrap:anywhere;direction:ltr;color:var(--ivory)}
+.card > .btn{margin-top:30px;text-align:center;position:relative}
+
+footer{padding-block:40px 48px;border-top:1px solid var(--rule);font-size:13px;color:var(--pewter);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer a{color:var(--pewter);text-decoration:none}
+footer a:hover{color:var(--champagne)}
+footer > span:first-child a{color:var(--champagne)}
+.foot-lng a,.foot-lng span{white-space:nowrap}
+.foot-lng [aria-current]{color:var(--ivory)}
+
+/* ── responsive ── */
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;padding-block:56px 80px}
+  .netcore{justify-self:start;max-width:300px}
+  .feats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .feats > div:not(:nth-child(3n+1)){border-inline-start:0}
+  .feats > div:nth-child(3n+1){padding-inline-start:clamp(20px,2.6vw,36px)}
+  .feats > div:nth-child(odd){padding-inline-start:0}
+  .feats > div:nth-child(even){border-inline-start:1px solid var(--rule)}
+  .method{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:52px}
+  .grid2{grid-template-columns:1fr}
+}
+@media (max-width:620px){
+  body{font-size:16px}
+  .bar{padding-block:20px}
+  .brand .logo img{width:172px}
+  .brand .by{padding-left:48px}
+  .bar nav > a{display:none}
+  .feats{grid-template-columns:1fr}
+  .feats > div,.feats > div:nth-child(n){padding-inline:0;border-inline-start:0}
+  .method{grid-template-columns:1fr}
+  .card .val{font-size:19px}
+}
+
+/* one orchestrated moment: the tree draws itself in on load; everything else stays still */
+@media (prefers-reduced-motion:no-preference){
+  .tree line{stroke-dasharray:120;stroke-dashoffset:120;animation:dl-draw 1.6s cubic-bezier(.3,.6,.2,1) .2s forwards}
+  .tree rect{opacity:0;animation:dl-in .8s ease-out forwards}
+  .tree rect.me{animation-delay:0s}
+  .tree rect:not(.me){animation-delay:.9s}
+  @keyframes dl-draw{to{stroke-dashoffset:0}}
+  @keyframes dl-in{to{opacity:1}}
+  /* lang.js adds .rv/.in reveal classes for the hub; keep them inert here */
+}
+.js .rv{opacity:1;transform:none}
+body{font-variant-numeric:lining-nums}
