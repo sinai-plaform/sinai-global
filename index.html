@@ -10,6 +10,10 @@
 <link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/">
 <link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/">
 <link rel="alternate" hreflang="es" href="https://sinai-global.com/es/">
+<link rel="alternate" hreflang="de" href="https://sinai-global.com/de/">
+<link rel="alternate" hreflang="it" href="https://sinai-global.com/it/">
+<link rel="alternate" hreflang="fr" href="https://sinai-global.com/fr/">
+<link rel="alternate" hreflang="pt" href="https://sinai-global.com/pt/">
 <link rel="alternate" hreflang="x-default" href="https://sinai-global.com/">
 <script src="/assets/lang.js"></script>
 <meta property="og:title" content="SINAI Global">
@@ -28,7 +32,7 @@
       <svg viewBox="0 0 28 28" aria-hidden="true"><path d="M2 24 L11 8 L15 14 L18 10 L26 24 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="18" cy="5" r="2" fill="var(--accent)"/></svg>
       SINAI GLOBAL
     </a>
-    <nav aria-label="Main"><a href="#platforms">Platforms</a><a href="#method">Method</a><a href="#founder">Founder</a><details class="lng"><summary aria-label="Language: English"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M1.5 8h13M8 1.5c2 2 2.8 4 2.8 6.5S10 12.5 8 14.5M8 1.5C6 3.5 5.2 5.5 5.2 8S6 12.5 8 14.5"/></svg>English</summary><div class="lng-list"><a href="/he/" data-setlang="he" lang="he">עברית</a><a href="/" data-setlang="en" lang="en" aria-current="true">English</a><a href="/ru/" data-setlang="ru" lang="ru">Русский</a><a href="/ar/" data-setlang="ar" lang="ar">العربية</a><a href="/es/" data-setlang="es" lang="es">Español</a></div></details></nav>
+    <nav aria-label="Main"><a href="#platforms">Platforms</a><a href="#method">Method</a><a href="#founder">Founder</a><details class="lng"><summary aria-label="Language: English"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M1.5 8h13M8 1.5c2 2 2.8 4 2.8 6.5S10 12.5 8 14.5M8 1.5C6 3.5 5.2 5.5 5.2 8S6 12.5 8 14.5"/></svg>English</summary><div class="lng-list"><a href="/he/" data-setlang="he" lang="he">עברית</a><a href="/" data-setlang="en" lang="en" aria-current="true">English</a><a href="/ru/" data-setlang="ru" lang="ru">Русский</a><a href="/ar/" data-setlang="ar" lang="ar">العربية</a><a href="/es/" data-setlang="es" lang="es">Español</a><a href="/de/" data-setlang="de" lang="de">Deutsch</a><a href="/it/" data-setlang="it" lang="it">Italiano</a><a href="/fr/" data-setlang="fr" lang="fr">Français</a><a href="/pt/" data-setlang="pt" lang="pt">Português</a></div></details></nav>
   </header>
 
   <div class="hero">
@@ -49,12 +53,13 @@
       <div>
         <div class="ptitle"><img class="plogo" src="/assets/logos/jasale.svg" alt="" width="48" height="48"><h3>JaSale</h3></div>
         <div class="tag">The field-sales app for companies that sell through agents</div>
-        <p>Built first for a medical-supplies distributor whose agents worked from PDF catalogs and paper notes. JaSale knows who to visit today, who owes money and what each customer ordered last time, and keeps working on the road with no signal. Now at version 83, in five languages.</p>
+        <p>Built first for a field agent in the pharma sector who worked from PDF catalogs and paper notes. JaSale plans the agent's week, shows the manager the whole team at a glance, and keeps working on the road with no signal.</p>
         <ul>
-          <li>A weekly plan for each agent: collections first, customers seen in the last 14 days skipped, then a daily route with Waze and Google Maps</li>
-          <li>Orders with product photos, price lists and step-based bonuses, sent to the office by email and WhatsApp in one tap</li>
-          <li>Payments matched to each open invoice, with a photo of the check or receipt</li>
-          <li>Works offline: orders, visits and payments are saved on the phone and sync when the signal returns</li>
+          <li>A smart weekly plan built from open debts, the days since each customer's last visit and order, and the visit rhythm their grade calls for. Anyone seen in the last 14 days stays off the list.</li>
+          <li>Each day covers one area, with stops lined up in driving order and opened in Waze or Google Maps</li>
+          <li>Orders with product photos, price lists and step-based bonuses in one tap, and payments matched to each open invoice, even with no signal</li>
+          <li>For the manager, one board: every agent's visits, orders and collections today, missed visits, debts past 90 days, and weekly plans to approve or send back with a note</li>
+          <li>Targets and commission tiers with a month-end forecast at the current pace, sales competitions with a leaderboard, real-time stock and a dispatch board for trucks and couriers</li>
         </ul>
       </div>
       <div class="facts"><dl>
@@ -62,7 +67,7 @@
         <div><dt>Users</dt><dd>Agents, managers, office, drivers, warehouse</dd></div>
         <div><dt>Stack</dt><dd class="stack"><span>PWA</span><span>Supabase</span><span>PostgreSQL</span></dd></div>
       </dl></div>
-      <figure class="shot"><img src="/assets/shots/jasale.webp" alt="JaSale" loading="lazy" width="640" height="640"></figure>
+      <figure class="shot"><img src="/assets/shots/jasale-en.webp" alt="JaSale" loading="lazy" width="640" height="640"></figure>
     </article>
 
     <article class="row">
@@ -70,9 +75,10 @@
       <div>
         <div class="ptitle"><img class="plogo" src="/assets/logos/sinai-club.svg" alt="" width="48" height="48"><h3>SINAI Club</h3></div>
         <div class="tag">Training and player development for youth football, built on the pitch</div>
-        <p>Born from coaching kids from kindergarten to 7th grade. The coach plans the season ahead, notes what each player does during practice, and the notes build a player card over time. Parents and players get their own view, and the coach side works with no internet.</p>
+        <p>Built from more than a decade of coaching youth football, with teams from kindergarten to 10th grade. The coach plans the season ahead, notes what each player does during practice, and the notes build a player card over time. Parents and players get their own view, and the coach side works with no internet.</p>
         <ul>
-          <li>Training programs that build themselves: pick a theme and get weeks of sessions from a 66-drill library inspired by La Masia, with animated demos</li>
+          <li>A smart training plan: choose a theme and a period, and every session is built for the team's age group, moving week by week from teaching to practice to a test game</li>
+          <li>Every session has a coach's structure: warm-up, rondo, main block and a closing game, drawn from 66 drills inspired by La Masia, with animated demos and an injury-prevention warm-up each week</li>
           <li>Hold the mic and speak during practice; the note turns into ratings for the right players and attributes</li>
           <li>A Football Manager-style 1–20 player card, built from many small observations, with recent sessions weighted more</li>
           <li>End-of-session game: teams split automatically by level or by hand, with notes during the game</li>
@@ -83,7 +89,7 @@
         <div><dt>Users</dt><dd>Coaches, managers, parents, players</dd></div>
         <div><dt>Stack</dt><dd class="stack"><span>PWA</span><span>Supabase</span></dd></div>
       </dl></div>
-      <figure class="shot"><img src="/assets/shots/sinaiclub.webp" alt="SINAI Club" loading="lazy" width="640" height="640"></figure>
+      <figure class="shot"><img src="/assets/shots/sinaiclub-en.webp" alt="SINAI Club" loading="lazy" width="640" height="640"></figure>
     </article>
 
     <article class="row">
@@ -144,7 +150,7 @@
       <div><h3>Ride along</h3><p>Spend a day with the user. Map what they do on paper, in PDFs and in their head.</p></div>
       <div><h3>Model the data</h3><p>Turn the workflow into tables, roles and permissions before any screen exists.</p></div>
       <div><h3>Ship to the phone</h3><p>A first working version in the user's hands within days, not a slide deck.</p></div>
-      <div><h3>Iterate weekly</h3><p>Every release comes from field feedback. JaSale is at version 83.</p></div>
+      <div><h3>Iterate weekly</h3><p>Each release starts from what we heard in the field, so the product keeps pace with the work.</p></div>
     </div>
   </section>
 
@@ -166,7 +172,7 @@
     </div>
   </section>
 
-  <footer><span>© 2026 SINAI Global</span><span class="foot-lng" aria-label="Language"><a href="/he/" data-setlang="he" lang="he">עברית</a> · <span aria-current="true" lang="en">English</span> · <a href="/ru/" data-setlang="ru" lang="ru">Русский</a> · <a href="/ar/" data-setlang="ar" lang="ar">العربية</a> · <a href="/es/" data-setlang="es" lang="es">Español</a></span></footer>
+  <footer><span>© 2026 SINAI Global</span><span class="foot-lng" aria-label="Language"><a href="/he/" data-setlang="he" lang="he">עברית</a> · <span aria-current="true" lang="en">English</span> · <a href="/ru/" data-setlang="ru" lang="ru">Русский</a> · <a href="/ar/" data-setlang="ar" lang="ar">العربية</a> · <a href="/es/" data-setlang="es" lang="es">Español</a> · <a href="/de/" data-setlang="de" lang="de">Deutsch</a> · <a href="/it/" data-setlang="it" lang="it">Italiano</a> · <a href="/fr/" data-setlang="fr" lang="fr">Français</a> · <a href="/pt/" data-setlang="pt" lang="pt">Português</a></span></footer>
 </div>
 </body>
 </html>

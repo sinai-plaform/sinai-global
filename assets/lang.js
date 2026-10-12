@@ -1,6 +1,6 @@
 /* Language routing for SINAI Global sites (same rules as jasale.app and sinaiclub.com).
    1. A language picked in the menu is saved (localStorage 'sg-lang') and always wins.
-   2. Otherwise the first browser language we support (he, en, ru, ar, es) is used;
+   2. Otherwise the first browser language we support (he, en, ru, ar, es, de, it, fr, pt) is used;
       an English browser in Israel (timezone Asia/Jerusalem) gets Hebrew.
    3. No match: Israel -> Hebrew, everywhere else -> English.
    Each page lists its twins as <link rel="alternate" hreflang="xx" href="..."> and sets <html lang>. */

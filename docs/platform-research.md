@@ -151,3 +151,28 @@ worker exists, `3e11c31`, but is not a public feature), memberships and Stripe p
 - JaSale users: "Agents, managers, office, drivers, warehouse".
 - "How we build" step 4: "JaSale is at version 83" (was "past its 80th version").
 - Status pills unchanged: JaSale Live, SINAI Club Live, Downline HQ In development, SINAI Cinema Coming soon.
+
+## Hub v3 (13 Oct 2026): JaSale and SINAI Club cards, re-verified in code
+JaSale (`~/Code/liberty-deploy/app/index.html`):
+- Weekly plan: `wpSuggest` > `wpPool` > `wpScore` > `routeScore`. Score uses open debt (`debt_agorot`, extra weight
+  when older than 90 days via `collAge`), days since last visit and last order (`_ltMap`, order 45+ days),
+  visit cadence from the customer grade (`custCadence`, `CAD_GRADE` green 14 / yellow 21 / orange+new 30 /
+  potential 45 / gray 56, or a per-customer `visit_frequency_days`), due follow-ups, missed visits, no-sale
+  follow-ups, neglected areas. `WP_RECENT_DAYS=14` keeps customers visited or ordered in the last 14 days out.
+- Each day: one area (`wpDayAreas`), nearby customers first (`wpPickDay`), stops ordered nearest-neighbour from
+  the start point (`wpOrder` > `nnOrder`); Waze / Google Maps links.
+- Grade (`custGrade`) is read from the customer record; the client does not compute it. Not claimed: how it is
+  calculated. "Buying rhythm" is NOT claimed; the rhythm is a visit cadence.
+- Manager: `mgrHomeView` (team today: visits, orders, amount, collected; missed visits; debt >90 days; agents
+  this month), `wkPlansView` (approve or return a weekly plan with a note), `targetsView` (commission tiers,
+  pace forecast for month end), competitions with a board (`annBoard`, `liberty_competition_board`),
+  `stockView` (real-time quantities), `dispatchView` (truck or courier).
+- Version number removed from all copy.
+SINAI Club (`~/Code/sinai-club/app/program.js`):
+- `autoPlanSheet` / `generateProgram`: season mode (theme per week from `THEME_SEQ` by age) or focus mode (one
+  theme over N weeks, `BLOCK_PHASES` introduce > practise > apply in game > test in game).
+- `buildSession`: per-age skeleton (`SLOTS`: warm-up, rondo/technique, development, application, game,
+  cool-down), drill choice by theme keywords with recently used drills penalised (`pickDrill`), a prevention
+  warm-up in the first session of each week ("FIFA 11+ style").
+- Coaching range now stated as kindergarten to 10th grade (founder update); app age profiles are
+  `גן–ב׳ / ג׳–ד׳ / ה׳–ז׳ / ח׳ ומעלה` (`drills.js`).
