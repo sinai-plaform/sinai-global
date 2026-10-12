@@ -203,3 +203,4 @@ section{border-top:0;padding-block:104px}
   .js .rv{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
   .js .rv.in{opacity:1;transform:none}
 }
+.founder-photo{display:block;width:120px;height:120px;border-radius:50%;object-fit:cover;margin-bottom:24px;box-shadow:0 0 0 1px var(--line),0 0 0 6px var(--bg),0 0 0 7px var(--line)}
