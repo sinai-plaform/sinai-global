@@ -204,3 +204,16 @@ section{border-top:0;padding-block:104px}
   .js .rv.in{opacity:1;transform:none}
 }
 .founder-photo{display:block;width:120px;height:120px;border-radius:50%;object-fit:cover;margin-bottom:24px;box-shadow:0 0 0 1px var(--line),0 0 0 6px var(--bg),0 0 0 7px var(--line)}
+/* Downline HQ hero: the network tree sits on a full-bleed field of the same network, growing out of the owner node */
+.netcore{position:relative;justify-self:end;width:100%;max-width:380px}
+.netcore::before{content:"";position:absolute;left:50%;top:15%;width:1400px;height:1100px;transform:translate(-50%,-50%);
+  background:var(--topo);-webkit-mask:url(/assets/network.svg) center/contain no-repeat;mask:url(/assets/network.svg) center/contain no-repeat;pointer-events:none}
+.netcore::after{content:"";position:absolute;left:50%;top:15%;width:900px;height:700px;transform:translate(-50%,-50%);
+  background:radial-gradient(closest-side,var(--glow),transparent);pointer-events:none;z-index:-1}
+.netcore .tree{position:relative;max-width:none;justify-self:auto}
+@media (max-width:860px){.netcore{justify-self:start;max-width:260px}}
+@media (prefers-reduced-motion:no-preference){
+  .netcore::before{animation:drift 40s ease-in-out infinite alternate}
+  .tree rect.me{animation:node 3s ease-in-out infinite}
+  @keyframes node{0%,100%{filter:drop-shadow(0 0 0 var(--accent))}50%{filter:drop-shadow(0 0 7px var(--accent))}}
+}
