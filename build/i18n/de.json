@@ -1,0 +1,182 @@
+{
+  "_lang": "Deutsch",
+  "meta": {
+    "title": "SINAI Global · KI, die in Ihrem Unternehmen arbeitet",
+    "desc": "SINAI Global bringt KI ins Unternehmen: smarte Apps, fertig für Ihre Branche (JaSale für den Vertrieb, SINAI Club für Fußball, Downline HQ für den Direktvertrieb), und individuelle Entwicklung, wenn Sie sie brauchen.",
+    "og": "Smarte Apps für Training, Vertrieb, Direktvertrieb und Produktion – ab dem ersten Tag einsatzbereit oder speziell für Sie gebaut.",
+    "sol_title": "Individuelle Entwicklung und Preise · SINAI Global",
+    "sol_desc": "KI für Ihr Unternehmen, mit Preisen vorab: KI-Analyse, smarte Websites, KI-Automatisierungen, Plattform-Anpassung, individuelle Apps, monatlicher Support und Hosting."
+  },
+  "nav": {
+    "home": "SINAI Global Startseite",
+    "main": "Start",
+    "products": "Produkte",
+    "solutions": "Business-Lösungen",
+    "cinema": "Cinema",
+    "lifestyle": "Lifestyle",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "menu": "Menü",
+    "close": "Menü schließen",
+    "language": "Sprache",
+    "currency": "Währung",
+    "skip": "Zum Inhalt springen"
+  },
+  "intro": {
+    "skip": "Intro überspringen"
+  },
+  "hero": {
+    "h1": "KI, die in Ihrem Unternehmen arbeitet.",
+    "sub": "Smarte Apps für Training, Vertrieb, Direktvertrieb und Produktion. Ab dem ersten Tag einsatzbereit oder speziell für Sie gebaut.",
+    "cta1": "Produkte entdecken",
+    "cta2": "Sprechen Sie mit uns",
+    "visual": "Echte Screens aus JaSale, SINAI Club und SINAI Cinema"
+  },
+  "divisions": {
+    "label": "Das Unternehmen",
+    "software": "Software",
+    "software_d": "Smarte Produkte und individuelle KI für Unternehmen. Unser größter Bereich – und der, der vorangeht.",
+    "cinema": "SINAI Cinema",
+    "cinema_d": "Medien und Produktion",
+    "lifestyle": "SINAI Lifestyle",
+    "lifestyle_d": "Gesund leben"
+  },
+  "build": {
+    "h2": "Was wir bauen",
+    "lead": "Der Softwarebereich: smarte Produkte, jedes für eine Branche gebaut.",
+    "live": "Live",
+    "dev": "In Entwicklung",
+    "soon": "Demnächst",
+    "demo": "Demo buchen",
+    "jasale_tag": "Außendienst",
+    "jasale_line": "Ein smarter Wochenplan für jeden Außendienstler, Bestellungen und Inkasso auch ohne Netz und ein zentrales Board für die Leitung.",
+    "club_tag": "Fußballvereine",
+    "club_line": "Ein smarter Trainingsplan für jede Altersklasse, Spielerkarten, die sich aus Sprachnotizen selbst füllen, und eine Ansicht für Eltern.",
+    "dl_tag": "Direktvertrieb",
+    "dl_line": "Eine persönliche Verkaufsseite und ein CRM für jeden Vertriebspartner sowie ein Live-Netzwerkbaum für die Führung.",
+    "dl_link": "Über Downline HQ",
+    "custom_tag": "Individuell",
+    "custom_t": "KI-Lösungen für Ihr Unternehmen",
+    "custom_line": "Automatisierungen, smarte Websites und Apps – gebaut rund um die Art, wie Ihr Unternehmen schon heute arbeitet.",
+    "custom_from": "KI-Analyse für Ihr Unternehmen",
+    "custom_cta": "Preise und Leistungen"
+  },
+  "how": {
+    "h2": "So arbeiten wir",
+    "s1_t": "Ein smarter Kern",
+    "s1_d": "Jedes Produkt läuft auf demselben bewährten Kern. Wir passen ihn an Ihr Unternehmen an, statt bei null anzufangen.",
+    "s2_t": "Ein Ingenieur an Ihrer Seite",
+    "s2_d": "Wir setzen uns zu Ihrem Team, schauen uns die echte Arbeit an und machen daraus Screens und Regeln.",
+    "s3_t": "Schnell ein laufender Pilot",
+    "s3_d": "Ihr Team nutzt innerhalb weniger Wochen eine funktionierende Version. Wir verbessern sie jede Woche anhand Ihres Feedbacks."
+  },
+  "trust": {
+    "h2": "Gebaut für Vertrauen",
+    "sec_t": "Sicherheit",
+    "sec_d": "Daten liegen in verwalteten, verschlüsselten Datenbanken, und jede Anfrage wird daraufhin geprüft, wer sie stellt.",
+    "perm_t": "Berechtigungen",
+    "perm_d": "Jede Rolle sieht nur, was sie braucht. Ein Außendienstler sieht seine eigenen Kunden, die Leitung das ganze Team.",
+    "minors_t": "Schutz von Minderjährigen",
+    "minors_d": "In SINAI Club brauchen Fotos und Videos von Kindern die Einwilligung eines Elternteils – und Eltern können sie jederzeit widerrufen.",
+    "rights_t": "Rechte an Inhalten",
+    "rights_d": "SINAI Cinema dokumentiert, wie jedes KI-generierte Asset entstanden ist – für eine klare Rechtekette.",
+    "priv_t": "Datenschutz",
+    "priv_d": "Ihre Daten gehören Ihnen. Wir verkaufen sie nicht und nutzen sie nicht für Werbung.",
+    "priv_link": "Datenschutzerklärung"
+  },
+  "nums": {
+    "h2": "In Zahlen",
+    "n1": "Live-Plattformen im täglichen Einsatz",
+    "n2": "Sprachen auf dieser Website",
+    "n3": "Übungen in der SINAI Club Bibliothek",
+    "n4": "Oberflächensprachen in SINAI Cinema"
+  },
+  "cinema": {
+    "h2": "SINAI Cinema",
+    "d": "Eine Streaming-Plattform für unabhängige, mit KI gemachte Filme – und das Studio hinter dem Bibeldrama Blood, Sand and Faith.",
+    "cta": "Frühen Zugang sichern"
+  },
+  "life": {
+    "h2": "SINAI Lifestyle",
+    "d": "Eine gesunde tägliche Routine, mit Drinks von bHIP.",
+    "disclosure": "Liran ist unabhängiger bHIP-Vertriebspartner; Marke und Produkte gehören bHIP Global.",
+    "xgrn": "Ein grüner Morgendrink mit Vitaminen, Mineralstoffen, Ballaststoffen und pflanzlichen Zutaten: Maca, Matcha, Moringa und Spirulina. Kalorienarm, ohne Zuckerzusatz.",
+    "indigo": "Ein exotischer, erfrischender Drink mit Açaí, Goji, grünem Tee, Guarana, Maca und Ginseng, mit B-Vitaminen und Vitamin C. Vegan, glutenfrei, ohne Zuckerzusatz.",
+    "byng": "Ein Premium-Kollagenpräparat mit Erdbeer-Zitrone-Geschmack, für eine tägliche Beauty-Routine.",
+    "order": "Auf der Produktseite bestellen",
+    "wa": "Per WhatsApp fragen"
+  },
+  "cta": {
+    "h2": "Lassen Sie KI in Ihrem Unternehmen arbeiten.",
+    "d": "Erzählen Sie uns, wie Ihr Unternehmen heute arbeitet. Wir zeigen Ihnen, wo KI am meisten Zeit spart.",
+    "b1": "Per WhatsApp schreiben",
+    "b2": "Erzählen Sie von Ihrem Unternehmen"
+  },
+  "about": {
+    "h2": "Über das Unternehmen",
+    "p1": "SINAI Global ist ein Technologieunternehmen aus dem Norden Israels. Wir entwickeln Software, die KI in den Arbeitsalltag von Unternehmen bringt – angefangen bei den Menschen, die die Arbeit machen.",
+    "founder": "Liran Dandekar, Gründer",
+    "bio": "Praktiker, Trainer und Entwickler. Zehn Jahre Leitung von Vertriebs- und Serviceabläufen, Analyst und Teamleiter im Nachrichtendienst der israelischen Armee, Studium des Wirtschaftsingenieurwesens am Technion. Heute Sportlehrer und Jugendfußballtrainer, der Software mit KI-Coding-Agenten entwirft und ausliefert."
+  },
+  "contact": {
+    "h2": "Kontakt",
+    "email": "E-Mail",
+    "whatsapp": "WhatsApp",
+    "copy": "Kopieren",
+    "copied": "Kopiert",
+    "place": "Shlomi, Israel"
+  },
+  "footer": {
+    "divisions": "Bereiche",
+    "platforms": "Plattformen",
+    "company": "Unternehmen",
+    "privacy": "Datenschutz",
+    "terms": "Nutzungsbedingungen",
+    "rights": "© 2026 SINAI Global"
+  },
+  "sol": {
+    "h1": "KI, gebaut rund um Ihr Unternehmen.",
+    "sub": "Wenn ein fertiges Produkt nicht reicht, bauen wir, was Sie brauchen: von einer einzelnen Automatisierung bis zur kompletten App. Klare Preise, vorab.",
+    "cta": "Erzählen Sie von Ihrem Unternehmen",
+    "prices_h2": "Leistungen und Preise",
+    "currency_note": "Festpreise je Währung. Alle Preise zzgl. MwSt.",
+    "p1_t": "KI-Analyse für Ihr Unternehmen",
+    "p1_d": "Ein Arbeitstermin mit Ihrem Team und eine schriftliche Übersicht, wo KI am meisten Zeit spart. Wird auf jedes Projekt angerechnet, das Sie danach umsetzen.",
+    "p2_t": "Smarte Website oder Landingpage",
+    "p2_d": "Eine schnelle Website in Ihren Sprachen, mit einem Chat, der Kunden antwortet, und Anfragen, die direkt bei Ihnen landen.",
+    "p3_t": "KI-Automatisierung",
+    "p3_d": "WhatsApp-Antworten, automatische Berichte, CRM-Updates. Preis pro Prozess.",
+    "p4_t": "Eine unserer Plattformen, angepasst an Ihr Unternehmen",
+    "p4_d": "JaSale, SINAI Club oder Downline HQ mit Ihrer Marke, Ihren Prozessen und Ihren Feldern.",
+    "p5_t": "Komplett individuelle App",
+    "p5_d": "Eine App von Grund auf, gebaut rund um die Arbeitsweise Ihres Unternehmens – für Smartphone und Computer.",
+    "p6_t": "Monatlicher Support (Retainer)",
+    "p6_d": "Ein festes Team für Verbesserungen, neue Funktionen und Automatisierungen – jeden Monat.",
+    "p7_t": "Hosting und Wartung",
+    "p7_d": "Server, Backups, Updates und Monitoring, damit alles zuverlässig läuft.",
+    "from": "Ab {p}",
+    "per_process": "Ab {p} pro Prozess",
+    "setup": "Einrichtung ab {p} + Monatsabo",
+    "range_month": "{a}–{b} / Monat",
+    "from_month": "Ab {p} / Monat",
+    "steps_h2": "So läuft ein Projekt",
+    "st1_t": "Analyse",
+    "st1_d": "Wir lernen die Arbeit kennen und einigen uns auf das eine Ergebnis, das am meisten zählt.",
+    "st2_t": "Pilot",
+    "st2_d": "Eine funktionierende Version in den Händen Ihres Teams – innerhalb weniger Wochen.",
+    "st3_t": "Launch und Wachstum",
+    "st3_d": "Wir starten, messen und verbessern – jede Woche.",
+    "form_h2": "Erzählen Sie uns von Ihrem Unternehmen",
+    "form_d": "Ein paar Zeilen genügen. Wir melden uns bald.",
+    "f_name": "Ihr Name",
+    "f_business": "Name des Unternehmens",
+    "f_field": "Branche",
+    "f_need": "Wobei soll KI Sie unterstützen?",
+    "f_contact": "Telefon oder E-Mail",
+    "f_send_wa": "Per WhatsApp senden",
+    "f_send_mail": "Per E-Mail senden",
+    "f_required": "Bitte geben Sie Ihren Namen an, was Sie brauchen und wie wir Sie erreichen.",
+    "f_sent": "Ihre Nachricht ist in der gerade geöffneten App versandbereit.",
+    "msg_intro": "Hallo Liran, ich möchte mehr über KI für mein Unternehmen erfahren."
+  }
+}

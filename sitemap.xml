@@ -1,26 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://sinai-global.com/</loc>
-    <lastmod>2026-10-15</lastmod>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/"/>
-    <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://sinai-global.com/de/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://sinai-global.com/it/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sinai-global.com/fr/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://sinai-global.com/pt/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sinai-global.com/"/>
-  </url>
-  <url>
     <loc>https://sinai-global.com/he/</loc>
     <lastmod>2026-10-15</lastmod>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/"/>
@@ -28,14 +13,31 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://sinai-global.com/it/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://sinai-global.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://sinai-global.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://sinai-global.com/hi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sinai-global.com/"/>
+  </url>
+  <url>
+    <loc>https://sinai-global.com/</loc>
+    <lastmod>2026-10-15</lastmod>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sinai-global.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://sinai-global.com/it/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sinai-global.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://sinai-global.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://sinai-global.com/hi/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sinai-global.com/"/>
   </url>
   <url>
     <loc>https://sinai-global.com/ru/</loc>
     <lastmod>2026-10-15</lastmod>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/"/>
@@ -43,14 +45,15 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://sinai-global.com/it/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://sinai-global.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://sinai-global.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://sinai-global.com/hi/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sinai-global.com/"/>
   </url>
   <url>
     <loc>https://sinai-global.com/ar/</loc>
     <lastmod>2026-10-15</lastmod>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/"/>
@@ -58,14 +61,15 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://sinai-global.com/it/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://sinai-global.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://sinai-global.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://sinai-global.com/hi/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sinai-global.com/"/>
   </url>
   <url>
     <loc>https://sinai-global.com/es/</loc>
     <lastmod>2026-10-15</lastmod>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/"/>
@@ -73,14 +77,15 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://sinai-global.com/it/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://sinai-global.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://sinai-global.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://sinai-global.com/hi/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sinai-global.com/"/>
   </url>
   <url>
     <loc>https://sinai-global.com/de/</loc>
     <lastmod>2026-10-15</lastmod>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/"/>
@@ -88,14 +93,15 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://sinai-global.com/it/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://sinai-global.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://sinai-global.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://sinai-global.com/hi/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sinai-global.com/"/>
   </url>
   <url>
     <loc>https://sinai-global.com/it/</loc>
     <lastmod>2026-10-15</lastmod>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/"/>
@@ -103,14 +109,15 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://sinai-global.com/it/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://sinai-global.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://sinai-global.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://sinai-global.com/hi/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sinai-global.com/"/>
   </url>
   <url>
     <loc>https://sinai-global.com/fr/</loc>
     <lastmod>2026-10-15</lastmod>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/"/>
@@ -118,14 +125,15 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://sinai-global.com/it/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://sinai-global.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://sinai-global.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://sinai-global.com/hi/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sinai-global.com/"/>
   </url>
   <url>
     <loc>https://sinai-global.com/pt/</loc>
     <lastmod>2026-10-15</lastmod>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/"/>
@@ -133,14 +141,191 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://sinai-global.com/it/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://sinai-global.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://sinai-global.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://sinai-global.com/hi/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sinai-global.com/"/>
   </url>
   <url>
-    <loc>https://sinai-global.com/downline-hq/</loc>
+    <loc>https://sinai-global.com/hi/</loc>
+    <lastmod>2026-10-15</lastmod>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sinai-global.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://sinai-global.com/it/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sinai-global.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://sinai-global.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://sinai-global.com/hi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sinai-global.com/"/>
+  </url>
+  <url>
+    <loc>https://sinai-global.com/he/solutions/</loc>
+    <lastmod>2026-10-15</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sinai-global.com/de/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://sinai-global.com/it/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sinai-global.com/fr/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://sinai-global.com/pt/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://sinai-global.com/hi/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sinai-global.com/solutions/"/>
+  </url>
+  <url>
+    <loc>https://sinai-global.com/solutions/</loc>
+    <lastmod>2026-10-15</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sinai-global.com/de/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://sinai-global.com/it/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sinai-global.com/fr/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://sinai-global.com/pt/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://sinai-global.com/hi/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sinai-global.com/solutions/"/>
+  </url>
+  <url>
+    <loc>https://sinai-global.com/ru/solutions/</loc>
+    <lastmod>2026-10-15</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sinai-global.com/de/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://sinai-global.com/it/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sinai-global.com/fr/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://sinai-global.com/pt/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://sinai-global.com/hi/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sinai-global.com/solutions/"/>
+  </url>
+  <url>
+    <loc>https://sinai-global.com/ar/solutions/</loc>
+    <lastmod>2026-10-15</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sinai-global.com/de/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://sinai-global.com/it/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sinai-global.com/fr/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://sinai-global.com/pt/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://sinai-global.com/hi/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sinai-global.com/solutions/"/>
+  </url>
+  <url>
+    <loc>https://sinai-global.com/es/solutions/</loc>
+    <lastmod>2026-10-15</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sinai-global.com/de/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://sinai-global.com/it/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sinai-global.com/fr/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://sinai-global.com/pt/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://sinai-global.com/hi/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sinai-global.com/solutions/"/>
+  </url>
+  <url>
+    <loc>https://sinai-global.com/de/solutions/</loc>
+    <lastmod>2026-10-15</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sinai-global.com/de/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://sinai-global.com/it/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sinai-global.com/fr/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://sinai-global.com/pt/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://sinai-global.com/hi/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sinai-global.com/solutions/"/>
+  </url>
+  <url>
+    <loc>https://sinai-global.com/it/solutions/</loc>
+    <lastmod>2026-10-15</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sinai-global.com/de/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://sinai-global.com/it/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sinai-global.com/fr/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://sinai-global.com/pt/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://sinai-global.com/hi/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sinai-global.com/solutions/"/>
+  </url>
+  <url>
+    <loc>https://sinai-global.com/fr/solutions/</loc>
+    <lastmod>2026-10-15</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sinai-global.com/de/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://sinai-global.com/it/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sinai-global.com/fr/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://sinai-global.com/pt/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://sinai-global.com/hi/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sinai-global.com/solutions/"/>
+  </url>
+  <url>
+    <loc>https://sinai-global.com/pt/solutions/</loc>
+    <lastmod>2026-10-15</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sinai-global.com/de/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://sinai-global.com/it/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sinai-global.com/fr/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://sinai-global.com/pt/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://sinai-global.com/hi/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sinai-global.com/solutions/"/>
+  </url>
+  <url>
+    <loc>https://sinai-global.com/hi/solutions/</loc>
+    <lastmod>2026-10-15</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sinai-global.com/de/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://sinai-global.com/it/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sinai-global.com/fr/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://sinai-global.com/pt/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://sinai-global.com/hi/solutions/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sinai-global.com/solutions/"/>
+  </url>
+  <url>
+    <loc>https://sinai-global.com/he/downline-hq/</loc>
     <lastmod>2026-10-15</lastmod>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/downline-hq/"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/downline-hq/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/downline-hq/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/downline-hq/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/downline-hq/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/downline-hq/"/>
@@ -151,11 +336,11 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sinai-global.com/downline-hq/"/>
   </url>
   <url>
-    <loc>https://sinai-global.com/he/downline-hq/</loc>
+    <loc>https://sinai-global.com/downline-hq/</loc>
     <lastmod>2026-10-15</lastmod>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/downline-hq/"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/downline-hq/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/downline-hq/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/downline-hq/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/downline-hq/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/downline-hq/"/>
@@ -169,8 +354,8 @@
     <loc>https://sinai-global.com/ru/downline-hq/</loc>
     <lastmod>2026-10-15</lastmod>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/downline-hq/"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/downline-hq/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/downline-hq/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/downline-hq/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/downline-hq/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/downline-hq/"/>
@@ -184,8 +369,8 @@
     <loc>https://sinai-global.com/ar/downline-hq/</loc>
     <lastmod>2026-10-15</lastmod>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/downline-hq/"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/downline-hq/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/downline-hq/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/downline-hq/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/downline-hq/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/downline-hq/"/>
@@ -199,8 +384,8 @@
     <loc>https://sinai-global.com/es/downline-hq/</loc>
     <lastmod>2026-10-15</lastmod>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/downline-hq/"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/downline-hq/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/downline-hq/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/downline-hq/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/downline-hq/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/downline-hq/"/>
@@ -214,8 +399,8 @@
     <loc>https://sinai-global.com/de/downline-hq/</loc>
     <lastmod>2026-10-15</lastmod>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/downline-hq/"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/downline-hq/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/downline-hq/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/downline-hq/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/downline-hq/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/downline-hq/"/>
@@ -229,8 +414,8 @@
     <loc>https://sinai-global.com/it/downline-hq/</loc>
     <lastmod>2026-10-15</lastmod>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/downline-hq/"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/downline-hq/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/downline-hq/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/downline-hq/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/downline-hq/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/downline-hq/"/>
@@ -244,8 +429,8 @@
     <loc>https://sinai-global.com/fr/downline-hq/</loc>
     <lastmod>2026-10-15</lastmod>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/downline-hq/"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/downline-hq/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/downline-hq/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/downline-hq/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/downline-hq/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/downline-hq/"/>
@@ -259,8 +444,8 @@
     <loc>https://sinai-global.com/pt/downline-hq/</loc>
     <lastmod>2026-10-15</lastmod>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/downline-hq/"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/downline-hq/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/downline-hq/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/downline-hq/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/downline-hq/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/downline-hq/"/>
@@ -271,11 +456,11 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sinai-global.com/downline-hq/"/>
   </url>
   <url>
-    <loc>https://sinai-global.com/privacy/</loc>
+    <loc>https://sinai-global.com/he/privacy/</loc>
     <lastmod>2026-10-15</lastmod>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/privacy/"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/privacy/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/privacy/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/privacy/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/privacy/"/>
@@ -286,11 +471,11 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sinai-global.com/privacy/"/>
   </url>
   <url>
-    <loc>https://sinai-global.com/he/privacy/</loc>
+    <loc>https://sinai-global.com/privacy/</loc>
     <lastmod>2026-10-15</lastmod>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/privacy/"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/privacy/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/privacy/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/privacy/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/privacy/"/>
@@ -304,8 +489,8 @@
     <loc>https://sinai-global.com/ru/privacy/</loc>
     <lastmod>2026-10-15</lastmod>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/privacy/"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/privacy/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/privacy/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/privacy/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/privacy/"/>
@@ -319,8 +504,8 @@
     <loc>https://sinai-global.com/ar/privacy/</loc>
     <lastmod>2026-10-15</lastmod>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/privacy/"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/privacy/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/privacy/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/privacy/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/privacy/"/>
@@ -334,8 +519,8 @@
     <loc>https://sinai-global.com/es/privacy/</loc>
     <lastmod>2026-10-15</lastmod>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/privacy/"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/privacy/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/privacy/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/privacy/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/privacy/"/>
@@ -349,8 +534,8 @@
     <loc>https://sinai-global.com/de/privacy/</loc>
     <lastmod>2026-10-15</lastmod>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/privacy/"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/privacy/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/privacy/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/privacy/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/privacy/"/>
@@ -364,8 +549,8 @@
     <loc>https://sinai-global.com/it/privacy/</loc>
     <lastmod>2026-10-15</lastmod>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/privacy/"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/privacy/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/privacy/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/privacy/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/privacy/"/>
@@ -379,8 +564,8 @@
     <loc>https://sinai-global.com/fr/privacy/</loc>
     <lastmod>2026-10-15</lastmod>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/privacy/"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/privacy/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/privacy/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/privacy/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/privacy/"/>
@@ -394,8 +579,8 @@
     <loc>https://sinai-global.com/pt/privacy/</loc>
     <lastmod>2026-10-15</lastmod>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/privacy/"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/privacy/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/privacy/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/privacy/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/privacy/"/>
@@ -406,11 +591,11 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sinai-global.com/privacy/"/>
   </url>
   <url>
-    <loc>https://sinai-global.com/terms/</loc>
+    <loc>https://sinai-global.com/he/terms/</loc>
     <lastmod>2026-10-15</lastmod>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/terms/"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/terms/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/terms/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/terms/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/terms/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/terms/"/>
@@ -421,11 +606,11 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sinai-global.com/terms/"/>
   </url>
   <url>
-    <loc>https://sinai-global.com/he/terms/</loc>
+    <loc>https://sinai-global.com/terms/</loc>
     <lastmod>2026-10-15</lastmod>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/terms/"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/terms/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/terms/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/terms/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/terms/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/terms/"/>
@@ -439,8 +624,8 @@
     <loc>https://sinai-global.com/ru/terms/</loc>
     <lastmod>2026-10-15</lastmod>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/terms/"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/terms/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/terms/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/terms/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/terms/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/terms/"/>
@@ -454,8 +639,8 @@
     <loc>https://sinai-global.com/ar/terms/</loc>
     <lastmod>2026-10-15</lastmod>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/terms/"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/terms/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/terms/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/terms/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/terms/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/terms/"/>
@@ -469,8 +654,8 @@
     <loc>https://sinai-global.com/es/terms/</loc>
     <lastmod>2026-10-15</lastmod>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/terms/"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/terms/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/terms/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/terms/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/terms/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/terms/"/>
@@ -484,8 +669,8 @@
     <loc>https://sinai-global.com/de/terms/</loc>
     <lastmod>2026-10-15</lastmod>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/terms/"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/terms/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/terms/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/terms/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/terms/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/terms/"/>
@@ -499,8 +684,8 @@
     <loc>https://sinai-global.com/it/terms/</loc>
     <lastmod>2026-10-15</lastmod>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/terms/"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/terms/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/terms/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/terms/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/terms/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/terms/"/>
@@ -514,8 +699,8 @@
     <loc>https://sinai-global.com/fr/terms/</loc>
     <lastmod>2026-10-15</lastmod>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/terms/"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/terms/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/terms/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/terms/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/terms/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/terms/"/>
@@ -529,8 +714,8 @@
     <loc>https://sinai-global.com/pt/terms/</loc>
     <lastmod>2026-10-15</lastmod>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/terms/"/>
     <xhtml:link rel="alternate" hreflang="he" href="https://sinai-global.com/he/terms/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sinai-global.com/terms/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/terms/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sinai-global.com/ar/terms/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://sinai-global.com/es/terms/"/>

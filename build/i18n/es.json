@@ -1,0 +1,182 @@
+{
+  "_lang": "Español",
+  "meta": {
+    "title": "SINAI Global · IA que trabaja dentro de tu negocio",
+    "desc": "SINAI Global lleva la IA a las empresas: apps inteligentes listas para tu sector (JaSale para ventas, SINAI Club para fútbol, Downline HQ para venta directa) y desarrollo a medida cuando lo necesites.",
+    "og": "Apps inteligentes para entrenamiento, ventas, venta directa y producción, listas desde el primer día o creadas solo para ti.",
+    "sol_title": "Desarrollo a medida y precios · SINAI Global",
+    "sol_desc": "IA para tu negocio, con precios claros desde el inicio: diagnóstico con IA, webs inteligentes, automatizaciones con IA, adaptación de plataformas, apps a medida, soporte mensual y hosting."
+  },
+  "nav": {
+    "home": "Inicio de SINAI Global",
+    "main": "Inicio",
+    "products": "Productos",
+    "solutions": "Soluciones para empresas",
+    "cinema": "Cinema",
+    "lifestyle": "Lifestyle",
+    "about": "Nosotros",
+    "contact": "Contacto",
+    "menu": "Menú",
+    "close": "Cerrar menú",
+    "language": "Idioma",
+    "currency": "Moneda",
+    "skip": "Saltar al contenido"
+  },
+  "intro": {
+    "skip": "Saltar intro"
+  },
+  "hero": {
+    "h1": "IA que trabaja dentro de tu negocio.",
+    "sub": "Apps inteligentes para entrenamiento, ventas, venta directa y producción. Listas para trabajar desde el primer día, o creadas solo para ti.",
+    "cta1": "Ver los productos",
+    "cta2": "Habla con nosotros",
+    "visual": "Pantallas reales de JaSale, SINAI Club y SINAI Cinema"
+  },
+  "divisions": {
+    "label": "La empresa",
+    "software": "Software",
+    "software_d": "Productos inteligentes e IA a medida para empresas. Nuestra mayor división, y la que marca el camino.",
+    "cinema": "SINAI Cinema",
+    "cinema_d": "Medios y producción",
+    "lifestyle": "SINAI Lifestyle",
+    "lifestyle_d": "Vida saludable"
+  },
+  "build": {
+    "h2": "Lo que construimos",
+    "lead": "La división de software: productos inteligentes, cada uno creado para un sector.",
+    "live": "Activo",
+    "dev": "En desarrollo",
+    "soon": "Próximamente",
+    "demo": "Reserva una demo",
+    "jasale_tag": "Ventas de campo",
+    "jasale_line": "Un plan semanal inteligente para cada agente, pedidos y cobros incluso sin cobertura, y un solo panel para el responsable.",
+    "club_tag": "Clubes de fútbol",
+    "club_line": "Un plan de entrenamiento inteligente para cada categoría, fichas de jugador que se completan solas a partir de notas de voz y una vista para las familias.",
+    "dl_tag": "Venta directa",
+    "dl_line": "Una página de ventas personal y un CRM para cada distribuidor, y un árbol de red en vivo para el líder.",
+    "dl_link": "Sobre Downline HQ",
+    "custom_tag": "A medida",
+    "custom_t": "Soluciones de IA para tu negocio",
+    "custom_line": "Automatizaciones, webs inteligentes y apps creadas en torno a cómo ya funciona tu negocio.",
+    "custom_from": "Diagnóstico con IA para tu negocio",
+    "custom_cta": "Precios y servicios"
+  },
+  "how": {
+    "h2": "Cómo trabajamos",
+    "s1_t": "Un núcleo inteligente",
+    "s1_d": "Todos los productos funcionan sobre el mismo núcleo probado. Lo adaptamos a tu negocio en lugar de empezar de cero.",
+    "s2_t": "Un ingeniero a tu lado",
+    "s2_d": "Nos sentamos con tu equipo, observamos el trabajo real y lo convertimos en pantallas y reglas.",
+    "s3_t": "Un piloto funcional, rápido",
+    "s3_d": "Tu equipo usa una versión funcional en pocas semanas. La mejoramos cada semana con lo que escuchamos."
+  },
+  "trust": {
+    "h2": "Hecho para inspirar confianza",
+    "sec_t": "Seguridad",
+    "sec_d": "Los datos se guardan en bases de datos gestionadas y cifradas, y cada solicitud se verifica según quién la hace.",
+    "perm_t": "Permisos",
+    "perm_d": "Cada rol ve solo lo que necesita. Un agente ve sus propios clientes; un responsable ve al equipo.",
+    "minors_t": "Protección de menores",
+    "minors_d": "En SINAI Club, las fotos y vídeos de niños requieren el consentimiento de su padre o madre, que puede retirarlo en cualquier momento.",
+    "rights_t": "Derechos sobre el contenido",
+    "rights_d": "SINAI Cinema registra cómo se creó cada recurso generado con IA, para una cadena de derechos clara.",
+    "priv_t": "Privacidad",
+    "priv_d": "Tus datos son tuyos. No los vendemos ni los usamos para publicidad.",
+    "priv_link": "Política de privacidad"
+  },
+  "nums": {
+    "h2": "En cifras",
+    "n1": "plataformas activas en uso diario",
+    "n2": "idiomas en este sitio",
+    "n3": "ejercicios en la biblioteca de SINAI Club",
+    "n4": "idiomas de interfaz en SINAI Cinema"
+  },
+  "cinema": {
+    "h2": "SINAI Cinema",
+    "d": "Una plataforma de streaming para cine independiente hecho con IA, y el estudio detrás del drama bíblico Blood, Sand and Faith.",
+    "cta": "Consigue acceso anticipado"
+  },
+  "life": {
+    "h2": "SINAI Lifestyle",
+    "d": "Una rutina diaria saludable, con bebidas de bHIP.",
+    "disclosure": "Liran es distribuidor independiente de bHIP; la marca y los productos pertenecen a bHIP Global.",
+    "xgrn": "Una bebida verde para la mañana con vitaminas, minerales, fibra e ingredientes vegetales: maca, matcha, moringa y espirulina. Baja en calorías, sin azúcar añadido.",
+    "indigo": "Una bebida exótica y refrescante con açaí, goji, té verde, guaraná, maca y ginseng, con vitaminas del grupo B y vitamina C. Vegana, sin gluten, sin azúcar añadido.",
+    "byng": "Un suplemento de colágeno premium con sabor a fresa y limón, para una rutina de belleza diaria.",
+    "order": "Pedir en la web del producto",
+    "wa": "Pregunta por WhatsApp"
+  },
+  "cta": {
+    "h2": "Pongamos la IA a trabajar en tu negocio.",
+    "d": "Cuéntanos cómo funciona tu negocio hoy. Te mostraremos dónde la IA te ahorra más tiempo.",
+    "b1": "Habla por WhatsApp",
+    "b2": "Cuéntanos sobre tu negocio"
+  },
+  "about": {
+    "h2": "Sobre la empresa",
+    "p1": "SINAI Global es una empresa tecnológica del norte de Israel. Creamos software que lleva la IA al trabajo diario de las empresas, empezando por las personas que hacen el trabajo.",
+    "founder": "Liran Dandekar, fundador",
+    "bio": "Gestor, entrenador y creador. Diez años dirigiendo operaciones de ventas y servicio, analista y jefe de equipo en Inteligencia de las FDI, estudios de Ingeniería Industrial en el Technion. Hoy, profesor de educación física y entrenador de fútbol juvenil que diseña y lanza software con agentes de programación de IA."
+  },
+  "contact": {
+    "h2": "Contacto",
+    "email": "Correo",
+    "whatsapp": "WhatsApp",
+    "copy": "Copiar",
+    "copied": "Copiado",
+    "place": "Shlomi, Israel"
+  },
+  "footer": {
+    "divisions": "Divisiones",
+    "platforms": "Plataformas",
+    "company": "Empresa",
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "rights": "© 2026 SINAI Global"
+  },
+  "sol": {
+    "h1": "IA creada en torno a tu negocio.",
+    "sub": "Cuando un producto listo no basta, creamos lo que necesitas: desde una automatización hasta una app completa. Precios claros desde el inicio.",
+    "cta": "Cuéntanos sobre tu negocio",
+    "prices_h2": "Servicios y precios",
+    "currency_note": "Precios fijos por moneda. Precios sin IVA.",
+    "p1_t": "Diagnóstico con IA para tu negocio",
+    "p1_d": "Una sesión de trabajo con tu equipo y un mapa por escrito de dónde la IA ahorra más tiempo. Se descuenta de cualquier proyecto que decidas hacer.",
+    "p2_t": "Web inteligente o landing page",
+    "p2_d": "Una web rápida en tus idiomas, con un chat que responde a los clientes y contactos que te llegan directamente.",
+    "p3_t": "Automatización con IA",
+    "p3_d": "Respuestas en WhatsApp, informes automáticos, actualizaciones del CRM. Precio por proceso.",
+    "p4_t": "Una de nuestras plataformas, adaptada a tu negocio",
+    "p4_d": "JaSale, SINAI Club o Downline HQ con tu marca, tus procesos y tus campos.",
+    "p5_t": "App totalmente a medida",
+    "p5_d": "Una app creada desde cero en torno a cómo funciona tu negocio, para móvil y ordenador.",
+    "p6_t": "Soporte mensual (cuota fija)",
+    "p6_d": "Un equipo estable para mejoras, nuevas funciones y automatizaciones, cada mes.",
+    "p7_t": "Hosting y mantenimiento",
+    "p7_d": "Servidores, copias de seguridad, actualizaciones y monitorización, para que todo siga funcionando.",
+    "from": "Desde {p}",
+    "per_process": "Desde {p} por proceso",
+    "setup": "Puesta en marcha desde {p} + suscripción mensual",
+    "range_month": "{a}–{b} / mes",
+    "from_month": "Desde {p} / mes",
+    "steps_h2": "Cómo avanza un proyecto",
+    "st1_t": "Diagnóstico",
+    "st1_d": "Conocemos el trabajo y acordamos el resultado que más importa.",
+    "st2_t": "Piloto",
+    "st2_d": "Una versión funcional en manos de tu equipo en pocas semanas.",
+    "st3_t": "Lanzamiento y crecimiento",
+    "st3_d": "Lanzamos, medimos y mejoramos cada semana.",
+    "form_h2": "Cuéntanos sobre tu negocio",
+    "form_d": "Bastan unas líneas. Te responderemos pronto.",
+    "f_name": "Tu nombre",
+    "f_business": "Nombre del negocio",
+    "f_field": "Sector",
+    "f_need": "¿Qué te gustaría que la IA hiciera por ti?",
+    "f_contact": "Teléfono o email",
+    "f_send_wa": "Enviar por WhatsApp",
+    "f_send_mail": "Enviar por email",
+    "f_required": "Indica tu nombre, lo que necesitas y cómo contactarte.",
+    "f_sent": "Tu mensaje está listo para enviar en la app que se acaba de abrir.",
+    "msg_intro": "Hola Liran, me gustaría saber más sobre IA para mi negocio."
+  }
+}
