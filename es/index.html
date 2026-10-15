@@ -15,16 +15,98 @@
 <link rel="alternate" hreflang="fr" href="https://sinai-global.com/fr/">
 <link rel="alternate" hreflang="pt" href="https://sinai-global.com/pt/">
 <link rel="alternate" hreflang="x-default" href="https://sinai-global.com/">
-<script src="/assets/lang.js?v=202610151345"></script>
-<script src="/assets/phone.js?v=202610151345" defer></script>
+<script src="/assets/lang.js?v=202610151600"></script>
+<script src="/assets/phone.js?v=202610151600" defer></script>
 <meta property="og:title" content="SINAI Global">
 <meta property="og:description" content="Software para quienes hacen el trabajo sobre el terreno.">
 <meta property="og:url" content="https://sinai-global.com/es/">
 <meta property="og:locale" content="es_ES">
+<link rel="canonical" href="https://sinai-global.com/es/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SINAI Global">
+<meta property="og:image" content="https://sinai-global.com/assets/og/sinai-global.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SINAI Global: JaSale, SINAI Club, Downline HQ, SINAI Cinema">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sinai-global.com/assets/og/sinai-global.jpg">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://sinai-global.com/#org",
+   "name": "SINAI Global",
+   "url": "https://sinai-global.com/",
+   "logo": "https://sinai-global.com/assets/og/logo.png",
+   "email": "hello@sinai-global.com",
+   "telephone": "+972-50-776-3923",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Shlomi",
+    "addressCountry": "IL"
+   },
+   "founder": {
+    "@type": "Person",
+    "name": "Liran Dandekar"
+   },
+   "sameAs": [
+    "https://jasale.app/",
+    "https://sinaiclub.com/",
+    "https://sinaicinema.com/",
+    "https://downlinehq.app/"
+   ]
+  },
+  {
+   "@type": "ItemList",
+   "name": "Plataformas",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "item": {
+      "@type": "SoftwareApplication",
+      "name": "JaSale",
+      "url": "https://jasale.app/",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web (PWA)",
+      "description": "La app de ventas en terreno para empresas que venden a través de agentes",
+      "inLanguage": "es",
+      "publisher": {
+       "@id": "https://sinai-global.com/#org"
+      }
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "item": {
+      "@type": "SoftwareApplication",
+      "name": "SINAI Club",
+      "url": "https://sinaiclub.com/",
+      "applicationCategory": "SportsApplication",
+      "operatingSystem": "Web (PWA)",
+      "description": "Entrenamiento y desarrollo de jugadores en el fútbol infantil y juvenil, nacida en la cancha",
+      "inLanguage": "es",
+      "publisher": {
+       "@id": "https://sinai-global.com/#org"
+      }
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+<!-- TODO Cloudflare Web Analytics: add the site in Cloudflare (Analytics & Logs > Web Analytics), paste its token below and uncomment.
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "PASTE_TOKEN_HERE"}'></script>
+-->
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="/assets/site.css?v=202610151345">
+<link rel="stylesheet" href="/assets/site.css?v=202610151600">
 </head>
 <body>
 <div class="wrap">
@@ -47,13 +129,14 @@
   </div>
 
   <section id="platforms">
-    <div class="sec-head"><h2>Plataformas</h2><span class="eyebrow">Registro · oct. 2026</span></div>
+    <div class="sec-head"><h2>Plataformas</h2><span class="eyebrow">Cuatro plataformas</span></div>
 
     <article class="row">
       <div class="code"><span class="id">SG-01</span><span class="pill live">Activa</span></div>
       <div>
         <div class="ptitle"><img class="plogo" src="/assets/logos/jasale.svg" alt="" width="48" height="48"><h3>JaSale</h3></div>
         <div class="tag">La app de ventas en terreno para empresas que venden a través de agentes</div>
+        <p class="who"><span>Para quién</span>Empresas de distribución que venden a través de agentes de campo, en cualquier sector: farmacia, alimentación, cosmética y perfumería, herramientas e industria</p>
         <p>Creada primero para un agente de campo del sector farmacéutico que trabajaba con catálogos en PDF y notas en papel. JaSale planifica la semana del agente, muestra al gerente todo el equipo de un vistazo y sigue funcionando en la ruta aunque no haya señal.</p>
         <ul>
           <li>Un plan semanal inteligente basado en las deudas abiertas, los días desde la última visita y el último pedido de cada cliente, y el ritmo de visitas que exige su calificación. Quien fue visitado en los últimos 14 días queda fuera.</li>
@@ -64,10 +147,11 @@
         </ul>
       </div>
       <div class="facts"><dl>
-        <div><dt>Sitio</dt><dd><a class="go" href="https://jasale.app/">jasale.app ↗</a></dd></div>
         <div><dt>Usuarios</dt><dd>Agentes, gerentes, oficina, conductores, almacén</dd></div>
         <div><dt>Tecnología</dt><dd class="stack"><span>PWA</span><span>Supabase</span><span>PostgreSQL</span></dd></div>
-      </dl></div>
+      </dl>
+        <div class="pcta"><a class="btn accent" href="https://wa.me/972507763923?text=Hola%20Liran%2C%20me%20gustar%C3%ADa%20reservar%20una%20demo%20de%20JaSale." target="_blank" rel="noopener">Reservar una demo</a><a class="btn ghost" href="https://jasale.app/" dir="ltr">jasale.app</a></div>
+      </div>
       <figure class="shot phone" data-phone><div class="device"><div class="screen" style="--sb:#577794"><img data-sb="#577794" src="/assets/screens/jasale/es/1.webp" alt="JaSale: Mi día" width="420" height="909" loading="lazy" decoding="async" class="on"><img data-sb="#557492" src="/assets/screens/jasale/es/2.webp" alt="JaSale: Plan semanal" width="420" height="909" loading="lazy" decoding="async" aria-hidden="true"><img data-sb="#577795" src="/assets/screens/jasale/es/3.webp" alt="JaSale: Informe semanal" width="420" height="909" loading="lazy" decoding="async" aria-hidden="true"></div></div><div class="pdots" hidden><button type="button" aria-label="Ver: Mi día" aria-current="true"></button><button type="button" aria-label="Ver: Plan semanal"></button><button type="button" aria-label="Ver: Informe semanal"></button></div></figure>
     </article>
 
@@ -76,7 +160,8 @@
       <div>
         <div class="ptitle"><img class="plogo" src="/assets/logos/sinai-club.svg" alt="" width="48" height="48"><h3>SINAI Club</h3></div>
         <div class="tag">Entrenamiento y desarrollo de jugadores en el fútbol infantil y juvenil, nacida en la cancha</div>
-        <p>Nació de más de una década entrenando fútbol infantil y juvenil, con equipos desde preescolar hasta 10.º grado. El entrenador planifica la temporada por adelantado, anota lo que hace cada jugador durante la práctica y esas notas van formando una ficha de jugador. Padres y jugadores tienen su propia vista, y el lado del entrenador funciona sin internet.</p>
+        <p class="who"><span>Para quién</span>Escuelas de fútbol, clubes y entrenadores, desde grupos de preescolar hasta equipos de adultos</p>
+        <p>Nació de más de una década entrenando fútbol infantil y juvenil, con equipos desde grupos de preescolar en escuelas de fútbol hasta equipos de adultos. El entrenador planifica la temporada por adelantado, anota lo que hace cada jugador durante la práctica y esas notas van formando una ficha de jugador. Padres y jugadores tienen su propia vista, y el lado del entrenador funciona sin internet.</p>
         <ul>
           <li>Un plan de entrenamiento inteligente: elige un tema y un periodo, y cada sesión se arma para la categoría de edad del equipo, avanzando semana a semana de la enseñanza a la práctica y a un partido de prueba</li>
           <li>Cada sesión tiene una estructura de entrenador: calentamiento, rondo, bloque principal y partido final, con una biblioteca de 66 ejercicios inspirados en La Masía, demostraciones animadas y un calentamiento de prevención de lesiones cada semana</li>
@@ -86,10 +171,11 @@
         </ul>
       </div>
       <div class="facts"><dl>
-        <div><dt>Sitio</dt><dd><a class="go" href="https://sinaiclub.com/">sinaiclub.com ↗</a></dd></div>
         <div><dt>Usuarios</dt><dd>Entrenadores, directivos, padres, jugadores</dd></div>
         <div><dt>Tecnología</dt><dd class="stack"><span>PWA</span><span>Supabase</span></dd></div>
-      </dl></div>
+      </dl>
+        <div class="pcta"><a class="btn accent" href="https://wa.me/972507763923?text=Hola%20Liran%2C%20me%20gustar%C3%ADa%20reservar%20una%20demo%20de%20SINAI%20Club." target="_blank" rel="noopener">Reservar una demo</a><a class="btn ghost" href="https://sinaiclub.com/" dir="ltr">sinaiclub.com</a></div>
+      </div>
       <figure class="shot phone" data-phone><div class="device"><div class="screen" style="--sb:#f5f7fb"><img data-sb="#f5f7fb" src="/assets/screens/sinaiclub/es/1.webp" alt="SINAI Club: Plan de entrenamiento" width="420" height="909" loading="lazy" decoding="async" class="on"><img data-sb="#818aa5" src="/assets/screens/sinaiclub/es/2.webp" alt="SINAI Club: Partido" width="420" height="909" loading="lazy" decoding="async" aria-hidden="true"><img data-sb="#f5f7fb" src="/assets/screens/sinaiclub/es/3.webp" alt="SINAI Club: Ficha del jugador" width="420" height="909" loading="lazy" decoding="async" aria-hidden="true"></div></div><div class="pdots" hidden><button type="button" aria-label="Ver: Plan de entrenamiento" aria-current="true"></button><button type="button" aria-label="Ver: Partido"></button><button type="button" aria-label="Ver: Ficha del jugador"></button></div></figure>
     </article>
 
@@ -98,6 +184,7 @@
       <div>
         <div class="ptitle"><img class="plogo" src="/assets/logos/downline-hq.svg" alt="" width="48" height="48"><h3>Downline HQ</h3></div>
         <div class="tag">CRM, árbol de red y páginas de venta personales para equipos de venta directa</div>
+        <p class="who"><span>Para quién</span>Redes de venta directa y sus líderes</p>
         <p>Creada dentro de nuestra propia red de venta directa y pensada para distribuidores de cualquier empresa. Cada distribuidor recibe una página de venta personal y un CRM para leads, pedidos y tareas de seguimiento. Los líderes ven toda su red, y el dueño de la red decide qué puede cambiar cada persona. El panel funciona en 9 idiomas.</p>
         <ul>
           <li>Una página de venta personal para cada distribuidor, con su foto, contacto y medios de pago, y un chat de producto que responde en su nombre</li>
@@ -107,10 +194,11 @@
         </ul>
       </div>
       <div class="facts"><dl>
-        <div><dt>Página</dt><dd><a class="go" href="/es/downline-hq/">Downline HQ →</a></dd></div>
         <div><dt>Dominio</dt><dd>downlinehq.app</dd></div>
         <div><dt>Tecnología</dt><dd class="stack"><span>Next.js</span><span>Supabase</span><span>Vercel</span></dd></div>
-      </dl></div>
+      </dl>
+        <div class="pcta"><a class="btn accent" href="https://wa.me/972507763923?text=Hola%20Liran%2C%20me%20gustar%C3%ADa%20reservar%20una%20demo%20de%20Downline%20HQ." target="_blank" rel="noopener">Reservar una demo</a><a class="btn ghost" href="/es/downline-hq/" dir="ltr">Downline HQ</a></div>
+      </div>
       <figure class="shot"><svg class="tree" viewBox="0 0 300 220" role="img" aria-label="Un árbol de red: un dueño, dos líderes y cinco distribuidores">
       <line x1="150" y1="44" x2="80" y2="100"/><line x1="150" y1="44" x2="220" y2="100"/>
       <line x1="80" y1="124" x2="40" y2="170"/><line x1="80" y1="124" x2="100" y2="170"/>
@@ -129,6 +217,7 @@
       <div>
         <div class="ptitle"><img class="plogo" src="/assets/logos/sinai-cinema.png" alt="" width="48" height="48"><h3>SINAI Cinema</h3></div>
         <div class="tag">Una plataforma de streaming para cine independiente hecho con IA, y el estudio detrás de BSF</div>
+        <p class="who"><span>Para quién</span>Cineastas independientes y público del cine de IA de calidad</p>
         <p>Largometrajes, cortometrajes y micros de creadores de todo el mundo, gratis para ver. Cada película se analiza antes de publicarse. La plataforma abre con <i>Blood, Sand and Faith</i>, un drama bíblico que producimos nosotros. Antes del lanzamiento, el acceso está limitado a cuentas aprobadas.</p>
         <ul>
           <li>Revisión con IA de cada episodio antes de publicar: historia, factura y sonido, con un informe que el creador puede apelar</li>
@@ -138,9 +227,10 @@
         </ul>
       </div>
       <div class="facts"><dl>
-        <div><dt>Sitio</dt><dd><a class="go" href="https://sinaicinema.com/">sinaicinema.com ↗</a></dd></div>
         <div><dt>Formato</dt><dd>Plataforma de streaming y serie dramática</dd></div>
-      </dl></div>
+      </dl>
+        <div class="pcta"><a class="btn accent" href="https://sinaicinema.com/coming-soon">Obtener acceso anticipado</a><a class="btn ghost" href="https://sinaicinema.com/" dir="ltr">sinaicinema.com</a></div>
+      </div>
       <figure class="shot wide"><img src="/assets/shots/sinaicinema.webp" alt="SINAI Cinema" loading="lazy" width="1240" height="420"></figure>
     </article>
   </section>
@@ -165,15 +255,15 @@
       </div>
       <div class="card">
         <div class="eyebrow">Contacto</div>
-        <div class="actions"><a class="btn big accent" href="mailto:lirandandekar@gmail.com">Escríbeme</a><a class="btn big ghost" href="https://wa.me/972507763923" target="_blank" rel="noopener">WhatsApp</a></div>
-        <div class="line"><span class="val" id="email">lirandandekar@gmail.com</span><button class="btn small" type="button" data-copy="email" data-done="Copiado">Copiar</button></div>
+        <div class="actions"><a class="btn big accent" href="mailto:hello@sinai-global.com">Escríbeme</a><a class="btn big ghost" href="https://wa.me/972507763923" target="_blank" rel="noopener">WhatsApp</a></div>
+        <div class="line"><span class="val" id="email">hello@sinai-global.com</span><button class="btn small" type="button" data-copy="email" data-done="Copiado">Copiar</button></div>
         <div class="line"><span class="val" id="phone">+972 50-776-3923</span><button class="btn small" type="button" data-copy="phone" data-done="Copiado">Copiar</button></div>
         <div class="line"><span>Shlomi, Israel</span></div>
       </div>
     </div>
   </section>
 
-  <footer><span>© 2026 SINAI Global</span><span class="foot-lng" aria-label="Idioma"><a href="/he/" data-setlang="he" lang="he">עברית</a> · <a href="/" data-setlang="en" lang="en">English</a> · <a href="/ru/" data-setlang="ru" lang="ru">Русский</a> · <a href="/ar/" data-setlang="ar" lang="ar">العربية</a> · <span aria-current="true" lang="es">Español</span> · <a href="/de/" data-setlang="de" lang="de">Deutsch</a> · <a href="/it/" data-setlang="it" lang="it">Italiano</a> · <a href="/fr/" data-setlang="fr" lang="fr">Français</a> · <a href="/pt/" data-setlang="pt" lang="pt">Português</a></span></footer>
+  <footer><span>© 2026 SINAI Global<span class="legal"> · <a href="/es/privacy/">Privacidad</a> · <a href="/es/terms/">Términos</a></span></span><span class="foot-lng" aria-label="Idioma"><a href="/he/" data-setlang="he" lang="he">עברית</a> · <a href="/" data-setlang="en" lang="en">English</a> · <a href="/ru/" data-setlang="ru" lang="ru">Русский</a> · <a href="/ar/" data-setlang="ar" lang="ar">العربية</a> · <span aria-current="true" lang="es">Español</span> · <a href="/de/" data-setlang="de" lang="de">Deutsch</a> · <a href="/it/" data-setlang="it" lang="it">Italiano</a> · <a href="/fr/" data-setlang="fr" lang="fr">Français</a> · <a href="/pt/" data-setlang="pt" lang="pt">Português</a></span></footer>
 </div>
 </body>
 </html>

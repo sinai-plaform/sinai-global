@@ -256,3 +256,23 @@ section{border-top:0;padding-block:104px}
 @keyframes pfill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 .pdots button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
 @media (max-width:860px){.row .shot.phone{--w:196px;--sbh:25px;max-width:none}}
+
+/* Platform cards: who it's for, and the demo / site actions */
+.row .who{margin:0 0 16px;padding-inline-start:14px;border-inline-start:2px solid var(--accent);font-size:15px;line-height:1.5;max-width:62ch}
+.row .who span{display:block;font-size:13px;font-weight:600;color:var(--muted);margin-bottom:2px}
+.pcta{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.pcta .btn{font-size:15px;padding:12px 20px;border-radius:999px;line-height:1.2}
+.pcta .btn.ghost{font-family:var(--mono);font-size:14px;font-weight:500}
+@media (max-width:520px){.pcta .btn{flex:1 1 auto;text-align:center}}
+/* Footer legal links */
+footer .legal a{white-space:nowrap}
+footer .legal a[aria-current]{color:var(--ink);text-decoration:none}
+/* Privacy policy and terms of use */
+.legal-doc{max-width:68ch;padding-block:72px 104px}
+.legal-doc .updated{margin:0;font-size:14px;color:var(--muted)}
+.legal-doc h1{font-size:clamp(36px,5.4vw,58px);font-weight:800;letter-spacing:-.015em;margin:10px 0 20px}
+.legal-doc .lead{margin:0 0 16px;font-size:18px;color:var(--muted)}
+.legal-doc h2{font-size:21px;font-weight:700;margin:40px 0 8px}
+.legal-doc p{margin:0}
+.legal-doc a[href^="mailto"]{white-space:nowrap}
+html[lang="he"] .legal-doc h1,html[lang="ar"] .legal-doc h1{letter-spacing:0;line-height:1.25}

@@ -179,3 +179,7 @@ footer > span:first-child a{color:var(--champagne)}
 }
 .js .rv{opacity:1;transform:none}
 body{font-variant-numeric:lining-nums}
+
+/* Footer legal links (Privacy, Terms) stay quiet next to the SINAI Global link */
+footer > span .legal a{color:var(--pewter);white-space:nowrap}
+footer > span .legal a:hover{color:var(--champagne)}

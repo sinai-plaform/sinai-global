@@ -15,16 +15,98 @@
 <link rel="alternate" hreflang="fr" href="https://sinai-global.com/fr/">
 <link rel="alternate" hreflang="pt" href="https://sinai-global.com/pt/">
 <link rel="alternate" hreflang="x-default" href="https://sinai-global.com/">
-<script src="/assets/lang.js?v=202610151345"></script>
-<script src="/assets/phone.js?v=202610151345" defer></script>
+<script src="/assets/lang.js?v=202610151600"></script>
+<script src="/assets/phone.js?v=202610151600" defer></script>
 <meta property="og:title" content="SINAI Global">
 <meta property="og:description" content="Software for people who do the work in the field.">
 <meta property="og:url" content="https://sinai-global.com/">
 <meta property="og:locale" content="en_US">
+<link rel="canonical" href="https://sinai-global.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SINAI Global">
+<meta property="og:image" content="https://sinai-global.com/assets/og/sinai-global.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SINAI Global: JaSale, SINAI Club, Downline HQ, SINAI Cinema">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sinai-global.com/assets/og/sinai-global.jpg">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://sinai-global.com/#org",
+   "name": "SINAI Global",
+   "url": "https://sinai-global.com/",
+   "logo": "https://sinai-global.com/assets/og/logo.png",
+   "email": "hello@sinai-global.com",
+   "telephone": "+972-50-776-3923",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Shlomi",
+    "addressCountry": "IL"
+   },
+   "founder": {
+    "@type": "Person",
+    "name": "Liran Dandekar"
+   },
+   "sameAs": [
+    "https://jasale.app/",
+    "https://sinaiclub.com/",
+    "https://sinaicinema.com/",
+    "https://downlinehq.app/"
+   ]
+  },
+  {
+   "@type": "ItemList",
+   "name": "Platforms",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "item": {
+      "@type": "SoftwareApplication",
+      "name": "JaSale",
+      "url": "https://jasale.app/",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web (PWA)",
+      "description": "The field-sales app for companies that sell through agents",
+      "inLanguage": "en",
+      "publisher": {
+       "@id": "https://sinai-global.com/#org"
+      }
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "item": {
+      "@type": "SoftwareApplication",
+      "name": "SINAI Club",
+      "url": "https://sinaiclub.com/",
+      "applicationCategory": "SportsApplication",
+      "operatingSystem": "Web (PWA)",
+      "description": "Training and player development for youth football, built on the pitch",
+      "inLanguage": "en",
+      "publisher": {
+       "@id": "https://sinai-global.com/#org"
+      }
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+<!-- TODO Cloudflare Web Analytics: add the site in Cloudflare (Analytics & Logs > Web Analytics), paste its token below and uncomment.
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "PASTE_TOKEN_HERE"}'></script>
+-->
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="/assets/site.css?v=202610151345">
+<link rel="stylesheet" href="/assets/site.css?v=202610151600">
 </head>
 <body>
 <div class="wrap">
@@ -47,13 +129,14 @@
   </div>
 
   <section id="platforms">
-    <div class="sec-head"><h2>Platforms</h2><span class="eyebrow">Ledger · Oct 2026</span></div>
+    <div class="sec-head"><h2>Platforms</h2><span class="eyebrow">Four platforms</span></div>
 
     <article class="row">
       <div class="code"><span class="id">SG-01</span><span class="pill live">Live</span></div>
       <div>
         <div class="ptitle"><img class="plogo" src="/assets/logos/jasale.svg" alt="" width="48" height="48"><h3>JaSale</h3></div>
         <div class="tag">The field-sales app for companies that sell through agents</div>
+        <p class="who"><span>Who it's for</span>Distribution companies that sell through field agents, in any field: pharma, food, cosmetics and perfume, tools and industry</p>
         <p>Built first for a field agent in the pharma sector who worked from PDF catalogs and paper notes. JaSale plans the agent's week, shows the manager the whole team at a glance, and keeps working on the road with no signal.</p>
         <ul>
           <li>A smart weekly plan built from open debts, the days since each customer's last visit and order, and the visit rhythm their grade calls for. Anyone seen in the last 14 days stays off the list.</li>
@@ -64,10 +147,11 @@
         </ul>
       </div>
       <div class="facts"><dl>
-        <div><dt>Site</dt><dd><a class="go" href="https://jasale.app/">jasale.app ↗</a></dd></div>
         <div><dt>Users</dt><dd>Agents, managers, office, drivers, warehouse</dd></div>
         <div><dt>Stack</dt><dd class="stack"><span>PWA</span><span>Supabase</span><span>PostgreSQL</span></dd></div>
-      </dl></div>
+      </dl>
+        <div class="pcta"><a class="btn accent" href="https://wa.me/972507763923?text=Hi%20Liran%2C%20I%27d%20like%20to%20book%20a%20demo%20of%20JaSale." target="_blank" rel="noopener">Book a demo</a><a class="btn ghost" href="https://jasale.app/" dir="ltr">jasale.app</a></div>
+      </div>
       <figure class="shot phone" data-phone><div class="device"><div class="screen" style="--sb:#577794"><img data-sb="#577794" src="/assets/screens/jasale/en/1.webp" alt="JaSale: My day" width="420" height="909" loading="lazy" decoding="async" class="on"><img data-sb="#547492" src="/assets/screens/jasale/en/2.webp" alt="JaSale: Weekly plan" width="420" height="909" loading="lazy" decoding="async" aria-hidden="true"><img data-sb="#577795" src="/assets/screens/jasale/en/3.webp" alt="JaSale: Weekly report" width="420" height="909" loading="lazy" decoding="async" aria-hidden="true"></div></div><div class="pdots" hidden><button type="button" aria-label="Show: My day" aria-current="true"></button><button type="button" aria-label="Show: Weekly plan"></button><button type="button" aria-label="Show: Weekly report"></button></div></figure>
     </article>
 
@@ -76,7 +160,8 @@
       <div>
         <div class="ptitle"><img class="plogo" src="/assets/logos/sinai-club.svg" alt="" width="48" height="48"><h3>SINAI Club</h3></div>
         <div class="tag">Training and player development for youth football, built on the pitch</div>
-        <p>Built from more than a decade of coaching youth football, with teams from kindergarten to 10th grade. The coach plans the season ahead, notes what each player does during practice, and the notes build a player card over time. Parents and players get their own view, and the coach side works with no internet.</p>
+        <p class="who"><span>Who it's for</span>Football schools, clubs and coaches, from kindergarten groups to adult teams</p>
+        <p>Built from more than a decade of coaching youth football, with teams from kindergarten groups in football schools up to adult teams. The coach plans the season ahead, notes what each player does during practice, and the notes build a player card over time. Parents and players get their own view, and the coach side works with no internet.</p>
         <ul>
           <li>A smart training plan: choose a theme and a period, and every session is built for the team's age group, moving week by week from teaching to practice to a test game</li>
           <li>Every session has a coach's structure: warm-up, rondo, main block and a closing game, drawn from 66 drills inspired by La Masia, with animated demos and an injury-prevention warm-up each week</li>
@@ -86,10 +171,11 @@
         </ul>
       </div>
       <div class="facts"><dl>
-        <div><dt>Site</dt><dd><a class="go" href="https://sinaiclub.com/">sinaiclub.com ↗</a></dd></div>
         <div><dt>Users</dt><dd>Coaches, managers, parents, players</dd></div>
         <div><dt>Stack</dt><dd class="stack"><span>PWA</span><span>Supabase</span></dd></div>
-      </dl></div>
+      </dl>
+        <div class="pcta"><a class="btn accent" href="https://wa.me/972507763923?text=Hi%20Liran%2C%20I%27d%20like%20to%20book%20a%20demo%20of%20SINAI%20Club." target="_blank" rel="noopener">Book a demo</a><a class="btn ghost" href="https://sinaiclub.com/" dir="ltr">sinaiclub.com</a></div>
+      </div>
       <figure class="shot phone" data-phone><div class="device"><div class="screen" style="--sb:#f5f7fb"><img data-sb="#f5f7fb" src="/assets/screens/sinaiclub/en/1.webp" alt="SINAI Club: Training plan" width="420" height="909" loading="lazy" decoding="async" class="on"><img data-sb="#818aa5" src="/assets/screens/sinaiclub/en/2.webp" alt="SINAI Club: Game" width="420" height="909" loading="lazy" decoding="async" aria-hidden="true"><img data-sb="#f5f7fb" src="/assets/screens/sinaiclub/en/3.webp" alt="SINAI Club: Player card" width="420" height="909" loading="lazy" decoding="async" aria-hidden="true"></div></div><div class="pdots" hidden><button type="button" aria-label="Show: Training plan" aria-current="true"></button><button type="button" aria-label="Show: Game"></button><button type="button" aria-label="Show: Player card"></button></div></figure>
     </article>
 
@@ -98,6 +184,7 @@
       <div>
         <div class="ptitle"><img class="plogo" src="/assets/logos/downline-hq.svg" alt="" width="48" height="48"><h3>Downline HQ</h3></div>
         <div class="tag">CRM, network tree and personal sales pages for direct-sales teams</div>
+        <p class="who"><span>Who it's for</span>Direct-sales networks and their leaders</p>
         <p>Built inside our own direct-sales network and designed for distributors of any company. Every distributor gets a personal sales page and a CRM for leads, orders and follow-up tasks. Leaders see their whole downline, and the network owner decides what each person may change. The admin runs in 9 languages.</p>
         <ul>
           <li>A personal sales page for each distributor, with their photo, contact and payment methods, and a product chat that answers in their name</li>
@@ -107,10 +194,11 @@
         </ul>
       </div>
       <div class="facts"><dl>
-        <div><dt>Page</dt><dd><a class="go" href="/downline-hq/">Downline HQ →</a></dd></div>
         <div><dt>Domain</dt><dd>downlinehq.app</dd></div>
         <div><dt>Stack</dt><dd class="stack"><span>Next.js</span><span>Supabase</span><span>Vercel</span></dd></div>
-      </dl></div>
+      </dl>
+        <div class="pcta"><a class="btn accent" href="https://wa.me/972507763923?text=Hi%20Liran%2C%20I%27d%20like%20to%20book%20a%20demo%20of%20Downline%20HQ." target="_blank" rel="noopener">Book a demo</a><a class="btn ghost" href="/downline-hq/" dir="ltr">Downline HQ</a></div>
+      </div>
       <figure class="shot"><svg class="tree" viewBox="0 0 300 220" role="img" aria-label="A network tree: an owner, two leaders and five distributors">
       <line x1="150" y1="44" x2="80" y2="100"/><line x1="150" y1="44" x2="220" y2="100"/>
       <line x1="80" y1="124" x2="40" y2="170"/><line x1="80" y1="124" x2="100" y2="170"/>
@@ -129,6 +217,7 @@
       <div>
         <div class="ptitle"><img class="plogo" src="/assets/logos/sinai-cinema.png" alt="" width="48" height="48"><h3>SINAI Cinema</h3></div>
         <div class="tag">A streaming platform for independent AI-made film, and the studio behind BSF</div>
+        <p class="who"><span>Who it's for</span>Independent filmmakers and audiences of prestige AI cinema</p>
         <p>Features, short films and micros from creators around the world, free to watch. Every film is analysed before it goes live. The platform opens with <i>Blood, Sand and Faith</i>, a biblical drama we produce ourselves. Pre-launch: access is limited to approved accounts.</p>
         <ul>
           <li>AI review of every episode before publishing: story, craft and sound, with a report the creator can appeal</li>
@@ -138,9 +227,10 @@
         </ul>
       </div>
       <div class="facts"><dl>
-        <div><dt>Site</dt><dd><a class="go" href="https://sinaicinema.com/">sinaicinema.com ↗</a></dd></div>
         <div><dt>Format</dt><dd>Streaming platform and drama series</dd></div>
-      </dl></div>
+      </dl>
+        <div class="pcta"><a class="btn accent" href="https://sinaicinema.com/coming-soon">Get early access</a><a class="btn ghost" href="https://sinaicinema.com/" dir="ltr">sinaicinema.com</a></div>
+      </div>
       <figure class="shot wide"><img src="/assets/shots/sinaicinema.webp" alt="SINAI Cinema" loading="lazy" width="1240" height="420"></figure>
     </article>
   </section>
@@ -165,15 +255,15 @@
       </div>
       <div class="card">
         <div class="eyebrow">Contact</div>
-        <div class="actions"><a class="btn big accent" href="mailto:lirandandekar@gmail.com">Email me</a><a class="btn big ghost" href="https://wa.me/972507763923" target="_blank" rel="noopener">WhatsApp</a></div>
-        <div class="line"><span class="val" id="email">lirandandekar@gmail.com</span><button class="btn small" type="button" data-copy="email" data-done="Copied">Copy</button></div>
+        <div class="actions"><a class="btn big accent" href="mailto:hello@sinai-global.com">Email me</a><a class="btn big ghost" href="https://wa.me/972507763923" target="_blank" rel="noopener">WhatsApp</a></div>
+        <div class="line"><span class="val" id="email">hello@sinai-global.com</span><button class="btn small" type="button" data-copy="email" data-done="Copied">Copy</button></div>
         <div class="line"><span class="val" id="phone">+972 50-776-3923</span><button class="btn small" type="button" data-copy="phone" data-done="Copied">Copy</button></div>
         <div class="line"><span class="val">Shlomi, Israel</span></div>
       </div>
     </div>
   </section>
 
-  <footer><span>© 2026 SINAI Global</span><span class="foot-lng" aria-label="Language"><a href="/he/" data-setlang="he" lang="he">עברית</a> · <span aria-current="true" lang="en">English</span> · <a href="/ru/" data-setlang="ru" lang="ru">Русский</a> · <a href="/ar/" data-setlang="ar" lang="ar">العربية</a> · <a href="/es/" data-setlang="es" lang="es">Español</a> · <a href="/de/" data-setlang="de" lang="de">Deutsch</a> · <a href="/it/" data-setlang="it" lang="it">Italiano</a> · <a href="/fr/" data-setlang="fr" lang="fr">Français</a> · <a href="/pt/" data-setlang="pt" lang="pt">Português</a></span></footer>
+  <footer><span>© 2026 SINAI Global<span class="legal"> · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></span></span><span class="foot-lng" aria-label="Language"><a href="/he/" data-setlang="he" lang="he">עברית</a> · <span aria-current="true" lang="en">English</span> · <a href="/ru/" data-setlang="ru" lang="ru">Русский</a> · <a href="/ar/" data-setlang="ar" lang="ar">العربية</a> · <a href="/es/" data-setlang="es" lang="es">Español</a> · <a href="/de/" data-setlang="de" lang="de">Deutsch</a> · <a href="/it/" data-setlang="it" lang="it">Italiano</a> · <a href="/fr/" data-setlang="fr" lang="fr">Français</a> · <a href="/pt/" data-setlang="pt" lang="pt">Português</a></span></footer>
 </div>
 </body>
 </html>
