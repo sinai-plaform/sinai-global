@@ -47,7 +47,7 @@ send, Google Calendar sync. Note: the local repo has only 20 commits (shallow hi
 ## 2. SINAI Club — youth football coaching (Live, sinaiclub.com)
 
 **Who it's for:** youth football coaches, assistants and club managers, plus parents and players (own
-views). Built by a coach of kindergarten to 7th-grade teams.
+views). Built by a coach with 10+ years in the field; audience: kindergarten groups in football schools up to adult teams.
 
 **Status:** live, app v2.7.0 (`5ef84f9`), PWA in `~/Code/sinai-club/app/`, own Supabase project.
 
@@ -174,5 +174,5 @@ SINAI Club (`~/Code/sinai-club/app/program.js`):
 - `buildSession`: per-age skeleton (`SLOTS`: warm-up, rondo/technique, development, application, game,
   cool-down), drill choice by theme keywords with recently used drills penalised (`pickDrill`), a prevention
   warm-up in the first session of each week ("FIFA 11+ style").
-- Coaching range now stated as kindergarten to 10th grade (founder update); app age profiles are
+- Audience (founder update, Oct 2026): kindergarten groups in football schools up to adult teams; no grade bands; app age profiles are
   `גן–ב׳ / ג׳–ד׳ / ה׳–ז׳ / ח׳ ומעלה` (`drills.js`).
