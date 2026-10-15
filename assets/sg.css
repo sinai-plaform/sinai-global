@@ -297,7 +297,7 @@ html[lang="he"] .sol-hero h1,html[lang="ar"] .sol-hero h1,html[lang="hi"] .sol-h
 .plist p{color:var(--slate);grid-column:1;max-width:40em}
 .plist .pr{grid-row:1/3;grid-column:2;font-size:clamp(20px,2.2vw,28px);font-weight:700;text-align:end;white-space:nowrap;font-variant-numeric:tabular-nums}
 .plist li.lead-item h3{font-size:clamp(24px,2.6vw,32px)}
-@media (max-width:640px){.plist li{grid-template-columns:1fr}.plist .pr{grid-row:auto;grid-column:1;text-align:start}}
+@media (max-width:640px){.plist li{grid-template-columns:1fr}.plist .pr{grid-row:auto;grid-column:1;text-align:start;white-space:normal}}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,3vw,48px);counter-reset:s}
 .steps div{border-top:2px solid var(--ink);padding-top:22px;counter-increment:s}
 .steps h3::before{content:counter(s);display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--sun);color:#fff;font-size:15px;margin-inline-end:12px;vertical-align:3px}
