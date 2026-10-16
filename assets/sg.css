@@ -317,3 +317,8 @@ form.biz{background:var(--paper);border:1px solid var(--line);border-radius:var(
 .form-msg{font-size:15px;min-height:1.4em}
 .form-msg.err{color:var(--sun)}
 .tile.dl .meta{color:#b7ad9b}.tile.dl .status.dev{color:#d9b45e}
+
+/* living topographic map behind the hero, solutions hero and call to action */
+.topo{position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none}
+.sky .topo{-webkit-mask:linear-gradient(to bottom,transparent,#000 22%);mask:linear-gradient(to bottom,transparent,#000 22%)}
+.cta-band .topo{z-index:0;opacity:.9}

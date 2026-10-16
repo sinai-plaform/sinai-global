@@ -159,7 +159,7 @@ function homePage(l) {
 ${header(l, 'home')}
 <main id="main">
   <section class="hero" aria-labelledby="h1">
-    <div class="sky" aria-hidden="true"><div class="glow"></div><div class="sun"></div></div>
+    <div class="sky" aria-hidden="true"><div class="glow"></div><canvas class="topo" data-topo></canvas><div class="sun"></div></div>
     ${RIDGE}
     <div class="wrap">
       <div>
@@ -236,13 +236,13 @@ ${header(l, 'home')}
     </div>
   </div></section>
 
-  <section class="sec" id="numbers" aria-labelledby="nums-h"><div class="wrap">
-    <h2 class="sr" id="nums-h">${esc(t.nums.h2)}</h2>
+  <section class="sec" id="details" aria-labelledby="details-h"><div class="wrap">
+    <div class="sec-head"><h2 id="details-h">${esc(t.nums.h2)}</h2></div>
     <div class="nums">
-      <div><b>2</b><span>${esc(t.nums.n1)}</span></div>
-      <div><b>10</b><span>${esc(t.nums.n2)}</span></div>
-      <div><b>66</b><span>${esc(t.nums.n3)}</span></div>
-      <div><b>63</b><span>${esc(t.nums.n4)}</span></div>
+      <div><b><bdi dir="ltr">14</bdi></b><span>${esc(t.nums.f1)}</span></div>
+      <div><b><bdi dir="ltr">1–20</bdi></b><span>${esc(t.nums.f2)}</span></div>
+      <div><b><bdi dir="ltr">0</bdi></b><span>${esc(t.nums.f3)}</span></div>
+      <div><b><bdi dir="ltr">36</bdi></b><span>${esc(t.nums.f4)}</span></div>
     </div>
   </div></section>
 
@@ -281,7 +281,7 @@ ${header(l, 'home')}
     </div>
   </div></section>
 
-  <section class="cta-band" aria-labelledby="cta-h"><div class="halo" aria-hidden="true"></div><div class="wrap">
+  <section class="cta-band" aria-labelledby="cta-h"><canvas class="topo" data-topo="cta" aria-hidden="true"></canvas><div class="halo" aria-hidden="true"></div><div class="wrap">
     <h2 id="cta-h">${esc(t.cta.h2)}</h2>
     <p>${esc(t.cta.d)}</p>
     <div class="ctas"><a class="btn sun" href="https://wa.me/${WA}?text=${encodeURIComponent(t.sol.msg_intro)}" target="_blank" rel="noopener">${esc(t.cta.b1)}</a><a class="btn line" href="${solPath(l)}#tell">${esc(t.cta.b2)}</a></div>
@@ -305,7 +305,7 @@ function solPage(l) {
 ${header(l, 'sol')}
 <main id="main">
   <section class="sol-hero" aria-labelledby="h1">
-    <div class="sky" aria-hidden="true"><div class="glow"></div><div class="sun"></div></div>
+    <div class="sky" aria-hidden="true"><div class="glow"></div><canvas class="topo" data-topo></canvas><div class="sun"></div></div>
     ${RIDGE}
     <div class="wrap">
       <h1 id="h1">${esc(s.h1)}</h1>
