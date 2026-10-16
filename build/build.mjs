@@ -239,10 +239,10 @@ ${header(l, 'home')}
   <section class="sec" id="details" aria-labelledby="details-h"><div class="wrap">
     <div class="sec-head"><h2 id="details-h">${esc(t.nums.h2)}</h2></div>
     <div class="nums">
-      <div><b><bdi dir="ltr">14</bdi></b><span>${esc(t.nums.f1)}</span></div>
-      <div><b><bdi dir="ltr">1–20</bdi></b><span>${esc(t.nums.f2)}</span></div>
-      <div><b><bdi dir="ltr">0</bdi></b><span>${esc(t.nums.f3)}</span></div>
-      <div><b><bdi dir="ltr">36</bdi></b><span>${esc(t.nums.f4)}</span></div>
+      <div><b><bdi dir="ltr">0</bdi></b><span>${esc(t.nums.f1)}</span></div>
+      <div><b><bdi dir="ltr">1</bdi></b><span>${esc(t.nums.f2)}</span></div>
+      <div><b><bdi dir="ltr">24/7</bdi></b><span>${esc(t.nums.f3)}</span></div>
+      <div><b><bdi dir="ltr">10+</bdi></b><span>${esc(t.nums.f4)}</span></div>
     </div>
   </div></section>
 
