@@ -1,0 +1,182 @@
+{
+  "_lang": "English",
+  "meta": {
+    "title": "SINAI Global · AI that works inside your business",
+    "desc": "SINAI Global brings AI into the business: smart apps ready for your field (JaSale for sales, SINAI Club for football, Downline HQ for direct sales) and custom development when you need it.",
+    "og": "Smart apps for training, sales, direct selling and production, ready from day one or built just for you.",
+    "sol_title": "Custom development and pricing · SINAI Global",
+    "sol_desc": "AI for your business, priced up front: AI diagnosis, smart websites, AI automations, platform customization, custom apps, monthly support and hosting."
+  },
+  "nav": {
+    "home": "SINAI Global home",
+    "main": "Main",
+    "products": "Products",
+    "solutions": "Business solutions",
+    "cinema": "Cinema",
+    "lifestyle": "Lifestyle",
+    "about": "About",
+    "contact": "Contact",
+    "menu": "Menu",
+    "close": "Close menu",
+    "language": "Language",
+    "currency": "Currency",
+    "skip": "Skip to content"
+  },
+  "intro": {
+    "skip": "Skip intro"
+  },
+  "hero": {
+    "h1": "AI that works inside your business.",
+    "sub": "Smart apps for training, sales, direct selling and production. Ready to work from day one, or built just for you.",
+    "cta1": "Explore the products",
+    "cta2": "Talk to us",
+    "visual": "Real screens from JaSale, SINAI Club and SINAI Cinema"
+  },
+  "divisions": {
+    "label": "The company",
+    "software": "Software",
+    "software_d": "Smart products and custom AI for businesses. Our largest division, and the one that leads.",
+    "cinema": "SINAI Cinema",
+    "cinema_d": "Media and production",
+    "lifestyle": "SINAI Lifestyle",
+    "lifestyle_d": "Healthy living"
+  },
+  "build": {
+    "h2": "What we build",
+    "lead": "The software division: smart products, each built for one line of work.",
+    "live": "Live",
+    "dev": "In development",
+    "soon": "Coming soon",
+    "demo": "Book a demo",
+    "jasale_tag": "Field sales",
+    "jasale_line": "A smart weekly plan for every agent, orders and collections even with no signal, and one board for the manager.",
+    "club_tag": "Football clubs",
+    "club_line": "A smart training plan for every age group, player cards that build themselves from voice notes, and a view for parents.",
+    "dl_tag": "Direct sales",
+    "dl_line": "A personal sales page and CRM for every distributor, and a live network tree for the leader.",
+    "dl_link": "About Downline HQ",
+    "custom_tag": "Custom",
+    "custom_t": "AI solutions for your business",
+    "custom_line": "Automations, smart websites and apps built around the way your business already works.",
+    "custom_from": "AI diagnosis for your business",
+    "custom_cta": "Prices and services"
+  },
+  "how": {
+    "h2": "How we work",
+    "s1_t": "One smart core",
+    "s1_d": "Every product runs on the same proven core. We fit it to your business instead of starting from zero.",
+    "s2_t": "An engineer at your side",
+    "s2_d": "We sit with your team, watch the real work, and turn it into screens and rules.",
+    "s3_t": "A working pilot, fast",
+    "s3_d": "Your team uses a working version within weeks. We improve it every week from what we hear."
+  },
+  "trust": {
+    "h2": "Built to be trusted",
+    "sec_t": "Security",
+    "sec_d": "Data is stored in managed, encrypted databases, and every request is checked against who is asking.",
+    "perm_t": "Permissions",
+    "perm_d": "Each role sees only what it needs. An agent sees their own customers; a manager sees the team.",
+    "minors_t": "Protecting minors",
+    "minors_d": "In SINAI Club, photos and videos of children need a parent's consent, and parents can withdraw it at any time.",
+    "rights_t": "Rights to content",
+    "rights_d": "SINAI Cinema records how each AI-generated asset was made, for a clear chain of title.",
+    "priv_t": "Privacy",
+    "priv_d": "Your data is yours. We don't sell it or use it to advertise.",
+    "priv_link": "Privacy policy"
+  },
+  "nums": {
+    "h2": "What it gives your business",
+    "f1": "signal needed. Our apps keep working on the road, in the field and in the warehouse, and everything syncs when the connection is back.",
+    "f2": "system for the whole business. Field team, office and management see the same picture, each with their own permissions.",
+    "f3": "a smart chat answers your customers day and night and passes the leads straight to you.",
+    "f4": "languages from day one. The system speaks your team's and your customers' language, including Hebrew and Arabic right to left."
+  },
+  "cinema": {
+    "h2": "SINAI Cinema",
+    "d": "A streaming platform for independent AI-made film, and the studio behind the biblical drama Blood, Sand and Faith.",
+    "cta": "Get early access"
+  },
+  "life": {
+    "h2": "SINAI Lifestyle",
+    "d": "A healthy daily routine, with drinks from bHIP.",
+    "disclosure": "Liran is an independent bHIP distributor; the brand and products belong to bHIP Global.",
+    "xgrn": "A green morning drink with vitamins, minerals, fiber and plant ingredients: maca, matcha, moringa and spirulina. Low in calories, no added sugar.",
+    "indigo": "An exotic, refreshing drink with acai, goji, green tea, guarana, maca and ginseng, with B vitamins and vitamin C. Vegan, gluten-free, no added sugar.",
+    "byng": "A premium collagen supplement with a strawberry-lemon taste, for a daily beauty routine.",
+    "order": "Order on the product site",
+    "wa": "Ask on WhatsApp"
+  },
+  "cta": {
+    "h2": "Let's put AI to work in your business.",
+    "d": "Tell us how your business works today. We'll show you where AI saves the most time.",
+    "b1": "Talk on WhatsApp",
+    "b2": "Tell us about your business"
+  },
+  "about": {
+    "h2": "About the company",
+    "p1": "SINAI Global is a technology company from northern Israel. We build software that brings AI into the daily work of businesses, starting with the people who do the work.",
+    "founder": "Liran Dandekar, founder",
+    "bio": "Operator, coach and builder. Ten years running sales and service operations, IDF Intelligence analyst and team leader, Industrial Engineering studies at the Technion. Today a physical education teacher and youth football coach who designs and ships software with AI coding agents."
+  },
+  "contact": {
+    "h2": "Contact",
+    "email": "Email",
+    "whatsapp": "WhatsApp",
+    "copy": "Copy",
+    "copied": "Copied",
+    "place": "Shlomi, Israel"
+  },
+  "footer": {
+    "divisions": "Divisions",
+    "platforms": "Platforms",
+    "company": "Company",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "rights": "© 2026 SINAI Global"
+  },
+  "sol": {
+    "h1": "AI built around your business.",
+    "sub": "When a ready product isn't enough, we build what you need: from one automation to a full app. Clear prices, up front.",
+    "cta": "Tell us about your business",
+    "prices_h2": "Services and prices",
+    "currency_note": "Fixed prices per currency. Prices exclude VAT.",
+    "p1_t": "AI diagnosis for your business",
+    "p1_d": "A working session with your team and a written map of where AI saves the most time. Credited toward any project you go ahead with.",
+    "p2_t": "Smart website or landing page",
+    "p2_d": "A fast site in your languages, with a chat that answers customers and leads sent straight to you.",
+    "p3_t": "AI automation",
+    "p3_d": "WhatsApp replies, automatic reports, CRM updates. Priced per process.",
+    "p4_t": "One of our platforms, fitted to your business",
+    "p4_d": "JaSale, SINAI Club or Downline HQ with your brand, your processes and your fields.",
+    "p5_t": "Fully custom app",
+    "p5_d": "An app built from scratch around the way your business works, for phone and computer.",
+    "p6_t": "Monthly support (retainer)",
+    "p6_d": "A standing team for improvements, new features and automations, every month.",
+    "p7_t": "Hosting and maintenance",
+    "p7_d": "Servers, backups, updates and monitoring, so everything keeps running.",
+    "from": "From {p}",
+    "per_process": "From {p} per process",
+    "setup": "Setup from {p} + monthly subscription",
+    "range_month": "{a}–{b} / month",
+    "from_month": "From {p} / month",
+    "steps_h2": "How a project runs",
+    "st1_t": "Diagnosis",
+    "st1_d": "We learn the work and agree on the one result that matters most.",
+    "st2_t": "Pilot",
+    "st2_d": "A working version in your team's hands within weeks.",
+    "st3_t": "Launch and growth",
+    "st3_d": "We launch, measure and improve every week.",
+    "form_h2": "Tell us about your business",
+    "form_d": "A few lines are enough. We'll get back to you soon.",
+    "f_name": "Your name",
+    "f_business": "Business name",
+    "f_field": "Field of business",
+    "f_need": "What would you like AI to do for you?",
+    "f_contact": "Phone or email",
+    "f_send_wa": "Send on WhatsApp",
+    "f_send_mail": "Send by email",
+    "f_required": "Please fill in your name, what you need, and how to reach you.",
+    "f_sent": "Your message is ready to send in the app that just opened.",
+    "msg_intro": "Hi Liran, I'd like to hear about AI for my business."
+  }
+}

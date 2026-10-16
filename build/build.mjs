@@ -1,0 +1,380 @@
+// SINAI Global page generator: node build/build.mjs
+// Writes the home page and the solutions page for 10 languages from build/i18n/<lang>.json.
+// The other pages (downline-hq, privacy, terms) are hand-written and left as they are.
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const SITE = 'https://sinai-global.com';
+const LANGS = ['he', 'en', 'ru', 'ar', 'es', 'de', 'it', 'fr', 'pt', 'hi'];
+const RTL = new Set(['he', 'ar']);
+const OG_LOCALE = { he: 'he_IL', en: 'en_US', ru: 'ru_RU', ar: 'ar_AR', es: 'es_ES', de: 'de_DE', it: 'it_IT', fr: 'fr_FR', pt: 'pt_BR', hi: 'hi_IN' };
+const FONTS = {
+  he: 'Rubik:wght@400;500;700;800',
+  ar: 'IBM+Plex+Sans+Arabic:wght@400;500;600;700',
+  hi: 'Mukta:wght@400;500;600;700;800',
+  _: 'Onest:wght@400;500;600;700;800',
+};
+// pages that only exist in the original 9 languages
+const LEGACY = new Set(['he', 'en', 'ru', 'ar', 'es', 'de', 'it', 'fr', 'pt']);
+const V = '202610152300';
+const WA = '972507763923';
+const PRICES = { // must match assets/sg.js; used for the first paint
+  diag: { ILS: 1500, USD: 420 }, site: { ILS: 4900, USD: 1350 }, auto: { ILS: 3900, USD: 1090 },
+  plat: { ILS: 9900, USD: 2750 }, app: { ILS: 29000, USD: 7900 }, ret: { ILS: [2500, 9000], USD: [690, 2490] },
+  host: { ILS: 350, USD: 99 },
+};
+
+const T = Object.fromEntries(LANGS.map(l => [l, JSON.parse(fs.readFileSync(path.join(ROOT, 'build/i18n', l + '.json'), 'utf8'))]));
+const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+const pre = l => (l === 'en' ? '' : '/' + l);
+const home = l => pre(l) + '/';
+const solPath = l => pre(l) + '/solutions/';
+const legacy = (l, p) => (LEGACY.has(l) ? pre(l) : '') + p;
+const screens = l => (LEGACY.has(l) ? l : 'en');
+const fmt = (n, c, l) => new Intl.NumberFormat(l === 'hi' ? 'en-IN' : l, { style: 'currency', currency: c, currencyDisplay: 'narrowSymbol', maximumFractionDigits: 0 }).format(n);
+function price(key, tpl, l) {
+  const c = l === 'he' ? 'ILS' : 'USD', v = PRICES[key][c];
+  const text = Array.isArray(v) ? tpl.replace('{a}', fmt(v[0], c, l)).replace('{b}', fmt(v[1], c, l)) : tpl.replace('{p}', fmt(v, c, l));
+  return `<span data-price="${key}" data-tpl="${esc(tpl)}">${esc(text)}</span>`;
+}
+
+const MARK = (cls = '') => `<svg class="${cls}" viewBox="0 0 28 28" aria-hidden="true"><path d="M2 24 L11 8 L15 14 L18 10 L26 24 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="20" cy="6" r="2.6" fill="#d4644f"/></svg>`;
+const GLOBE = `<svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M1.5 8h13M8 1.5c2 2 2.8 4 2.8 6.5S10 12.5 8 14.5M8 1.5C6 3.5 5.2 5.5 5.2 8S6 12.5 8 14.5"/></svg>`;
+const RIDGE = `<svg class="ridge" viewBox="0 0 1440 260" preserveAspectRatio="none" aria-hidden="true"><path class="back" d="M0 260V170L180 120L330 150L520 70L640 120L760 92L900 150L1080 60L1220 120L1440 90V260Z"/><path class="front" d="M0 260V215L210 180L420 205L640 120L760 165L850 140L1010 200L1220 175L1440 200V260Z"/></svg>`;
+
+function head(l, page) {
+  const t = T[l], isSol = page === 'sol';
+  const url = SITE + (isSol ? solPath(l) : home(l));
+  const alts = LANGS.map(x => `<link rel="alternate" hreflang="${x}" href="${SITE}${isSol ? solPath(x) : home(x)}">`).join('\n')
+    + `\n<link rel="alternate" hreflang="x-default" href="${SITE}${isSol ? '/solutions/' : '/'}">`;
+  const font = FONTS[l] || FONTS._;
+  const title = isSol ? t.meta.sol_title : t.meta.title, desc = isSol ? t.meta.sol_desc : t.meta.desc;
+  const ld = isSol ? '' : `<script type="application/ld+json">${JSON.stringify({
+    '@context': 'https://schema.org', '@type': 'Organization', '@id': SITE + '/#org', name: 'SINAI Global', url: SITE + '/',
+    logo: SITE + '/assets/og/logo.png', email: 'hello@sinai-global.com', telephone: '+972-50-776-3923',
+    address: { '@type': 'PostalAddress', addressLocality: 'Shlomi', addressCountry: 'IL' },
+    founder: { '@type': 'Person', name: 'Liran Dandekar' },
+    sameAs: ['https://jasale.app/', 'https://sinaiclub.com/', 'https://sinaicinema.com/', 'https://downlinehq.app/'],
+  })}</script>`;
+  const intro = isSol ? '' : `<script>(function(){try{var d=document.documentElement;if(sessionStorage.getItem('sg-intro')||!window.matchMedia||matchMedia('(prefers-reduced-motion: reduce)').matches)return;sessionStorage.setItem('sg-intro','1');d.classList.add('intro-on')}catch(e){}})()</script>`;
+  return `<!doctype html>
+<html lang="${l}" dir="${RTL.has(l) ? 'rtl' : 'ltr'}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>${esc(title)}</title>
+<meta name="description" content="${esc(desc)}">
+<meta name="theme-color" content="#121a24">
+<link rel="canonical" href="${url}">
+${alts}
+${intro}
+<script src="/assets/lang.js?v=${V}"></script>
+<script src="/assets/sg.js?v=${V}" defer></script>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SINAI Global">
+<meta property="og:title" content="${esc(title)}">
+<meta property="og:description" content="${esc(t.meta.og)}">
+<meta property="og:url" content="${url}">
+<meta property="og:locale" content="${OG_LOCALE[l]}">
+<meta property="og:image" content="${SITE}/assets/og/sinai-global.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="${SITE}/assets/og/sinai-global.jpg">
+${ld}
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=${font}&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=${font}&display=swap"></noscript>
+<link rel="stylesheet" href="/assets/sg.css?v=${V}">
+${isSol ? '' : `<link rel="preload" as="image" href="/assets/screens/jasale/${screens(l)}/1.webp">`}
+</head>`;
+}
+
+function header(l, page) {
+  const t = T[l], n = t.nav, isSol = page === 'sol', h = isSol ? home(l) : '';
+  const langLinks = LANGS.map(x => `<a href="${isSol ? solPath(x) : home(x)}" data-setlang="${x}" lang="${x}"${x === l ? ' aria-current="true"' : ''}>${esc(T[x]._lang)}</a>`).join('');
+  return `<a class="skip" href="#main">${esc(n.skip)}</a>
+<header class="top${isSol ? ' solid' : ''}">
+  <div class="wrap">
+    <a class="brand" href="${home(l)}" aria-label="${esc(n.home)}">${MARK()}SINAI GLOBAL</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">${esc(n.menu)}</button>
+    <nav class="nav" id="nav" aria-label="${esc(n.main)}">
+      <button class="menu-btn nav-close" type="button">${esc(n.close)}</button>
+      <a href="${h}#products">${esc(n.products)}</a>
+      <a href="${solPath(l)}"${isSol ? ' aria-current="page"' : ''}>${esc(n.solutions)}</a>
+      <a href="${h}#cinema" lang="en">${esc(n.cinema)}</a>
+      <a href="${h}#lifestyle" lang="en">${esc(n.lifestyle)}</a>
+      <a href="${h}#about">${esc(n.about)}</a>
+      <a href="${h}#contact">${esc(n.contact)}</a>
+      <details class="lng"><summary aria-label="${esc(n.language)}: ${esc(t._lang)}">${GLOBE}${esc(t._lang)}</summary><div class="lng-list">${langLinks}</div></details>
+    </nav>
+  </div>
+</header>`;
+}
+
+function footer(l, page) {
+  const t = T[l], n = t.nav, f = t.footer, isSol = page === 'sol', h = isSol ? home(l) : '';
+  const langs = LANGS.map(x => x === l ? `<span aria-current="true" lang="${x}">${esc(T[x]._lang)}</span>` : `<a href="${isSol ? solPath(x) : home(x)}" data-setlang="${x}" lang="${x}">${esc(T[x]._lang)}</a>`).join('');
+  const cur = ['ILS', 'USD', 'EUR', 'GBP', 'INR'].map(c => `<option value="${c}"${(l === 'he' ? 'ILS' : 'USD') === c ? ' selected' : ''}>${({ ILS: '₪ ILS', USD: '$ USD', EUR: '€ EUR', GBP: '£ GBP', INR: '₹ INR' })[c]}</option>`).join('');
+  return `<footer class="foot${page === "home" ? " flush" : ""}">
+  <div class="wrap">
+    <div class="grid">
+      <div><a class="brand" href="${home(l)}">${MARK()}SINAI GLOBAL</a><p class="tag">${esc(t.hero.h1)}</p></div>
+      <div><h2>${esc(f.divisions)}</h2><ul><li><a href="${h}#products">${esc(t.divisions.software)}</a></li><li><a href="${h}#cinema" lang="en">SINAI Cinema</a></li><li><a href="${h}#lifestyle" lang="en">SINAI Lifestyle</a></li></ul></div>
+      <div><h2>${esc(f.platforms)}</h2><ul lang="en"><li><a href="https://jasale.app/">JaSale</a></li><li><a href="https://sinaiclub.com/">SINAI Club</a></li><li><a href="${legacy(l, '/downline-hq/')}">Downline HQ</a></li><li><a href="https://sinaicinema.com/">SINAI Cinema</a></li></ul></div>
+      <div><h2>${esc(f.company)}</h2><ul><li><a href="${solPath(l)}">${esc(n.solutions)}</a></li><li><a href="${h}#about">${esc(n.about)}</a></li><li><a href="${h}#contact">${esc(n.contact)}</a></li></ul></div>
+    </div>
+    <div class="settings">
+      <nav class="langs" aria-label="${esc(n.language)}">${langs}</nav>
+      <label>${esc(n.currency)} <select class="cur" aria-label="${esc(n.currency)}">${cur}</select></label>
+      <span class="legal"><span>${esc(f.rights)}</span><a href="${legacy(l, '/privacy/')}">${esc(f.privacy)}</a><a href="${legacy(l, '/terms/')}">${esc(f.terms)}</a></span>
+    </div>
+  </div>
+</footer>`;
+}
+
+const device = (app, l, n, cls = '', eager = false) => {
+  const s = screens(l), name = app === 'jasale' ? 'JaSale' : 'SINAI Club';
+  const imgs = [1, 2, 3].slice(0, n).map(i => `<img src="/assets/screens/${app}/${s}/${i}.webp" alt="" width="420" height="909"${i === 1 ? ' class="on"' : ''}${i === 1 && eager ? ' fetchpriority="high"' : ' loading="lazy"'} decoding="async">`).join('');
+  return `<div class="device ${cls}" data-cycle role="img" aria-label="${name}"><div class="screen">${imgs}</div></div>`;
+};
+
+const ICON = {
+  sec: '<path d="M12 3l7 3v5c0 4.5-3 8.3-7 9.7C8 19.3 5 15.5 5 11V6z"/><path d="M9 11.5l2 2 4-4"/>',
+  perm: '<circle cx="9" cy="8" r="3.2"/><path d="M3.5 19c.6-3.2 2.8-5 5.5-5s4.9 1.8 5.5 5"/><path d="M16 7h5M16 11h5M18 15h3"/>',
+  minors: '<circle cx="12" cy="7" r="3"/><path d="M6 21v-3a6 6 0 0112 0v3"/><path d="M12 13v3"/>',
+  rights: '<rect x="4" y="3.5" width="16" height="17" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/>',
+  priv: '<rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V8a4 4 0 018 0v2.5"/>',
+};
+
+function homePage(l) {
+  const t = T[l], b = t.build, demo = app => `https://wa.me/${WA}?text=${encodeURIComponent(t.sol.msg_intro + ' (' + app + ')')}`;
+  return `${head(l, 'home')}
+<body>
+<div class="sg-intro"><div class="mk"><svg viewBox="0 0 28 28" aria-hidden="true"><path class="peak" d="M2 24 L11 8 L15 14 L18 10 L26 24 Z"/><circle class="disc" cx="20" cy="6" r="2.6"/></svg><div class="word" aria-hidden="true">SINAI GLOBAL</div></div><button type="button">${esc(t.intro.skip)}</button></div>
+${header(l, 'home')}
+<main id="main">
+  <section class="hero" aria-labelledby="h1">
+    <div class="sky" aria-hidden="true"><div class="glow"></div><canvas class="topo" data-topo></canvas><div class="sun"></div></div>
+    ${RIDGE}
+    <div class="wrap">
+      <div>
+        <h1 id="h1">${esc(t.hero.h1)}</h1>
+        <p class="sub">${esc(t.hero.sub)}</p>
+        <div class="ctas"><a class="btn sun" href="#products">${esc(t.hero.cta1)}</a><a class="btn line" href="#contact">${esc(t.hero.cta2)}</a></div>
+      </div>
+      <div class="stage" role="img" aria-label="${esc(t.hero.visual)}">
+        <div class="cine"><img src="/assets/shots/sinaicinema.webp" alt="" width="1240" height="420" decoding="async"></div>
+        ${device('jasale', l, 3, 'd1', true)}
+        ${device('sinaiclub', l, 3, 'd2', true)}
+      </div>
+    </div>
+  </section>
+
+  <div class="divs" aria-label="${esc(t.divisions.label)}"><div class="wrap"><ul>
+    <li><a href="#products"><b>${esc(t.divisions.software)}</b></a><span>${esc(t.divisions.software_d)}</span></li>
+    <li><a href="#cinema" lang="en"><b>SINAI Cinema</b></a><span>${esc(t.divisions.cinema_d)}</span></li>
+    <li><a href="#lifestyle" lang="en"><b>SINAI Lifestyle</b></a><span>${esc(t.divisions.lifestyle_d)}</span></li>
+  </ul></div></div>
+
+  <section class="sec" id="products" aria-labelledby="products-h"><div class="wrap">
+    <div class="sec-head"><h2 id="products-h">${esc(b.h2)}</h2><p class="lead">${esc(b.lead)}</p></div>
+
+    <article class="prod jasale">
+      <div>
+        <div class="meta"><img class="plogo" src="/assets/logos/jasale.svg" alt="" width="52" height="52" loading="lazy"><span>${esc(b.jasale_tag)}</span><span class="status live">${esc(b.live)}</span></div>
+        <h3 lang="en">JaSale</h3>
+        <p class="line">${esc(b.jasale_line)}</p>
+        <div class="acts"><a class="btn sun" href="${demo('JaSale')}" target="_blank" rel="noopener">${esc(b.demo)}</a><a class="link" href="https://jasale.app/" dir="ltr">jasale.app</a></div>
+      </div>
+      <div class="shot">${device('jasale', l, 3)}</div>
+    </article>
+
+    <article class="prod club flip">
+      <div>
+        <div class="meta"><img class="plogo" src="/assets/logos/sinai-club.svg" alt="" width="52" height="52" loading="lazy"><span>${esc(b.club_tag)}</span><span class="status live">${esc(b.live)}</span></div>
+        <h3 lang="en">SINAI Club</h3>
+        <p class="line">${esc(b.club_line)}</p>
+        <div class="acts"><a class="btn sun" href="${demo('SINAI Club')}" target="_blank" rel="noopener">${esc(b.demo)}</a><a class="link" href="https://sinaiclub.com/" dir="ltr">sinaiclub.com</a></div>
+      </div>
+      <div class="shot">${device('sinaiclub', l, 3)}</div>
+    </article>
+
+    <div class="pair">
+      <article class="tile dl">
+        <div class="meta"><img class="plogo" src="/assets/logos/downline-hq.svg" alt="" width="52" height="52" loading="lazy"> <span>${esc(b.dl_tag)}</span> <span class="status dev">${esc(b.dev)}</span></div>
+        <h3 lang="en">Downline HQ</h3>
+        <p>${esc(b.dl_line)}</p>
+        <div class="acts"><a class="btn line small" href="${legacy(l, '/downline-hq/')}">${esc(b.dl_link)}</a></div>
+      </article>
+      <article class="tile custom">
+        <h3>${esc(b.custom_t)}</h3>
+        <p>${esc(b.custom_line)}</p>
+        <div class="price-chip"><span>${esc(b.custom_from)}</span><b>${price('diag', '{p}', l)}</b></div>
+        <div class="acts"><a class="btn sun" href="${solPath(l)}">${esc(b.custom_cta)}</a></div>
+      </article>
+    </div>
+  </div></section>
+
+  <section class="sec" id="how" aria-labelledby="how-h"><div class="wrap">
+    <div class="sec-head"><h2 id="how-h">${esc(t.how.h2)}</h2></div>
+    <div class="how">
+      <div><h3>${esc(t.how.s1_t)}</h3><p>${esc(t.how.s1_d)}</p></div>
+      <div><h3>${esc(t.how.s2_t)}</h3><p>${esc(t.how.s2_d)}</p></div>
+      <div><h3>${esc(t.how.s3_t)}</h3><p>${esc(t.how.s3_d)}</p></div>
+    </div>
+  </div></section>
+
+  <section class="sec" id="trust" aria-labelledby="trust-h"><div class="wrap">
+    <div class="sec-head"><h2 id="trust-h">${esc(t.trust.h2)}</h2></div>
+    <div class="trust">
+      ${['sec', 'perm', 'minors', 'rights', 'priv'].map(k => `<div><h3><svg viewBox="0 0 24 24" aria-hidden="true">${ICON[k]}</svg>${esc(t.trust[k + '_t'])}</h3><p>${esc(t.trust[k + '_d'])}</p>${k === 'priv' ? `<a class="link" href="${legacy(l, '/privacy/')}">${esc(t.trust.priv_link)}</a>` : ''}</div>`).join('\n      ')}
+    </div>
+  </div></section>
+
+  <section class="sec" id="details" aria-labelledby="details-h"><div class="wrap">
+    <div class="sec-head"><h2 id="details-h">${esc(t.nums.h2)}</h2></div>
+    <div class="nums">
+      <div><b><bdi dir="ltr">0</bdi></b><span>${esc(t.nums.f1)}</span></div>
+      <div><b><bdi dir="ltr">1</bdi></b><span>${esc(t.nums.f2)}</span></div>
+      <div><b><bdi dir="ltr">24/7</bdi></b><span>${esc(t.nums.f3)}</span></div>
+      <div><b><bdi dir="ltr">10+</bdi></b><span>${esc(t.nums.f4)}</span></div>
+    </div>
+  </div></section>
+
+  <section class="sec" aria-label="SINAI Cinema · SINAI Lifestyle"><div class="wrap duo">
+    <article class="cine-card" id="cinema">
+      <div class="pic"><img src="/assets/shots/sinaicinema.webp" alt="" width="1240" height="420" loading="lazy" decoding="async"></div>
+      <div class="body">
+        <img src="/assets/logos/sinai-cinema.png" alt="" width="56" height="56" loading="lazy">
+        <h2 lang="en">SINAI Cinema</h2>
+        <p>${esc(t.cinema.d)}</p>
+        <a class="btn line" href="https://sinaicinema.com/coming-soon">${esc(t.cinema.cta)}</a>
+      </div>
+    </article>
+    <article class="life-card" id="lifestyle">
+      <h2 lang="en">SINAI Lifestyle</h2>
+      <p>${esc(t.life.d)}</p>
+      <ul class="prods">
+        ${[['X-GRN', 'x-grn', 'xgrn', 'https://x-grn.com/'], ['Indigo', 'indigo', 'indigo', 'https://indigo-x.uk/'], ['B-YNG', 'b-yng', 'byng', 'https://b-yng.net/']].map(([nm, img, k, url]) => `<li><div class="box"><img src="/assets/lifestyle/${img}.webp" alt="${nm}" loading="lazy" decoding="async"></div><b lang="en">${nm}</b><p>${esc(t.life[k])}</p><div class="acts"><a class="link" href="${url}" target="_blank" rel="noopener">${esc(t.life.order)}</a><a class="link" href="https://wa.me/${WA}?text=${encodeURIComponent(nm)}" target="_blank" rel="noopener">${esc(t.life.wa)}</a></div></li>`).join('\n        ')}
+      </ul>
+      <p class="disc">${esc(t.life.disclosure)}</p>
+    </article>
+  </div></section>
+
+  <section class="sec" id="about" aria-labelledby="about-h"><div class="wrap about">
+    <div>
+      <h2 id="about-h">${esc(t.about.h2)}</h2>
+      <p>${esc(t.about.p1)}</p>
+      <div class="who"><img src="/assets/founder.webp" alt="" width="72" height="72" loading="lazy"><div><b>${esc(t.about.founder)}</b><p>${esc(t.about.bio)}</p></div></div>
+    </div>
+    <div class="contact" id="contact">
+      <h2>${esc(t.contact.h2)}</h2>
+      <div class="acts"><a class="btn sun" href="https://wa.me/${WA}" target="_blank" rel="noopener">${esc(t.contact.whatsapp)}</a><a class="btn line" href="mailto:hello@sinai-global.com">${esc(t.contact.email)}</a></div>
+      <div class="row"><span id="c-mail">hello@sinai-global.com</span><button class="btn line small" type="button" data-copy="c-mail" data-done="${esc(t.contact.copied)}">${esc(t.contact.copy)}</button></div>
+      <div class="row"><span id="c-phone">+972 50-776-3923</span><button class="btn line small" type="button" data-copy="c-phone" data-done="${esc(t.contact.copied)}">${esc(t.contact.copy)}</button></div>
+      <div class="row"><span style="direction:inherit">${esc(t.contact.place)}</span></div>
+    </div>
+  </div></section>
+
+  <section class="cta-band" aria-labelledby="cta-h"><canvas class="topo" data-topo="cta" aria-hidden="true"></canvas><div class="halo" aria-hidden="true"></div><div class="wrap">
+    <h2 id="cta-h">${esc(t.cta.h2)}</h2>
+    <p>${esc(t.cta.d)}</p>
+    <div class="ctas"><a class="btn sun" href="https://wa.me/${WA}?text=${encodeURIComponent(t.sol.msg_intro)}" target="_blank" rel="noopener">${esc(t.cta.b1)}</a><a class="btn line" href="${solPath(l)}#tell">${esc(t.cta.b2)}</a></div>
+  </div></section>
+</main>
+${footer(l, 'home')}
+</body>
+</html>
+`;
+}
+
+function solPage(l) {
+  const t = T[l], s = t.sol;
+  const items = [
+    ['diag', 'p1', s.from, true], ['site', 'p2', s.from], ['auto', 'p3', s.per_process], ['plat', 'p4', s.setup],
+    ['app', 'p5', s.from], ['ret', 'p6', s.range_month], ['host', 'p7', s.from_month],
+  ];
+  const fld = (n, type = 'text', req = false, ac = '') => `<div class="fld"><label for="f-${n}">${esc(s['f_' + n])}</label>${type === 'area' ? `<textarea id="f-${n}" name="${n}"${req ? ' required' : ''}></textarea>` : `<input id="f-${n}" name="${n}" type="${type}"${ac ? ` autocomplete="${ac}"` : ''}${req ? ' required' : ''}>`}</div>`;
+  return `${head(l, 'sol')}
+<body>
+${header(l, 'sol')}
+<main id="main">
+  <section class="sol-hero" aria-labelledby="h1">
+    <div class="sky" aria-hidden="true"><div class="glow"></div><canvas class="topo" data-topo></canvas><div class="sun"></div></div>
+    ${RIDGE}
+    <div class="wrap">
+      <h1 id="h1">${esc(s.h1)}</h1>
+      <p>${esc(s.sub)}</p>
+      <a class="btn sun" href="#tell">${esc(s.cta)}</a>
+    </div>
+  </section>
+
+  <section class="sec" id="prices" aria-labelledby="prices-h"><div class="wrap">
+    <div class="price-head">
+      <div><h2 id="prices-h">${esc(s.prices_h2)}</h2><p class="note">${esc(s.currency_note)}</p></div>
+      <div class="seg" role="group" aria-label="${esc(t.nav.currency)}">${['ILS', 'USD', 'EUR', 'GBP', 'INR'].map(c => `<button type="button" data-cur="${c}" aria-pressed="${(l === 'he' ? 'ILS' : 'USD') === c}" aria-label="${c}">${({ ILS: '₪', USD: '$', EUR: '€', GBP: '£', INR: '₹' })[c]}</button>`).join('')}</div>
+    </div>
+    <ul class="plist">
+      ${items.map(([k, p, tpl, lead]) => `<li${lead ? ' class="lead-item"' : ''}><h3>${esc(s[p + '_t'])}</h3><p>${esc(s[p + '_d'])}</p><div class="pr">${price(k, tpl, l)}</div></li>`).join('\n      ')}
+    </ul>
+  </div></section>
+
+  <section class="sec" aria-labelledby="steps-h"><div class="wrap">
+    <div class="sec-head"><h2 id="steps-h">${esc(s.steps_h2)}</h2></div>
+    <div class="steps">
+      <div><h3>${esc(s.st1_t)}</h3><p>${esc(s.st1_d)}</p></div>
+      <div><h3>${esc(s.st2_t)}</h3><p>${esc(s.st2_d)}</p></div>
+      <div><h3>${esc(s.st3_t)}</h3><p>${esc(s.st3_d)}</p></div>
+    </div>
+  </div></section>
+
+  <section class="sec" id="tell" aria-labelledby="tell-h"><div class="wrap form-wrap">
+    <div><h2 id="tell-h">${esc(s.form_h2)}</h2><p class="lead">${esc(s.form_d)}</p></div>
+    <form class="biz" novalidate data-intro="${esc(s.msg_intro)}" data-required="${esc(s.f_required)}" data-sent="${esc(s.f_sent)}">
+      <div class="two">${fld('name', 'text', true, 'name')}${fld('business', 'text', false, 'organization')}</div>
+      ${fld('field')}
+      ${fld('need', 'area', true)}
+      ${fld('contact', 'text', true, 'email')}
+      <div class="form-acts"><button class="btn sun" type="button" data-send="wa">${esc(s.f_send_wa)}</button><button class="btn line" type="button" data-send="mail">${esc(s.f_send_mail)}</button></div>
+      <p class="form-msg" role="status" aria-live="polite"></p>
+    </form>
+  </div></section>
+</main>
+${footer(l, 'sol')}
+</body>
+</html>
+`;
+}
+
+for (const l of LANGS) {
+  const dir = path.join(ROOT, pre(l).slice(1));
+  fs.mkdirSync(path.join(dir, 'solutions'), { recursive: true });
+  fs.writeFileSync(path.join(dir, 'index.html'), homePage(l));
+  fs.writeFileSync(path.join(dir, 'solutions', 'index.html'), solPage(l));
+}
+console.log('built', LANGS.length * 2, 'pages');
+
+// sitemap: home + solutions in 10 languages, legacy pages in 9
+{
+  const today = new Date().toISOString().slice(0, 10);
+  const groups = [
+    { langs: LANGS, path: '/', pri: '1.0' },
+    { langs: LANGS, path: '/solutions/', pri: '0.9' },
+    { langs: [...LEGACY], path: '/downline-hq/', pri: '0.8' },
+    { langs: [...LEGACY], path: '/privacy/', pri: '0.3' },
+    { langs: [...LEGACY], path: '/terms/', pri: '0.3' },
+  ];
+  const u = (l, p) => SITE + pre(l) + p;
+  let xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n';
+  for (const g of groups) for (const l of g.langs) {
+    xml += `  <url>\n    <loc>${u(l, g.path)}</loc>\n    <lastmod>${today}</lastmod>\n    <priority>${g.pri}</priority>\n`;
+    for (const x of g.langs) xml += `    <xhtml:link rel="alternate" hreflang="${x}" href="${u(x, g.path)}"/>\n`;
+    xml += `    <xhtml:link rel="alternate" hreflang="x-default" href="${u('en', g.path)}"/>\n  </url>\n`;
+  }
+  fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), xml + '</urlset>\n');
+}
