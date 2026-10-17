@@ -198,3 +198,9 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:90;opa
   @keyframes dl-glow{from{opacity:.7}to{opacity:1}}
   @keyframes dl-node{0%{filter:drop-shadow(0 0 0 rgba(201,169,106,.75))}100%{filter:drop-shadow(0 0 14px rgba(201,169,106,0))}}
 }
+
+/* Flow: light runs along the network branches (rides on the glow layer, same centre as the field) */
+.netcore::after{width:1300px;height:1000px;
+  background:url(/assets/network-flow.svg) center/contain no-repeat,radial-gradient(closest-side,rgba(201,169,106,.10),transparent) center/58% 60% no-repeat}
+@media (prefers-reduced-motion:no-preference){.netcore::after{animation:dl-drift 38s ease-in-out infinite alternate}}
+@media (prefers-reduced-motion:reduce){.netcore::after{background:radial-gradient(closest-side,rgba(201,169,106,.10),transparent) center/58% 60% no-repeat}}
