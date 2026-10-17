@@ -276,3 +276,9 @@ footer .legal a[aria-current]{color:var(--ink);text-decoration:none}
 .legal-doc p{margin:0}
 .legal-doc a[href^="mailto"]{white-space:nowrap}
 html[lang="he"] .legal-doc h1,html[lang="ar"] .legal-doc h1{letter-spacing:0;line-height:1.25}
+/* legal pages: the same summit field, quietly behind the page title */
+.wrap{position:relative}
+.legal-mark{position:absolute;top:170px;inset-inline-end:14%;z-index:0}
+.legal-mark ~ *{position:relative;z-index:1}
+.legal-mark .legend{display:none}
+@media (max-width:760px){.legal-mark{top:120px;inset-inline-end:10%}.legal-mark .alt{display:none}}

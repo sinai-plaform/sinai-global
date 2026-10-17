@@ -18,7 +18,7 @@ const FONTS = {
 };
 // pages that only exist in the original 9 languages
 const LEGACY = new Set(['he', 'en', 'ru', 'ar', 'es', 'de', 'it', 'fr', 'pt']);
-const V = '202610152300';
+const V = '202610171900';
 const WA = '972507763923';
 const PRICES = { // must match assets/sg.js; used for the first paint
   diag: { ILS: 1500, USD: 420 }, site: { ILS: 4900, USD: 1350 }, auto: { ILS: 3900, USD: 1090 },
@@ -159,7 +159,7 @@ function homePage(l) {
 ${header(l, 'home')}
 <main id="main">
   <section class="hero" aria-labelledby="h1">
-    <div class="sky" aria-hidden="true"><div class="glow"></div><canvas class="topo" data-topo></canvas><div class="sun"></div></div>
+    <div class="sky" aria-hidden="true"><div class="glow"></div><div class="sun"></div><div class="field"><i class="layer far"></i><i class="layer"></i><b class="summit-dot"></b><span class="alt" dir="ltr">2,285 m</span></div></div>
     ${RIDGE}
     <div class="wrap">
       <div>
@@ -281,7 +281,7 @@ ${header(l, 'home')}
     </div>
   </div></section>
 
-  <section class="cta-band" aria-labelledby="cta-h"><canvas class="topo" data-topo="cta" aria-hidden="true"></canvas><div class="halo" aria-hidden="true"></div><div class="wrap">
+  <section class="cta-band" aria-labelledby="cta-h"><div class="field cta-field" aria-hidden="true"><i class="layer far"></i><i class="layer"></i></div><div class="halo" aria-hidden="true"></div><div class="wrap">
     <h2 id="cta-h">${esc(t.cta.h2)}</h2>
     <p>${esc(t.cta.d)}</p>
     <div class="ctas"><a class="btn sun" href="https://wa.me/${WA}?text=${encodeURIComponent(t.sol.msg_intro)}" target="_blank" rel="noopener">${esc(t.cta.b1)}</a><a class="btn line" href="${solPath(l)}#tell">${esc(t.cta.b2)}</a></div>
@@ -305,7 +305,7 @@ function solPage(l) {
 ${header(l, 'sol')}
 <main id="main">
   <section class="sol-hero" aria-labelledby="h1">
-    <div class="sky" aria-hidden="true"><div class="glow"></div><canvas class="topo" data-topo></canvas><div class="sun"></div></div>
+    <div class="sky" aria-hidden="true"><div class="glow"></div><div class="sun"></div><div class="field"><i class="layer far"></i><i class="layer"></i><b class="summit-dot"></b><span class="alt" dir="ltr">2,285 m</span></div></div>
     ${RIDGE}
     <div class="wrap">
       <h1 id="h1">${esc(s.h1)}</h1>

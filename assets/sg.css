@@ -18,7 +18,8 @@ html[lang="hi"]{--font:"Mukta",system-ui,"Segoe UI",sans-serif}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{margin:0;background:var(--stone);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--stone);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
 html[lang="hi"] body{line-height:1.75}
 img{max-width:100%;height:auto;display:block}
 a{color:inherit}
@@ -318,7 +319,33 @@ form.biz{background:var(--paper);border:1px solid var(--line);border-radius:var(
 .form-msg.err{color:var(--sun)}
 .tile.dl .meta{color:#b7ad9b}.tile.dl .status.dev{color:#d9b45e}
 
-/* living topographic map behind the hero, solutions hero and call to action */
-.topo{position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none}
-.sky .topo{-webkit-mask:linear-gradient(to bottom,transparent,#000 22%);mask:linear-gradient(to bottom,transparent,#000 22%)}
-.cta-band .topo{z-index:0;opacity:.9}
+
+/* Signature background (the sinai-global method): topographic contours of the summit as a CSS mask,
+   a pulsing summit dot with its altitude, a warm glow, a slow drift in two depths, page-wide film grain. */
+:root{--ridge-h:clamp(140px,19vw,260px);--contour:rgba(233,236,232,.11);--contour-far:rgba(234,163,107,.07)}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:90;opacity:.05;mix-blend-mode:overlay;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.field{position:absolute;width:12px;height:12px;left:75%;bottom:calc(var(--ridge-h)*.77 + 6px);pointer-events:none}
+html[dir="rtl"] .field{left:25%}
+.field .layer{position:absolute;left:50%;top:50%;width:1800px;height:1415px;transform:translate(-50%,-50%);
+  background:var(--contour);-webkit-mask:url(/assets/topo.svg) center/contain no-repeat;mask:url(/assets/topo.svg) center/contain no-repeat}
+.field .layer.far{width:2600px;height:2045px;background:var(--contour-far)}
+.summit-dot{position:absolute;inset:0;border-radius:50%;background:#f4efe6;box-shadow:0 0 0 5px rgba(234,163,107,.35)}
+.field .alt{position:absolute;left:22px;top:-7px;font:500 12px/1 ui-monospace,Menlo,monospace;letter-spacing:.08em;color:var(--on-night-2);white-space:nowrap}
+html[dir="rtl"] .field .alt{left:auto;right:22px}
+.sky .glow{background:radial-gradient(38% 55% at 75% 78%,rgba(234,163,107,.20),transparent 70%)}
+html[dir="rtl"] .sky .glow{background:radial-gradient(38% 55% at 25% 78%,rgba(234,163,107,.20),transparent 70%)}
+.cta-field{left:auto;inset-inline-end:14%;bottom:-40px;z-index:0}
+.cta-field .layer{width:1500px;height:1180px}
+.cta-band .halo{z-index:0}
+@media (max-width:860px){.field .alt{display:none}.field .layer{width:1300px;height:1022px}.field .layer.far{width:1900px;height:1494px}}
+@media (prefers-reduced-motion:no-preference){
+  .field .layer{animation:sg-drift 36s ease-in-out infinite alternate}
+  .field .layer.far{animation:sg-drift-far 54s ease-in-out -12s infinite alternate}
+  .summit-dot{animation:sg-ping 3s ease-out infinite}
+  .sky .sun{animation:sg-breathe 14s ease-in-out infinite alternate}
+  @keyframes sg-drift{from{transform:translate(-50%,-50%) scale(1) rotate(0)}to{transform:translate(-50%,-50%) scale(1.07) rotate(4deg)}}
+  @keyframes sg-drift-far{from{transform:translate(-50%,-50%) scale(1.04) rotate(2deg)}to{transform:translate(-50%,-50%) scale(.98) rotate(-3deg)}}
+  @keyframes sg-ping{0%{box-shadow:0 0 0 0 rgba(234,163,107,.55),0 0 0 5px rgba(234,163,107,.35)}100%{box-shadow:0 0 0 28px rgba(234,163,107,0),0 0 0 5px rgba(234,163,107,.35)}}
+  @keyframes sg-breathe{to{box-shadow:0 0 180px 46px rgba(212,100,79,.34)}}
+}
