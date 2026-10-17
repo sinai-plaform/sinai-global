@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Downline HQ</title>
-<meta name="description" content="Downline HQ : pages personnelles, un CRM de prospects et un arbre du réseau en direct pour les distributeurs indépendants. Par SINAI Global.">
+<meta name="description" content="Downline HQ : pages de destination personnelles, un CRM de leads, le partage en un clic avec suivi complet, un studio de contenu AI et un arbre du réseau en direct pour les distributeurs indépendants. Par SINAI Global.">
 <link rel="alternate" hreflang="he" href="https://sinai-global.com/he/downline-hq/">
 <link rel="alternate" hreflang="en" href="https://sinai-global.com/downline-hq/">
 <link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/downline-hq/">
@@ -14,10 +14,13 @@
 <link rel="alternate" hreflang="it" href="https://sinai-global.com/it/downline-hq/">
 <link rel="alternate" hreflang="fr" href="https://sinai-global.com/fr/downline-hq/">
 <link rel="alternate" hreflang="pt" href="https://sinai-global.com/pt/downline-hq/">
+<link rel="alternate" hreflang="hi" href="https://sinai-global.com/hi/downline-hq/">
 <link rel="alternate" hreflang="x-default" href="https://sinai-global.com/downline-hq/">
 <script src="/assets/lang.js?v=202610151600"></script>
+<style>#dl-intro{display:none}html.dl-intro-on #dl-intro{display:flex;position:fixed;inset:0;z-index:2147483000;background:#0E1316;align-items:center;justify-content:center;flex-direction:column;cursor:pointer}html.dl-intro-on.dl-intro-out #dl-intro{opacity:0;transition:opacity .25s ease}#dl-intro img{width:min(300px,62vw);height:auto;opacity:0;transform:scale(.9);animation:dl-in .62s cubic-bezier(.22,1,.36,1) .08s forwards}#dl-intro i{display:block;margin-top:18px;height:1px;width:0;background:#C9A96A;animation:dl-bar .5s cubic-bezier(.22,1,.36,1) .55s forwards}@keyframes dl-in{to{opacity:1;transform:scale(1)}}@keyframes dl-bar{to{width:min(220px,46vw)}}@media (prefers-reduced-motion:reduce){html.dl-intro-on #dl-intro{display:none}}</style>
+<script>(function(){try{var k='sg_intro_downline';if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,'1');if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;var d=document.documentElement;d.classList.add('dl-intro-on');var done=function(){d.classList.add('dl-intro-out');setTimeout(function(){d.classList.remove('dl-intro-on','dl-intro-out')},260)};var t=setTimeout(done,1240);var skip=function(){clearTimeout(t);done()};addEventListener('keydown',skip,{once:true});addEventListener('click',function(e){var o=document.getElementById('dl-intro');if(o&&o.contains(e.target))skip()})}catch(e){}})();</script>
 <meta property="og:title" content="Downline HQ">
-<meta property="og:description" content="Tout votre réseau sur un seul écran : pages, prospects et les personnes en dessous de vous.">
+<meta property="og:description" content="Tout votre réseau sur un seul écran : pages, leads, contenus et toutes les personnes sous vous.">
 <meta property="og:url" content="https://sinai-global.com/fr/downline-hq/">
 <link rel="canonical" href="https://sinai-global.com/fr/downline-hq/">
 <meta property="og:type" content="website">
@@ -30,44 +33,42 @@
 <meta property="og:image:alt" content="Downline HQ by SINAI Global">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://sinai-global.com/assets/og/downline-hq.jpg">
-<!-- TODO Cloudflare Web Analytics: add the site in Cloudflare (Analytics & Logs > Web Analytics), paste its token below and uncomment.
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "PASTE_TOKEN_HERE"}'></script>
--->
 <link rel="icon" href="/assets/downline/favicon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#0E1316">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap">
-<link rel="stylesheet" href="/assets/downline/downline.css?v=202610151600">
+<link rel="stylesheet" href="/assets/downline/downline.css?v=202610170900">
 </head>
 <body>
+<div id="dl-intro" aria-hidden="true"><img src="/assets/downline/logo-wordmark.svg" alt="" width="288" height="64"><i></i></div>
 <div class="wrap">
   <header class="bar">
     <div class="brand" dir="ltr">
       <a class="logo" href="/fr/downline-hq/" aria-label="Downline HQ, accueil"><img src="/assets/downline/logo-wordmark.svg" alt="Downline HQ" width="288" height="64"></a>
       <a class="by" href="/fr/" lang="fr" dir="auto">par SINAI Global</a>
     </div>
-    <nav aria-label="Principal"><a href="#features">Fonctionnalités</a><a href="#faq">FAQ</a><a href="#early">Accès anticipé</a><details class="lng"><summary aria-label="Langue : Français"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M1.5 8h13M8 1.5c2 2 2.8 4 2.8 6.5S10 12.5 8 14.5M8 1.5C6 3.5 5.2 5.5 5.2 8S6 12.5 8 14.5"/></svg>Français</summary><div class="lng-list"><a href="/he/downline-hq/" data-setlang="he" lang="he">עברית</a><a href="/downline-hq/" data-setlang="en" lang="en">English</a><a href="/ru/downline-hq/" data-setlang="ru" lang="ru">Русский</a><a href="/ar/downline-hq/" data-setlang="ar" lang="ar">العربية</a><a href="/es/downline-hq/" data-setlang="es" lang="es">Español</a><a href="/de/downline-hq/" data-setlang="de" lang="de">Deutsch</a><a href="/it/downline-hq/" data-setlang="it" lang="it">Italiano</a><a href="/fr/downline-hq/" data-setlang="fr" lang="fr" aria-current="true">Français</a><a href="/pt/downline-hq/" data-setlang="pt" lang="pt">Português</a><a href="/hi/" data-setlang="hi" lang="hi">हिन्दी</a></div></details></nav>
+    <nav aria-label="Navigation principale"><a href="#features">Fonctionnalités</a><a href="#faq">FAQ</a><a href="#early">Accès anticipé</a><details class="lng"><summary aria-label="Langue: Français"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M1.5 8h13M8 1.5c2 2 2.8 4 2.8 6.5S10 12.5 8 14.5M8 1.5C6 3.5 5.2 5.5 5.2 8S6 12.5 8 14.5"/></svg>Français</summary><div class="lng-list"><a href="/he/downline-hq/" data-setlang="he" lang="he">עברית</a><a href="/downline-hq/" data-setlang="en" lang="en">English</a><a href="/ru/downline-hq/" data-setlang="ru" lang="ru">Русский</a><a href="/ar/downline-hq/" data-setlang="ar" lang="ar">العربية</a><a href="/es/downline-hq/" data-setlang="es" lang="es">Español</a><a href="/de/downline-hq/" data-setlang="de" lang="de">Deutsch</a><a href="/it/downline-hq/" data-setlang="it" lang="it">Italiano</a><a href="/fr/downline-hq/" data-setlang="fr" lang="fr" aria-current="true">Français</a><a href="/pt/downline-hq/" data-setlang="pt" lang="pt">Português</a><a href="/hi/downline-hq/" data-setlang="hi" lang="hi">हिन्दी</a></div></details></nav>
   </header>
 
   <div class="hero">
     <div>
       <div class="eyebrow">Downline HQ · En développement</div>
       <h1>Tout votre réseau <em>sur un seul écran.</em></h1>
-      <p>Downline HQ donne aux distributeurs indépendants une page personnelle, un CRM pour leurs prospects et un arbre en direct de toutes les personnes en dessous d’eux. Les leaders voient toute leur downline. Le propriétaire du réseau décide qui voit et modifie quoi.</p>
+      <p>Downline HQ offre aux distributeurs indépendants une page de destination personnelle, un CRM de leads intelligent, un partage en un clic qui se mesure tout seul et un studio AI qui crée des posts et des vidéos à partir de vos produits. Les Chefs d’équipe voient toute leur équipe. Le Leader du réseau décide qui voit et modifie quoi.</p>
       <div class="stats"><a class="btn" href="#early">Rejoindre la liste d’attente</a></div>
     </div>
     <div class="netcore">
-  <svg class="tree" viewBox="0 0 300 220" role="img" aria-label="Un arbre de réseau : un propriétaire, deux leaders et cinq distributeurs">
-        <line x1="150" y1="44" x2="80" y2="100"/><line x1="150" y1="44" x2="220" y2="100"/>
+  <svg class="tree" viewBox="0 0 300 220" role="img" aria-label="Un arbre du réseau : un Leader du réseau, deux Chefs d’équipe et cinq distributeurs" dir="ltr">
+        <line x1="150" y1="46" x2="80" y2="100"/><line x1="150" y1="46" x2="220" y2="100"/>
         <line x1="80" y1="124" x2="40" y2="170"/><line x1="80" y1="124" x2="100" y2="170"/>
         <line x1="220" y1="124" x2="170" y2="170"/><line x1="220" y1="124" x2="220" y2="170"/><line x1="220" y1="124" x2="270" y2="170"/>
-        <rect class="me" x="110" y="20" width="80" height="26" rx="5"/><text x="150" y="37" text-anchor="middle">Propriétaire</text>
-        <rect x="45" y="100" width="70" height="24" rx="5"/><text x="80" y="116" text-anchor="middle">Leader</text>
-        <rect x="185" y="100" width="70" height="24" rx="5"/><text x="220" y="116" text-anchor="middle">Leader</text>
+        <rect class="me" x="80" y="20" width="140" height="26" rx="5"/><text x="150" y="37" text-anchor="middle" direction="ltr">Leader du réseau</text>
+        <rect x="22" y="100" width="116" height="24" rx="5"/><text x="80" y="116" text-anchor="middle" direction="ltr">Chef d’équipe</text>
+        <rect x="162" y="100" width="116" height="24" rx="5"/><text x="220" y="116" text-anchor="middle" direction="ltr">Chef d’équipe</text>
         <rect x="18" y="170" width="44" height="22" rx="5"/><rect x="78" y="170" width="44" height="22" rx="5"/>
         <rect x="148" y="170" width="44" height="22" rx="5"/><rect x="198" y="170" width="44" height="22" rx="5"/><rect x="248" y="170" width="44" height="22" rx="5"/>
-        <text x="150" y="214" text-anchor="middle">chaque nœud : page · prospects · tâches</text>
+        <text x="150" y="214" text-anchor="middle" direction="ltr">Distributeurs · page · leads · tâches</text>
       </svg>
     </div>
   </div>
@@ -75,49 +76,56 @@
   <section id="features">
     <div class="sec-head"><h2>Ce qu’il contient</h2><span class="eyebrow">Conçu pour les équipes de vente directe</span></div>
     <div class="feats">
-      <div><h3>Une page personnelle</h3><p>Chaque distributeur dispose de sa propre page avec sa photo, son histoire et son bouton de contact. Les prix et les produits restent fixés par le réseau.</p></div>
-      <div><h3>CRM des prospects</h3><p>Chaque contact venu de la page devient un prospect avec ses tâches et ses relances, pour que personne ne passe entre les mailles.</p></div>
-      <div><h3>Arbre du réseau en direct</h3><p>Les leaders voient toutes les personnes en dessous d’eux, à tous les niveaux, avec l’activité de chacun au même endroit.</p></div>
-      <div><h3>Des droits que vous maîtrisez</h3><p>Les distributeurs ne modifient que leur propre profil. Seul un leader autorisé peut ouvrir un nouveau distributeur. Le propriétaire fixe les règles.</p></div>
-      <div><h3>Bibliothèque de médias bruts</h3><p>Photos produits, visuels des boîtes et certificats pour créer vos propres publications, plutôt que le même post copié-collé que tout le monde partage.</p></div>
-      <div><h3>Toute entreprise, tout produit</h3><p>Downline HQ n’est lié à aucune marque. Le réseau de n’importe quelle entreprise peut l’utiliser avec ses propres produits.</p></div>
+      <div><h3>Partage en un clic, suivi complet</h3><p>Partagez n’importe quel post, vidéo ou page sur WhatsApp, Instagram, Facebook ou TikTok avec un lien court personnel. Ouvertures, personnes, leads et commandes sont comptés automatiquement et remontent l’arbre — personne n’a rien à déclarer.</p></div>
+      <div><h3>Studio de contenu AI</h3><p>Choisissez un produit, un objectif et une plateforme, ajoutez votre histoire et votre style — et obtenez un post, une image, un reel ou une bannière prêts. Chaque résultat est unique, les plateformes ne pénalisent donc jamais le contenu dupliqué.</p></div>
+      <div><h3>La prochaine action, chaque matin</h3><p>3 à 5 tâches par jour, chacune avec sa raison : un lead qui attend depuis trois jours, un client qui doit recommander, un nouveau membre de l’équipe devenu silencieux. Un geste ouvre WhatsApp avec un message prêt.</p></div>
+      <div><h3>Récompenses et rangs</h3><p>Le plan de rémunération de votre entreprise sous forme de données : statut actif et qualifié, volume gauche et droit, exactement ce qui manque pour le rang suivant et une estimation de revenu. Importez le document du plan — l’AI le lit et vous validez.</p></div>
+      <div><h3>Conformité avant publication</h3><p>Chaque post et chaque vidéo sont vérifiés pour détecter allégations médicales, promesses de revenus et mauvais usage de la marque, avec une reformulation conforme proposée. Le Leader du réseau peut ajouter une étape d’approbation manuelle.</p></div>
+      <div><h3>Insights AI intelligents</h3><p>Une courte note quotidienne pour les leaders, en mots simples : quelle équipe a ralenti, quel contenu fonctionne trois fois mieux, qui approche du rang suivant — avec les chiffres à l’appui.</p></div>
+      <div><h3>Une page de destination personnelle</h3><p>Chaque distributeur·rice reçoit sa propre page avec sa photo, son histoire et son bouton de contact. Prix, ingrédients et allégations restent verrouillés sur la bibliothèque de produits approuvée.</p></div>
+      <div><h3>CRM de leads et heure d’action</h3><p>Chaque demande arrive comme lead avec des relances. Une heure d’action quotidienne avec un objectif et des modèles de messages transforme les intentions en conversations.</p></div>
+      <div><h3>Arbre du réseau en direct</h3><p>Les Chefs d’équipe voient tous ceux qui sont en dessous d’eux, à toute profondeur, avec l’activité de chacun au même endroit.</p></div>
+      <div><h3>Des permissions que vous contrôlez</h3><p>Les distributeurs ne modifient que leur propre profil. Seul un Chef d’équipe autorisé peut ouvrir un nouveau compte distributeur. Le Leader du réseau fixe les règles.</p></div>
+      <div><h3>Tokens, packs et quotas</h3><p>Les créations AI fonctionnent avec des tokens et un quota mensuel gratuit selon l’offre. Le Leader du réseau fixe les prix et les packs, et peut offrir des tokens à l’équipe.</p></div>
+      <div><h3>Toute entreprise, tout produit</h3><p>Downline HQ n’est lié à aucune marque. Le réseau de n’importe quelle entreprise y fonctionne avec ses propres produits et son propre plan de rémunération.</p></div>
     </div>
   </section>
 
   <section id="how">
     <div class="sec-head"><h2>Comment ça marche</h2></div>
     <div class="method">
-      <div><h3>Configurer le réseau</h3><p>Le propriétaire ajoute les produits et décide de ce que chaque rôle peut voir et faire.</p></div>
-      <div><h3>Ouvrir des distributeurs</h3><p>Les leaders ouvrent les comptes de leur équipe. Chacun reçoit une page et un identifiant.</p></div>
-      <div><h3>Partager la page</h3><p>Les distributeurs partagent leur lien personnel. Chaque demande devient un prospect.</p></div>
-      <div><h3>Suivre l’arbre</h3><p>Les leaders suivent prospects et activité dans toute leur downline.</p></div>
+      <div><h3>Configurer le réseau</h3><p>Le Leader du réseau ajoute les produits et le plan de rémunération, et décide ce que chaque rôle peut voir et faire.</p></div>
+      <div><h3>Ouvrir des distributeurs</h3><p>Les Chefs d’équipe ouvrent des comptes pour leur équipe. Chacun reçoit une page, un studio et un accès.</p></div>
+      <div><h3>Partager et créer</h3><p>Les distributeurs partagent depuis la bibliothèque ou le studio en un clic. Chaque ouverture est comptée, chaque demande devient un lead.</p></div>
+      <div><h3>Piloter par les données</h3><p>Chaque matin, les leaders voient ce qui fonctionne, qui approche d’un rang et qui a besoin d’un appel.</p></div>
     </div>
   </section>
 
   <section id="faq" class="faq">
-    <div class="sec-head"><h2>Questions</h2></div>
-    <details open><summary>Downline HQ est-il disponible ?</summary><p>Il est en développement et utilisé aujourd’hui au sein d’un réseau. Nous l’ouvrons progressivement à d’autres réseaux. Rejoignez la liste d’attente et nous vous contacterons.</p></details>
-    <details><summary>Fonctionne-t-il uniquement avec les produits d’une seule entreprise ?</summary><p>Non. Il est conçu pour que les distributeurs de n’importe quelle entreprise de vente directe puissent l’utiliser avec leurs propres produits.</p></details>
-    <details><summary>Un distributeur peut-il modifier les prix ou les produits ?</summary><p>Non. Les distributeurs modifient leur propre profil, leur photo et leur texte personnel. Les prix, les produits et les personnes au-dessus d’eux sont fixés par le réseau.</p></details>
-    <details><summary>Qui voit les données de mon équipe ?</summary><p>Vous voyez toutes les personnes en dessous de vous. Celles au-dessus de vous vous voient. Le propriétaire du réseau contrôle tous les droits.</p></details>
+    <div class="sec-head"><h2>FAQ</h2></div>
+    <details open><summary>Downline HQ est-il disponible maintenant ?</summary><p>Il est en développement et utilisé aujourd’hui au sein d’un réseau. Nous l’ouvrons progressivement à d’autres réseaux. Rejoignez la liste d’attente et nous vous contacterons.</p></details>
+    <details><summary>Fonctionne-t-il uniquement avec les produits d’une seule entreprise ?</summary><p>Non. Les distributeurs de n’importe quelle entreprise de vente directe peuvent l’utiliser avec leurs propres produits et leur propre plan de rémunération.</p></details>
+    <details><summary>Un distributeur peut-il modifier les prix ou les produits ?</summary><p>Non. Les distributeurs modifient leur profil, leur photo et leur texte personnel. Les prix, les produits, les allégations et les personnes au-dessus d’eux sont définis par le réseau.</p></details>
+    <details><summary>Qui voit les données de mon équipe ?</summary><p>Vous voyez toutes les personnes en dessous de vous. Les personnes au-dessus de vous vous voient. Le Leader du réseau contrôle toutes les permissions.</p></details>
+    <details><summary>Le partage est-il suivi par des cookies ?</summary><p>Non. Les ouvertures sont comptées sur notre serveur à partir du lien court personnel. Aucun cookie de suivi tiers, aucun pixel.</p></details>
   </section>
 
   <section id="early">
     <div class="grid2">
       <div>
         <div class="eyebrow">Accès anticipé</div>
-        <h2>Vous dirigez un réseau ? Parlons-en.</h2>
-        <p>Envoyez un court message avec votre entreprise et la taille de votre équipe. Nous organiserons un appel pour vous présenter la plateforme.</p>
+        <h2>Vous dirigez un réseau ? Parlons-en.</h2>
+        <p>Envoyez un court message avec le nom de votre entreprise et la taille de votre équipe. Nous fixerons un appel et vous montrerons la plateforme.</p>
       </div>
       <div class="card">
         <div class="line"><span class="val" id="email">hello@downlinehq.app</span><button class="btn small" type="button" data-copy="email" data-done="Copié">Copier</button></div>
-        <div class="line"><span class="val" id="phone">+972 50-776-3923</span><button class="btn small" type="button" data-copy="phone" data-done="Copié">Copier</button></div>
-        <a class="btn" href="mailto:hello@downlinehq.app?subject=Downline%20HQ%20-%20acc%C3%A8s%20anticip%C3%A9">Nous écrire</a>
+        <div class="line"><span class="val" id="phone">050-776-3923</span><button class="btn small" type="button" data-copy="phone" data-done="Copié">Copier</button></div>
+        <a class="btn" href="mailto:hello@downlinehq.app?subject=Downline%20HQ%20-%20acces%20anticipe">Envoyer un e-mail</a>
       </div>
     </div>
   </section>
 
-  <footer><span>Downline HQ est une plateforme <a href="/fr/">SINAI Global</a><span class="legal"> · <a href="/fr/privacy/">Confidentialité</a> · <a href="/fr/terms/">Conditions</a></span></span><span class="foot-lng" aria-label="Langue"><a href="/he/downline-hq/" data-setlang="he" lang="he">עברית</a> · <a href="/downline-hq/" data-setlang="en" lang="en">English</a> · <a href="/ru/downline-hq/" data-setlang="ru" lang="ru">Русский</a> · <a href="/ar/downline-hq/" data-setlang="ar" lang="ar">العربية</a> · <a href="/es/downline-hq/" data-setlang="es" lang="es">Español</a> · <a href="/de/downline-hq/" data-setlang="de" lang="de">Deutsch</a> · <a href="/it/downline-hq/" data-setlang="it" lang="it">Italiano</a> · <span aria-current="true" lang="fr">Français</span> · <a href="/pt/downline-hq/" data-setlang="pt" lang="pt">Português</a> · <a href="/hi/" data-setlang="hi" lang="hi">हिन्दी</a></span></footer>
+  <footer><span>Downline HQ est une plateforme de <a href="/fr/">SINAI Global</a><span class="legal"> · <a href="/fr/privacy/">Confidentialité</a> · <a href="/fr/terms/">Conditions</a></span></span><span class="foot-lng" aria-label="Langue"><a href="/he/downline-hq/" data-setlang="he" lang="he">עברית</a> · <a href="/downline-hq/" data-setlang="en" lang="en">English</a> · <a href="/ru/downline-hq/" data-setlang="ru" lang="ru">Русский</a> · <a href="/ar/downline-hq/" data-setlang="ar" lang="ar">العربية</a> · <a href="/es/downline-hq/" data-setlang="es" lang="es">Español</a> · <a href="/de/downline-hq/" data-setlang="de" lang="de">Deutsch</a> · <a href="/it/downline-hq/" data-setlang="it" lang="it">Italiano</a> · <span aria-current="true" lang="fr">Français</span> · <a href="/pt/downline-hq/" data-setlang="pt" lang="pt">Português</a> · <a href="/hi/downline-hq/" data-setlang="hi" lang="hi">हिन्दी</a></span></footer>
 </div>
 </body>
 </html>

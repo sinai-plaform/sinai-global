@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Downline HQ</title>
-<meta name="description" content="Downline HQ: דף נחיתה אישי, CRM ללידים ועץ רשת חי למפיצים עצמאיים. מבית SINAI Global.">
+<meta name="description" content="Downline HQ: דף נחיתה אישי, CRM ללידים, שיתוף בלחיצה עם מעקב מלא, סטודיו תוכן AI ועץ רשת חי למפיצים עצמאיים. מבית SINAI Global.">
 <link rel="alternate" hreflang="he" href="https://sinai-global.com/he/downline-hq/">
 <link rel="alternate" hreflang="en" href="https://sinai-global.com/downline-hq/">
 <link rel="alternate" hreflang="ru" href="https://sinai-global.com/ru/downline-hq/">
@@ -14,10 +14,13 @@
 <link rel="alternate" hreflang="it" href="https://sinai-global.com/it/downline-hq/">
 <link rel="alternate" hreflang="fr" href="https://sinai-global.com/fr/downline-hq/">
 <link rel="alternate" hreflang="pt" href="https://sinai-global.com/pt/downline-hq/">
+<link rel="alternate" hreflang="hi" href="https://sinai-global.com/hi/downline-hq/">
 <link rel="alternate" hreflang="x-default" href="https://sinai-global.com/downline-hq/">
 <script src="/assets/lang.js?v=202610151600"></script>
+<style>#dl-intro{display:none}html.dl-intro-on #dl-intro{display:flex;position:fixed;inset:0;z-index:2147483000;background:#0E1316;align-items:center;justify-content:center;flex-direction:column;cursor:pointer}html.dl-intro-on.dl-intro-out #dl-intro{opacity:0;transition:opacity .25s ease}#dl-intro img{width:min(300px,62vw);height:auto;opacity:0;transform:scale(.9);animation:dl-in .62s cubic-bezier(.22,1,.36,1) .08s forwards}#dl-intro i{display:block;margin-top:18px;height:1px;width:0;background:#C9A96A;animation:dl-bar .5s cubic-bezier(.22,1,.36,1) .55s forwards}@keyframes dl-in{to{opacity:1;transform:scale(1)}}@keyframes dl-bar{to{width:min(220px,46vw)}}@media (prefers-reduced-motion:reduce){html.dl-intro-on #dl-intro{display:none}}</style>
+<script>(function(){try{var k='sg_intro_downline';if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,'1');if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;var d=document.documentElement;d.classList.add('dl-intro-on');var done=function(){d.classList.add('dl-intro-out');setTimeout(function(){d.classList.remove('dl-intro-on','dl-intro-out')},260)};var t=setTimeout(done,1240);var skip=function(){clearTimeout(t);done()};addEventListener('keydown',skip,{once:true});addEventListener('click',function(e){var o=document.getElementById('dl-intro');if(o&&o.contains(e.target))skip()})}catch(e){}})();</script>
 <meta property="og:title" content="Downline HQ">
-<meta property="og:description" content="כל הרשת שלך במסך אחד: דפים, לידים והאנשים שמתחתיך.">
+<meta property="og:description" content="כל הרשת שלך במסך אחד: דפים, לידים, תוכן והאנשים שמתחתיך.">
 <meta property="og:url" content="https://sinai-global.com/he/downline-hq/">
 <link rel="canonical" href="https://sinai-global.com/he/downline-hq/">
 <meta property="og:type" content="website">
@@ -30,44 +33,42 @@
 <meta property="og:image:alt" content="Downline HQ by SINAI Global">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://sinai-global.com/assets/og/downline-hq.jpg">
-<!-- TODO Cloudflare Web Analytics: add the site in Cloudflare (Analytics & Logs > Web Analytics), paste its token below and uncomment.
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "PASTE_TOKEN_HERE"}'></script>
--->
 <link rel="icon" href="/assets/downline/favicon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#0E1316">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Frank+Ruhl+Libre:wght@300;400;500;700&family=Assistant:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="/assets/downline/downline.css?v=202610151600">
+<link rel="stylesheet" href="/assets/downline/downline.css?v=202610170900">
 </head>
 <body>
+<div id="dl-intro" aria-hidden="true"><img src="/assets/downline/logo-wordmark.svg" alt="" width="288" height="64"><i></i></div>
 <div class="wrap">
   <header class="bar">
     <div class="brand" dir="ltr">
       <a class="logo" href="/he/downline-hq/" aria-label="Downline HQ דף הבית"><img src="/assets/downline/logo-wordmark.svg" alt="Downline HQ" width="288" height="64"></a>
       <a class="by" href="/he/" lang="he" dir="auto">מבית SINAI Global</a>
     </div>
-    <nav aria-label="ראשי"><a href="#features">מה יש בפנים</a><a href="#faq">שאלות</a><a href="#early">גישה מוקדמת</a><details class="lng"><summary aria-label="שפה: עברית"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M1.5 8h13M8 1.5c2 2 2.8 4 2.8 6.5S10 12.5 8 14.5M8 1.5C6 3.5 5.2 5.5 5.2 8S6 12.5 8 14.5"/></svg>עברית</summary><div class="lng-list"><a href="/he/downline-hq/" data-setlang="he" lang="he" aria-current="true">עברית</a><a href="/downline-hq/" data-setlang="en" lang="en">English</a><a href="/ru/downline-hq/" data-setlang="ru" lang="ru">Русский</a><a href="/ar/downline-hq/" data-setlang="ar" lang="ar">العربية</a><a href="/es/downline-hq/" data-setlang="es" lang="es">Español</a><a href="/de/downline-hq/" data-setlang="de" lang="de">Deutsch</a><a href="/it/downline-hq/" data-setlang="it" lang="it">Italiano</a><a href="/fr/downline-hq/" data-setlang="fr" lang="fr">Français</a><a href="/pt/downline-hq/" data-setlang="pt" lang="pt">Português</a><a href="/hi/" data-setlang="hi" lang="hi">हिन्दी</a></div></details></nav>
+    <nav aria-label="ראשי"><a href="#features">מה יש בפנים</a><a href="#faq">שאלות</a><a href="#early">גישה מוקדמת</a><details class="lng"><summary aria-label="שפה: עברית"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M1.5 8h13M8 1.5c2 2 2.8 4 2.8 6.5S10 12.5 8 14.5M8 1.5C6 3.5 5.2 5.5 5.2 8S6 12.5 8 14.5"/></svg>עברית</summary><div class="lng-list"><a href="/he/downline-hq/" data-setlang="he" lang="he" aria-current="true">עברית</a><a href="/downline-hq/" data-setlang="en" lang="en">English</a><a href="/ru/downline-hq/" data-setlang="ru" lang="ru">Русский</a><a href="/ar/downline-hq/" data-setlang="ar" lang="ar">العربية</a><a href="/es/downline-hq/" data-setlang="es" lang="es">Español</a><a href="/de/downline-hq/" data-setlang="de" lang="de">Deutsch</a><a href="/it/downline-hq/" data-setlang="it" lang="it">Italiano</a><a href="/fr/downline-hq/" data-setlang="fr" lang="fr">Français</a><a href="/pt/downline-hq/" data-setlang="pt" lang="pt">Português</a><a href="/hi/downline-hq/" data-setlang="hi" lang="hi">हिन्दी</a></div></details></nav>
   </header>
 
   <div class="hero">
     <div>
       <div class="eyebrow">Downline HQ · בפיתוח</div>
       <h1>כל הרשת שלך <em>במסך אחד.</em></h1>
-      <p>Downline HQ נותנת למפיצים עצמאיים דף נחיתה אישי, CRM ללידים ועץ חי של כל מי שמתחתיהם. מובילים רואים את כל הרשת שלהם, ובעל הרשת מחליט מי רואה ומי עורך מה.</p>
+      <p>Downline HQ נותנת למפיצים עצמאיים דף נחיתה אישי, CRM חכם ללידים, שיתוף בלחיצה שנמדד לבד, וסטודיו AI שמייצר פוסטים וסרטונים מהמוצרים שלכם. ראשי צוותים רואים את כל הצוות שלהם, ומנהיג/ת הרשת מחליט/ה מי רואה ומי עורך מה.</p>
       <div class="stats"><a class="btn" href="#early">להצטרפות לרשימה המוקדמת</a></div>
     </div>
     <div class="netcore">
-  <svg class="tree" viewBox="0 0 300 220" role="img" aria-label="עץ רשת: בעל רשת, שני מובילים וחמישה מפיצים" dir="ltr">
-        <line x1="150" y1="44" x2="80" y2="100"/><line x1="150" y1="44" x2="220" y2="100"/>
+  <svg class="tree" viewBox="0 0 300 220" role="img" aria-label="עץ רשת: מנהיג/ת הרשת, שני ראשי צוותים וחמישה מפיצים" dir="ltr">
+        <line x1="150" y1="46" x2="80" y2="100"/><line x1="150" y1="46" x2="220" y2="100"/>
         <line x1="80" y1="124" x2="40" y2="170"/><line x1="80" y1="124" x2="100" y2="170"/>
         <line x1="220" y1="124" x2="170" y2="170"/><line x1="220" y1="124" x2="220" y2="170"/><line x1="220" y1="124" x2="270" y2="170"/>
-        <rect class="me" x="110" y="20" width="80" height="26" rx="5"/><text x="150" y="37" text-anchor="middle">בעל הרשת</text>
-        <rect x="45" y="100" width="70" height="24" rx="5"/><text x="80" y="116" text-anchor="middle">מוביל</text>
-        <rect x="185" y="100" width="70" height="24" rx="5"/><text x="220" y="116" text-anchor="middle">מוביל</text>
+        <rect class="me" x="80" y="20" width="140" height="26" rx="5"/><text x="150" y="37" text-anchor="middle" direction="rtl">מנהיג/ת הרשת</text>
+        <rect x="22" y="100" width="116" height="24" rx="5"/><text x="80" y="116" text-anchor="middle" direction="rtl">ראש צוות</text>
+        <rect x="162" y="100" width="116" height="24" rx="5"/><text x="220" y="116" text-anchor="middle" direction="rtl">ראש צוות</text>
         <rect x="18" y="170" width="44" height="22" rx="5"/><rect x="78" y="170" width="44" height="22" rx="5"/>
         <rect x="148" y="170" width="44" height="22" rx="5"/><rect x="198" y="170" width="44" height="22" rx="5"/><rect x="248" y="170" width="44" height="22" rx="5"/>
-        <text x="150" y="214" text-anchor="middle">לכל אחד: דף · לידים · משימות</text>
+        <text x="150" y="214" text-anchor="middle" direction="rtl">מפיצים · לכל אחד: דף · לידים · משימות</text>
       </svg>
     </div>
   </div>
@@ -75,31 +76,38 @@
   <section id="features">
     <div class="sec-head"><h2>מה יש בפנים</h2><span class="eyebrow">בנוי לצוותי מכירה ישירה</span></div>
     <div class="feats">
-      <div><h3>דף נחיתה אישי</h3><p>כל מפיץ מקבל דף משלו עם התמונה שלו, הסיפור שלו וכפתור יצירת קשר. המחירים והמוצרים נקבעים ברמת הרשת.</p></div>
-      <div><h3>CRM ללידים</h3><p>כל פנייה מהדף נכנסת כליד עם משימות ומעקב, כך שאף אחד לא נופל בין הכיסאות.</p></div>
-      <div><h3>עץ רשת חי</h3><p>מובילים רואים את כל מי שמתחתיהם, בכל עומק, עם הפעילות של כל אחד במקום אחד.</p></div>
-      <div><h3>הרשאות בשליטה שלך</h3><p>מפיץ עורך רק את הפרופיל שלו. רק מוביל מורשה פותח מפיץ חדש. בעל הרשת קובע את הכללים.</p></div>
-      <div><h3>ספריית מדיה גולמית</h3><p>תמונות מוצר, צילומי אריזה ותעודות לבניית פוסטים משלך, במקום אותו פוסט מועתק שכולם משתפים.</p></div>
-      <div><h3>כל חברה, כל מוצר</h3><p>Downline HQ לא קשורה למותג אחד. רשת של כל חברה יכולה לעבוד עליה עם המוצרים שלה.</p></div>
+      <div><h3>שיתוף בלחיצה, מעקב מלא</h3><p>משתפים כל פוסט, סרטון או דף ל-WhatsApp, Instagram, Facebook או TikTok עם קישור אישי קצר. פתיחות, אנשים, לידים והזמנות נספרים לבד וזורמים למעלה בעץ — אף אחד לא מדווח כלום.</p></div>
+      <div><h3>סטודיו תוכן AI</h3><p>בוחרים מוצר, מטרה ופלטפורמה, מוסיפים את הסיפור והסגנון שלכם — ומקבלים פוסט, תמונה, רילס או באנר מוכנים. כל תוצר שונה, כך שהרשתות לא מענישות על תוכן כפול.</p></div>
+      <div><h3>הפעולה הבאה, כל בוקר</h3><p>3–5 משימות ביום, כל אחת עם הסיבה: ליד שמחכה שלושה ימים, לקוח שהגיע הזמן להזמנה הבאה, מפיץ חדש שנעלם. לחיצה אחת פותחת וואטסאפ עם הודעה מוכנה.</p></div>
+      <div><h3>תגמולים ודרגות</h3><p>תוכנית התגמולים של החברה שלכם כנתונים: פעיל ומוסמך, נפח שמאל וימין, בדיוק מה חסר לדרגה הבאה והערכת הכנסה. מעלים את מסמך התוכנית — ה-AI קורא, ואתם מאשרים.</p></div>
+      <div><h3>בדיקת תאימות לפני פרסום</h3><p>כל פוסט וסרטון נבדק לטענות רפואיות, הבטחות הכנסה ושימוש לא נכון במותג, עם ניסוח תקין מוצע. מנהיג/ת הרשת יכול/ה להוסיף שלב אישור ידני.</p></div>
+      <div><h3>תובנות AI חכמות</h3><p>הודעה קצרה כל יום למנהיגים, בשפה פשוטה: איזה צוות האט, איזה תוכן עובד פי שלושה, מי קרוב לדרגה הבאה — עם המספרים שמאחורי זה.</p></div>
+      <div><h3>דף נחיתה אישי</h3><p>כל מפיץ מקבל דף משלו עם התמונה שלו, הסיפור שלו וכפתור יצירת קשר. מחירים, רכיבים וטענות נעולים לספריית המוצרים המאושרת.</p></div>
+      <div><h3>CRM ללידים ושעת פעולה</h3><p>כל פנייה נכנסת כליד עם מעקב. שעת פעולה יומית עם יעד ותבניות הודעה הופכת כוונות לשיחות.</p></div>
+      <div><h3>עץ רשת חי</h3><p>ראשי צוותים רואים את כל מי שמתחתיהם, בכל עומק, עם הפעילות של כל אחד במקום אחד.</p></div>
+      <div><h3>הרשאות בשליטה שלך</h3><p>מפיץ עורך רק את הפרופיל שלו. רק ראש צוות מורשה פותח מפיץ חדש. מנהיג/ת הרשת קובע/ת את הכללים.</p></div>
+      <div><h3>טוקנים, חבילות ומכסות</h3><p>היצירות ב-AI עובדות עם טוקנים ומכסה חודשית חינם לפי מסלול. מנהיג/ת הרשת קובע/ת מחירים וחבילות, ויכול/ה לחלק טוקנים לצוות.</p></div>
+      <div><h3>כל חברה, כל מוצר</h3><p>Downline HQ לא קשורה למותג אחד. רשת של כל חברה עובדת עליה עם המוצרים ותוכנית התגמולים שלה.</p></div>
     </div>
   </section>
 
   <section id="how">
     <div class="sec-head"><h2>איך זה עובד</h2></div>
     <div class="method">
-      <div><h3>מקימים את הרשת</h3><p>בעל הרשת מוסיף את המוצרים וקובע מה כל תפקיד רואה ועושה.</p></div>
-      <div><h3>פותחים מפיצים</h3><p>מובילים פותחים חשבונות לצוות. כל אחד מקבל דף וכניסה.</p></div>
-      <div><h3>משתפים את הדף</h3><p>המפיצים משתפים את הקישור האישי. כל פנייה הופכת לליד.</p></div>
-      <div><h3>עוקבים אחרי העץ</h3><p>מובילים עוקבים אחרי לידים ופעילות בכל הרשת שמתחתיהם.</p></div>
+      <div><h3>מקימים את הרשת</h3><p>מנהיג/ת הרשת מוסיף/ה את המוצרים ואת תוכנית התגמולים, וקובע/ת מה כל תפקיד רואה ועושה.</p></div>
+      <div><h3>פותחים מפיצים</h3><p>ראשי צוותים פותחים חשבונות לצוות. כל אחד מקבל דף, סטודיו וכניסה.</p></div>
+      <div><h3>משתפים ויוצרים</h3><p>המפיצים משתפים מהספרייה או מהסטודיו בלחיצה. כל פתיחה נספרת, כל פנייה הופכת לליד.</p></div>
+      <div><h3>מובילים עם נתונים</h3><p>המנהיגים רואים כל בוקר מה עובד, מי קרוב לדרגה ומי צריך שיחה.</p></div>
     </div>
   </section>
 
   <section id="faq" class="faq">
     <div class="sec-head"><h2>שאלות</h2></div>
     <details open><summary>Downline HQ כבר זמינה?</summary><p>היא בפיתוח ומשמשת היום רשת אחת. אנחנו פותחים אותה בהדרגה לרשתות נוספות. הצטרפו לרשימה המוקדמת ונחזור אליכם.</p></details>
-    <details><summary>היא מתאימה רק למוצרים של חברה אחת?</summary><p>לא. היא בנויה כך שמפיצים של כל חברת מכירה ישירה יוכלו להשתמש בה עם המוצרים שלהם.</p></details>
-    <details><summary>מפיץ יכול לשנות מחירים או מוצרים?</summary><p>לא. מפיץ עורך את הפרופיל, התמונה והטקסט האישי שלו. מחירים, מוצרים והאנשים שמעליו נקבעים ברמת הרשת.</p></details>
-    <details><summary>מי רואה את הנתונים של הצוות שלי?</summary><p>אתם רואים את כל מי שמתחתיכם. מי שמעליכם רואה אתכם. בעל הרשת שולט בכל ההרשאות.</p></details>
+    <details><summary>היא מתאימה רק למוצרים של חברה אחת?</summary><p>לא. מפיצים של כל חברת מכירה ישירה יכולים להשתמש בה עם המוצרים ותוכנית התגמולים שלהם.</p></details>
+    <details><summary>מפיץ יכול לשנות מחירים או מוצרים?</summary><p>לא. מפיץ עורך את הפרופיל, התמונה והטקסט האישי שלו. מחירים, מוצרים, טענות והאנשים שמעליו נקבעים ברמת הרשת.</p></details>
+    <details><summary>מי רואה את הנתונים של הצוות שלי?</summary><p>אתם רואים את כל מי שמתחתיכם. מי שמעליכם רואה אתכם. מנהיג/ת הרשת שולט/ת בכל ההרשאות.</p></details>
+    <details><summary>המעקב אחרי שיתופים משתמש בעוגיות?</summary><p>לא. הפתיחות נספרות אצלנו בשרת מהקישור האישי הקצר. בלי עוגיות מעקב של צד שלישי ובלי פיקסלים.</p></details>
   </section>
 
   <section id="early">
@@ -117,7 +125,7 @@
     </div>
   </section>
 
-  <footer><span>Downline HQ היא פלטפורמה של <a href="/he/">SINAI Global</a><span class="legal"> · <a href="/he/privacy/">פרטיות</a> · <a href="/he/terms/">תנאי שימוש</a></span></span><span class="foot-lng" aria-label="שפה"><span aria-current="true" lang="he">עברית</span> · <a href="/downline-hq/" data-setlang="en" lang="en">English</a> · <a href="/ru/downline-hq/" data-setlang="ru" lang="ru">Русский</a> · <a href="/ar/downline-hq/" data-setlang="ar" lang="ar">العربية</a> · <a href="/es/downline-hq/" data-setlang="es" lang="es">Español</a> · <a href="/de/downline-hq/" data-setlang="de" lang="de">Deutsch</a> · <a href="/it/downline-hq/" data-setlang="it" lang="it">Italiano</a> · <a href="/fr/downline-hq/" data-setlang="fr" lang="fr">Français</a> · <a href="/pt/downline-hq/" data-setlang="pt" lang="pt">Português</a> · <a href="/hi/" data-setlang="hi" lang="hi">हिन्दी</a></span></footer>
+  <footer><span>Downline HQ היא פלטפורמה של <a href="/he/">SINAI Global</a><span class="legal"> · <a href="/he/privacy/">פרטיות</a> · <a href="/he/terms/">תנאי שימוש</a></span></span><span class="foot-lng" aria-label="שפה"><span aria-current="true" lang="he">עברית</span> · <a href="/downline-hq/" data-setlang="en" lang="en">English</a> · <a href="/ru/downline-hq/" data-setlang="ru" lang="ru">Русский</a> · <a href="/ar/downline-hq/" data-setlang="ar" lang="ar">العربية</a> · <a href="/es/downline-hq/" data-setlang="es" lang="es">Español</a> · <a href="/de/downline-hq/" data-setlang="de" lang="de">Deutsch</a> · <a href="/it/downline-hq/" data-setlang="it" lang="it">Italiano</a> · <a href="/fr/downline-hq/" data-setlang="fr" lang="fr">Français</a> · <a href="/pt/downline-hq/" data-setlang="pt" lang="pt">Português</a> · <a href="/hi/downline-hq/" data-setlang="hi" lang="hi">हिन्दी</a></span></footer>
 </div>
 </body>
 </html>
