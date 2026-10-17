@@ -351,8 +351,7 @@ html[dir="rtl"] .sky .glow{background:radial-gradient(38% 55% at 25% 78%,rgba(23
 }
 
 /* Flow: light streaks travel along the contour lines, so the map is visibly alive */
-.field .flow{position:absolute;left:50%;top:50%;width:1800px;height:1415px;transform:translate(-50%,-50%);
-  background:url(/assets/topo-flow.svg) center/contain no-repeat}
+.field .flow{position:absolute;left:50%;top:50%;width:1800px;height:1415px;transform:translate(-50%,-50%)}
 .cta-field .flow{width:1500px;height:1180px}
 @media (max-width:860px){.field .flow{width:1300px;height:1022px}}
 @media (prefers-reduced-motion:no-preference){.field .flow{animation:sg-drift 36s ease-in-out infinite alternate}}

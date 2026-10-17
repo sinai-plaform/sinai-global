@@ -282,6 +282,6 @@ html[lang="he"] .legal-doc h1,html[lang="ar"] .legal-doc h1{letter-spacing:0;lin
 .legal-mark ~ *{position:relative;z-index:1}
 .legal-mark .legend{display:none}
 @media (max-width:760px){.legal-mark{top:120px;inset-inline-end:10%}.legal-mark .alt{display:none}}
-.legal-mark .flow{position:absolute;left:50%;top:50%;width:1400px;height:1100px;transform:translate(-50%,-50%);background:url(/assets/topo-flow-light.svg) center/contain no-repeat;pointer-events:none}
+.legal-mark .flow{position:absolute;left:50%;top:50%;width:1400px;height:1100px;transform:translate(-50%,-50%);pointer-events:none}
 @media (prefers-reduced-motion:no-preference){.legal-mark .flow{animation:drift 40s ease-in-out infinite alternate}}
 @media (prefers-reduced-motion:reduce){.legal-mark .flow{display:none}}
