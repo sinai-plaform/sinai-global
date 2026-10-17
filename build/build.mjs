@@ -125,7 +125,7 @@ function footer(l, page) {
     <div class="grid">
       <div><a class="brand" href="${home(l)}">${MARK()}SINAI GLOBAL</a><p class="tag">${esc(t.hero.h1)}</p></div>
       <div><h2>${esc(f.divisions)}</h2><ul><li><a href="${h}#products">${esc(t.divisions.software)}</a></li><li><a href="${h}#cinema" lang="en">SINAI Cinema</a></li><li><a href="${h}#lifestyle" lang="en">SINAI Lifestyle</a></li></ul></div>
-      <div><h2>${esc(f.platforms)}</h2><ul lang="en"><li><a href="https://jasale.app/">JaSale</a></li><li><a href="https://sinaiclub.com/">SINAI Club</a></li><li><a href="${pre(l) + '/downline-hq/'}">Downline HQ</a></li><li><a href="https://sinaicinema.com/">SINAI Cinema</a></li></ul></div>
+      <div><h2>${esc(f.platforms)}</h2><ul lang="en"><li><a href="https://jasale.app/">JaSale</a></li><li><a href="https://sinaiclub.com/">SINAI Club</a></li><li><a href="${'https://downlinehq.app/' + l}">Downline HQ</a></li><li><a href="https://sinaicinema.com/">SINAI Cinema</a></li></ul></div>
       <div><h2>${esc(f.company)}</h2><ul><li><a href="${solPath(l)}">${esc(n.solutions)}</a></li><li><a href="${h}#about">${esc(n.about)}</a></li><li><a href="${h}#contact">${esc(n.contact)}</a></li></ul></div>
     </div>
     <div class="settings">
@@ -209,7 +209,7 @@ ${header(l, 'home')}
         <div class="meta"><img class="plogo" src="/assets/logos/downline-hq.svg" alt="" width="52" height="52" loading="lazy"> <span>${esc(b.dl_tag)}</span> <span class="status dev">${esc(b.dev)}</span></div>
         <h3 lang="en">Downline HQ</h3>
         <p>${esc(b.dl_line)}</p>
-        <div class="acts"><a class="btn line small" href="${pre(l) + '/downline-hq/'}">${esc(b.dl_link)}</a></div>
+        <div class="acts"><a class="btn line small" href="${'https://downlinehq.app/' + l}">${esc(b.dl_link)}</a></div>
       </article>
       <article class="tile custom">
         <h3>${esc(b.custom_t)}</h3>
@@ -365,7 +365,6 @@ console.log('built', LANGS.length * 2, 'pages');
   const groups = [
     { langs: LANGS, path: '/', pri: '1.0' },
     { langs: LANGS, path: '/solutions/', pri: '0.9' },
-    { langs: LANGS, path: '/downline-hq/', pri: '0.8' }, // build/downline.mjs — all 10 languages
     { langs: [...LEGACY], path: '/privacy/', pri: '0.3' },
     { langs: [...LEGACY], path: '/terms/', pri: '0.3' },
   ];
