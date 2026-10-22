@@ -3,7 +3,7 @@
   "meta": {
     "title": "SINAI Global · Software inteligente que trabaja para ti",
     "desc": "SINAI Global lleva la IA a las empresas: apps inteligentes listas para tu sector (JaSale para ventas, SINAI Club para fútbol, Downline HQ para venta directa) y desarrollo a medida cuando lo necesites.",
-    "og": "Apps inteligentes para entrenamiento, ventas, venta directa y producción, listas desde el primer día o creadas solo para ti.",
+    "og": "Productos inteligentes para quienes ya trabajan sobre el terreno. O una solución creada solo para tu negocio.",
     "sol_title": "Desarrollo a medida y precios · SINAI Global",
     "sol_desc": "IA para tu negocio, con precios claros desde el inicio: diagnóstico con IA, webs inteligentes, automatizaciones con IA, adaptación de plataformas, apps a medida, soporte mensual y hosting."
   },
@@ -27,7 +27,7 @@
   },
   "hero": {
     "h1": "Software inteligente que trabaja para ti.",
-    "sub": "Productos inteligentes para ventas, entrenamiento, venta directa y producción, que ya funcionan sobre el terreno. O una solución creada solo para tu negocio.",
+    "sub": "Productos inteligentes para quienes ya trabajan sobre el terreno. O una solución creada solo para tu negocio.",
     "cta1": "Ver los productos",
     "cta2": "Habla con nosotros",
     "visual": "Pantallas reales de JaSale, SINAI Club y SINAI Cinema"
@@ -49,9 +49,9 @@
     "soon": "Próximamente",
     "demo": "Reserva una demo",
     "jasale_tag": "Ventas de campo",
-    "jasale_line": "Un plan semanal inteligente para cada agente, pedidos y cobros incluso sin cobertura, y un solo panel para el responsable.",
+    "jasale_line": "Planes de trabajo inteligentes para cada agente, pedidos y cobros incluso sin cobertura, y un solo panel para el responsable.",
     "club_tag": "Clubes de fútbol",
-    "club_line": "Un plan de entrenamiento inteligente para cada categoría, fichas de jugador que se completan solas a partir de notas de voz y una vista para las familias.",
+    "club_line": "Un plan de entrenamiento inteligente para cada categoría, fichas de jugador que se completan solas a partir de notas de voz y un canal con las familias: novedades constantes y un informe mensual del progreso de su hijo.",
     "dl_tag": "Venta directa",
     "dl_line": "Una página de ventas personal y un CRM para cada distribuidor, y un árbol de red en vivo para el líder.",
     "dl_link": "Sobre Downline HQ",

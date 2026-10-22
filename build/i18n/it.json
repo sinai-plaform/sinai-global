@@ -3,7 +3,7 @@
   "meta": {
     "title": "SINAI Global · Software intelligente che lavora per te",
     "desc": "SINAI Global porta l’IA nell’azienda: app intelligenti pronte per il tuo settore (JaSale per le vendite, SINAI Club per il calcio, Downline HQ per la vendita diretta) e sviluppo su misura quando serve.",
-    "og": "App intelligenti per allenamento, vendite, vendita diretta e produzione, pronte dal primo giorno o costruite su misura per te.",
+    "og": "Prodotti intelligenti per chi lavora già sul campo. Oppure una soluzione costruita su misura per la tua azienda.",
     "sol_title": "Sviluppo su misura e prezzi · SINAI Global",
     "sol_desc": "IA per la tua azienda, con prezzi chiari in anticipo: diagnosi IA, siti intelligenti, automazioni IA, personalizzazione delle piattaforme, app su misura, supporto mensile e hosting."
   },
@@ -27,7 +27,7 @@
   },
   "hero": {
     "h1": "Software intelligente che lavora per te.",
-    "sub": "Prodotti intelligenti per vendite, allenamento, vendita diretta e produzione, già al lavoro sul campo. Oppure una soluzione costruita su misura per la tua azienda.",
+    "sub": "Prodotti intelligenti per chi lavora già sul campo. Oppure una soluzione costruita su misura per la tua azienda.",
     "cta1": "Scopri i prodotti",
     "cta2": "Parliamone",
     "visual": "Schermate reali di JaSale, SINAI Club e SINAI Cinema"
@@ -49,9 +49,9 @@
     "soon": "In arrivo",
     "demo": "Prenota una demo",
     "jasale_tag": "Vendita sul campo",
-    "jasale_line": "Un piano settimanale intelligente per ogni agente, ordini e incassi anche senza campo, e un’unica bacheca per il manager.",
+    "jasale_line": "Piani di lavoro intelligenti per ogni agente, ordini e incassi anche senza campo, e un’unica bacheca per il manager.",
     "club_tag": "Club di calcio",
-    "club_line": "Un piano di allenamento intelligente per ogni fascia d’età, schede giocatore che si compilano da sole dai messaggi vocali e una vista per i genitori.",
+    "club_line": "Un piano di allenamento intelligente per ogni fascia d’età, schede giocatore che si compilano da sole dai messaggi vocali e un canale con i genitori: aggiornamenti costanti e un report mensile sui progressi del figlio.",
     "dl_tag": "Vendita diretta",
     "dl_line": "Una pagina di vendita personale e un CRM per ogni distributore, e un albero della rete in tempo reale per il leader.",
     "dl_link": "Scopri Downline HQ",

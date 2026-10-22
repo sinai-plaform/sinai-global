@@ -3,7 +3,7 @@
   "meta": {
     "title": "SINAI Global · Des logiciels intelligents qui travaillent pour vous",
     "desc": "SINAI Global fait entrer l’IA dans l’entreprise : des applications intelligentes prêtes pour votre métier (JaSale pour la vente, SINAI Club pour le football, Downline HQ pour la vente directe) et du développement sur mesure quand vous en avez besoin.",
-    "og": "Des applications intelligentes pour l’entraînement, la vente, la vente directe et la production, prêtes dès le premier jour ou conçues pour vous.",
+    "og": "Des produits intelligents pour ceux qui travaillent déjà sur le terrain. Ou une solution conçue sur mesure pour votre entreprise.",
     "sol_title": "Développement sur mesure et tarifs · SINAI Global",
     "sol_desc": "L’IA pour votre entreprise, avec des prix annoncés d’avance : diagnostic IA, sites intelligents, automatisations IA, personnalisation de plateformes, applications sur mesure, accompagnement mensuel et hébergement."
   },
@@ -27,7 +27,7 @@
   },
   "hero": {
     "h1": "Des logiciels intelligents qui travaillent pour vous.",
-    "sub": "Des produits intelligents pour la vente, l’entraînement, la vente directe et la production, déjà utilisés sur le terrain. Ou une solution conçue sur mesure pour votre entreprise.",
+    "sub": "Des produits intelligents pour ceux qui travaillent déjà sur le terrain. Ou une solution conçue sur mesure pour votre entreprise.",
     "cta1": "Découvrir les produits",
     "cta2": "Parlons-en",
     "visual": "Écrans réels de JaSale, SINAI Club et SINAI Cinema"
@@ -49,9 +49,9 @@
     "soon": "Bientôt disponible",
     "demo": "Réserver une démo",
     "jasale_tag": "Vente terrain",
-    "jasale_line": "Un planning hebdomadaire intelligent pour chaque commercial, commandes et encaissements même sans réseau, et un tableau unique pour le manager.",
+    "jasale_line": "Des plannings de travail intelligents pour chaque commercial, commandes et encaissements même sans réseau, et un tableau unique pour le manager.",
     "club_tag": "Clubs de football",
-    "club_line": "Un plan d’entraînement intelligent pour chaque catégorie d’âge, des fiches joueurs qui se remplissent toutes seules à partir de notes vocales, et un espace pour les parents.",
+    "club_line": "Un plan d’entraînement intelligent pour chaque catégorie d’âge, des fiches joueurs qui se remplissent toutes seules à partir de notes vocales, et un lien avec les parents : des nouvelles régulières et un bilan mensuel des progrès de leur enfant.",
     "dl_tag": "Vente directe",
     "dl_line": "Une page de vente personnelle et un CRM pour chaque distributeur, et un arbre du réseau en temps réel pour le leader.",
     "dl_link": "Découvrir Downline HQ",

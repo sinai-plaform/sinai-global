@@ -3,7 +3,7 @@
   "meta": {
     "title": "SINAI Global · Smart software that works for you",
     "desc": "SINAI Global brings AI into the business: smart apps ready for your field (JaSale for sales, SINAI Club for football, Downline HQ for direct sales) and custom development when you need it.",
-    "og": "Smart apps for training, sales, direct selling and production, ready from day one or built just for you.",
+    "og": "Smart products for people who already work in the field. Or a solution built just for your business.",
     "sol_title": "Custom development and pricing · SINAI Global",
     "sol_desc": "AI for your business, priced up front: AI diagnosis, smart websites, AI automations, platform customization, custom apps, monthly support and hosting."
   },
@@ -27,7 +27,7 @@
   },
   "hero": {
     "h1": "Smart software that works for you.",
-    "sub": "Smart products for sales, coaching, direct selling and production, already working in the field. Or a solution built just for your business.",
+    "sub": "Smart products for people who already work in the field. Or a solution built just for your business.",
     "cta1": "Explore the products",
     "cta2": "Talk to us",
     "visual": "Real screens from JaSale, SINAI Club and SINAI Cinema"
@@ -49,9 +49,9 @@
     "soon": "Coming soon",
     "demo": "Book a demo",
     "jasale_tag": "Field sales",
-    "jasale_line": "A smart weekly plan for every agent, orders and collections even with no signal, and one board for the manager.",
+    "jasale_line": "Smart work plans for every agent, orders and collections even with no signal, and one board for the manager.",
     "club_tag": "Football clubs",
-    "club_line": "A smart training plan for every age group, player cards that build themselves from voice notes, and a view for parents.",
+    "club_line": "A smart training plan for every age group, player cards that build themselves from voice notes, and a parent connection: regular updates and a monthly progress report on their child.",
     "dl_tag": "Direct sales",
     "dl_line": "A personal sales page and CRM for every distributor, and a live network tree for the leader.",
     "dl_link": "About Downline HQ",
