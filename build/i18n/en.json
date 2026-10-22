@@ -1,7 +1,7 @@
 {
   "_lang": "English",
   "meta": {
-    "title": "SINAI Global · AI that works inside your business",
+    "title": "SINAI Global · Smart software that works for you",
     "desc": "SINAI Global brings AI into the business: smart apps ready for your field (JaSale for sales, SINAI Club for football, Downline HQ for direct sales) and custom development when you need it.",
     "og": "Smart apps for training, sales, direct selling and production, ready from day one or built just for you.",
     "sol_title": "Custom development and pricing · SINAI Global",
@@ -26,8 +26,8 @@
     "skip": "Skip intro"
   },
   "hero": {
-    "h1": "AI that works inside your business.",
-    "sub": "Smart apps for training, sales, direct selling and production. Ready to work from day one, or built just for you.",
+    "h1": "Smart software that works for you.",
+    "sub": "Smart products for sales, coaching, direct selling and production, already working in the field. Or a solution built just for your business.",
     "cta1": "Explore the products",
     "cta2": "Talk to us",
     "visual": "Real screens from JaSale, SINAI Club and SINAI Cinema"
@@ -56,10 +56,15 @@
     "dl_line": "A personal sales page and CRM for every distributor, and a live network tree for the leader.",
     "dl_link": "About Downline HQ",
     "custom_tag": "Custom",
-    "custom_t": "AI solutions for your business",
-    "custom_line": "Automations, smart websites and apps built around the way your business already works.",
+    "custom_t": "Bring AI into your business",
+    "custom_line": "Smart tools that slot into your daily work, built around the way your business already runs:",
     "custom_from": "AI diagnosis for your business",
-    "custom_cta": "Prices and services"
+    "custom_cta": "Prices and services",
+    "custom_ex": [
+      "A chatbot that answers customers 24/7",
+      "Automated reports, quotes and customer follow-up",
+      "Data analysis that shows where you earn and where you lose"
+    ]
   },
   "how": {
     "h2": "How we work",
@@ -178,5 +183,16 @@
     "f_required": "Please fill in your name, what you need, and how to reach you.",
     "f_sent": "Your message is ready to send in the app that just opened.",
     "msg_intro": "Hi Liran, I'd like to hear about AI for my business."
+  },
+  "why": {
+    "h2": "Why SINAI Global",
+    "w1_t": "Products already working in the field",
+    "w1_d": "JaSale and SINAI Club are already in use by real sales reps and coaches. You see a live product, not a slide deck.",
+    "w2_t": "From idea to working app in weeks",
+    "w2_d": "A proven core and a fast build method: your team holds a working version within weeks, improved every week.",
+    "w3_t": "Ready for the world from day one",
+    "w3_d": "Ten languages, including right-to-left Hebrew and Arabic, and a built-in currency selector.",
+    "w4_t": "Everything under one roof",
+    "w4_d": "App, website, branding and promo videos from one team. One supplier, one point of responsibility."
   }
 }

@@ -1,7 +1,7 @@
 {
   "_lang": "Português",
   "meta": {
-    "title": "SINAI Global · IA que trabalha dentro da sua empresa",
+    "title": "SINAI Global · Software inteligente que trabalha para você",
     "desc": "A SINAI Global leva a IA para dentro da empresa: apps inteligentes prontos para o seu setor (JaSale para vendas, SINAI Club para futebol, Downline HQ para venda direta) e desenvolvimento sob medida quando você precisar.",
     "og": "Apps inteligentes para treino, vendas, venda direta e produção, prontos desde o primeiro dia ou feitos sob medida para você.",
     "sol_title": "Desenvolvimento sob medida e preços · SINAI Global",
@@ -26,8 +26,8 @@
     "skip": "Pular introdução"
   },
   "hero": {
-    "h1": "IA que trabalha dentro da sua empresa.",
-    "sub": "Apps inteligentes para treino, vendas, venda direta e produção. Prontos para trabalhar desde o primeiro dia, ou feitos sob medida para você.",
+    "h1": "Software inteligente que trabalha para você.",
+    "sub": "Produtos inteligentes para vendas, treino, venda direta e produção, que já funcionam em campo. Ou uma solução feita sob medida para a sua empresa.",
     "cta1": "Conheça os produtos",
     "cta2": "Fale com a gente",
     "visual": "Telas reais do JaSale, SINAI Club e SINAI Cinema"
@@ -56,10 +56,15 @@
     "dl_line": "Uma página de vendas pessoal e um CRM para cada distribuidor, e uma árvore da rede em tempo real para o líder.",
     "dl_link": "Sobre o Downline HQ",
     "custom_tag": "Sob medida",
-    "custom_t": "Soluções de IA para a sua empresa",
-    "custom_line": "Automações, sites inteligentes e apps construídos em torno do jeito que a sua empresa já trabalha.",
+    "custom_t": "IA dentro da sua empresa",
+    "custom_line": "Ferramentas inteligentes que entram no seu dia a dia, construídas em torno do jeito que a sua empresa já trabalha:",
     "custom_from": "Diagnóstico de IA para a sua empresa",
-    "custom_cta": "Preços e serviços"
+    "custom_cta": "Preços e serviços",
+    "custom_ex": [
+      "Um chatbot que atende os clientes 24/7",
+      "Relatórios, orçamentos e acompanhamento de clientes automatizados",
+      "Análise de dados que mostra onde você ganha e onde perde"
+    ]
   },
   "how": {
     "h2": "Como trabalhamos",
@@ -178,5 +183,16 @@
     "f_required": "Preencha seu nome, o que você precisa e como falar com você.",
     "f_sent": "Sua mensagem está pronta para envio no app que acabou de abrir.",
     "msg_intro": "Olá, Liran! Quero saber mais sobre IA para a minha empresa."
+  },
+  "why": {
+    "h2": "Por que a SINAI Global",
+    "w1_t": "Produtos que já funcionam em campo",
+    "w1_d": "Vendedores e treinadores reais já usam o JaSale e o SINAI Club. Você vê um produto vivo, não uma apresentação.",
+    "w2_t": "Da ideia ao app em semanas",
+    "w2_d": "Um núcleo comprovado e um método de desenvolvimento rápido: sua equipe tem uma versão funcional em poucas semanas, com melhorias toda semana.",
+    "w3_t": "Pronto para o mundo desde o primeiro dia",
+    "w3_d": "Dez idiomas, incluindo hebraico e árabe da direita para a esquerda, e seletor de moeda integrado.",
+    "w4_t": "Tudo sob o mesmo teto",
+    "w4_d": "App, site, marca e vídeos promocionais de uma só equipe. Um fornecedor, uma única responsabilidade."
   }
 }

@@ -18,7 +18,7 @@ const FONTS = {
 };
 // pages that only exist in the original 9 languages
 const LEGACY = new Set(['he', 'en', 'ru', 'ar', 'es', 'de', 'it', 'fr', 'pt']);
-const V = '202610180000';
+const V = '202610210200';
 const WA = '972507763923';
 const PRICES = { // must match assets/sg.js; used for the first paint
   diag: { ILS: 1500, USD: 420 }, site: { ILS: 4900, USD: 1350 }, auto: { ILS: 3900, USD: 1090 },
@@ -215,25 +215,24 @@ ${header(l, 'home')}
       <article class="tile custom">
         <h3>${esc(b.custom_t)}</h3>
         <p>${esc(b.custom_line)}</p>
+        <ul class="ex">${b.custom_ex.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
         <div class="price-chip"><span>${esc(b.custom_from)}</span><b>${price('diag', '{p}', l)}</b></div>
         <div class="acts"><a class="btn sun" href="${solPath(l)}">${esc(b.custom_cta)}</a></div>
       </article>
     </div>
   </div></section>
 
-  <section class="sec" id="how" aria-labelledby="how-h"><div class="wrap">
-    <div class="sec-head"><h2 id="how-h">${esc(t.how.h2)}</h2></div>
-    <div class="how">
-      <div><h3>${esc(t.how.s1_t)}</h3><p>${esc(t.how.s1_d)}</p></div>
-      <div><h3>${esc(t.how.s2_t)}</h3><p>${esc(t.how.s2_d)}</p></div>
-      <div><h3>${esc(t.how.s3_t)}</h3><p>${esc(t.how.s3_d)}</p></div>
+  <section class="sec" id="why" aria-labelledby="why-h"><div class="wrap">
+    <div class="sec-head"><h2 id="why-h">${esc(t.why.h2)}</h2></div>
+    <div class="how four">
+      ${[1, 2, 3, 4].map(i => `<div><h3>${esc(t.why['w' + i + '_t'])}</h3><p>${esc(t.why['w' + i + '_d'])}</p></div>`).join('\n      ')}
     </div>
   </div></section>
 
   <section class="sec" id="trust" aria-labelledby="trust-h"><div class="wrap">
     <div class="sec-head"><h2 id="trust-h">${esc(t.trust.h2)}</h2></div>
     <div class="trust">
-      ${['sec', 'perm', 'minors', 'rights', 'priv'].map(k => `<div><h3><svg viewBox="0 0 24 24" aria-hidden="true">${ICON[k]}</svg>${esc(t.trust[k + '_t'])}</h3><p>${esc(t.trust[k + '_d'])}</p>${k === 'priv' ? `<a class="link" href="${legacy(l, '/privacy/')}">${esc(t.trust.priv_link)}</a>` : ''}</div>`).join('\n      ')}
+      ${['minors', 'rights', 'priv'].map(k => `<div><h3><svg viewBox="0 0 24 24" aria-hidden="true">${ICON[k]}</svg>${esc(t.trust[k + '_t'])}</h3><p>${esc(t.trust[k + '_d'])}</p>${k === 'priv' ? `<a class="link" href="${legacy(l, '/privacy/')}">${esc(t.trust.priv_link)}</a>` : ''}</div>`).join('\n      ')}
     </div>
   </div></section>
 

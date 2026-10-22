@@ -178,7 +178,12 @@ html[lang="he"] .prod h3,html[lang="ar"] .prod h3,html[lang="hi"] .prod h3{lette
 .how{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,3vw,48px)}
 .how div{border-top:2px solid var(--ink);padding-top:22px}
 .how p{color:var(--slate);margin-top:12px}
-@media (max-width:760px){.how{grid-template-columns:1fr}}
+.how.four{grid-template-columns:repeat(4,1fr)}
+@media (max-width:1000px){.how.four{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:760px){.how,.how.four{grid-template-columns:1fr}}
+.tile.custom ul.ex{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.tile.custom ul.ex li{position:relative;padding-inline-start:20px;color:var(--on-night)}
+.tile.custom ul.ex li::before{content:"";position:absolute;inset-inline-start:0;top:.6em;width:8px;height:8px;border-radius:50%;background:var(--sun)}
 
 /* trust */
 .trust{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:0;border-top:1px solid var(--line)}
