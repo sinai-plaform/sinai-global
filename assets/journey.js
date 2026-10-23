@@ -23,10 +23,12 @@ function point(q){
  var top=q.indexOf('top:')===0,sel=top?q.slice(4):q,el=document.querySelector(sel);if(!el)return null;
  var b=box(el);if(!b.w&&!b.h)return null;var R=rtl();
  if(top)return [clampX(R?b.x+b.w-46:b.x+46),b.y-16];
- return [clampX(R?b.x+b.w+20:b.x-20),b.y+b.h/2];}
+ return [clampX(R?b.x+b.w+34:b.x-34),b.y+b.h/2];}
 function el(n,a){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);return e;}
 function build(){
  W=document.documentElement.clientWidth;H=document.documentElement.scrollHeight;
+ /* phones: the side gutter is too narrow for a line beside the text — the night zone carries the signature there */
+ if(W<760){if(svg){svg.remove();svg=null;}built=false;return;}
  var P=[],s=document.querySelector(C.start);
  if(s){var b=box(s);if(b.w||b.h)P.push([b.x+b.w/2,b.y+b.h/2]);}
  (C.stations||[]).forEach(function(q){var p=point(q);if(p)P.push(p);});
@@ -35,8 +37,10 @@ function build(){
  if(P.length<2)return;
  var d='M'+P[0][0].toFixed(1)+' '+P[0][1].toFixed(1),cx=W/2;
  for(var i=1;i<P.length;i++){var a=P[i-1],c=P[i],dy=c[1]-a[1],k=i%2?0.85:0.45;
-  var c1x=a[0]+(cx-a[0])*k,c2x=c[0]+(cx-c[0])*(1-k)*0.9;
-  var c1y=a[1]+dy*.42,c2y=c[1]-dy*.42;
+  /* leave each station straight down along the margin (never across the headline under it), swing inward behind the
+     section's cards, and arrive at the next station from above */
+  var c1x=a[0],c2x=c[0]+(cx-c[0])*k;
+  var c1y=a[1]+dy*.5,c2y=c[1]-dy*.3;
   /* first leg: drop straight out of the hero, then sweep in ABOVE the first station so it never crosses the section headline */
   if(i===1){c1x=a[0];c1y=a[1]+dy*.75;c2x=c[0]+(cx-c[0])*.15;c2y=c[1]-dy*.2;}
   d+=' C'+c1x.toFixed(1)+' '+c1y.toFixed(1)+' '+c2x.toFixed(1)+' '+c2y.toFixed(1)+' '+c[0].toFixed(1)+' '+c[1].toFixed(1);}
