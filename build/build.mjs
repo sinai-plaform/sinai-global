@@ -106,7 +106,7 @@ function header(l, page) {
     <nav class="nav" id="nav" aria-label="${esc(n.main)}">
       <button class="menu-btn nav-close" type="button">${esc(n.close)}</button>
       <a href="${h}#products">${esc(n.products)}</a>
-      <a href="${solPath(l)}"${isSol ? ' aria-current="page"' : ''}>${esc(n.solutions)}</a>
+      ${isSol ? '' : `<a href="${solPath(l)}">${esc(n.solutions)}</a>`}
       <a href="${h}#cinema" lang="en">${esc(n.cinema)}</a>
       <a href="${h}#lifestyle" lang="en">${esc(n.lifestyle)}</a>
       <a href="${h}#about">${esc(n.about)}</a>
@@ -127,7 +127,7 @@ function footer(l, page) {
       <div><a class="brand" href="${home(l)}">${MARK()}SINAI GLOBAL</a><p class="tag">${esc(t.hero.h1)}</p></div>
       <div><h2>${esc(f.divisions)}</h2><ul><li><a href="${h}#products">${esc(t.divisions.software)}</a></li><li><a href="${h}#cinema" lang="en">SINAI Cinema</a></li><li><a href="${h}#lifestyle" lang="en">SINAI Lifestyle</a></li></ul></div>
       <div><h2>${esc(f.platforms)}</h2><ul lang="en"><li><a href="https://jasale.app/">JaSale</a></li><li><a href="https://sinaiclub.com/">SINAI Club</a></li><li><a href="${'https://downlinehq.app/' + l}">Downline HQ</a></li><li><a href="https://sinaicinema.com/">SINAI Cinema</a></li></ul></div>
-      <div><h2>${esc(f.company)}</h2><ul><li><a href="${solPath(l)}">${esc(n.solutions)}</a></li><li><a href="${h}#about">${esc(n.about)}</a></li><li><a href="${h}#contact">${esc(n.contact)}</a></li></ul></div>
+      <div><h2>${esc(f.company)}</h2><ul>${isSol ? '' : `<li><a href="${solPath(l)}">${esc(n.solutions)}</a></li>`}<li><a href="${h}#about">${esc(n.about)}</a></li><li><a href="${h}#contact">${esc(n.contact)}</a></li></ul></div>
     </div>
     <div class="settings">
       <nav class="langs" aria-label="${esc(n.language)}">${langs}</nav>
@@ -167,6 +167,7 @@ ${header(l, 'home')}
         <h1 id="h1">${esc(t.hero.h1)}</h1>
         <p class="sub">${esc(t.hero.sub)}</p>
         <div class="ctas"><a class="btn sun" href="#products">${esc(t.hero.cta1)}</a><a class="btn line" href="#contact">${esc(t.hero.cta2)}</a></div>
+        <div class="htrust"><span>${esc(t.hero.t1)}</span><span>${esc(t.hero.t2)}</span><span class="tsec"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>${esc(t.hero.t3)}</span></div>
       </div>
       <div class="stage" role="img" aria-label="${esc(t.hero.visual)}">
         <div class="cine"><img src="/assets/shots/sinaicinema.webp" alt="" width="1240" height="420" decoding="async"></div>
@@ -222,6 +223,7 @@ ${header(l, 'home')}
     </div>
   </div></section>
 
+  <div class="night">
   <section class="sec" id="why" aria-labelledby="why-h"><div class="wrap">
     <div class="sec-head"><h2 id="why-h">${esc(t.why.h2)}</h2></div>
     <div class="how four">
@@ -235,16 +237,7 @@ ${header(l, 'home')}
       ${['minors', 'rights', 'priv'].map(k => `<div><h3><svg viewBox="0 0 24 24" aria-hidden="true">${ICON[k]}</svg>${esc(t.trust[k + '_t'])}</h3><p>${esc(t.trust[k + '_d'])}</p>${k === 'priv' ? `<a class="link" href="${legacy(l, '/privacy/')}">${esc(t.trust.priv_link)}</a>` : ''}</div>`).join('\n      ')}
     </div>
   </div></section>
-
-  <section class="sec" id="details" aria-labelledby="details-h"><div class="wrap">
-    <div class="sec-head"><h2 id="details-h">${esc(t.nums.h2)}</h2></div>
-    <div class="nums">
-      <div><b><bdi dir="ltr">0</bdi></b><span>${esc(t.nums.f1)}</span></div>
-      <div><b><bdi dir="ltr">1</bdi></b><span>${esc(t.nums.f2)}</span></div>
-      <div><b><bdi dir="ltr">24/7</bdi></b><span>${esc(t.nums.f3)}</span></div>
-      <div><b><bdi dir="ltr">10+</bdi></b><span>${esc(t.nums.f4)}</span></div>
-    </div>
-  </div></section>
+  </div>
 
   <section class="sec" aria-label="SINAI Cinema · SINAI Lifestyle"><div class="wrap duo">
     <article class="cine-card" id="cinema">
@@ -288,6 +281,7 @@ ${header(l, 'home')}
   </div></section>
 </main>
 ${footer(l, 'home')}
+<script>window.JOURNEY={start:'.summit-dot',stations:['#products-h','#why-h','#trust-h','top:#cinema','#about-h'],end:'top:.cta-band',base:'rgba(180,72,58,.42)',prog:'#d4644f',dot:'#eaa36b',bg:'#f8f9f6'};</script><script src="/assets/journey.js?v=${V}" defer></script>
 </body>
 </html>
 `;

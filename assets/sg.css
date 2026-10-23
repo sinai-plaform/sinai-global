@@ -361,3 +361,19 @@ html[dir="rtl"] .sky .glow{background:radial-gradient(38% 55% at 25% 78%,rgba(23
 @media (max-width:860px){.field .flow{width:1300px;height:1022px}}
 @media (prefers-reduced-motion:no-preference){.field .flow{animation:sg-drift 36s ease-in-out infinite alternate}}
 @media (prefers-reduced-motion:reduce){.field .flow{display:none}}
+
+/* hero trust row — data protection emphasised (landing principles, 2026-10-23) */
+.htrust{display:flex;flex-wrap:wrap;gap:10px 20px;margin-top:26px;font-size:14px;font-weight:600;color:var(--on-night-2)}
+.htrust span{display:inline-flex;align-items:center;gap:7px}
+.htrust .tsec{font-weight:800;color:var(--on-night);background:rgba(234,163,107,.14);padding:5px 12px 5px 10px;border-radius:999px;box-shadow:inset 0 0 0 1px rgba(234,163,107,.35)}
+.htrust svg{width:17px;height:17px;fill:none;stroke:var(--dawn);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+/* the signature continues below the hero: one night zone (why + trust) + the journey line (assets/journey.js) */
+.hero{z-index:3}
+.divs>.wrap{position:relative;z-index:2}
+.night{position:relative;margin-top:clamp(72px,9vw,128px);padding-bottom:clamp(72px,9vw,128px);background:radial-gradient(900px 520px at 85% 0%,rgba(234,163,107,.16),transparent 70%),radial-gradient(700px 500px at 0% 100%,rgba(180,72,58,.18),transparent 70%),linear-gradient(175deg,var(--night-2) 0%,var(--night) 70%);color:var(--on-night)}
+.night::before{content:"";position:absolute;inset:0;background:rgba(233,236,232,.07);-webkit-mask:url(/assets/topo.svg) center/cover no-repeat;mask:url(/assets/topo.svg) center/cover no-repeat;pointer-events:none}
+.night .sec h2,.night h3{color:var(--on-night)}
+.night .how div{border-top-color:var(--dawn)}
+.night .how p,.night .trust p{color:var(--on-night-2)}
+.night .trust{border-top-color:var(--night-line)}.night .trust div{border-bottom-color:var(--night-line)}
+.night .link{color:var(--dawn)}
