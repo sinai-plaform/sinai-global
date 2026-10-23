@@ -377,3 +377,6 @@ html[dir="rtl"] .sky .glow{background:radial-gradient(38% 55% at 25% 78%,rgba(23
 .night .how p,.night .trust p{color:var(--on-night-2)}
 .night .trust{border-top-color:var(--night-line)}.night .trust div{border-bottom-color:var(--night-line)}
 .night .link{color:var(--dawn)}
+.sol-hero{z-index:3}.sol-hero .htrust{margin-top:22px}
+.night .steps h3{color:var(--on-night)}.night .steps p{color:var(--on-night-2)}
+.night .steps div{border-top-color:var(--dawn)}

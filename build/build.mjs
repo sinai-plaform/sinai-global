@@ -18,7 +18,7 @@ const FONTS = {
 };
 // pages that only exist in the original 9 languages
 const LEGACY = new Set(['he', 'en', 'ru', 'ar', 'es', 'de', 'it', 'fr', 'pt']);
-const V = '202610231100';
+const V = '202610231135';
 const WA = '972507763923';
 const PRICES = { // must match assets/sg.js; used for the first paint
   diag: { ILS: 1500, USD: 420 }, site: { ILS: 4900, USD: 1350 }, auto: { ILS: 3900, USD: 1090 },
@@ -305,6 +305,7 @@ ${header(l, 'sol')}
       <h1 id="h1">${esc(s.h1)}</h1>
       <p>${esc(s.sub)}</p>
       <a class="btn sun" href="#tell">${esc(s.cta)}</a>
+      <div class="htrust"><span>${esc(t.hero.t1)}</span><span>${esc(t.hero.t2)}</span><span class="tsec"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>${esc(t.hero.t3)}</span></div>
     </div>
   </section>
 
@@ -318,6 +319,7 @@ ${header(l, 'sol')}
     </ul>
   </div></section>
 
+  <div class="night">
   <section class="sec" aria-labelledby="steps-h"><div class="wrap">
     <div class="sec-head"><h2 id="steps-h">${esc(s.steps_h2)}</h2></div>
     <div class="steps">
@@ -326,6 +328,7 @@ ${header(l, 'sol')}
       <div><h3>${esc(s.st3_t)}</h3><p>${esc(s.st3_d)}</p></div>
     </div>
   </div></section>
+  </div>
 
   <section class="sec" id="tell" aria-labelledby="tell-h"><div class="wrap form-wrap">
     <div><h2 id="tell-h">${esc(s.form_h2)}</h2><p class="lead">${esc(s.form_d)}</p></div>
@@ -340,6 +343,7 @@ ${header(l, 'sol')}
   </div></section>
 </main>
 ${footer(l, 'sol')}
+<script>window.JOURNEY={start:'.summit-dot',stations:['#prices-h','#steps-h','#tell-h'],end:'top:.biz',swing:0,base:'rgba(180,72,58,.42)',prog:'#d4644f',dot:'#eaa36b',bg:'#f8f9f6'};</script><script src="/assets/journey.js?v=${V}" defer></script>
 </body>
 </html>
 `;

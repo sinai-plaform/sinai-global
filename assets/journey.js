@@ -36,13 +36,13 @@ function build(){
  P=P.filter(function(p,i){return i===0||p[1]>P[i-1][1]+40;});
  if(P.length<2)return;
  var d='M'+P[0][0].toFixed(1)+' '+P[0][1].toFixed(1),cx=W/2;
- for(var i=1;i<P.length;i++){var a=P[i-1],c=P[i],dy=c[1]-a[1],k=i%2?0.85:0.45;
+ for(var i=1;i<P.length;i++){var a=P[i-1],c=P[i],dy=c[1]-a[1],k=C.swing!=null?C.swing:(i%2?0.85:0.45); /* swing:0 keeps the line in the margin (pages without cards to hide behind) */
   /* leave each station straight down along the margin (never across the headline under it), swing inward behind the
      section's cards, and arrive at the next station from above */
   var c1x=a[0],c2x=c[0]+(cx-c[0])*k;
   var c1y=a[1]+dy*.5,c2y=c[1]-dy*.3;
   /* first leg: drop straight out of the hero, then sweep in ABOVE the first station so it never crosses the section headline */
-  if(i===1){c1x=a[0];c1y=a[1]+dy*.75;c2x=c[0]+(cx-c[0])*.15;c2y=c[1]-dy*.2;}
+  if(i===1){c1x=a[0];c1y=a[1]+dy*.75;c2x=c[0]+(cx-c[0])*(C.swing!=null?C.swing:.15);c2y=c[1]-dy*.2;}
   d+=' C'+c1x.toFixed(1)+' '+c1y.toFixed(1)+' '+c2x.toFixed(1)+' '+c2y.toFixed(1)+' '+c[0].toFixed(1)+' '+c[1].toFixed(1);}
  if(svg)svg.remove();
  svg=el('svg',{'class':'jr-svg',width:W,height:H,viewBox:'0 0 '+W+' '+H,'aria-hidden':'true'});
