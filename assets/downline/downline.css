@@ -206,3 +206,23 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:90;opa
   background:url(/assets/network-flow.svg) center/contain no-repeat,radial-gradient(closest-side,rgba(201,169,106,.10),transparent) center/58% 60% no-repeat}
 @media (prefers-reduced-motion:no-preference){.netcore::after{animation:dl-drift 38s ease-in-out infinite alternate}}
 @media (prefers-reduced-motion:reduce){.netcore::after{background:radial-gradient(closest-side,rgba(201,169,106,.10),transparent) center/58% 60% no-repeat}}
+
+/* The signature continues below the hero (same principle as SINAI Club / JaSale): one dark night zone carrying
+   the network motif, and the journey line (assets/journey.js) from the leader node through every section to
+   the early-access call. Content sits above the line; the night background and the hero field sit below it. */
+.bar,.hero,.wrap>section,.night>section,footer{position:relative;z-index:2}
+.night{position:relative;margin-inline:calc(50% - 50vw);padding-inline:calc(50vw - 50%);
+  background:radial-gradient(900px 520px at 85% 0%,rgba(201,169,106,.11),transparent 70%),
+    radial-gradient(700px 500px at 0% 100%,rgba(201,169,106,.07),transparent 70%),
+    linear-gradient(175deg,#161D22 0%,#090D10 72%);
+  border-block:1px solid var(--hairline)}
+.night::before{content:"";position:absolute;inset:0;background:rgba(201,169,106,.075);
+  -webkit-mask:url(/assets/network.svg) center/cover no-repeat;mask:url(/assets/network.svg) center/cover no-repeat;pointer-events:none}
+.night>section{border-top:0}
+.night>section+section{border-top:1px solid var(--rule)}
+.night .method>div::before{background:none;transform:translateY(-135%)}
+@media (prefers-reduced-motion:no-preference){
+  .night::before{animation:dl-night 46s ease-in-out infinite alternate}
+  @keyframes dl-night{from{transform:scale(1)}to{transform:scale(1.06) rotate(1.5deg)}}
+}
+.night{overflow:clip}

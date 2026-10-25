@@ -19,7 +19,7 @@ const FONTS = {
   ar: `${CG}&family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;700`,
   hi: `${CG}&family=Mukta:wght@300;400;500;600`,
 };
-const V = '202610252210';
+const V = '202610260145';
 const T = Object.fromEntries(LANGS.map((l) => [l, JSON.parse(fs.readFileSync(path.join(ROOT, 'build/downline-i18n', l + '.json'), 'utf8'))]));
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const pre = (l) => (l === 'en' ? '' : '/' + l);
@@ -107,6 +107,7 @@ ${intro(l)}
     ${cards(t.feats, 'feats')}
   </section>
 
+  <div class="night">
   <section id="how">
     <div class="sec-head"><h2>${esc(t.howH2)}</h2></div>
     ${cards(t.how, 'method')}
@@ -116,6 +117,7 @@ ${intro(l)}
     <div class="sec-head"><h2>${esc(t.faqH2)}</h2></div>
 ${t.faq.map((f, i) => `    <details${i === 0 ? ' open' : ''}><summary>${esc(f.q)}</summary><p>${esc(f.a)}</p></details>`).join('\n')}
   </section>
+  </div>
 
   <section id="early">
     <div class="grid2">
@@ -134,6 +136,7 @@ ${t.faq.map((f, i) => `    <details${i === 0 ? ' open' : ''}><summary>${esc(f.q)
 
   <footer><span>${esc(t.footerPlatform)} <a href="${home(l)}">SINAI Global</a><span class="legal"> · <a href="${legal(l, '/privacy/')}">${esc(t.privacy)}</a> · <a href="${legal(l, '/terms/')}">${esc(t.terms)}</a></span></span><span class="foot-lng" aria-label="${esc(t.langLabel)}">${footLangs}</span></footer>
 </div>
+<script>window.JOURNEY={start:'.tree text:last-of-type',stations:['#features h2','#how h2','#faq h2','#early h2'],swing:0,base:'rgba(201,169,106,.38)',prog:'#C9A96A',dot:'#E8D2A0',bg:'#0E1316'};</script><script src="/assets/journey.js?v=${V}" defer></script>
 </body>
 </html>
 `;
