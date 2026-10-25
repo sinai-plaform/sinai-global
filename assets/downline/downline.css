@@ -88,6 +88,8 @@ html[lang="he"] .btn,html[lang="ar"] .btn{letter-spacing:0;font-size:15px}
 .tree text{font-family:var(--display);font-size:13px;letter-spacing:.04em;fill:var(--ivory);font-variant-numeric:lining-nums}
 .tree rect.me + text{fill:var(--onyx);font-weight:600}
 .tree text:last-of-type{font-family:var(--body);font-size:9.5px;letter-spacing:.08em;fill:var(--pewter)}
+/* Safari draws RTL text inside SVG <text> in reverse when letter-spacing is set */
+html[lang="he"] .tree text,html[lang="ar"] .tree text{letter-spacing:0}
 
 /* ── sections ── */
 section{padding-block:clamp(80px,10vw,128px);border-top:1px solid var(--rule)}

@@ -19,7 +19,7 @@ const FONTS = {
   ar: `${CG}&family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;700`,
   hi: `${CG}&family=Mukta:wght@300;400;500;600`,
 };
-const V = '202610172330';
+const V = '202610252210';
 const T = Object.fromEntries(LANGS.map((l) => [l, JSON.parse(fs.readFileSync(path.join(ROOT, 'build/downline-i18n', l + '.json'), 'utf8'))]));
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const pre = (l) => (l === 'en' ? '' : '/' + l);
