@@ -18,7 +18,7 @@ const FONTS = {
 };
 // pages that only exist in the original 9 languages
 const LEGACY = new Set(['he', 'en', 'ru', 'ar', 'es', 'de', 'it', 'fr', 'pt']);
-const V = '202610231135';
+const V = '202610261510';
 const WA = '972507763923';
 const PRICES = { // must match assets/sg.js; used for the first paint
   diag: { ILS: 1500, USD: 420 }, site: { ILS: 4900, USD: 1350 }, auto: { ILS: 3900, USD: 1090 },
@@ -33,6 +33,7 @@ const home = l => pre(l) + '/';
 const solPath = l => pre(l) + '/solutions/';
 const legacy = (l, p) => (LEGACY.has(l) ? pre(l) : '') + p;
 const screens = l => (LEGACY.has(l) ? l : 'en');
+const chipset = (s, name, keys, multi, literal) => `<fieldset class="chips" data-chips="${name}" data-multi="${multi ? 1 : 0}"><legend>${esc(s['f_' + name])}${multi ? ` <small>${esc(s.f_pick)}</small>` : ''}</legend><div class="chip-row">${keys.map(k => `<button type="button" class="chip" aria-pressed="false"${literal ? ' dir="ltr"' : ''} data-v="${esc(literal ? k : s[k])}">${esc(literal ? k : s[k])}</button>`).join('')}</div></fieldset>`;
 const fmt = (n, c, l) => new Intl.NumberFormat(l === 'hi' ? 'en-IN' : l, { style: 'currency', currency: c, currencyDisplay: 'narrowSymbol', maximumFractionDigits: 0 }).format(n);
 function price(key, tpl, l) {
   const c = l === 'he' ? 'ILS' : 'USD', v = PRICES[key][c];
@@ -335,6 +336,10 @@ ${header(l, 'sol')}
     <form class="biz" novalidate data-intro="${esc(s.msg_intro)}" data-required="${esc(s.f_required)}" data-sent="${esc(s.f_sent)}">
       <div class="two">${fld('name', 'text', true, 'name')}${fld('business', 'text', false, 'organization')}</div>
       ${fld('field')}
+      ${chipset(s, 'kind', ['k1','k2','k3','k4','k5'], false)}
+      ${chipset(s, 'users', ['u1','u2','u3','u4','u5'], true)}
+      ${chipset(s, 'feat', ['x1','x2','x3','x4','x5','x6','x7','x8'], true)}
+      ${chipset(s, 'size', ['1–5','6–20','21–100','100+'], false, true)}
       ${fld('need', 'area', true)}
       ${fld('contact', 'text', true, 'email')}
       <div class="form-acts"><button class="btn sun" type="button" data-send="wa">${esc(s.f_send_wa)}</button><button class="btn line" type="button" data-send="mail">${esc(s.f_send_mail)}</button></div>

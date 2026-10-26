@@ -74,16 +74,25 @@
       var msg=f.querySelector('.form-msg');
       function compose(){
         var v=function(n){return (f.elements[n].value||'').trim()};
-        if(!v('name')||!v('need')||!v('contact')){msg.textContent=f.getAttribute('data-required');msg.className='form-msg err';
-          var bad=!v('name')?'name':!v('need')?'need':'contact';f.elements[bad].focus();return null}
+        var picked=f.querySelectorAll('.chip[aria-pressed="true"]').length;
+        if(!v('name')||(!v('need')&&!picked)||!v('contact')){msg.textContent=f.getAttribute('data-required');msg.className='form-msg err';
+          var bad=!v('name')?'name':(!v('need')&&!picked)?'need':'contact';f.elements[bad].focus();return null}
         var L=function(n){return f.querySelector('label[for="f-'+n+'"]').textContent};
         var lines=[f.getAttribute('data-intro'),'',L('name')+': '+v('name')];
         if(v('business'))lines.push(L('business')+': '+v('business'));
         if(v('field'))lines.push(L('field')+': '+v('field'));
-        lines.push(L('need')+': '+v('need'),L('contact')+': '+v('contact'));
+        Array.prototype.forEach.call(f.querySelectorAll('.chips'),function(g){
+          var on=Array.prototype.map.call(g.querySelectorAll('.chip[aria-pressed="true"]'),function(c){return c.getAttribute('data-v')});
+          if(on.length)lines.push(g.querySelector('legend').firstChild.textContent.trim()+' '+on.join(', '));
+        });
+        if(v('need'))lines.push(L('need')+': '+v('need'));
+        lines.push(L('contact')+': '+v('contact'));
         return lines.join('\n');
       }
       f.addEventListener('submit',function(e){e.preventDefault()});
+      f.addEventListener('click',function(e){var c=e.target.closest('.chip');if(!c)return;e.preventDefault();var g=c.closest('.chips');
+        if(g.getAttribute('data-multi')!=='1')Array.prototype.forEach.call(g.querySelectorAll('.chip'),function(x){if(x!==c)x.setAttribute('aria-pressed','false')});
+        c.setAttribute('aria-pressed',c.getAttribute('aria-pressed')==='true'?'false':'true');msg.textContent='';msg.className='form-msg'});
       f.addEventListener('click',function(e){
         var b=e.target.closest('[data-send]');if(!b)return;e.preventDefault();
         var text=compose();if(!text)return;

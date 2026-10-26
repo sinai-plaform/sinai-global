@@ -320,6 +320,14 @@ form.biz{background:var(--paper);border:1px solid var(--line);border-radius:var(
 .two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 @media (max-width:560px){.two{grid-template-columns:1fr}}
 .form-acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
+.chips{border:0;margin:0;padding:0;min-width:0}
+.chips legend{font-weight:600;font-size:15px;padding:0;margin-bottom:8px}
+.chips legend small{font-weight:400;color:var(--slate);font-size:13px}
+.chip-row{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:inherit;font-size:15px;color:var(--ink);background:var(--stone);border:1px solid var(--line);border-radius:999px;padding:8px 14px;cursor:pointer;min-height:40px}
+.chip:hover{border-color:var(--slate)}
+.chip[aria-pressed="true"]{background:var(--sun);border-color:var(--sun);color:#fff}
+.chip:focus-visible{outline:2px solid var(--sun);outline-offset:2px}
 .form-msg{font-size:15px;min-height:1.4em}
 .form-msg.err{color:var(--sun)}
 .tile.dl .meta{color:#b7ad9b}.tile.dl .status.dev{color:#d9b45e}
