@@ -208,7 +208,13 @@
     "x7": "Maps and routes",
     "x8": "WhatsApp messages",
     "f_size": "How many people will use it?",
-    "f_pick": "Pick all that apply"
+    "f_pick": "Pick all that apply",
+    "f_today": "What do you use today?",
+    "t1": "Excel or Google Sheets",
+    "t2": "WhatsApp",
+    "t3": "Paper and notebooks",
+    "t4": "Other software",
+    "t5": "Nothing yet"
   },
   "why": {
     "h2": "Why SINAI Global",
