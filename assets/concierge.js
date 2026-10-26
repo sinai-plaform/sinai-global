@@ -43,13 +43,16 @@
     var wa = root.getAttribute('data-wa') || '972507763923';
     var mail = root.getAttribute('data-mail') || 'hello@sinai-global.com';
     var t = T[lang] || T.en;
+    var brand = root.getAttribute('data-name') || t.us;
+    var starters = root.getAttribute('data-starters') === 'off' ? [] : t.s;
     var key = 'cg:' + site + ':' + lang;
-    var st = store(key) || { id: null, log: [], chips: t.s, done: null };
+    var st = store(key) || { id: null, log: [], chips: starters, done: null };
     var busy = false;
 
     if (!document.getElementById('cg-css')) { var s = el('style'); s.id = 'cg-css'; s.textContent = CSS; document.head.appendChild(s); }
     root.innerHTML = '';
     var box = el('div', 'cg'); box.setAttribute('dir', RTL[lang] ? 'rtl' : 'ltr');
+    if (root.getAttribute('data-accent')) box.style.setProperty('--cg-acc', root.getAttribute('data-accent'));
     var head = el('div', 'cg-h'); head.appendChild(el('span', 'cg-dot'));
     var ht = el('div'); ht.appendChild(el('b', '', t.title)); ht.appendChild(el('small', '', t.sub)); head.appendChild(ht);
     var log = el('div', 'cg-log'); log.setAttribute('role', 'log'); log.setAttribute('aria-live', 'polite');
@@ -61,7 +64,7 @@
     form.appendChild(ta); form.appendChild(sendB);
     var alt = el('div', 'cg-alt'); var altA = el('a', '', t.form); altA.href = root.getAttribute('data-form-link') || '#tell-form'; alt.appendChild(altA);
     altA.addEventListener('click', function () { var d = document.querySelector('details.formalt'); if (d) d.open = true; });
-    box.appendChild(head); box.appendChild(log); box.appendChild(chips); box.appendChild(doneBox); box.appendChild(form); if (!document.querySelector('details.formalt')) box.appendChild(alt);
+    box.appendChild(head); box.appendChild(log); box.appendChild(chips); box.appendChild(doneBox); box.appendChild(form); if (root.getAttribute('data-form-link') && !document.querySelector('details.formalt')) box.appendChild(alt);
     root.appendChild(box);
 
     function bubble(role, text) { var m = el('div', 'cg-m ' + (role === 'u' ? 'cg-u' : 'cg-a'), text); log.appendChild(m); log.scrollTop = log.scrollHeight; return m; }
@@ -76,7 +79,7 @@
       var c = el('div', 'cg-done'); c.appendChild(el('p', '', t.done)); c.appendChild(el('pre', '', d.summary));
       var acts = el('div', 'cg-acts');
       var a1 = el('a', 'cg-btn p', t.wa); a1.href = waLink(d.summary); a1.target = '_blank'; a1.rel = 'noopener';
-      var a2 = el('a', 'cg-btn l', t.mail); a2.href = 'mailto:' + mail + '?subject=' + encodeURIComponent(t.us) + '&body=' + encodeURIComponent(d.summary);
+      var a2 = el('a', 'cg-btn l', t.mail); a2.href = 'mailto:' + mail + '?subject=' + encodeURIComponent(brand) + '&body=' + encodeURIComponent(d.summary);
       [a1, a2].forEach(function (a) { a.addEventListener('click', function () { post({ action: 'handoff', id: st.id }).catch(function () {}); }); acts.appendChild(a); });
       c.appendChild(acts); doneBox.appendChild(c);
     }
@@ -101,7 +104,7 @@
         st.chips = j.chips || []; renderChips(st.chips);
         if (j.ready && j.summary) { st.done = { summary: j.summary }; renderDone(st.done); }
         store(key, st);
-      }).catch(function () { typing.remove(); failCard(); renderChips(st.log.length > 1 ? st.chips : t.s); })
+      }).catch(function () { typing.remove(); failCard(); renderChips(st.log.length > 1 ? st.chips : starters); })
         .then(function () { busy = false; sendB.disabled = false; });
     }
     form.addEventListener('submit', function (e) { e.preventDefault(); send(ta.value); });
@@ -110,7 +113,7 @@
 
     bubble('a', t.greet);
     st.log.forEach(function (m) { bubble(m.r, m.x); });
-    renderChips(st.log.length ? st.chips : t.s);
+    renderChips(st.log.length ? st.chips : starters);
     renderDone(st.done);
   }
   // Show the chat only when the backend says this site is active and the AI answers; otherwise open the form.
