@@ -395,3 +395,20 @@ html[dir="rtl"] .sky .glow{background:radial-gradient(38% 55% at 25% 78%,rgba(23
 .formalt summary::before{content:'＋ ';color:var(--sun)}
 .formalt[open] summary::before{content:'－ '}
 .formalt[open] summary{margin-bottom:12px}
+
+/* Anti-flicker (2026-10-26): phones flickered at the top of the page.
+   1. grain: mix-blend-mode on a fixed full-screen layer forced the whole screen to re-composite every frame — plain alpha instead
+   2. sun: box-shadow animation (180px blur) repainted every frame — the glow now lives on its own layer and only fades (opacity)
+   3. touch devices: the contour map stays put (no rotate/scale of huge masked layers); the light streaks keep running along it */
+body::after{mix-blend-mode:normal;opacity:.035}
+.sky .sun::after{content:"";position:absolute;inset:0;border-radius:50%;box-shadow:0 0 180px 46px rgba(212,100,79,.34);opacity:0;pointer-events:none}
+@media (prefers-reduced-motion:no-preference){
+  .sky .sun{animation:none}
+  .sky .sun::after{animation:sg-glow 14s ease-in-out infinite alternate;will-change:opacity}
+  @keyframes sg-glow{to{opacity:1}}
+}
+.field .layer,.field .flow{backface-visibility:hidden;-webkit-backface-visibility:hidden}
+@media (max-width:860px),(hover:none) and (pointer:coarse){
+  .field .layer,.field .flow{animation:none!important}
+  .field .layer.far{display:none}
+}
