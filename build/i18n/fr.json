@@ -214,7 +214,9 @@
     "t2": "WhatsApp",
     "t3": "Papier et carnets",
     "t4": "Un autre logiciel",
-    "t5": "Rien pour l’instant"
+    "t5": "Rien pour l’instant",
+    "cg_lead": "Dites-nous en quelques mots ce que fait votre entreprise. Une ou deux questions, une recommandation qui vous correspond vraiment, et Liran vous recontacte.",
+    "f_alt": "Vous préférez un court formulaire ?"
   },
   "why": {
     "h2": "Pourquoi SINAI Global",

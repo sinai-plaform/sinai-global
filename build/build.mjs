@@ -18,7 +18,7 @@ const FONTS = {
 };
 // pages that only exist in the original 9 languages
 const LEGACY = new Set(['he', 'en', 'ru', 'ar', 'es', 'de', 'it', 'fr', 'pt']);
-const V = '202610261530';
+const V = '202610261620';
 const WA = '972507763923';
 const PRICES = { // must match assets/sg.js; used for the first paint
   diag: { ILS: 1500, USD: 420 }, site: { ILS: 4900, USD: 1350 }, auto: { ILS: 3900, USD: 1090 },
@@ -332,7 +332,10 @@ ${header(l, 'sol')}
   </div>
 
   <section class="sec" id="tell" aria-labelledby="tell-h"><div class="wrap form-wrap">
-    <div><h2 id="tell-h">${esc(s.form_h2)}</h2><p class="lead">${esc(s.form_d)}</p></div>
+    <div><h2 id="tell-h">${esc(s.form_h2)}</h2><p class="lead">${esc(s.cg_lead)}</p></div>
+    <div class="tell-main">
+    <div class="concierge" data-site="sinai-global" data-lang="${l}" data-wa="${WA}" data-form-link="#tell-form"></div>
+    <details class="formalt" id="tell-form"><summary>${esc(s.f_alt)}</summary>
     <form class="biz" novalidate data-intro="${esc(s.msg_intro)}" data-required="${esc(s.f_required)}" data-sent="${esc(s.f_sent)}">
       <div class="two">${fld('name', 'text', true, 'name')}${fld('business', 'text', false, 'organization')}</div>
       ${fld('field')}
@@ -346,10 +349,13 @@ ${header(l, 'sol')}
       <div class="form-acts"><button class="btn sun" type="button" data-send="wa">${esc(s.f_send_wa)}</button><button class="btn line" type="button" data-send="mail">${esc(s.f_send_mail)}</button></div>
       <p class="form-msg" role="status" aria-live="polite"></p>
     </form>
+    </details>
+    </div>
   </div></section>
+<script src="/assets/concierge.js?v=${V}" defer></script>
 </main>
 ${footer(l, 'sol')}
-<script>window.JOURNEY={start:'.summit-dot',stations:['#prices-h','#steps-h','#tell-h'],end:'top:.biz',swing:0,base:'rgba(180,72,58,.42)',prog:'#d4644f',dot:'#eaa36b',bg:'#f8f9f6'};</script><script src="/assets/journey.js?v=${V}" defer></script>
+<script>window.JOURNEY={start:'.summit-dot',stations:['#prices-h','#steps-h','#tell-h'],end:'top:.concierge',swing:0,base:'rgba(180,72,58,.42)',prog:'#d4644f',dot:'#eaa36b',bg:'#f8f9f6'};</script><script src="/assets/journey.js?v=${V}" defer></script>
 </body>
 </html>
 `;

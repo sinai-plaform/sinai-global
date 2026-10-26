@@ -214,7 +214,9 @@
     "t2": "WhatsApp",
     "t3": "Carta e quaderni",
     "t4": "Un altro software",
-    "t5": "Ancora niente"
+    "t5": "Ancora niente",
+    "cg_lead": "Raccontaci in poche parole cosa fa la tua attività. Facciamo una o due domande, consigliamo ciò che fa davvero per te e Liran ti ricontatta.",
+    "f_alt": "Preferisci un modulo breve?"
   },
   "why": {
     "h2": "Perché SINAI Global",
