@@ -113,7 +113,21 @@
     renderChips(st.log.length ? st.chips : t.s);
     renderDone(st.done);
   }
-  function init() { Array.prototype.forEach.call(document.querySelectorAll('.concierge'), mount); }
+  // Show the chat only when the backend says this site is active and the AI answers; otherwise open the form.
+  function fallback(root) {
+    root.style.display = 'none';
+    var d = document.querySelector('details.formalt'); if (d) d.open = true;
+  }
+  function init() {
+    Array.prototype.forEach.call(document.querySelectorAll('.concierge'), function (root) {
+      var site = root.getAttribute('data-site') || 'sinai-global';
+      var done = false, timer = setTimeout(function () { if (!done) { done = true; fallback(root); } }, 8000);
+      fetch(API + '?site=' + encodeURIComponent(site), { cache: 'no-store' })
+        .then(function (r) { return r.json(); })
+        .then(function (j) { if (done) return; done = true; clearTimeout(timer); if (j && j.ok) mount(root); else fallback(root); })
+        .catch(function () { if (done) return; done = true; clearTimeout(timer); fallback(root); });
+    });
+  }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
   window.SinaiConcierge = { mount: mount };
 })();
