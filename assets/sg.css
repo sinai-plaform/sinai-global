@@ -414,3 +414,5 @@ body::after{mix-blend-mode:normal;opacity:.035}
 }
 /* touch devices: no full-screen grain layer at all (invisible on a phone screen, and one less layer over the page) */
 @media (hover:none) and (pointer:coarse){body::after{display:none}}
+/* phone screens: each screen on its own layer so the cross-fade never re-draws the phone frame (periodic hitch on Android) */
+.device .screen img{will-change:opacity;-webkit-backface-visibility:hidden;backface-visibility:hidden}

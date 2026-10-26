@@ -62,7 +62,9 @@
       function tick(){clearTimeout(t);if(!seen)return;t=setTimeout(function(){
         var n=(i+1)%imgs.length, nx=imgs[n];
         if(!nx.complete){nx.loading='eager';nx.addEventListener('load',tick,{once:true});return}
-        imgs[i].classList.remove('on');nx.classList.add('on');i=n;tick();
+        /* decode the next screen off the main thread first, so the swap itself never stalls a frame */
+        var swap=function(){imgs[i].classList.remove('on');nx.classList.add('on');i=n;tick()};
+        nx.decode?nx.decode().then(swap,swap):swap();
       },3400+k*500)}
       if('IntersectionObserver' in window){new IntersectionObserver(function(es){seen=es[0].isIntersecting;if(seen)Array.prototype.forEach.call(imgs,function(m){m.loading='eager'});tick()},{threshold:.25}).observe(dev)}
       else{seen=true;tick()}
