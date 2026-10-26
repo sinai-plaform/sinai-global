@@ -412,3 +412,5 @@ body::after{mix-blend-mode:normal;opacity:.035}
   .field .layer,.field .flow{animation:none!important}
   .field .layer.far{display:none}
 }
+/* touch devices: no full-screen grain layer at all (invisible on a phone screen, and one less layer over the page) */
+@media (hover:none) and (pointer:coarse){body::after{display:none}}
