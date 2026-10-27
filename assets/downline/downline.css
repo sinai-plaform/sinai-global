@@ -189,7 +189,7 @@ html[lang="hi"]{--display:"Mukta","Cormorant Garamond",Georgia,serif;--body:"Muk
 
 /* Signature background, completed (the sinai-global method): film grain, slow drift of the network field,
    and a pulse on the owner node — the focal point. Off with reduced motion. */
-body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:90;opacity:.05;mix-blend-mode:overlay;
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:90;opacity:.05;
   background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 .netcore::before{background:rgba(201,169,106,.10)}
 @media (prefers-reduced-motion:no-preference){
@@ -226,3 +226,6 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:90;opa
   @keyframes dl-night{from{transform:scale(1)}to{transform:scale(1.06) rotate(1.5deg)}}
 }
 .night{overflow:clip}
+
+/* Phones (perf_lint, 2026-10-27): no grain, network field + night motif stay still, owner node only fades in */
+@media (max-width:860px),(hover:none) and (pointer:coarse){body::after{display:none}.netcore::before,.netcore::after,.night::before{animation:none!important}.tree rect.me{animation:dl-in .8s ease-out forwards!important}}

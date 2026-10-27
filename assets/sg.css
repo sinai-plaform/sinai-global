@@ -336,7 +336,7 @@ form.biz{background:var(--paper);border:1px solid var(--line);border-radius:var(
 /* Signature background (the sinai-global method): topographic contours of the summit as a CSS mask,
    a pulsing summit dot with its altitude, a warm glow, a slow drift in two depths, page-wide film grain. */
 :root{--ridge-h:clamp(140px,19vw,260px);--contour:rgba(233,236,232,.11);--contour-far:rgba(234,163,107,.07)}
-body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:90;opacity:.05;mix-blend-mode:overlay;
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:90;opacity:.05;
   background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 .field{position:absolute;width:12px;height:12px;left:75%;bottom:calc(var(--ridge-h)*.77 + 6px);pointer-events:none}
 html[dir="rtl"] .field{left:25%}
@@ -356,7 +356,6 @@ html[dir="rtl"] .sky .glow{background:radial-gradient(38% 55% at 25% 78%,rgba(23
   .field .layer{animation:sg-drift 36s ease-in-out infinite alternate}
   .field .layer.far{animation:sg-drift-far 54s ease-in-out -12s infinite alternate}
   .summit-dot{animation:sg-ping 3s ease-out infinite}
-  .sky .sun{animation:sg-breathe 14s ease-in-out infinite alternate}
   @keyframes sg-drift{from{transform:translate(-50%,-50%) scale(1) rotate(0)}to{transform:translate(-50%,-50%) scale(1.07) rotate(4deg)}}
   @keyframes sg-drift-far{from{transform:translate(-50%,-50%) scale(1.04) rotate(2deg)}to{transform:translate(-50%,-50%) scale(.98) rotate(-3deg)}}
   @keyframes sg-ping{0%{box-shadow:0 0 0 0 rgba(234,163,107,.55),0 0 0 5px rgba(234,163,107,.35)}100%{box-shadow:0 0 0 28px rgba(234,163,107,0),0 0 0 5px rgba(234,163,107,.35)}}
