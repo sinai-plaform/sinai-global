@@ -53,6 +53,8 @@
     var wa = root.getAttribute('data-wa') || '972507763923';
     var mail = root.getAttribute('data-mail') || 'hello@sinai-global.com';
     var t = T[lang] || T.en;
+    var person = root.getAttribute('data-person'); // per-site sales contact (default: Liran)
+    if (person) { var reP = /לירן|Liran|Лирану|Лирана|ليران/g; t = Object.assign({}, t, { wa: t.wa.replace(reP, person), done: t.done.replace(reP, person) }); }
     var brand = root.getAttribute('data-name') || t.us;
     var starters = root.getAttribute('data-starters') === 'off' ? [] : t.s;
     var key = 'cg:' + site + ':' + lang;
