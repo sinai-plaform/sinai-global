@@ -52,7 +52,7 @@
     "soon": "Demnächst",
     "demo": "Demo buchen",
     "jasale_tag": "Außendienst",
-    "jasale_line": "Smarte Arbeitspläne für jeden Außendienstler, Bestellungen und Inkasso auch ohne Netz und ein zentrales Board für die Leitung.",
+    "jasale_line": "Smarte Routen für jeden Außendienstler nach echten Fahrzeiten, ein KI-Assistent, der alle Daten kennt und jeden Bericht auf Abruf erstellt, und Bestellungen und Inkasso auch ohne Netz.",
     "club_tag": "Fußballvereine",
     "club_line": "Ein smarter Trainingsplan für jede Altersklasse, eine Spielerkarte, die sich aus dem, was in Training und Spiel erfasst wird, selbst aktualisiert, und ein direkter Draht zu den Eltern: laufende Updates und ein monatlicher Fortschrittsbericht über ihr Kind.",
     "dl_tag": "Direktvertrieb",
@@ -66,7 +66,7 @@
     "custom_ex": [
       "Ein Chatbot, der Kunden rund um die Uhr antwortet",
       "Automatisierte Berichte, Angebote und Kundennachverfolgung",
-      "Datenanalyse, die zeigt, wo Sie verdienen und wo Sie verlieren"
+      "Ein KI-Assistent mit Zugriff auf Ihre Geschäftsdaten: einfach fragen und Antwort, Plan oder Bericht als Excel und PDF erhalten"
     ]
   },
   "how": {

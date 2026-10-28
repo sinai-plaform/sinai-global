@@ -52,7 +52,7 @@
     "soon": "Coming soon",
     "demo": "Book a demo",
     "jasale_tag": "Field sales",
-    "jasale_line": "Smart work plans for every agent, orders and collections even with no signal, and one board for the manager.",
+    "jasale_line": "Smart routes for every agent built on real driving times, an AI assistant that knows all the data and produces any report on request, and orders and collections even with no signal.",
     "club_tag": "Football clubs",
     "club_line": "A smart training plan for every age group, a player card that updates itself from what's logged in training and matches, and a parent connection: regular updates and a monthly progress report on their child.",
     "dl_tag": "Direct sales",
@@ -66,7 +66,7 @@
     "custom_ex": [
       "A chatbot that answers customers 24/7",
       "Automated reports, quotes and customer follow-up",
-      "Data analysis that shows where you earn and where you lose"
+      "An AI assistant connected to your business data: ask in plain words, get an answer, a plan or a report in Excel and PDF"
     ]
   },
   "how": {

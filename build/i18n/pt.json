@@ -52,7 +52,7 @@
     "soon": "Em breve",
     "demo": "Agende uma demo",
     "jasale_tag": "Vendas em campo",
-    "jasale_line": "Planos de trabalho inteligentes para cada representante, pedidos e cobranças mesmo sem sinal, e um painel único para o gestor.",
+    "jasale_line": "Rotas inteligentes para cada representante com tempos reais de direção, um assistente de IA que conhece todos os dados e gera qualquer relatório sob demanda, e pedidos e cobranças mesmo sem sinal.",
     "club_tag": "Clubes de futebol",
     "club_line": "Um plano de treino inteligente para cada categoria, uma ficha de jogador que se atualiza sozinha com o que é registrado nos treinos e jogos, e um canal com os pais: novidades constantes e um relatório mensal da evolução do filho.",
     "dl_tag": "Venda direta",
@@ -66,7 +66,7 @@
     "custom_ex": [
       "Um chatbot que atende os clientes 24/7",
       "Relatórios, orçamentos e acompanhamento de clientes automatizados",
-      "Análise de dados que mostra onde você ganha e onde perde"
+      "Um assistente de IA conectado aos dados do seu negócio: pergunte com suas palavras e receba uma resposta, um plano ou um relatório em Excel e PDF"
     ]
   },
   "how": {

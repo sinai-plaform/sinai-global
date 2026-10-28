@@ -52,7 +52,7 @@
     "soon": "In arrivo",
     "demo": "Prenota una demo",
     "jasale_tag": "Vendita sul campo",
-    "jasale_line": "Piani di lavoro intelligenti per ogni agente, ordini e incassi anche senza campo, e un’unica bacheca per il manager.",
+    "jasale_line": "Percorsi intelligenti per ogni agente in base ai tempi di guida reali, un assistente IA che conosce tutti i dati e prepara qualsiasi report su richiesta, e ordini e incassi anche senza campo.",
     "club_tag": "Club di calcio",
     "club_line": "Un piano di allenamento intelligente per ogni fascia d’età, una scheda giocatore che si aggiorna da sola con ciò che viene registrato in allenamenti e partite, e un canale con i genitori: aggiornamenti costanti e un report mensile sui progressi del figlio.",
     "dl_tag": "Vendita diretta",
@@ -66,7 +66,7 @@
     "custom_ex": [
       "Un chatbot che risponde ai clienti 24/7",
       "Report, preventivi e follow-up clienti automatizzati",
-      "Analisi dei dati che mostra dove guadagni e dove perdi"
+      "Un assistente IA collegato ai dati della tua azienda: chiedi a parole e ricevi una risposta, un piano o un report in Excel e PDF"
     ]
   },
   "how": {
