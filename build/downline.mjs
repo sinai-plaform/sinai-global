@@ -46,7 +46,7 @@ function render(l) {
 ${LANGS.map((x) => `<link rel="alternate" hreflang="${x}" href="${DL}${page(x)}">`).join('\n')}
 <link rel="alternate" hreflang="x-default" href="${DL}/">
 <script>if(/(^|\.)sinai-global\.com$/.test(location.hostname))location.replace('${DL}${page(l)}'+location.search+location.hash)</script>
-<script src="/assets/lang.js?v=202610151600"></script>
+<script src="/assets/lang.js?v=202610311600"></script>
 ${intro(l)}
 <meta property="og:title" content="Downline HQ">
 <meta property="og:description" content="${esc(t.ogDesc)}">

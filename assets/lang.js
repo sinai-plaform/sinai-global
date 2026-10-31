@@ -7,6 +7,11 @@
    Each page lists its twins as <link rel="alternate" hreflang="xx" href="..."> and sets <html lang>. */
 (function(){
   document.documentElement.classList.add('js');
+  /* Cross-site: a link from jasale.app / sinaiclub.com / … carries ?lang=xx — adopt it (localStorage is per domain). */
+  var L=/^(he|en|ru|ar|es|de|it|fr|pt|hi)$/, D=['jasale.app','sinaiclub.com','sinai-global.com','downlinehq.app','sinaicinema.com'];
+  try{var u=new URL(location.href),q=u.searchParams.get('lang');if(q&&L.test(q)){localStorage.setItem('sg-lang',q);u.searchParams.delete('lang');history.replaceState(null,'',u.pathname+u.search+u.hash)}}catch(e){}
+  /* …and links out to our other sites carry this page's language. */
+  document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;try{var h=new URL(a.href,location.href),l=(document.documentElement.lang||'').slice(0,2);if(h.host!==location.host&&D.some(function(d){return h.host===d||h.host.slice(-d.length-1)==='.'+d})&&L.test(l)&&!h.searchParams.has('lang')){h.searchParams.set('lang',l);a.href=h.href}}catch(e){}},true);
   var here=(document.documentElement.lang||'en').slice(0,2), P={};
   var links=document.querySelectorAll('link[rel="alternate"][hreflang]');
   for(var i=0;i<links.length;i++){var h=links[i].getAttribute('hreflang');if(h!=='x-default')P[h]=new URL(links[i].href).pathname}
