@@ -154,7 +154,7 @@ const ICON = {
 };
 
 function homePage(l) {
-  const t = T[l], b = t.build, demo = app => `https://wa.me/${WA}?text=${encodeURIComponent(t.sol.msg_intro + ' (' + app + ')')}`;
+  const t = T[l], b = t.build, demo = host => `https://${host}${l === 'he' ? '/' : '/' + l + '/'}#chat`;
   return `${head(l, 'home')}
 <body>
 <div class="sg-intro"><div class="mk"><svg viewBox="0 0 28 28" aria-hidden="true"><path class="peak" d="M2 24 L11 8 L15 14 L18 10 L26 24 Z"/><circle class="disc" cx="20" cy="6" r="2.6"/></svg><div class="word" aria-hidden="true">SINAI GLOBAL</div></div><button type="button">${esc(t.intro.skip)}</button></div>
@@ -192,7 +192,7 @@ ${header(l, 'home')}
         <div class="meta"><img class="plogo" src="/assets/logos/jasale.svg" alt="" width="52" height="52" loading="lazy"><span>${esc(b.jasale_tag)}</span><span class="status live">${esc(b.live)}</span></div>
         <h3 lang="en">JaSale</h3>
         <p class="line">${esc(b.jasale_line)}</p>
-        <div class="acts"><a class="btn sun" href="${demo('JaSale')}" target="_blank" rel="noopener">${esc(b.demo)}</a><a class="link" href="https://jasale.app/" dir="ltr">jasale.app</a></div>
+        <div class="acts"><a class="btn sun" href="${demo('jasale.app')}">${esc(b.demo)}</a><a class="link" href="https://jasale.app/" dir="ltr">jasale.app</a></div>
       </div>
       <div class="shot">${device('jasale', l, 3)}</div>
     </article>
@@ -202,7 +202,7 @@ ${header(l, 'home')}
         <div class="meta"><img class="plogo" src="/assets/logos/sinai-club.svg" alt="" width="52" height="52" loading="lazy"><span>${esc(b.club_tag)}</span><span class="status live">${esc(b.live)}</span></div>
         <h3 lang="en">SINAI Club</h3>
         <p class="line">${esc(b.club_line)}</p>
-        <div class="acts"><a class="btn sun" href="${demo('SINAI Club')}" target="_blank" rel="noopener">${esc(b.demo)}</a><a class="link" href="https://sinaiclub.com/" dir="ltr">sinaiclub.com</a></div>
+        <div class="acts"><a class="btn sun" href="${demo('sinaiclub.com')}">${esc(b.demo)}</a><a class="link" href="https://sinaiclub.com/" dir="ltr">sinaiclub.com</a></div>
       </div>
       <div class="shot">${device('sinaiclub', l, 3)}</div>
     </article>
