@@ -22,6 +22,19 @@
     pt: { close: 'Fechar', open: 'Fale conosco', title: 'Vamos ver o que o seu negócio precisa', sub: 'Resposta imediata · sem compromisso', greet: 'Olá! Conte-nos em poucas palavras o que o seu negócio faz e o que mais atrasa vocês hoje, e mostramos onde dá para ganhar tempo.', ph: 'Escreva aqui…', send: 'Enviar', form: 'Prefere um formulário?', err: 'Algo deu errado do nosso lado. Fale conosco diretamente:', wa: 'Enviar ao Liran no WhatsApp', mail: 'Enviar por e-mail', done: 'O resumo está pronto. Um toque e o Liran recebe:', you: 'Você', us: 'SINAI Global', s: ['Temos vendedores externos', 'Precisamos de um app', 'Automação de WhatsApp', 'Um site que traga clientes'] },
     hi: { close: 'बंद करें', open: 'हमसे बात करें', title: 'आइए समझें आपके बिज़नेस को क्या चाहिए', sub: 'तुरंत जवाब · कोई बाध्यता नहीं', greet: 'नमस्ते! कुछ शब्दों में बताइए आपका बिज़नेस क्या करता है और आज सबसे ज़्यादा क्या धीमा करता है, हम दिखाएँगे कि समय कहाँ बचेगा।', ph: 'यहाँ लिखें…', send: 'भेजें', form: 'फ़ॉर्म पसंद है?', err: 'हमारी तरफ़ कुछ गड़बड़ हुई। सीधे लिखें:', wa: 'Liran को WhatsApp पर भेजें', mail: 'ईमेल से भेजें', done: 'सारांश तैयार है। एक टैप और Liran के पास:', you: 'आप', us: 'SINAI Global', s: ['हमारे फ़ील्ड सेल्स एजेंट हैं', 'हमें ऐप चाहिए', 'WhatsApp ऑटोमेशन', 'लीड लाने वाली वेबसाइट'] },
   };
+  // Closing card (v4): customer-facing summary + offer; staff are never named, no call-back time is promised.
+  var DN = {
+    he: { h: 'הפרטים התקבלו ✓', c: 'סיכום הפנייה שלכם', u: 'מה הבנו', o: 'ההצעה שלנו', wa: 'לשיחה עם הצוות ב-WhatsApp', wm: 'היי, השארתי פרטים בצ׳אט באתר' },
+    en: { h: 'Details received ✓', c: 'Your request at a glance', u: 'What we understood', o: 'Our offer', wa: 'Chat with our team on WhatsApp', wm: 'Hi, I left my details in the website chat' },
+    ru: { h: 'Данные получены ✓', c: 'Кратко о вашем запросе', u: 'Что мы поняли', o: 'Наше предложение', wa: 'Написать команде в WhatsApp', wm: 'Здравствуйте, я оставил(а) данные в чате на сайте' },
+    ar: { h: 'تم استلام التفاصيل ✓', c: 'ملخص طلبكم', u: 'ما فهمناه', o: 'عرضنا', wa: 'تحدثوا مع فريقنا عبر WhatsApp', wm: 'مرحبًا، تركت تفاصيلي في محادثة الموقع' },
+    es: { h: 'Datos recibidos ✓', c: 'Resumen de tu solicitud', u: 'Lo que entendimos', o: 'Nuestra propuesta', wa: 'Hablar con el equipo por WhatsApp', wm: 'Hola, dejé mis datos en el chat de la web' },
+    de: { h: 'Angaben erhalten ✓', c: 'Ihre Anfrage im Überblick', u: 'Was wir verstanden haben', o: 'Unser Angebot', wa: 'Mit dem Team per WhatsApp sprechen', wm: 'Hallo, ich habe meine Angaben im Website-Chat hinterlassen' },
+    it: { h: 'Dati ricevuti ✓', c: 'Riepilogo della tua richiesta', u: 'Cosa abbiamo capito', o: 'La nostra proposta', wa: 'Parla con il team su WhatsApp', wm: 'Ciao, ho lasciato i miei dati nella chat del sito' },
+    fr: { h: 'Informations reçues ✓', c: 'Votre demande en bref', u: 'Ce que nous avons compris', o: 'Notre proposition', wa: 'Échanger avec l’équipe sur WhatsApp', wm: 'Bonjour, j’ai laissé mes coordonnées dans le chat du site' },
+    pt: { h: 'Dados recebidos ✓', c: 'Resumo do seu pedido', u: 'O que entendemos', o: 'Nossa proposta', wa: 'Falar com a equipe no WhatsApp', wm: 'Olá, deixei meus dados no chat do site' },
+    hi: { h: 'जानकारी मिल गई ✓', c: 'आपके अनुरोध का सारांश', u: 'हमने क्या समझा', o: 'हमारा प्रस्ताव', wa: 'WhatsApp पर टीम से बात करें', wm: 'नमस्ते, मैंने वेबसाइट चैट में अपनी जानकारी छोड़ी है' },
+  };
   var CSS = '.cg{--cg-acc:var(--sun,#b4483a);--cg-bg:var(--paper,#f8f9f6);--cg-ink:var(--ink,#16202b);--cg-mut:var(--slate,#56616d);--cg-line:var(--line,#d7dcd6);--cg-soft:var(--stone,#eef0ec);background:var(--cg-bg);color:var(--cg-ink);border:1px solid var(--cg-line);border-radius:22px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 18px 40px -28px rgba(10,16,24,.35)}' +
     '.cg-h{display:flex;gap:12px;align-items:center;padding:16px 18px;border-bottom:1px solid var(--cg-line)}.cg-dot{width:38px;height:38px;border-radius:50%;flex:none;background:radial-gradient(circle at 50% 38%,rgba(255,255,255,.55) 0,var(--cg-acc) 62%)}' +
     '.cg-h b{display:block;font-size:16px;line-height:1.3}.cg-h small{color:var(--cg-mut);font-size:13px}' +
@@ -33,7 +46,7 @@
     '.cg-chips{display:flex;flex-wrap:wrap;gap:8px;padding:0 18px 12px}.cg-chip{font:inherit;font-size:14px;color:var(--cg-ink);background:transparent;border:1px solid var(--cg-line);border-radius:999px;padding:7px 13px;cursor:pointer;min-height:38px}.cg-chip:hover{border-color:var(--cg-acc);color:var(--cg-acc)}' +
     '.cg-f{display:flex;gap:8px;padding:12px;border-top:1px solid var(--cg-line);background:var(--cg-bg)}.cg-f textarea{flex:1;font:inherit;font-size:16px;color:var(--cg-ink);background:var(--cg-soft);border:1px solid var(--cg-line);border-radius:14px;padding:11px 13px;resize:none;min-height:46px;max-height:140px;line-height:1.4}' +
     '.cg-f textarea:focus{outline:2px solid var(--cg-acc);outline-offset:1px;border-color:transparent}.cg-f button{font:inherit;font-weight:700;font-size:15px;border:0;border-radius:14px;padding:0 18px;background:var(--cg-acc);color:#fff;cursor:pointer;min-height:46px}.cg-f button[disabled]{opacity:.55;cursor:default}' +
-    '.cg-done{margin:0 18px 14px;padding:14px;border:1px solid var(--cg-line);border-radius:16px;background:var(--cg-soft)}.cg-done p{margin:0 0 10px;font-weight:600}.cg-done pre{white-space:pre-wrap;font:inherit;font-size:14px;color:var(--cg-mut);margin:0 0 12px}.cg-acts{display:flex;flex-wrap:wrap;gap:8px}' +
+    '.cg-done{margin:0 18px 14px;padding:14px;border:1px solid var(--cg-line);border-radius:16px;background:var(--cg-soft)}.cg-done p{margin:0 0 10px;font-weight:600}.cg-done pre{white-space:pre-wrap;font:inherit;font-size:14px;color:var(--cg-mut);margin:0 0 12px}.cg-acts{display:flex;flex-wrap:wrap;gap:8px}.cg-done small{display:block;color:var(--cg-mut);font-size:13px;margin:0 0 2px}.cg-done div.v{font-size:15px;line-height:1.5;margin:0 0 12px}.cg-done div.v.b{font-weight:700}' +
     '.cg-btn{display:inline-flex;align-items:center;justify-content:center;font:inherit;font-weight:700;font-size:15px;border-radius:999px;padding:11px 18px;text-decoration:none;cursor:pointer;border:1px solid var(--cg-acc);min-height:44px}.cg-btn.p{background:var(--cg-acc);color:#fff}.cg-btn.l{background:transparent;color:var(--cg-acc)}' +
     '.cg-alt{padding:0 18px 14px;font-size:14px}.cg-alt a{color:var(--cg-mut)}' +
     '.cg-x{margin-inline-start:auto;font:inherit;font-size:26px;line-height:1;border:0;background:transparent;color:var(--cg-mut);cursor:pointer;width:40px;height:40px;border-radius:50%}.cg-x:hover{background:var(--cg-soft)}' +
@@ -55,6 +68,7 @@
     var t = T[lang] || T.en;
     var person = root.getAttribute('data-person'); // per-site sales contact (default: Liran)
     if (person) { var reP = /לירן|Liran|Лирану|Лирана|ليران/g; t = Object.assign({}, t, { wa: t.wa.replace(reP, person), done: t.done.replace(reP, person) }); }
+    var dn = DN[lang] || DN.en; t = Object.assign({}, t, { wa: dn.wa });
     var brand = root.getAttribute('data-name') || t.us;
     var starters = root.getAttribute('data-starters') === 'off' ? [] : t.s;
     var key = 'cg:' + site + ':' + lang;
@@ -66,7 +80,7 @@
     var box = el('div', 'cg'); box.setAttribute('dir', RTL[lang] ? 'rtl' : 'ltr');
     if (root.getAttribute('data-accent')) box.style.setProperty('--cg-acc', root.getAttribute('data-accent'));
     var head = el('div', 'cg-h'); head.appendChild(el('span', 'cg-dot'));
-    var ht = el('div'); ht.appendChild(el('b', '', t.title)); ht.appendChild(el('small', '', t.sub)); head.appendChild(ht);
+    var ht = el('div'), htB = el('b', '', t.title), htS = el('small', '', t.sub); ht.appendChild(htB); ht.appendChild(htS); head.appendChild(ht);
     if (onClose) { var xb = el('button', 'cg-x', '×'); xb.type = 'button'; xb.setAttribute('aria-label', t.close || 'Close'); xb.addEventListener('click', onClose); head.appendChild(xb); }
     var log = el('div', 'cg-log'); log.setAttribute('role', 'log'); log.setAttribute('aria-live', 'polite');
     var chips = el('div', 'cg-chips');
@@ -90,11 +104,16 @@
     function renderDone(d) {
       doneBox.innerHTML = '';
       if (!d) return;
-      var c = el('div', 'cg-done'); c.appendChild(el('p', '', t.done)); c.appendChild(el('pre', '', d.summary));
+      htB.textContent = dn.h;
+      var c = el('div', 'cg-done');
+      if (d.understood || d.offer) {
+        c.appendChild(el('p', '', dn.c));
+        if (d.understood) { c.appendChild(el('small', '', dn.u)); c.appendChild(el('div', 'v', d.understood)); }
+        if (d.offer) { c.appendChild(el('small', '', dn.o)); c.appendChild(el('div', 'v b', d.offer)); }
+      }
       var acts = el('div', 'cg-acts');
-      var a1 = el('a', 'cg-btn p', t.wa); a1.href = waLink(d.summary); a1.target = '_blank'; a1.rel = 'noopener';
-      var a2 = el('a', 'cg-btn l', t.mail); a2.href = 'mailto:' + mail + '?subject=' + encodeURIComponent(brand) + '&body=' + encodeURIComponent(d.summary);
-      [a1, a2].forEach(function (a) { a.addEventListener('click', function () { post({ action: 'handoff', id: st.id }).catch(function () {}); }); acts.appendChild(a); });
+      var a1 = el('a', 'cg-btn l', dn.wa); a1.href = waLink(dn.wm + ' (' + brand + ')' + (d.name ? ' · ' + d.name : '')); a1.target = '_blank'; a1.rel = 'noopener';
+      a1.addEventListener('click', function () { post({ action: 'handoff', id: st.id }).catch(function () {}); }); acts.appendChild(a1);
       c.appendChild(acts); doneBox.appendChild(c);
     }
     function post(body) {
@@ -116,7 +135,7 @@
         st.id = j.id || st.id;
         bubble('a', j.reply); st.log.push({ r: 'a', x: j.reply });
         st.chips = j.chips || []; renderChips(st.chips);
-        if (j.ready && j.summary) { st.done = { summary: j.summary }; renderDone(st.done); }
+        if (j.ready) { var cl = j.client || {}; st.done = { name: cl.name || '', understood: cl.understood || '', offer: cl.offer || '' }; renderDone(st.done); }
         store(key, st);
       }).catch(function () { typing.remove(); failCard(); renderChips(st.log.length > 1 ? st.chips : starters); })
         .then(function () { busy = false; sendB.disabled = false; });
