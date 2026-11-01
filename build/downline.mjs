@@ -11,7 +11,7 @@ const SITE = 'https://sinai-global.com';
 const DL = 'https://downlinehq.app'; // the page's real address: downlinehq.app proxies these files (sinai-lifestyle/middleware.ts)
 const LANGS = ['he', 'en', 'ru', 'ar', 'es', 'de', 'it', 'fr', 'pt', 'hi'];
 const RTL = new Set(['he', 'ar']);
-const LEGACY = new Set(['he', 'en', 'ru', 'ar', 'es', 'de', 'it', 'fr', 'pt']); // languages with privacy/terms twins
+const LEGACY = new Set(['he', 'en', 'ru', 'ar', 'es', 'de', 'it', 'fr', 'pt', 'hi']); // languages with privacy/terms twins
 const OG_LOCALE = { he: 'he_IL', en: 'en_US', ru: 'ru_RU', ar: 'ar_AR', es: 'es_ES', de: 'de_DE', it: 'it_IT', fr: 'fr_FR', pt: 'pt_BR', hi: 'hi_IN' };
 const CG = 'family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400';
 const FONTS = {

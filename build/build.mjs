@@ -31,7 +31,8 @@ const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(
 const pre = l => (l === 'en' ? '' : '/' + l);
 const home = l => pre(l) + '/';
 const solPath = l => pre(l) + '/solutions/';
-const legacy = (l, p) => (LEGACY.has(l) ? pre(l) : '') + p;
+const LEGAL = new Set([...LEGACY, 'hi']); // languages with privacy/terms pages
+const legacy = (l, p) => (LEGAL.has(l) ? pre(l) : '') + p;
 const screens = l => (LEGACY.has(l) ? l : 'en');
 const chipset = (s, name, keys, multi, literal) => `<fieldset class="chips" data-chips="${name}" data-multi="${multi ? 1 : 0}"><legend>${esc(s['f_' + name])}${multi ? ` <small>${esc(s.f_pick)}</small>` : ''}</legend><div class="chip-row">${keys.map(k => `<button type="button" class="chip" aria-pressed="false"${literal ? ' dir="ltr"' : ''} data-v="${esc(literal ? k : s[k])}">${esc(literal ? k : s[k])}</button>`).join('')}</div></fieldset>`;
 const fmt = (n, c, l) => new Intl.NumberFormat(l === 'hi' ? 'en-IN' : l, { style: 'currency', currency: c, currencyDisplay: 'narrowSymbol', maximumFractionDigits: 0 }).format(n);
@@ -381,8 +382,8 @@ console.log('built', LANGS.length * 2, 'pages');
   const groups = [
     { langs: LANGS, path: '/', pri: '1.0' },
     { langs: LANGS, path: '/solutions/', pri: '0.9' },
-    { langs: [...LEGACY], path: '/privacy/', pri: '0.3' },
-    { langs: [...LEGACY], path: '/terms/', pri: '0.3' },
+    { langs: [...LEGAL], path: '/privacy/', pri: '0.3' },
+    { langs: [...LEGAL], path: '/terms/', pri: '0.3' },
   ];
   const u = (l, p) => SITE + pre(l) + p;
   let xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n';
