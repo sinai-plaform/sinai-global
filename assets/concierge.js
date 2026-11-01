@@ -57,6 +57,30 @@
     '.cg-launch{display:inline-flex;align-items:center;gap:10px;font:inherit;font-weight:700;font-size:16px;border:0;border-radius:999px;padding:14px 22px;cursor:pointer;color:#fff;background:var(--cg-acc,var(--sun,#b4483a));box-shadow:0 10px 24px -14px rgba(10,16,24,.5)}.cg-launch small{font-weight:500;opacity:.85}';
 
   function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+  // Greeting that follows the button the visitor tapped (demo / talk to us on the big-org card / a plan on the pricing page)
+  var GI = {
+    he: { demo: 'היי! נשמח לתאם לכם הדגמה. ספרו לנו בכמה מילים מי אתם ומה הכי חשוב לכם לראות בה?', enterprise: 'היי! נשמח לבנות לכם הצעה מותאמת. כמה אנשים או קבוצות יעבדו עם המערכת, ומה הכי חשוב לכם?', plan: 'היי! לפני שמתחילים, ספרו לנו בכמה מילים מה אתם צריכים, ונמצא לכם את המסלול המשתלם ביותר.' },
+    en: { demo: "Hi! We'd love to set up a demo for you. Tell us in a few words who you are and what matters most for you to see.", enterprise: "Hi! We'd love to put together a tailored offer. How many people or teams will use the system, and what matters most to you?", plan: "Hi! Before you start, tell us in a few words what you need and we'll find you the best-value plan." },
+    ru: { demo: 'Здравствуйте! С радостью проведём демонстрацию. Расскажите в двух словах, кто вы и что вам важнее всего увидеть?', enterprise: 'Здравствуйте! Подготовим индивидуальное предложение. Сколько людей или команд будут работать в системе и что для вас важнее всего?', plan: 'Здравствуйте! Прежде чем начать, расскажите в двух словах, что вам нужно, и мы подберём самый выгодный тариф.' },
+    ar: { demo: 'مرحبًا! يسعدنا ترتيب عرض توضيحي لكم. أخبرونا باختصار من أنتم وما أهم ما تريدون رؤيته؟', enterprise: 'مرحبًا! يسعدنا إعداد عرض مخصص لكم. كم شخصًا أو فريقًا سيستخدم النظام، وما الأهم بالنسبة لكم؟', plan: 'مرحبًا! قبل البدء، أخبرونا باختصار بما تحتاجونه وسنجد لكم الباقة الأوفر.' },
+    es: { demo: '¡Hola! Con gusto te preparamos una demo. Cuéntanos en pocas palabras quién eres y qué es lo que más te interesa ver.', enterprise: '¡Hola! Te preparamos una propuesta a medida. ¿Cuántas personas o equipos usarán el sistema y qué es lo más importante para ti?', plan: '¡Hola! Antes de empezar, cuéntanos en pocas palabras qué necesitas y te encontramos el plan más conveniente.' },
+    de: { demo: 'Hallo! Gerne zeigen wir Ihnen eine Demo. Erzählen Sie uns kurz, wer Sie sind und was Sie am meisten sehen möchten.', enterprise: 'Hallo! Gerne erstellen wir Ihnen ein individuelles Angebot. Wie viele Personen oder Teams werden das System nutzen, und was ist Ihnen am wichtigsten?', plan: 'Hallo! Bevor Sie starten: Erzählen Sie uns kurz, was Sie brauchen, und wir finden den günstigsten Tarif für Sie.' },
+    it: { demo: 'Ciao! Organizziamo volentieri una demo. Raccontaci in poche parole chi siete e cosa vi interessa vedere di più.', enterprise: 'Ciao! Prepariamo volentieri un’offerta su misura. Quante persone o squadre useranno il sistema e cosa conta di più per voi?', plan: 'Ciao! Prima di iniziare, raccontaci in poche parole di cosa avete bisogno e troveremo il piano più conveniente.' },
+    fr: { demo: 'Bonjour ! Organisons une démo pour vous. Dites-nous en quelques mots qui vous êtes et ce que vous voulez voir en priorité.', enterprise: 'Bonjour ! Préparons une offre sur mesure. Combien de personnes ou d’équipes utiliseront le système, et qu’est-ce qui compte le plus pour vous ?', plan: 'Bonjour ! Avant de commencer, dites-nous en quelques mots ce dont vous avez besoin et nous trouverons la formule la plus avantageuse.' },
+    pt: { demo: 'Olá! Vamos marcar uma demo para vocês. Contem em poucas palavras quem são e o que mais querem ver.', enterprise: 'Olá! Vamos montar uma proposta sob medida. Quantas pessoas ou equipes vão usar o sistema e o que é mais importante para vocês?', plan: 'Olá! Antes de começar, contem em poucas palavras o que precisam e encontramos o plano mais vantajoso.' },
+    hi: { demo: 'नमस्ते! हम आपके लिए डेमो तय करना चाहेंगे। कुछ शब्दों में बताइए कि आप कौन हैं और आप सबसे ज़्यादा क्या देखना चाहते हैं?', enterprise: 'नमस्ते! हम आपके लिए एक कस्टम ऑफ़र तैयार करेंगे। कितने लोग या टीमें सिस्टम इस्तेमाल करेंगी, और आपके लिए सबसे ज़रूरी क्या है?', plan: 'नमस्ते! शुरू करने से पहले कुछ शब्दों में बताइए कि आपको क्या चाहिए, और हम आपके लिए सबसे किफ़ायती प्लान ढूँढेंगे।' }
+  };
+  // Where the chat was opened from: the button's intent, its text and the page — sent with every message so the bot follows it
+  var CTX = null;
+  function ctxFrom(a) {
+    if (!a) return null;
+    var href = a.getAttribute('href') || '', txt = (a.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 60);
+    var h = href; try { h = decodeURIComponent(href); } catch (e) {}
+    var intent = a.getAttribute('data-intent') || (/demo|הדגמה|демо|عرض|डेमो|démo/i.test(h + ' ' + txt) ? 'demo' : 'contact');
+    var sec = a.closest('section[id]');
+    return { intent: intent, text: txt, page: location.pathname + (sec ? '#' + sec.id : '') };
+  }
+  function ctxLine() { return CTX ? CTX.intent + ' | "' + CTX.text + '" | ' + CTX.page : 'chat | ' + location.pathname; }
   function store(k, v) { try { if (v === undefined) return JSON.parse(sessionStorage.getItem(k) || 'null'); sessionStorage.setItem(k, JSON.stringify(v)); } catch (e) { return null; } }
 
   function mount(root, host, onClose) {
@@ -131,7 +155,7 @@
       busy = true; sendB.disabled = true; ta.value = ''; ta.style.height = '';
       bubble('u', text); st.log.push({ r: 'u', x: text }); renderChips([]);
       var typing = bubble('a', ''); typing.innerHTML = '<span class="cg-typing" aria-label="…"><i></i><i></i><i></i></span>';
-      post({ site: site, lang: lang, id: st.id, message: text, page: location.pathname }).then(function (j) {
+      post({ site: site, lang: lang, id: st.id, message: text, page: location.pathname, ctx: ctxLine() }).then(function (j) {
         typing.remove();
         st.id = j.id || st.id;
         bubble('a', j.reply); st.log.push({ r: 'a', x: j.reply });
@@ -145,7 +169,7 @@
     ta.addEventListener('keydown', function (e) { if (e.key === 'Enter' && !e.shiftKey && !e.isComposing) { e.preventDefault(); send(ta.value); } });
     ta.addEventListener('input', function () { ta.style.height = 'auto'; ta.style.height = Math.min(ta.scrollHeight, 140) + 'px'; });
 
-    bubble('a', t.greet);
+    bubble('a', (CTX && !st.log.length && (GI[lang] || GI.en)[CTX.intent]) || t.greet);
     st.log.forEach(function (m) { bubble(m.r, m.x); });
     renderChips(st.log.length ? st.chips : starters);
     renderDone(st.done);
@@ -172,8 +196,14 @@
     }
     ov.addEventListener('click', function (e) { if (e.target === ov) close(); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && ov.classList.contains('on')) close(); });
+    // triggers are matched at click time, so buttons drawn later (the pricing cards re-render) open the chat too
     var sel = root.getAttribute('data-triggers');
-    if (sel) Array.prototype.forEach.call(document.querySelectorAll(sel), function (a) { a.addEventListener('click', open); });
+    if (sel) document.addEventListener('click', function (e) {
+      if (e.defaultPrevented || e.button || e.metaKey || e.ctrlKey || e.shiftKey) return;
+      var a = e.target && e.target.closest ? e.target.closest(sel) : null;
+      if (!a || a.closest('.cg-ov')) return;
+      e.preventDefault(); CTX = ctxFrom(a); open({ preventDefault: function () {}, currentTarget: a });
+    }, true);
     root.innerHTML = '';
     if (root.getAttribute('data-launcher') === '1') {
       var b = el('button', 'cg-launch'); b.type = 'button';
