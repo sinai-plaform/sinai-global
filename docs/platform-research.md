@@ -14,7 +14,7 @@ sales managers, back office, drivers and warehouse staff. First customer: a medi
 (pharmacies, dental, orthopedic) whose agents worked from PDF catalogs.
 
 **Status:** live and in daily use; app version `APP_VERSION='2026-10-12-83'` (v83) in
-`~/Code/liberty-deploy/app/index.html`. Single-file PWA on Supabase/PostgreSQL.
+`~/Code/jasale/app/index.html`. Single-file PWA on Supabase/PostgreSQL.
 
 **Standout capabilities (verified):**
 1. **Weekly plan + daily route.** Sunday plan suggestion, collections first, customers visited or ordered in
@@ -153,7 +153,7 @@ worker exists, `3e11c31`, but is not a public feature), memberships and Stripe p
 - Status pills unchanged: JaSale Live, SINAI Club Live, Downline HQ In development, SINAI Cinema Coming soon.
 
 ## Hub v3 (13 Oct 2026): JaSale and SINAI Club cards, re-verified in code
-JaSale (`~/Code/liberty-deploy/app/index.html`):
+JaSale (`~/Code/jasale/app/index.html`):
 - Weekly plan: `wpSuggest` > `wpPool` > `wpScore` > `routeScore`. Score uses open debt (`debt_agorot`, extra weight
   when older than 90 days via `collAge`), days since last visit and last order (`_ltMap`, order 45+ days),
   visit cadence from the customer grade (`custCadence`, `CAD_GRADE` green 14 / yellow 21 / orange+new 30 /
