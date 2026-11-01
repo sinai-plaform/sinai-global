@@ -54,7 +54,7 @@ function head(l, page) {
   const title = isSol ? t.meta.sol_title : t.meta.title, desc = isSol ? t.meta.sol_desc : t.meta.desc;
   const ld = isSol ? '' : `<script type="application/ld+json">${JSON.stringify({
     '@context': 'https://schema.org', '@type': 'Organization', '@id': SITE + '/#org', name: 'SINAI Global', url: SITE + '/',
-    logo: SITE + '/assets/og/logo.png', email: 'hello@sinai-global.com', telephone: '+972-50-776-3923',
+    logo: SITE + '/assets/og/logo.png', email: 'hello@sinai-global.com',
     address: { '@type': 'PostalAddress', addressLocality: 'Shlomi', addressCountry: 'IL' },
     founder: { '@type': 'Person', name: 'Liran Dandekar' },
     sameAs: ['https://jasale.app/', 'https://sinaiclub.com/', 'https://sinaicinema.com/', 'https://downlinehq.app/'],
@@ -270,7 +270,6 @@ ${header(l, 'home')}
       <h2>${esc(t.contact.h2)}</h2>
       <div class="acts"><a class="btn sun" href="mailto:hello@sinai-global.com">${esc(t.contact.email)}</a></div>
       <div class="row"><span id="c-mail">hello@sinai-global.com</span><button class="btn line small" type="button" data-copy="c-mail" data-done="${esc(t.contact.copied)}">${esc(t.contact.copy)}</button></div>
-      <div class="row"><span id="c-phone">+972 50-776-3923</span><button class="btn line small" type="button" data-copy="c-phone" data-done="${esc(t.contact.copied)}">${esc(t.contact.copy)}</button></div>
       <div class="row"><span style="direction:inherit">${esc(t.contact.place)}</span></div>
     </div>
   </div></section>
@@ -347,7 +346,7 @@ ${header(l, 'sol')}
       ${chipset(s, 'today', ['t1','t2','t3','t4','t5'], true)}
       ${fld('need', 'area', true)}
       ${fld('contact', 'text', true, 'email')}
-      <div class="form-acts"><button class="btn sun" type="button" data-send="wa">${esc(s.f_send_wa)}</button><button class="btn line" type="button" data-send="mail">${esc(s.f_send_mail)}</button></div>
+      <div class="form-acts"><button class="btn sun" type="button" data-send="mail">${esc(s.f_send_mail)}</button></div>
       <p class="form-msg" role="status" aria-live="polite"></p>
     </form>
     </details>

@@ -62,7 +62,7 @@ ${intro(l)}
 <meta property="og:image:alt" content="Downline HQ by SINAI Global">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="${SITE}/assets/og/downline-hq.jpg">
-<link rel="icon" href="/assets/downline/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/downline/favicon.svg" type="image/svg+xml"><link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png"><link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png"><link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
 <meta name="theme-color" content="#0E1316">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -128,7 +128,6 @@ ${t.faq.map((f, i) => `    <details${i === 0 ? ' open' : ''}><summary>${esc(f.q)
       </div>
       <div class="card">
         <div class="line"><span class="val" id="email">hello@downlinehq.app</span><button class="btn small" type="button" data-copy="email" data-done="${esc(t.copied)}">${esc(t.copy)}</button></div>
-        <div class="line"><span class="val" id="phone">050-776-3923</span><button class="btn small" type="button" data-copy="phone" data-done="${esc(t.copied)}">${esc(t.copy)}</button></div>
         <a class="btn" href="mailto:hello@downlinehq.app?subject=${encodeURIComponent(t.mailSubject)}">${esc(t.sendMail)}</a>
       </div>
     </div>
