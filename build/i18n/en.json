@@ -228,5 +228,10 @@
     "w3_d": "Ten languages, including right-to-left Hebrew and Arabic, and a built-in currency selector.",
     "w4_t": "Everything under one roof",
     "w4_d": "App, website, branding and promo videos from one team. One supplier, one point of responsibility."
+  },
+  "demo": {
+    "k": "Demo",
+    "h2": "How AI works in a business — the website bot, the smart assistant and our products in the field.",
+    "play": "Watch with sound"
   }
 }

@@ -228,5 +228,10 @@
     "w3_d": "Dix langues, dont l’hébreu et l’arabe de droite à gauche, et un choix de devise intégré.",
     "w4_t": "Tout sous un même toit",
     "w4_d": "Application, site, image de marque et vidéos promotionnelles par une seule équipe. Un prestataire, un seul responsable."
+  },
+  "demo": {
+    "k": "Démo",
+    "h2": "L’IA au travail dans une entreprise — le bot du site, l’assistant intelligent et nos produits sur le terrain.",
+    "play": "Regarder avec le son"
   }
 }

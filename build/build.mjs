@@ -18,7 +18,7 @@ const FONTS = {
 };
 // pages that only exist in the original 9 languages
 const LEGACY = new Set(['he', 'en', 'ru', 'ar', 'es', 'de', 'it', 'fr', 'pt']);
-const V = '202611011230';
+const V = '202611011400';
 const WA = '972507763923';
 const PRICES = { // must match assets/sg.js; used for the first paint
   diag: { ILS: 1500, USD: 420 }, site: { ILS: 4900, USD: 1350 }, auto: { ILS: 3900, USD: 1090 },
@@ -184,6 +184,11 @@ ${header(l, 'home')}
     <li><a href="#lifestyle" lang="en"><b>SINAI Lifestyle</b></a><span>${esc(t.divisions.lifestyle_d)}</span></li>
   </ul></div></div>
 
+  <section class="sec demo" id="demo" aria-labelledby="demo-h"><div class="wrap">
+    <div class="sec-head dhead"><p class="dkick">${esc(t.demo.k)}</p><h2 id="demo-h">${esc(t.demo.h2)}</h2></div>
+    <div class="dstage"><div class="dframe"><video id="dvid" muted playsinline loop preload="none" data-base="/assets/video/demo-${l}" aria-label="${esc(t.demo.h2)}"></video><button class="dplay" type="button"><span class="dpi"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span><span>${esc(t.demo.play)}</span></button></div></div>
+  </div></section>
+
   <section class="sec" id="products" aria-labelledby="products-h"><div class="wrap">
     <div class="sec-head"><h2 id="products-h">${esc(b.h2)}</h2><p class="lead">${esc(b.lead)}</p></div>
 
@@ -282,7 +287,8 @@ ${header(l, 'home')}
 </main>
 ${footer(l, 'home')}
 <div class="concierge" data-site="sinai-global" data-lang="${l}" data-triggers="a.btn[href='#contact'], a.btn[href$='#tell']" hidden></div><script src="/assets/concierge.js?v=${V}" defer></script>
-<script>window.JOURNEY={start:'.summit-dot',stations:['#products-h','#why-h','#trust-h','top:#cinema','#about-h'],end:'top:.cta-band',base:'rgba(180,72,58,.42)',prog:'#d4644f',dot:'#eaa36b',bg:'#f8f9f6'};</script><script src="/assets/journey.js?v=${V}" defer></script>
+<script>(function(){var v=document.getElementById("dvid");if(!v)return;var f=v.parentNode,b=f.querySelector(".dplay"),m=matchMedia("(max-width:760px)");function src(){var o=m.matches?"v":"h";if(v.dataset.o===o)return;v.dataset.o=o;var u=v.dataset.base+"-"+o;v.poster=u+".jpg";v.src=u+".mp4"}src();if(m.addEventListener)m.addEventListener("change",function(){var s=f.classList.contains("on");src();if(s)v.play()});var rm=matchMedia("(prefers-reduced-motion: reduce)").matches;if(!rm&&"IntersectionObserver"in window){new IntersectionObserver(function(es){es.forEach(function(e){if(f.classList.contains("on"))return;if(e.isIntersecting){var p=v.play();if(p&&p.catch)p.catch(function(){})}else v.pause()})},{threshold:.45}).observe(f)}function snd(){v.muted=false;v.loop=false;v.controls=true;f.classList.add("on");try{v.currentTime=0}catch(e){}var p=v.play();if(p&&p.catch)p.catch(function(){})}b.addEventListener("click",snd);v.addEventListener("ended",function(){f.classList.remove("on");v.controls=false;v.muted=true;v.loop=true})})();</script>
+<script>window.JOURNEY={start:'.summit-dot',stations:['#demo-h','#products-h','#why-h','#trust-h','top:#cinema','#about-h'],end:'top:.cta-band',base:'rgba(180,72,58,.42)',prog:'#d4644f',dot:'#eaa36b',bg:'#f8f9f6'};</script><script src="/assets/journey.js?v=${V}" defer></script>
 </body>
 </html>
 `;

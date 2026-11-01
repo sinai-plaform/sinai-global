@@ -415,3 +415,16 @@ body::after{mix-blend-mode:normal;opacity:.035}
 @media (hover:none) and (pointer:coarse){body::after{display:none}}
 /* phone screens: each screen on its own layer so the cross-fade never re-draws the phone frame (periodic hitch on Android) */
 .device .screen img{will-change:opacity;-webkit-backface-visibility:hidden;backface-visibility:hidden}
+
+/* demo video */
+.demo .dhead{margin-inline:auto;text-align:center;justify-items:center}
+.dkick{margin:0 0 10px;font-size:14px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--sun)}
+.dstage{display:flex;justify-content:center}
+.dframe{position:relative;width:100%;max-width:1040px;aspect-ratio:16/9;border-radius:28px;overflow:hidden;background:#121a24;box-shadow:0 40px 90px -40px rgba(180,72,58,.35),0 24px 50px -30px rgba(10,20,40,.45),inset 0 0 0 1px rgba(255,255,255,.06)}
+.dframe video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;background:#121a24}
+.dplay{position:absolute;inset-inline-start:50%;bottom:22px;transform:translateX(-50%);display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 20px 0 8px;border:0;border-radius:999px;cursor:pointer;font:700 15px/1 var(--font);color:#fff;white-space:nowrap;background:rgba(8,14,30,.55);box-shadow:0 8px 24px rgba(0,0,0,.25)}
+[dir=rtl] .dplay{transform:translateX(50%)}
+.dplay:hover{background:rgba(8,14,30,.72)}.dplay:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.dplay .dpi{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:#fff;color:#121a24}
+.dframe.on .dplay{opacity:0;pointer-events:none}
+@media(max-width:760px){.dframe{max-width:330px;aspect-ratio:9/16;border-radius:38px;border:7px solid #0b1020}}

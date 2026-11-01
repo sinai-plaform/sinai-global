@@ -19,9 +19,9 @@
 <link rel="alternate" hreflang="hi" href="https://sinai-global.com/hi/">
 <link rel="alternate" hreflang="x-default" href="https://sinai-global.com/">
 <script>(function(){try{var d=document.documentElement;if(sessionStorage.getItem('sg-intro')||!window.matchMedia||matchMedia('(prefers-reduced-motion: reduce)').matches)return;sessionStorage.setItem('sg-intro','1');d.classList.add('intro-on')}catch(e){}})()</script>
-<script src="/assets/lang.js?v=202611011230"></script>
-<script src="/assets/sg.js?v=202611011230" defer></script>
-<script src="/assets/flow.js?v=202611011230" defer></script>
+<script src="/assets/lang.js?v=202611011400"></script>
+<script src="/assets/sg.js?v=202611011400" defer></script>
+<script src="/assets/flow.js?v=202611011400" defer></script>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="SINAI Global">
 <meta property="og:title" content="SINAI Global · स्मार्ट सॉफ़्टवेयर जो आपके लिए काम करे">
@@ -39,7 +39,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700;800&display=swap"></noscript>
-<link rel="stylesheet" href="/assets/sg.css?v=202611011230">
+<link rel="stylesheet" href="/assets/sg.css?v=202611011400">
 <link rel="preload" as="image" href="/assets/screens/jasale/en/1.webp">
 </head>
 <body>
@@ -85,6 +85,11 @@
     <li><a href="#cinema" lang="en"><b>SINAI Cinema</b></a><span>मीडिया और प्रोडक्शन</span></li>
     <li><a href="#lifestyle" lang="en"><b>SINAI Lifestyle</b></a><span>स्वस्थ जीवनशैली</span></li>
   </ul></div></div>
+
+  <section class="sec demo" id="demo" aria-labelledby="demo-h"><div class="wrap">
+    <div class="sec-head dhead"><p class="dkick">डेमो</p><h2 id="demo-h">बिज़नेस में AI ऐसे काम करता है — वेबसाइट बॉट, स्मार्ट असिस्टेंट और फ़ील्ड में चलते हमारे प्रोडक्ट।</h2></div>
+    <div class="dstage"><div class="dframe"><video id="dvid" muted playsinline loop preload="none" data-base="/assets/video/demo-hi" aria-label="बिज़नेस में AI ऐसे काम करता है — वेबसाइट बॉट, स्मार्ट असिस्टेंट और फ़ील्ड में चलते हमारे प्रोडक्ट।"></video><button class="dplay" type="button"><span class="dpi"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span><span>आवाज़ के साथ देखें</span></button></div></div>
+  </div></section>
 
   <section class="sec" id="products" aria-labelledby="products-h"><div class="wrap">
     <div class="sec-head"><h2 id="products-h">हम क्या बनाते हैं</h2><p class="lead">सॉफ़्टवेयर डिवीज़न: स्मार्ट प्रोडक्ट, हर एक किसी एक काम के लिए बना।</p></div>
@@ -204,7 +209,8 @@
     </div>
   </div>
 </footer>
-<div class="concierge" data-site="sinai-global" data-lang="hi" data-triggers="a.btn[href='#contact'], a.btn[href$='#tell']" hidden></div><script src="/assets/concierge.js?v=202611011230" defer></script>
-<script>window.JOURNEY={start:'.summit-dot',stations:['#products-h','#why-h','#trust-h','top:#cinema','#about-h'],end:'top:.cta-band',base:'rgba(180,72,58,.42)',prog:'#d4644f',dot:'#eaa36b',bg:'#f8f9f6'};</script><script src="/assets/journey.js?v=202611011230" defer></script>
+<div class="concierge" data-site="sinai-global" data-lang="hi" data-triggers="a.btn[href='#contact'], a.btn[href$='#tell']" hidden></div><script src="/assets/concierge.js?v=202611011400" defer></script>
+<script>(function(){var v=document.getElementById("dvid");if(!v)return;var f=v.parentNode,b=f.querySelector(".dplay"),m=matchMedia("(max-width:760px)");function src(){var o=m.matches?"v":"h";if(v.dataset.o===o)return;v.dataset.o=o;var u=v.dataset.base+"-"+o;v.poster=u+".jpg";v.src=u+".mp4"}src();if(m.addEventListener)m.addEventListener("change",function(){var s=f.classList.contains("on");src();if(s)v.play()});var rm=matchMedia("(prefers-reduced-motion: reduce)").matches;if(!rm&&"IntersectionObserver"in window){new IntersectionObserver(function(es){es.forEach(function(e){if(f.classList.contains("on"))return;if(e.isIntersecting){var p=v.play();if(p&&p.catch)p.catch(function(){})}else v.pause()})},{threshold:.45}).observe(f)}function snd(){v.muted=false;v.loop=false;v.controls=true;f.classList.add("on");try{v.currentTime=0}catch(e){}var p=v.play();if(p&&p.catch)p.catch(function(){})}b.addEventListener("click",snd);v.addEventListener("ended",function(){f.classList.remove("on");v.controls=false;v.muted=true;v.loop=true})})();</script>
+<script>window.JOURNEY={start:'.summit-dot',stations:['#demo-h','#products-h','#why-h','#trust-h','top:#cinema','#about-h'],end:'top:.cta-band',base:'rgba(180,72,58,.42)',prog:'#d4644f',dot:'#eaa36b',bg:'#f8f9f6'};</script><script src="/assets/journey.js?v=202611011400" defer></script>
 </body>
 </html>

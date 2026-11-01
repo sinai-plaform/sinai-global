@@ -228,5 +228,10 @@
     "w3_d": "Dez idiomas, incluindo hebraico e árabe da direita para a esquerda, e seletor de moeda integrado.",
     "w4_t": "Tudo sob o mesmo teto",
     "w4_d": "App, site, marca e vídeos promocionais de uma só equipe. Um fornecedor, uma única responsabilidade."
+  },
+  "demo": {
+    "k": "Demo",
+    "h2": "Assim funciona a IA num negócio — o bot do site, o assistente inteligente e os nossos produtos no terreno.",
+    "play": "Ver com som"
   }
 }

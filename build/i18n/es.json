@@ -228,5 +228,10 @@
     "w3_d": "Diez idiomas, incluidos hebreo y árabe de derecha a izquierda, y selector de moneda integrado.",
     "w4_t": "Todo bajo un mismo techo",
     "w4_d": "App, web, marca y vídeos promocionales de un solo equipo. Un proveedor, un único responsable."
+  },
+  "demo": {
+    "k": "Demo",
+    "h2": "Así trabaja la IA en un negocio: el bot de la web, el asistente inteligente y nuestros productos en la calle.",
+    "play": "Ver con sonido"
   }
 }
