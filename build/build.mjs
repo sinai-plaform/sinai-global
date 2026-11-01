@@ -18,7 +18,7 @@ const FONTS = {
 };
 // pages that only exist in the original 9 languages
 const LEGACY = new Set(['he', 'en', 'ru', 'ar', 'es', 'de', 'it', 'fr', 'pt']);
-const V = '202611010100';
+const V = '202611010215';
 const WA = '972507763923';
 const PRICES = { // must match assets/sg.js; used for the first paint
   diag: { ILS: 1500, USD: 420 }, site: { ILS: 4900, USD: 1350 }, auto: { ILS: 3900, USD: 1090 },
@@ -254,7 +254,7 @@ ${header(l, 'home')}
       <h2 lang="en">SINAI Lifestyle</h2>
       <p>${esc(t.life.d)}</p>
       <ul class="prods">
-        ${[['X-GRN', 'x-grn', 'xgrn', 'https://x-grn.com/'], ['Indigo', 'indigo', 'indigo', 'https://indigo-x.uk/'], ['B-YNG', 'b-yng', 'byng', 'https://b-yng.net/']].map(([nm, img, k, url]) => `<li><div class="box"><img src="/assets/lifestyle/${img}.webp" alt="${nm}" loading="lazy" decoding="async"></div><b lang="en">${nm}</b><p>${esc(t.life[k])}</p><div class="acts"><a class="link" href="${url}" target="_blank" rel="noopener">${esc(t.life.order)}</a><a class="link" href="https://wa.me/${WA}?text=${encodeURIComponent(nm)}" target="_blank" rel="noopener">${esc(t.life.wa)}</a></div></li>`).join('\n        ')}
+        ${[['X-GRN', 'x-grn', 'xgrn', 'https://x-grn.com/'], ['Indigo', 'indigo', 'indigo', 'https://indigo-x.uk/'], ['B-YNG', 'b-yng', 'byng', 'https://b-yng.net/']].map(([nm, img, k, url]) => `<li><div class="box"><img src="/assets/lifestyle/${img}.webp" alt="${nm}" loading="lazy" decoding="async"></div><b lang="en">${nm}</b><p>${esc(t.life[k])}</p><div class="acts"><a class="link" href="${url}" target="_blank" rel="noopener">${esc(t.life.order)}</a></div></li>`).join('\n        ')}
       </ul>
       <p class="disc">${esc(t.life.disclosure)}</p>
     </article>
@@ -268,7 +268,7 @@ ${header(l, 'home')}
     </div>
     <div class="contact" id="contact">
       <h2>${esc(t.contact.h2)}</h2>
-      <div class="acts"><a class="btn sun" href="https://wa.me/${WA}" target="_blank" rel="noopener">${esc(t.contact.whatsapp)}</a><a class="btn line" href="mailto:hello@sinai-global.com">${esc(t.contact.email)}</a></div>
+      <div class="acts"><a class="btn sun" href="mailto:hello@sinai-global.com">${esc(t.contact.email)}</a></div>
       <div class="row"><span id="c-mail">hello@sinai-global.com</span><button class="btn line small" type="button" data-copy="c-mail" data-done="${esc(t.contact.copied)}">${esc(t.contact.copy)}</button></div>
       <div class="row"><span id="c-phone">+972 50-776-3923</span><button class="btn line small" type="button" data-copy="c-phone" data-done="${esc(t.contact.copied)}">${esc(t.contact.copy)}</button></div>
       <div class="row"><span style="direction:inherit">${esc(t.contact.place)}</span></div>
@@ -278,11 +278,11 @@ ${header(l, 'home')}
   <section class="cta-band" aria-labelledby="cta-h"><div class="field cta-field" aria-hidden="true"><i class="layer far"></i><i class="layer"></i><i class="flow" data-flow="/assets/topo-flow.svg"></i></div><div class="halo" aria-hidden="true"></div><div class="wrap">
     <h2 id="cta-h">${esc(t.cta.h2)}</h2>
     <p>${esc(t.cta.d)}</p>
-    <div class="ctas"><a class="btn sun" href="https://wa.me/${WA}?text=${encodeURIComponent(t.sol.msg_intro)}" target="_blank" rel="noopener">${esc(t.cta.b1)}</a><a class="btn line" href="${solPath(l)}#tell">${esc(t.cta.b2)}</a></div>
+    <div class="ctas"><a class="btn sun" href="${solPath(l)}#tell">${esc(t.cta.b2)}</a></div>
   </div></section>
 </main>
 ${footer(l, 'home')}
-<div class="concierge" data-site="sinai-global" data-lang="${l}" data-wa="${WA}" data-triggers="a.btn[href='#contact'], a.btn[href$='#tell']" hidden></div><script src="/assets/concierge.js?v=${V}" defer></script>
+<div class="concierge" data-site="sinai-global" data-lang="${l}" data-triggers="a.btn[href='#contact'], a.btn[href$='#tell']" hidden></div><script src="/assets/concierge.js?v=${V}" defer></script>
 <script>window.JOURNEY={start:'.summit-dot',stations:['#products-h','#why-h','#trust-h','top:#cinema','#about-h'],end:'top:.cta-band',base:'rgba(180,72,58,.42)',prog:'#d4644f',dot:'#eaa36b',bg:'#f8f9f6'};</script><script src="/assets/journey.js?v=${V}" defer></script>
 </body>
 </html>
@@ -335,7 +335,7 @@ ${header(l, 'sol')}
   <section class="sec" id="tell" aria-labelledby="tell-h"><div class="wrap form-wrap">
     <div><h2 id="tell-h">${esc(s.form_h2)}</h2><p class="lead">${esc(s.cg_lead)}</p></div>
     <div class="tell-main">
-    <div class="concierge" data-site="sinai-global" data-lang="${l}" data-wa="${WA}" data-launcher="1" data-triggers="a.btn[href='#tell']"></div>
+    <div class="concierge" data-site="sinai-global" data-lang="${l}" data-launcher="1" data-triggers="a.btn[href='#tell']"></div>
     <details class="formalt" id="tell-form"><summary>${esc(s.f_alt)}</summary>
     <form class="biz" novalidate data-intro="${esc(s.msg_intro)}" data-required="${esc(s.f_required)}" data-sent="${esc(s.f_sent)}">
       <div class="two">${fld('name', 'text', true, 'name')}${fld('business', 'text', false, 'organization')}</div>

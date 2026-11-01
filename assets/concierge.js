@@ -63,7 +63,7 @@
     host = host || root;
     var site = root.getAttribute('data-site') || 'sinai-global';
     var lang = (root.getAttribute('data-lang') || document.documentElement.lang || 'he').slice(0, 2);
-    var wa = root.getAttribute('data-wa') || '972507763923';
+    var wa = root.getAttribute('data-wa') || '';
     var mail = root.getAttribute('data-mail') || 'hello@sinai-global.com';
     var t = T[lang] || T.en;
     var person = root.getAttribute('data-person'); // per-site sales contact (default: Liran)
@@ -111,17 +111,18 @@
         if (d.understood) { c.appendChild(el('small', '', dn.u)); c.appendChild(el('div', 'v', d.understood)); }
         if (d.offer) { c.appendChild(el('small', '', dn.o)); c.appendChild(el('div', 'v b', d.offer)); }
       }
-      var acts = el('div', 'cg-acts');
+      if (wa) { var acts = el('div', 'cg-acts');
       var a1 = el('a', 'cg-btn l', dn.wa); a1.href = waLink(dn.wm + ' (' + brand + ')' + (d.name ? ' · ' + d.name : '')); a1.target = '_blank'; a1.rel = 'noopener';
       a1.addEventListener('click', function () { post({ action: 'handoff', id: st.id }).catch(function () {}); }); acts.appendChild(a1);
-      c.appendChild(acts); doneBox.appendChild(c);
+      c.appendChild(acts); }
+      doneBox.appendChild(c);
     }
     function post(body) {
       return fetch(API, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) }).then(function (r) { return r.json().then(function (j) { if (!r.ok || !j.ok) throw j; return j; }); });
     }
     function failCard() {
       var m = bubble('a', t.err + '\n');
-      var a = el('a', 'cg-btn p', t.wa); a.href = waLink(st.log.filter(function (x) { return x.r === 'u'; }).map(function (x) { return x.x; }).join('\n')); a.target = '_blank'; a.rel = 'noopener'; a.style.marginTop = '8px';
+      var a = el('a', 'cg-btn p', wa ? t.wa : mail); a.href = wa ? waLink(st.log.filter(function (x) { return x.r === 'u'; }).map(function (x) { return x.x; }).join('\n')) : 'mailto:' + mail; a.target = '_blank'; a.rel = 'noopener'; a.style.marginTop = '8px';
       m.appendChild(a);
     }
     function send(text) {
