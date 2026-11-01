@@ -10,15 +10,16 @@ const SITE = 'https://sinai-global.com';
 const LANGS = ['he', 'en', 'ru', 'ar', 'es', 'de', 'it', 'fr', 'pt', 'hi'];
 const RTL = new Set(['he', 'ar']);
 const OG_LOCALE = { he: 'he_IL', en: 'en_US', ru: 'ru_RU', ar: 'ar_AR', es: 'es_ES', de: 'de_DE', it: 'it_IT', fr: 'fr_FR', pt: 'pt_BR', hi: 'hi_IN' };
-const FONTS = {
-  he: 'Rubik:wght@400;500;700;800',
-  ar: 'IBM+Plex+Sans+Arabic:wght@400;500;600;700',
-  hi: 'Mukta:wght@400;500;600;700;800',
-  _: 'Onest:wght@400;500;600;700;800',
+const FONTS = { // friendly typography (Liran 2026-11-01): rounded headings + clean body per script; Onest only for the SINAI GLOBAL wordmark
+  he: 'Fredoka:wght@500;600;700&family=Assistant:wght@400;500;600;700&family=Onest:wght@700',
+  ru: 'Nunito:wght@600;700;800&family=Nunito+Sans:wght@400;500;600;700&family=Onest:wght@700',
+  ar: 'Baloo+Bhaijaan+2:wght@500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Onest:wght@700',
+  hi: 'Baloo+2:wght@500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Onest:wght@700',
+  _: 'Fredoka:wght@500;600;700&family=Assistant:wght@400;500;600;700&family=Onest:wght@700',
 };
 // pages that only exist in the original 9 languages
 const LEGACY = new Set(['he', 'en', 'ru', 'ar', 'es', 'de', 'it', 'fr', 'pt']);
-const V = '202611011400';
+const V = '202611012300';
 const WA = '972507763923';
 const PRICES = { // must match assets/sg.js; used for the first paint
   diag: { ILS: 1500, USD: 420 }, site: { ILS: 4900, USD: 1350 }, auto: { ILS: 3900, USD: 1090 },
