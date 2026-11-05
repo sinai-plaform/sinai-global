@@ -19,7 +19,7 @@ const FONTS = { // friendly typography (Liran 2026-11-01): rounded headings + cl
 };
 // pages that only exist in the original 9 languages
 const LEGACY = new Set(['he', 'en', 'ru', 'ar', 'es', 'de', 'it', 'fr', 'pt']);
-const V = '202611012320';
+const V = '202611060110';
 const WA = '972507763923';
 const PRICES = { // must match assets/sg.js; used for the first paint
   diag: { ILS: 1500, USD: 420 }, site: { ILS: 4900, USD: 1350 }, auto: { ILS: 3900, USD: 1090 },
