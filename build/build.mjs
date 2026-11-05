@@ -61,7 +61,7 @@ function head(l, page) {
     founder: { '@type': 'Person', name: 'Liran Dandekar' },
     sameAs: ['https://jasale.app/', 'https://sinaiclub.com/', 'https://sinaicinema.com/', 'https://downlinehq.app/'],
   })}</script>`;
-  const intro = isSol ? '' : `<script>(function(){try{var d=document.documentElement;if(sessionStorage.getItem('sg-intro')||!window.matchMedia||matchMedia('(prefers-reduced-motion: reduce)').matches)return;sessionStorage.setItem('sg-intro','1');d.classList.add('intro-on')}catch(e){}})()</script>`;
+  const intro = isSol ? '' : `<script>(function(){try{var d=document.documentElement;var h=/^\/([a-z]{2}\/)?$/.test(location.pathname),nv=((performance.getEntriesByType&&performance.getEntriesByType("navigation")[0])||{}).type||"",ex=!document.referrer||document.referrer.indexOf(location.origin+"/")!==0,fr=h&&(nv==="reload"||ex);if((!fr&&sessionStorage.getItem('sg-intro'))||!window.matchMedia||matchMedia('(prefers-reduced-motion: reduce)').matches)return;sessionStorage.setItem('sg-intro','1');d.classList.add('intro-on')}catch(e){}})()</script>`;
   return `<!doctype html>
 <html lang="${l}" dir="${RTL.has(l) ? 'rtl' : 'ltr'}">
 <head>
