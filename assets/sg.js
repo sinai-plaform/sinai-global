@@ -32,10 +32,10 @@
   d.addEventListener('change',function(e){if(e.target.matches&&e.target.matches('select.cur'))setCur(e.target.value)});
   d.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('.seg [data-cur]');if(b)setCur(b.getAttribute('data-cur'))});
 
-  /* brand intro: removed after 2.5s or on skip */
+  /* brand intro: removed after 2s or on skip */
   function endIntro(){root.classList.remove('intro-on');var o=d.querySelector('.sg-intro');if(o&&o.parentNode)o.parentNode.removeChild(o)}
   if(root.classList.contains('intro-on')){
-    setTimeout(endIntro,2500);
+    setTimeout(endIntro,2000);
     d.addEventListener('keydown',function(e){if(e.key==='Escape')endIntro()});
   }
 

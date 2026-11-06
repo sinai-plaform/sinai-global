@@ -275,7 +275,7 @@ select.cur{font:inherit;color:var(--on-night);background:var(--night-2);border:1
 
 /* brand intro (logo A), max 1.5s, skippable, once per session, never with reduced motion */
 .sg-intro{display:none}
-html.intro-on .sg-intro{display:grid;place-items:center;position:fixed;inset:0;z-index:999;background:var(--night);color:var(--on-night);animation:intro-out .35s ease 2.15s forwards;cursor:pointer}
+html.intro-on .sg-intro{display:grid;place-items:center;position:fixed;inset:0;z-index:999;background:var(--night);color:var(--on-night);animation:intro-out .35s ease 1.65s forwards;cursor:pointer}
 .sg-intro .mk{display:grid;justify-items:center;gap:18px}
 .sg-intro svg{width:132px;height:132px;overflow:visible}
 .sg-intro .peak{fill:none;stroke:var(--on-night);stroke-width:1.6;stroke-linejoin:round;stroke-dasharray:80;stroke-dashoffset:80;animation:intro-draw .6s cubic-bezier(.6,0,.3,1) .05s forwards}
