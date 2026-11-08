@@ -19,7 +19,7 @@ const FONTS = { // friendly typography (Liran 2026-11-01): rounded headings + cl
 };
 // pages that only exist in the original 9 languages
 const LEGACY = new Set(['he', 'en', 'ru', 'ar', 'es', 'de', 'it', 'fr', 'pt']);
-const V = '202611060210';
+const V = '202611090040';
 const WA = '972507763923';
 const PRICES = { // must match assets/sg.js; used for the first paint
   diag: { ILS: 1500, USD: 420 }, site: { ILS: 4900, USD: 1350 }, auto: { ILS: 3900, USD: 1090 },
@@ -111,7 +111,7 @@ function header(l, page) {
       <a href="${h}#products">${esc(n.products)}</a>
       ${isSol ? '' : `<a href="${solPath(l)}">${esc(n.solutions)}</a>`}
       <a href="${h}#cinema" lang="en">${esc(n.cinema)}</a>
-      <a href="${h}#lifestyle" lang="en">${esc(n.lifestyle)}</a>
+      <a href="https://sinailifestyle.com/${l}" lang="en">${esc(n.lifestyle)}</a>
       <a href="${h}#about">${esc(n.about)}</a>
       <a href="${h}#contact">${esc(n.contact)}</a>
       <details class="lng"><summary aria-label="${esc(n.language)}: ${esc(t._lang)}">${GLOBE}${esc(t._lang)}</summary><div class="lng-list">${langLinks}</div></details>
@@ -128,7 +128,7 @@ function footer(l, page) {
   <div class="wrap">
     <div class="grid">
       <div><a class="brand" href="${home(l)}">${MARK()}SINAI GLOBAL</a><p class="tag">${esc(t.hero.h1)}</p></div>
-      <div><h2>${esc(f.divisions)}</h2><ul><li><a href="${h}#products">${esc(t.divisions.software)}</a></li><li><a href="${h}#cinema" lang="en">SINAI Cinema</a></li><li><a href="${h}#lifestyle" lang="en">SINAI Lifestyle</a></li></ul></div>
+      <div><h2>${esc(f.divisions)}</h2><ul><li><a href="${h}#products">${esc(t.divisions.software)}</a></li><li><a href="${h}#cinema" lang="en">SINAI Cinema</a></li><li><a href="https://sinailifestyle.com/${l}" lang="en">SINAI Lifestyle</a></li></ul></div>
       <div><h2>${esc(f.platforms)}</h2><ul lang="en"><li><a href="https://jasale.app/">JaSale</a></li><li><a href="https://sinaiclub.com/">SINAI Club</a></li><li><a href="${'https://downlinehq.app/' + l}">Downline HQ</a></li><li><a href="https://sinaicinema.com/">SINAI Cinema</a></li></ul></div>
       <div><h2>${esc(f.company)}</h2><ul>${isSol ? '' : `<li><a href="${solPath(l)}">${esc(n.solutions)}</a></li>`}<li><a href="${h}#about">${esc(n.about)}</a></li><li><a href="${h}#contact">${esc(n.contact)}</a></li></ul></div>
     </div>
@@ -258,12 +258,20 @@ ${header(l, 'home')}
       </div>
     </article>
     <article class="life-card" id="lifestyle">
-      <h2 lang="en">SINAI Lifestyle</h2>
-      <p>${esc(t.life.d)}</p>
-      <ul class="prods">
-        ${[['X-GRN', 'x-grn', 'xgrn', 'https://x-grn.com/'], ['Indigo', 'indigo', 'indigo', 'https://indigo-x.uk/'], ['B-YNG', 'b-yng', 'byng', 'https://b-yng.net/']].map(([nm, img, k, url]) => `<li><div class="box"><img src="/assets/lifestyle/${img}.webp" alt="${nm}" loading="lazy" decoding="async"></div><b lang="en">${nm}</b><p>${esc(t.life[k])}</p><div class="acts"><a class="link" href="${url}" target="_blank" rel="noopener">${esc(t.life.order)}</a></div></li>`).join('\n        ')}
-      </ul>
-      <p class="disc">${esc(t.life.disclosure)}</p>
+      <a class="life-sun" href="https://sinailifestyle.com/${l}" aria-hidden="true" tabindex="-1"><img src="/assets/lifestyle/sunrise.jpg?v=${V}" alt="" width="640" height="640" loading="lazy" decoding="async"></a>
+      <div class="life-body">
+        <div class="life-brand" lang="en"><svg viewBox="0 0 28 28" aria-hidden="true"><path d="M2 17.5 H7.5 L10.2 13 L13.2 21.5 L17 6.5 L20.2 15 L22.3 17.5 H26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="23" cy="8" r="2.6" fill="#d4644f"/></svg>SINAI LIFESTYLE</div>
+        <p class="life-kick">${esc(t.life.kicker)}</p>
+        <h2>${esc(t.life.head)}</h2>
+        <p>${esc(t.life.d)}</p>
+        <ul class="life-pills">${(t.life.pillars || []).map(x => `<li>${esc(x)}</li>`).join('')}</ul>
+        <a class="btn sun" href="https://sinailifestyle.com/${l}">${esc(t.life.cta)}</a>
+        <div class="life-prods"><span>${esc(t.life.prods_h)}</span>
+          ${[['X-GRN', 'x-grn', 'https://x-grn.com/'], ['Indigo', 'indigo', 'https://indigo-x.uk/'], ['B-YNG', 'b-yng', 'https://b-yng.net/']].map(([nm, img, url]) => `<a href="${url}" target="_blank" rel="noopener" title="${nm}"><img src="/assets/lifestyle/${img}.webp" alt="${nm}" width="44" height="44" loading="lazy" decoding="async"></a>`).join('')}
+          <a class="link" href="https://sinailifestyle.com/${l}/products">${esc(t.life.cabinet)} →</a>
+        </div>
+        <p class="disc">${esc(t.life.disclosure)}</p>
+      </div>
     </article>
   </div></section>
 

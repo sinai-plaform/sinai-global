@@ -106,13 +106,24 @@
   },
   "life": {
     "h2": "SINAI Lifestyle",
-    "d": "A healthy daily routine, with drinks from bHIP.",
-    "disclosure": "Liran is an independent bHIP distributor; the brand and products belong to bHIP Global.",
+    "d": "Energy, movement and nutrition built for real life — no extremes, no diets. Small habits that carry the people who carry everything.",
+    "disclosure": "Liran Dandekar is an authorized independent distributor of bHIP Global. SINAI Lifestyle is not bHIP's official website.",
     "xgrn": "A green morning drink with vitamins, minerals, fiber and plant ingredients: maca, matcha, moringa and spirulina. Low in calories, no added sugar.",
     "indigo": "An exotic, refreshing drink with acai, goji, green tea, guarana, maca and ginseng, with B vitamins and vitamin C. Vegan, gluten-free, no added sugar.",
     "byng": "A premium collagen supplement with a strawberry-lemon taste, for a daily beauty routine.",
     "order": "Order on the product site",
-    "wa": "Ask on WhatsApp"
+    "wa": "Ask on WhatsApp",
+    "kicker": "A performance lifestyle",
+    "head": "Your body is your first business.",
+    "cta": "Start reading",
+    "pillars": [
+      "Energy & focus",
+      "Movement",
+      "Simple nutrition",
+      "Beauty from within"
+    ],
+    "prods_h": "What we drink",
+    "cabinet": "The Cabinet"
   },
   "cta": {
     "h2": "Let's put AI to work in your business.",
