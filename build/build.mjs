@@ -188,7 +188,7 @@ ${header(l, 'home')}
 
   <section class="sec demo" id="demo" aria-labelledby="demo-h"><div class="wrap">
     <div class="sec-head dhead"><p class="dkick">${esc(t.demo.k)}</p><h2 id="demo-h">${esc(t.demo.h2)}</h2></div>
-    <div class="dstage"><div class="dframe"><video id="dvid" muted playsinline loop preload="none" data-base="/assets/video/demo-${l}" aria-label="${esc(t.demo.h2)}"></video><button class="dplay" type="button"><span class="dpi"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span><span>${esc(t.demo.play)}</span></button></div></div>
+    <div class="dstage"><div class="dframe"><video id="dvid" muted playsinline loop preload="none" data-base="/assets/video/film-${l}" aria-label="${esc(t.demo.h2)}"></video><button class="dplay" type="button"><span class="dpi"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span><span>${esc(t.demo.play)}</span></button></div></div>
   </div></section>
 
   <section class="sec" id="products" aria-labelledby="products-h"><div class="wrap">
