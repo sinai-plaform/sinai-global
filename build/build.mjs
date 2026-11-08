@@ -19,7 +19,16 @@ const FONTS = { // friendly typography (Liran 2026-11-01): rounded headings + cl
 };
 // pages that only exist in the original 9 languages
 const LEGACY = new Set(['he', 'en', 'ru', 'ar', 'es', 'de', 'it', 'fr', 'pt']);
-const V = '202611090040';
+const V = '202611091200';
+// brands linked from the site (nav, footer, product cards): JSON-LD subOrganization + llms.txt
+const BRANDS = [
+  ['SINAI Club', 'https://sinaiclub.com'],
+  ['JaSale', 'https://jasale.app'],
+  ['SINAI Cinema', 'https://sinaicinema.com'],
+  ['SINAI Lifestyle', 'https://sinailifestyle.com'],
+  ['Downline HQ', 'https://downlinehq.app'],
+];
+const INDEXNOW_KEY = 'de0302ef2ad707c72e38b83829457624'; // IndexNow key, served at /<key>.txt
 const WA = '972507763923';
 const PRICES = { // must match assets/sg.js; used for the first paint
   diag: { ILS: 1500, USD: 420 }, site: { ILS: 4900, USD: 1350 }, auto: { ILS: 3900, USD: 1090 },
@@ -54,13 +63,22 @@ function head(l, page) {
     + `\n<link rel="alternate" hreflang="x-default" href="${SITE}${isSol ? '/solutions/' : '/'}">`;
   const font = FONTS[l] || FONTS._;
   const title = isSol ? t.meta.sol_title : t.meta.title, desc = isSol ? t.meta.sol_desc : t.meta.desc;
+  // JSON-LD (search kit 2026-11-09): Organization (parent company + the brands linked on the site) + WebSite.
+  // The brands were in sameAs before; sameAs means "the same entity", so they moved to subOrganization.
   const ld = isSol ? '' : `<script type="application/ld+json">${JSON.stringify({
-    '@context': 'https://schema.org', '@type': 'Organization', '@id': SITE + '/#org', name: 'SINAI Global', url: SITE + '/',
-    logo: SITE + '/assets/og/logo.png', email: 'hello@sinai-global.com',
-    address: { '@type': 'PostalAddress', addressLocality: 'Shlomi', addressCountry: 'IL' },
-    founder: { '@type': 'Person', name: 'Liran Dandekar' },
-    sameAs: ['https://jasale.app/', 'https://sinaiclub.com/', 'https://sinaicinema.com/', 'https://downlinehq.app/'],
-  })}</script>`;
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Organization', '@id': SITE + '/#org', name: 'SINAI Global', url: SITE + '/',
+        logo: SITE + '/assets/favicon.svg', image: SITE + '/assets/og/sinai-global.jpg', email: 'hello@sinai-global.com',
+        description: t.meta.desc,
+        address: { '@type': 'PostalAddress', addressLocality: 'Shlomi', addressCountry: 'IL' },
+        founder: { '@type': 'Person', name: 'Liran Dandekar' },
+        subOrganization: BRANDS.map(([name, url]) => ({ '@type': 'Organization', name, url })),
+      },
+      { '@type': 'WebSite', '@id': SITE + '/#website', name: 'SINAI Global', url: SITE + '/', inLanguage: l, publisher: { '@id': SITE + '/#org' } },
+    ],
+  }).replace(/</g, '\\u003c')}</script>`;
   const intro = isSol ? '' : `<script>(function(){try{var d=document.documentElement;var h=/^\/([a-z]{2}\/)?$/.test(location.pathname),nv=((performance.getEntriesByType&&performance.getEntriesByType("navigation")[0])||{}).type||"",ex=!document.referrer||document.referrer.indexOf(location.origin+"/")!==0,fr=h&&(nv==="reload"||ex);if((!fr&&sessionStorage.getItem('sg-intro'))||!window.matchMedia||matchMedia('(prefers-reduced-motion: reduce)').matches)return;sessionStorage.setItem('sg-intro','1');d.classList.add('intro-on')}catch(e){}})()</script>`;
   return `<!doctype html>
 <html lang="${l}" dir="${RTL.has(l) ? 'rtl' : 'ltr'}">
@@ -402,4 +420,52 @@ console.log('built', LANGS.length * 2, 'pages');
     xml += `    <xhtml:link rel="alternate" hreflang="x-default" href="${u('en', g.path)}"/>\n  </url>\n`;
   }
   fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), xml + '</urlset>\n');
+}
+
+// robots.txt, llms.txt and the IndexNow key file (search kit 2026-11-09). Static site: nothing private to block.
+{
+  const BOTS = ['Googlebot', 'Bingbot', 'Google-Extended', 'GPTBot', 'OAI-SearchBot', 'ChatGPT-User', 'ClaudeBot', 'Claude-SearchBot', 'Claude-User', 'PerplexityBot', 'Applebot-Extended'];
+  const robots = BOTS.map(b => `User-agent: ${b}\nAllow: /\n`).join('\n')
+    + `\nUser-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n# llms.txt: ${SITE}/llms.txt\n`;
+  fs.writeFileSync(path.join(ROOT, 'robots.txt'), robots);
+
+  const e = T.en, b = e.build, s = e.sol;
+  const one = x => String(x).replace(/\s+/g, ' ').trim();
+  const usd = k => { const v = PRICES[k].USD; return Array.isArray(v) ? `$${v[0].toLocaleString('en-US')}–$${v[1].toLocaleString('en-US')} / month` : `from $${v.toLocaleString('en-US')}`; };
+  const llms = `# SINAI Global
+
+> ${one(e.about.p1)} SINAI Global (${SITE}) is the parent company of three divisions: Software (smart AI products for specific lines of work, plus custom development for businesses), SINAI Cinema (media and production) and SINAI Lifestyle (healthy living). Its products are built for people who already work in the field — sales reps, football clubs, direct-sales networks — and for businesses that want AI in their daily work. The site is available in 10 languages: ${LANGS.map(l => `${T[l]._lang} (${SITE}${home(l)})`).join(', ')}.
+
+## Pages
+- [SINAI Global — home (English)](${SITE}/): ${one(e.meta.desc)}
+- [Custom development and pricing](${SITE}/solutions/): ${one(e.meta.sol_desc)}
+${LANGS.filter(l => l !== 'en').map(l => `- [${T[l]._lang} — home](${SITE}${home(l)}): ${one(T[l].meta.title)}`).join('\n')}
+- [Privacy policy](${SITE}/privacy/)
+- [Terms of use](${SITE}/terms/)
+
+## Products and divisions
+- [JaSale](https://jasale.app): ${one(b.jasale_tag)}. ${one(b.jasale_line)}
+- [SINAI Club](https://sinaiclub.com): ${one(b.club_tag)}. ${one(b.club_line)}
+- [Downline HQ](https://downlinehq.app): ${one(b.dl_tag)}. ${one(b.dl_line)}
+- [SINAI Cinema](https://sinaicinema.com): ${one(e.cinema.d)}
+- [SINAI Lifestyle](https://sinailifestyle.com): ${one(e.life.d)} ${one(e.life.disclosure)}
+
+## Custom development (prices in USD, excluding VAT; fixed prices are also shown in ₪, €, £ and ₹)
+- ${one(s.p1_t)}: ${usd('diag')}. ${one(s.p1_d)}
+- ${one(s.p2_t)}: ${usd('site')}. ${one(s.p2_d)}
+- ${one(s.p3_t)}: ${usd('auto')} per process. ${one(s.p3_d)}
+- ${one(s.p4_t)}: setup ${usd('plat')} + monthly subscription. ${one(s.p4_d)}
+- ${one(s.p5_t)}: ${usd('app')}. ${one(s.p5_d)}
+- ${one(s.p6_t)}: ${usd('ret')}. ${one(s.p6_d)}
+- ${one(s.p7_t)}: ${usd('host')} / month. ${one(s.p7_d)}
+
+## About
+- Company: SINAI Global, a technology company from Shlomi, northern Israel
+- Founder: Liran Dandekar
+- Contact: hello@sinai-global.com
+- Website: ${SITE}
+`;
+  fs.writeFileSync(path.join(ROOT, 'llms.txt'), llms);
+  fs.writeFileSync(path.join(ROOT, INDEXNOW_KEY + '.txt'), INDEXNOW_KEY);
+  console.log('wrote robots.txt, llms.txt, ' + INDEXNOW_KEY + '.txt');
 }

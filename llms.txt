@@ -1,0 +1,40 @@
+# SINAI Global
+
+> SINAI Global is a technology company from northern Israel. We build software that brings AI into the daily work of businesses, starting with the people who do the work. SINAI Global (https://sinai-global.com) is the parent company of three divisions: Software (smart AI products for specific lines of work, plus custom development for businesses), SINAI Cinema (media and production) and SINAI Lifestyle (healthy living). Its products are built for people who already work in the field — sales reps, football clubs, direct-sales networks — and for businesses that want AI in their daily work. The site is available in 10 languages: עברית (https://sinai-global.com/he/), English (https://sinai-global.com/), Русский (https://sinai-global.com/ru/), العربية (https://sinai-global.com/ar/), Español (https://sinai-global.com/es/), Deutsch (https://sinai-global.com/de/), Italiano (https://sinai-global.com/it/), Français (https://sinai-global.com/fr/), Português (https://sinai-global.com/pt/), हिन्दी (https://sinai-global.com/hi/).
+
+## Pages
+- [SINAI Global — home (English)](https://sinai-global.com/): SINAI Global brings AI into the business: smart apps ready for your field (JaSale for sales, SINAI Club for football, Downline HQ for direct sales) and custom development when you need it.
+- [Custom development and pricing](https://sinai-global.com/solutions/): AI for your business, priced up front: AI diagnosis, smart websites, AI automations, platform customization, custom apps, monthly support and hosting.
+- [עברית — home](https://sinai-global.com/he/): SINAI Global · תוכנה חכמה שעובדת בשבילך
+- [Русский — home](https://sinai-global.com/ru/): SINAI Global · Умные программы, которые работают на вас
+- [العربية — home](https://sinai-global.com/ar/): SINAI Global · برمجيات ذكية تعمل من أجلك
+- [Español — home](https://sinai-global.com/es/): SINAI Global · Software inteligente que trabaja para ti
+- [Deutsch — home](https://sinai-global.com/de/): SINAI Global · Smarte Software, die für Sie arbeitet
+- [Italiano — home](https://sinai-global.com/it/): SINAI Global · Software intelligente che lavora per te
+- [Français — home](https://sinai-global.com/fr/): SINAI Global · Des logiciels intelligents qui travaillent pour vous
+- [Português — home](https://sinai-global.com/pt/): SINAI Global · Software inteligente que trabalha para você
+- [हिन्दी — home](https://sinai-global.com/hi/): SINAI Global · स्मार्ट सॉफ़्टवेयर जो आपके लिए काम करे
+- [Privacy policy](https://sinai-global.com/privacy/)
+- [Terms of use](https://sinai-global.com/terms/)
+
+## Products and divisions
+- [JaSale](https://jasale.app): Field & phone sales. An AI assistant that knows the whole business: answers any question, builds the day’s route, sets reminders and produces any report. Plus smart routes on real driving times, and orders and collections even with no signal. And a business that sells from the office gets its own screen: leads, catalog and orders.
+- [SINAI Club](https://sinaiclub.com): Football clubs. A smart training plan for every age group, a player card that updates itself from what's logged in training and matches, and a parent connection: regular updates and a monthly progress report on their child.
+- [Downline HQ](https://downlinehq.app): Direct sales. A personal sales page and CRM for every distributor, and a live network tree for the leader.
+- [SINAI Cinema](https://sinaicinema.com): A streaming platform for independent AI-made film, and the studio behind the biblical drama Blood, Sand and Faith.
+- [SINAI Lifestyle](https://sinailifestyle.com): Energy, movement and nutrition built for real life — no extremes, no diets. Small habits that carry the people who carry everything. Liran Dandekar is an authorized independent distributor of bHIP Global. SINAI Lifestyle is not bHIP's official website.
+
+## Custom development (prices in USD, excluding VAT; fixed prices are also shown in ₪, €, £ and ₹)
+- AI diagnosis for your business: from $420. A working session with your team and a written map of where AI saves the most time. Credited toward any project you go ahead with.
+- Smart website or landing page: from $1,350. A fast site in your languages, with a chat that answers customers and leads sent straight to you.
+- AI automation: from $1,090 per process. WhatsApp replies, automatic reports, CRM updates. Priced per process.
+- One of our platforms, fitted to your business: setup from $2,750 + monthly subscription. JaSale, SINAI Club or Downline HQ with your brand, your processes and your fields.
+- Fully custom app: from $7,900. An app built from scratch around the way your business works, for phone and computer.
+- Monthly support (retainer): $690–$2,490 / month. A standing team for improvements, new features and automations, every month.
+- Hosting and maintenance: from $99 / month. Servers, backups, updates and monitoring, so everything keeps running.
+
+## About
+- Company: SINAI Global, a technology company from Shlomi, northern Israel
+- Founder: Liran Dandekar
+- Contact: hello@sinai-global.com
+- Website: https://sinai-global.com

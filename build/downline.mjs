@@ -19,7 +19,7 @@ const FONTS = {
   ar: `${CG}&family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;700`,
   hi: `${CG}&family=Mukta:wght@300;400;500;600`,
 };
-const V = '202610260145';
+const V = '202611091200'; // was behind the committed HTML (202610270330); bumped so a rebuild never serves an older ?v=
 const T = Object.fromEntries(LANGS.map((l) => [l, JSON.parse(fs.readFileSync(path.join(ROOT, 'build/downline-i18n', l + '.json'), 'utf8'))]));
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const pre = (l) => (l === 'en' ? '' : '/' + l);
@@ -29,6 +29,16 @@ const legal = (l, p) => SITE + (LEGACY.has(l) ? pre(l) : '') + p;
 
 const intro = (l) => `<style>#dl-intro{display:none}html.dl-intro-on #dl-intro{display:flex;position:fixed;inset:0;z-index:2147483000;background:#0E1316;align-items:center;justify-content:center;flex-direction:column;cursor:pointer}html.dl-intro-on.dl-intro-out #dl-intro{opacity:0;transition:opacity .25s ease}#dl-intro img{width:min(300px,62vw);height:auto;opacity:0;transform:scale(.9);animation:dl-in .62s cubic-bezier(.22,1,.36,1) .08s forwards}#dl-intro i{display:block;margin-top:18px;height:1px;width:0;background:#C9A96A;animation:dl-bar .5s cubic-bezier(.22,1,.36,1) .55s forwards}@keyframes dl-in{to{opacity:1;transform:scale(1)}}@keyframes dl-bar{to{width:min(220px,46vw)}}@media (prefers-reduced-motion:reduce){html.dl-intro-on #dl-intro{display:none}}</style>
 <script>(function(){try{var k='sg_intro_downline';if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,'1');if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;var d=document.documentElement;d.classList.add('dl-intro-on');var done=function(){d.classList.add('dl-intro-out');setTimeout(function(){d.classList.remove('dl-intro-on','dl-intro-out')},260)};var t=setTimeout(done,1240);var skip=function(){clearTimeout(t);done()};addEventListener('keydown',skip,{once:true});addEventListener('click',function(e){var o=document.getElementById('dl-intro');if(o&&o.contains(e.target))skip()})}catch(e){}})();</script>`;
+
+// JSON-LD (search kit 2026-11-09): Organization + SoftwareApplication. No public prices on the page, so no offers.
+const SG_ORG = { '@type': 'Organization', '@id': SITE + '/#org', name: 'SINAI Global', url: SITE + '/' };
+const ld = (l) => `<script type="application/ld+json">${JSON.stringify({
+  '@context': 'https://schema.org',
+  '@graph': [
+    { '@type': 'Organization', '@id': DL + '/#org', name: 'Downline HQ', url: DL + page(l), logo: SITE + '/assets/downline/logo-wordmark.svg', email: 'hello@downlinehq.app', parentOrganization: SG_ORG },
+    { '@type': 'SoftwareApplication', '@id': DL + '/#app', name: 'Downline HQ', url: DL + page(l), description: T[l].description, inLanguage: l, applicationCategory: 'BusinessApplication', operatingSystem: 'Web', image: SITE + '/assets/og/downline-hq.jpg', publisher: SG_ORG, provider: { '@id': DL + '/#org' } },
+  ],
+}).replace(/</g, '\\u003c')}</script>`;
 
 function render(l) {
   const t = T[l];
@@ -44,7 +54,8 @@ function render(l) {
 <title>${esc(t.title)}</title>
 <meta name="description" content="${esc(t.description)}">
 ${LANGS.map((x) => `<link rel="alternate" hreflang="${x}" href="${DL}${page(x)}">`).join('\n')}
-<link rel="alternate" hreflang="x-default" href="${DL}/">
+<link rel="alternate" hreflang="x-default" href="${DL}/en">
+${ld(l)}
 <script>if(/(^|\.)sinai-global\.com$/.test(location.hostname))location.replace('${DL}${page(l)}'+location.search+location.hash)</script>
 <script src="/assets/lang.js?v=202610311600"></script>
 ${intro(l)}
