@@ -53,6 +53,7 @@
     "demo": "Demo buchen",
     "jasale_tag": "Außendienst & Telefonvertrieb",
     "jasale_line": "Ein KI-Assistent, der das ganze Geschäft kennt: beantwortet jede Frage, plant die Tagesroute, setzt Erinnerungen und erstellt jeden Bericht. Dazu smarte Routen nach echten Fahrzeiten sowie Bestellungen und Inkasso auch ohne Netz. Und wer aus dem Büro verkauft, bekommt einen eigenen Bildschirm: Leads, Katalog und Bestellung.",
+    "jasale_leads": "Mit einer fertigen Liste potenzieller Kunden in Ihrer Branche und Region: angereichert, ohne Dubletten und direkt auf der Karte.",
     "club_tag": "Fußballvereine",
     "club_line": "Ein smarter Trainingsplan für jede Altersklasse, eine Spielerkarte, die sich aus dem, was in Training und Spiel erfasst wird, selbst aktualisiert, und ein direkter Draht zu den Eltern: laufende Updates und ein monatlicher Fortschrittsbericht über ihr Kind.",
     "dl_tag": "Direktvertrieb",
@@ -66,7 +67,8 @@
     "custom_ex": [
       "Ein Chatbot, der Kunden rund um die Uhr antwortet",
       "Automatisierte Berichte, Angebote und Kundennachverfolgung",
-      "Ein KI-Assistent mit Zugriff auf Ihre Geschäftsdaten: einfach fragen und Antwort, Plan oder Bericht als Excel und PDF erhalten"
+      "Ein KI-Assistent mit Zugriff auf Ihre Geschäftsdaten: einfach fragen und Antwort, Plan oder Bericht als Excel und PDF erhalten",
+      "Ihre nächsten Kunden finden: recherchierte, angereicherte B2B-Leadlisten"
     ]
   },
   "how": {

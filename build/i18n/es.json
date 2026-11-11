@@ -53,6 +53,7 @@
     "demo": "Reserva una demo",
     "jasale_tag": "Ventas en ruta y por teléfono",
     "jasale_line": "Un asistente de IA que conoce todo el negocio: responde cualquier pregunta, arma la ruta del día, crea recordatorios y genera cualquier informe. Además, rutas inteligentes con tiempos reales de conducción, y pedidos y cobros incluso sin cobertura. Y si vendes desde la oficina, tienes tu propia pantalla: prospectos, catálogo y pedido.",
+    "jasale_leads": "Llega con una lista preparada de clientes potenciales de tu sector y tu zona: enriquecida, sin duplicados y directamente en el mapa.",
     "club_tag": "Clubes de fútbol",
     "club_line": "Un plan de entrenamiento inteligente para cada categoría, una ficha de jugador que se actualiza sola con lo que se registra en entrenamientos y partidos, y un canal con las familias: novedades constantes y un informe mensual del progreso de su hijo.",
     "dl_tag": "Venta directa",
@@ -66,7 +67,8 @@
     "custom_ex": [
       "Un chatbot que atiende a tus clientes 24/7",
       "Informes, presupuestos y seguimiento de clientes automatizados",
-      "Un asistente de IA conectado a los datos de tu negocio: pregunta con tus palabras y recibe una respuesta, un plan o un informe en Excel y PDF"
+      "Un asistente de IA conectado a los datos de tu negocio: pregunta con tus palabras y recibe una respuesta, un plan o un informe en Excel y PDF",
+      "Encontrar a tus próximos clientes: listas de leads B2B investigadas y enriquecidas"
     ]
   },
   "how": {

@@ -18,7 +18,7 @@
 - [Terms of use](https://sinai-global.com/terms/)
 
 ## Products and divisions
-- [JaSale](https://jasale.app): Field & phone sales. An AI assistant that knows the whole business: answers any question, builds the day’s route, sets reminders and produces any report. Plus smart routes on real driving times, and orders and collections even with no signal. And a business that sells from the office gets its own screen: leads, catalog and orders.
+- [JaSale](https://jasale.app): Field & phone sales. An AI assistant that knows the whole business: answers any question, builds the day’s route, sets reminders and produces any report. Plus smart routes on real driving times, and orders and collections even with no signal. And a business that sells from the office gets its own screen: leads, catalog and orders. Comes with a ready list of potential customers in your field and region: enriched, de-duplicated and right on the map.
 - [SINAI Club](https://sinaiclub.com): Football clubs. A smart training plan for every age group, a player card that updates itself from what's logged in training and matches, and a parent connection: regular updates and a monthly progress report on their child.
 - [Downline HQ](https://downlinehq.app): Direct sales. A personal sales page and CRM for every distributor, and a live network tree for the leader.
 - [SINAI Cinema](https://sinaicinema.com): A streaming platform for independent AI-made film, and the studio behind the biblical drama Blood, Sand and Faith.

@@ -53,6 +53,7 @@
     "demo": "Réserver une démo",
     "jasale_tag": "Vente terrain et téléphone",
     "jasale_line": "Un assistant IA qui connaît toute l’activité : il répond à toutes les questions, construit la tournée du jour, crée des rappels et produit n’importe quel rapport. En plus, des tournées intelligentes selon les vrais temps de trajet, et commandes et encaissements même sans réseau. Et l’entreprise qui vend depuis le bureau a son propre écran : prospects, catalogue et commande.",
+    "jasale_leads": "Livré avec une liste prête de clients potentiels dans votre secteur et votre région : enrichie, sans doublons et directement sur la carte.",
     "club_tag": "Clubs de football",
     "club_line": "Un plan d’entraînement intelligent pour chaque catégorie d’âge, une fiche joueur qui se met à jour toute seule à partir de ce qui est saisi aux entraînements et aux matchs, et un lien avec les parents : des nouvelles régulières et un bilan mensuel des progrès de leur enfant.",
     "dl_tag": "Vente directe",
@@ -66,7 +67,8 @@
     "custom_ex": [
       "Un chatbot qui répond à vos clients 24h/24, 7j/7",
       "Rapports, devis et suivi client automatisés",
-      "Un assistant IA connecté aux données de votre entreprise : posez la question avec vos mots, recevez une réponse, un plan ou un rapport en Excel et PDF"
+      "Un assistant IA connecté aux données de votre entreprise : posez la question avec vos mots, recevez une réponse, un plan ou un rapport en Excel et PDF",
+      "Trouver vos prochains clients : listes de prospects B2B recherchées et enrichies"
     ]
   },
   "how": {

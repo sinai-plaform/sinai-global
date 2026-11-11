@@ -19,7 +19,7 @@ const FONTS = { // friendly typography (Liran 2026-11-01): rounded headings + cl
 };
 // pages that only exist in the original 9 languages
 const LEGACY = new Set(['he', 'en', 'ru', 'ar', 'es', 'de', 'it', 'fr', 'pt']);
-const V = '202611091200';
+const V = '202611121200';
 // brands linked from the site (nav, footer, product cards): JSON-LD subOrganization + llms.txt
 const BRANDS = [
   ['SINAI Club', 'https://sinaiclub.com'],
@@ -217,6 +217,7 @@ ${header(l, 'home')}
         <div class="meta"><img class="plogo" src="/assets/logos/jasale.svg" alt="" width="52" height="52" loading="lazy"><span>${esc(b.jasale_tag)}</span><span class="status live">${esc(b.live)}</span></div>
         <h3 lang="en">JaSale</h3>
         <p class="line">${esc(b.jasale_line)}</p>
+        <p class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M7.8 12.3l2.9 2.9 5.5-6"/></svg><span>${esc(b.jasale_leads)}</span></p>
         <div class="acts"><a class="btn sun" href="${demo('jasale.app')}">${esc(b.demo)}</a><a class="link" href="https://jasale.app/" dir="ltr">jasale.app</a></div>
       </div>
       <div class="shot">${device('jasale', l, 3)}</div>
@@ -444,7 +445,7 @@ ${LANGS.filter(l => l !== 'en').map(l => `- [${T[l]._lang} — home](${SITE}${ho
 - [Terms of use](${SITE}/terms/)
 
 ## Products and divisions
-- [JaSale](https://jasale.app): ${one(b.jasale_tag)}. ${one(b.jasale_line)}
+- [JaSale](https://jasale.app): ${one(b.jasale_tag)}. ${one(b.jasale_line)} ${one(b.jasale_leads)}
 - [SINAI Club](https://sinaiclub.com): ${one(b.club_tag)}. ${one(b.club_line)}
 - [Downline HQ](https://downlinehq.app): ${one(b.dl_tag)}. ${one(b.dl_line)}
 - [SINAI Cinema](https://sinaicinema.com): ${one(e.cinema.d)}

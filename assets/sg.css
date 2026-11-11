@@ -458,3 +458,7 @@ html[lang="de"] .hero h1,html[lang="ru"] .hero h1,html[lang="fr"] .hero h1,html[
 @keyframes life-rise{0%{transform:translateY(14px)}100%{transform:translateY(-10px)}}
 @media (max-width:900px){.life-card{grid-template-columns:1fr}.life-card .life-sun{width:min(260px,70%);justify-self:center;margin-bottom:0}.life-card .life-body{padding-inline-start:clamp(24px,3vw,40px)}}
 @media (prefers-reduced-motion:reduce){.life-card .life-sun{animation:none}}
+/* JaSale card: ready prospect list line */
+.prod p.plus{display:flex;gap:10px;align-items:flex-start;margin-top:16px;font-size:16.5px;font-weight:600;line-height:1.5;max-width:32em}
+.prod p.plus svg{flex:none;width:22px;height:22px;margin-top:1px;color:#2f7a52}
+@media (prefers-color-scheme:dark){.prod p.plus svg{color:#6cc496}}
