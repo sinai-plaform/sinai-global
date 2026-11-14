@@ -5,7 +5,6 @@
 ## Pages
 - [SINAI Global — home (English)](https://sinai-global.com/): SINAI Global brings AI into the business: smart apps ready for your field (JaSale for sales, SINAI Club for football, Downline HQ for direct sales) and custom development when you need it.
 - [Custom development and pricing](https://sinai-global.com/solutions/): AI for your business, priced up front: AI diagnosis, smart websites, AI automations, platform customization, custom apps, monthly support and hosting.
-- [Magazine](https://sinai-global.com/magazine): Short guides for business owners: where AI saves time, what it costs and how to start without getting lost. Every article is listed in https://sinai-global.com/magazine/llms.txt
 - [עברית — home](https://sinai-global.com/he/): SINAI Global · תוכנה חכמה שעובדת בשבילך
 - [Русский — home](https://sinai-global.com/ru/): SINAI Global · Умные программы, которые работают на вас
 - [العربية — home](https://sinai-global.com/ar/): SINAI Global · برمجيات ذكية تعمل من أجلك

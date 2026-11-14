@@ -118,6 +118,10 @@ ${isSol ? '' : `<link rel="preload" as="image" href="/assets/screens/jasale/${sc
 
 // The magazine (/magazine, /xx/magazine) is rendered on request by functions/ (server/mag-site.js). Its header and
 // footer are generated here (page 'mag') into server/mag-chrome.js; the language links are filled in per page (%%TWIN:xx%%).
+// MAG_LIVE: sinai-global.com is still served by GitHub Pages (DNS → github.io), which cannot run the magazine's
+// Pages Functions — there /magazine is a 404. Until the domain points to the Cloudflare Pages project, the site's own
+// pages do not link to the magazine. Set to true (and rebuild) the day the domain moves.
+const MAG_LIVE = false;
 const magPath = l => pre(l) + '/magazine';
 const twinOf = (page, x) => page === 'mag' ? `%%TWIN:${x}%%` : page === 'sol' ? solPath(x) : home(x);
 
@@ -133,7 +137,7 @@ function header(l, page) {
       <button class="menu-btn nav-close" type="button">${esc(n.close)}</button>
       <a href="${h}#products">${esc(n.products)}</a>
       ${isSol ? '' : `<a href="${solPath(l)}">${esc(n.solutions)}</a>`}
-      <a href="${magPath(l)}"${isMag ? ' aria-current="page"' : ''}>${esc(n.magazine)}</a>
+      ${MAG_LIVE || isMag ? `<a href="${magPath(l)}"${isMag ? ' aria-current="page"' : ''}>${esc(n.magazine)}</a>` : ''}
       <a href="${h}#cinema" lang="en">${esc(n.cinema)}</a>
       <a href="https://sinailifestyle.com/${l}" lang="en">${esc(n.lifestyle)}</a>
       <a href="${h}#about">${esc(n.about)}</a>
@@ -154,7 +158,7 @@ function footer(l, page) {
       <div><a class="brand" href="${home(l)}">${MARK()}SINAI GLOBAL</a><p class="tag">${esc(t.hero.h1)}</p></div>
       <div><h2>${esc(f.divisions)}</h2><ul><li><a href="${h}#products">${esc(t.divisions.software)}</a></li><li><a href="${h}#cinema" lang="en">SINAI Cinema</a></li><li><a href="https://sinailifestyle.com/${l}" lang="en">SINAI Lifestyle</a></li></ul></div>
       <div><h2>${esc(f.platforms)}</h2><ul lang="en"><li><a href="https://jasale.app/">JaSale</a></li><li><a href="https://sinaiclub.com/">SINAI Club</a></li><li><a href="${'https://downlinehq.app/' + l}">Downline HQ</a></li><li><a href="https://sinaicinema.com/">SINAI Cinema</a></li></ul></div>
-      <div><h2>${esc(f.company)}</h2><ul>${isSol ? '' : `<li><a href="${solPath(l)}">${esc(n.solutions)}</a></li>`}<li><a href="${magPath(l)}">${esc(n.magazine)}</a></li><li><a href="${h}#about">${esc(n.about)}</a></li><li><a href="${h}#contact">${esc(n.contact)}</a></li></ul></div>
+      <div><h2>${esc(f.company)}</h2><ul>${isSol ? '' : `<li><a href="${solPath(l)}">${esc(n.solutions)}</a></li>`}${MAG_LIVE || page === 'mag' ? `<li><a href="${magPath(l)}">${esc(n.magazine)}</a></li>` : ''}<li><a href="${h}#about">${esc(n.about)}</a></li><li><a href="${h}#contact">${esc(n.contact)}</a></li></ul></div>
     </div>
     <div class="settings">
       <nav class="langs" aria-label="${esc(n.language)}">${langs}</nav>
@@ -444,7 +448,7 @@ console.log('built', LANGS.length * 2, 'pages');
 {
   const BOTS = ['Googlebot', 'Bingbot', 'Google-Extended', 'GPTBot', 'OAI-SearchBot', 'ChatGPT-User', 'ClaudeBot', 'Claude-SearchBot', 'Claude-User', 'PerplexityBot', 'Applebot-Extended'];
   const robots = BOTS.map(b => `User-agent: ${b}\nAllow: /\n`).join('\n')
-    + `\nUser-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\nSitemap: ${SITE}/magazine/sitemap.xml\n# llms.txt: ${SITE}/llms.txt\n`;
+    + `\nUser-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n${MAG_LIVE ? `Sitemap: ${SITE}/magazine/sitemap.xml\n` : ''}# llms.txt: ${SITE}/llms.txt\n`;
   fs.writeFileSync(path.join(ROOT, 'robots.txt'), robots);
 
   const e = T.en, b = e.build, s = e.sol;
@@ -457,8 +461,7 @@ console.log('built', LANGS.length * 2, 'pages');
 ## Pages
 - [SINAI Global — home (English)](${SITE}/): ${one(e.meta.desc)}
 - [Custom development and pricing](${SITE}/solutions/): ${one(e.meta.sol_desc)}
-- [Magazine](${SITE}/magazine): ${one(e.mag.sub)} Every article is listed in ${SITE}/magazine/llms.txt
-${LANGS.filter(l => l !== 'en').map(l => `- [${T[l]._lang} — home](${SITE}${home(l)}): ${one(T[l].meta.title)}`).join('\n')}
+${MAG_LIVE ? `- [Magazine](${SITE}/magazine): ${one(e.mag.sub)} Every article is listed in ${SITE}/magazine/llms.txt\n` : ''}${LANGS.filter(l => l !== 'en').map(l => `- [${T[l]._lang} — home](${SITE}${home(l)}): ${one(T[l].meta.title)}`).join('\n')}
 - [Privacy policy](${SITE}/privacy/)
 - [Terms of use](${SITE}/terms/)
 

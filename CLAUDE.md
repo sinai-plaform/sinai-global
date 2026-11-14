@@ -3,7 +3,9 @@
 Company site: home + solutions in 10 languages (generated), the magazine (rendered on request), hand-written legal and Downline HQ pages. README.md describes the generated pages; its "GitHub Pages" line is outdated.
 
 ## Hosting and ship
-Cloudflare Pages project `sinai-global`, direct upload. **A git push alone does not update the site.**
+**Checked 2026-11-14: sinai-global.com is served by GitHub Pages** (DNS A records → GitHub, repo public, Pages builds `main` on every push). The Cloudflare Pages project `sinai-global` only answers at sinai-global.pages.dev. So today a `git push` IS the deploy of the real domain, and `deploy-cf.sh` only updates the pages.dev copy. The magazine needs Cloudflare (Pages Functions): on the real domain `/magazine` is a 404 until the domain is moved, and `MAG_LIVE` in `build/build.mjs` keeps the site from linking to it. The day the domain moves: set `MAG_LIVE = true`, rebuild, ship, and the steps below become true.
+
+After the move: Cloudflare Pages project `sinai-global`, direct upload; a git push alone will not update the site.
 1. Edit `build/i18n/<lang>.json` / `build/build.mjs`, then `node build/build.mjs` (bump `const V` when a file in `assets/` changed).
 2. `python3 ~/.claude/skills/landing-page-builder/scripts/perf_lint.py .` → 0 errors.
 3. Commit, `git push origin HEAD:main`, `zsh deploy-cf.sh`.
