@@ -35,4 +35,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://sinai-global.com/sitemap.xml
+Sitemap: https://sinai-global.com/magazine/sitemap.xml
 # llms.txt: https://sinai-global.com/llms.txt

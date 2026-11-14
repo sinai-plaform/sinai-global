@@ -118,10 +118,9 @@ ${isSol ? '' : `<link rel="preload" as="image" href="/assets/screens/jasale/${sc
 
 // The magazine (/magazine, /xx/magazine) is rendered on request by functions/ (server/mag-site.js). Its header and
 // footer are generated here (page 'mag') into server/mag-chrome.js; the language links are filled in per page (%%TWIN:xx%%).
-// MAG_LIVE: sinai-global.com is still served by GitHub Pages (DNS → github.io), which cannot run the magazine's
-// Pages Functions — there /magazine is a 404. Until the domain points to the Cloudflare Pages project, the site's own
-// pages do not link to the magazine. Set to true (and rebuild) the day the domain moves.
-const MAG_LIVE = false;
+// MAG_LIVE: the site links to its magazine. It was false until 2026-11-14, while sinai-global.com was still served by
+// GitHub Pages (which cannot run the magazine's Pages Functions). Keep it true as long as the domain is on Cloudflare Pages.
+const MAG_LIVE = true;
 const magPath = l => pre(l) + '/magazine';
 const twinOf = (page, x) => page === 'mag' ? `%%TWIN:${x}%%` : page === 'sol' ? solPath(x) : home(x);
 
