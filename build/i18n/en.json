@@ -20,7 +20,8 @@
     "close": "Close menu",
     "language": "Language",
     "currency": "Currency",
-    "skip": "Skip to content"
+    "skip": "Skip to content",
+    "magazine": "Magazine"
   },
   "intro": {
     "skip": "Skip intro"
@@ -246,5 +247,23 @@
     "k": "Demo",
     "h2": "Our products in under a minute — and the system we’ll build for you.",
     "play": "Watch with sound"
+  },
+  "mag": {
+    "title": "AI in business, in plain words",
+    "sub": "Short guides for business owners: where AI saves time, what it costs and how to start without getting lost.",
+    "all": "All articles",
+    "cat_ai": "AI in business",
+    "cat_automation": "Automation",
+    "cat_build": "Building & pricing",
+    "cat_growth": "Sales & customers",
+    "min": "min read",
+    "by": "By",
+    "back": "All articles",
+    "more": "More articles",
+    "bio": "Founder of SINAI Global. Builds AI systems for businesses and for people who work in the field.",
+    "nf_h": "Article not found",
+    "nf_p": "The link may have changed. Every article is waiting in the magazine.",
+    "err_p": "The magazine is unavailable right now. Try again in a minute.",
+    "empty": "The first articles are on their way."
   }
 }

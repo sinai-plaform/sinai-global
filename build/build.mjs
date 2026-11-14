@@ -116,11 +116,16 @@ ${isSol ? '' : `<link rel="preload" as="image" href="/assets/screens/jasale/${sc
 </head>`;
 }
 
+// The magazine (/magazine, /xx/magazine) is rendered on request by functions/ (server/mag-site.js). Its header and
+// footer are generated here (page 'mag') into server/mag-chrome.js; the language links are filled in per page (%%TWIN:xx%%).
+const magPath = l => pre(l) + '/magazine';
+const twinOf = (page, x) => page === 'mag' ? `%%TWIN:${x}%%` : page === 'sol' ? solPath(x) : home(x);
+
 function header(l, page) {
-  const t = T[l], n = t.nav, isSol = page === 'sol', h = isSol ? home(l) : '';
-  const langLinks = LANGS.map(x => `<a href="${isSol ? solPath(x) : home(x)}" data-setlang="${x}" lang="${x}"${x === l ? ' aria-current="true"' : ''}>${esc(T[x]._lang)}</a>`).join('');
+  const t = T[l], n = t.nav, isSol = page === 'sol', isMag = page === 'mag', h = isSol || isMag ? home(l) : '';
+  const langLinks = LANGS.map(x => `<a href="${twinOf(page, x)}" data-setlang="${x}" lang="${x}"${x === l ? ' aria-current="true"' : ''}>${esc(T[x]._lang)}</a>`).join('');
   return `<a class="skip" href="#main">${esc(n.skip)}</a>
-<header class="top${isSol ? ' solid' : ''}">
+<header class="top${isSol || isMag ? ' solid' : ''}">
   <div class="wrap">
     <a class="brand" href="${home(l)}" aria-label="${esc(n.home)}">${MARK()}SINAI GLOBAL</a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">${esc(n.menu)}</button>
@@ -128,6 +133,7 @@ function header(l, page) {
       <button class="menu-btn nav-close" type="button">${esc(n.close)}</button>
       <a href="${h}#products">${esc(n.products)}</a>
       ${isSol ? '' : `<a href="${solPath(l)}">${esc(n.solutions)}</a>`}
+      <a href="${magPath(l)}"${isMag ? ' aria-current="page"' : ''}>${esc(n.magazine)}</a>
       <a href="${h}#cinema" lang="en">${esc(n.cinema)}</a>
       <a href="https://sinailifestyle.com/${l}" lang="en">${esc(n.lifestyle)}</a>
       <a href="${h}#about">${esc(n.about)}</a>
@@ -139,16 +145,16 @@ function header(l, page) {
 }
 
 function footer(l, page) {
-  const t = T[l], n = t.nav, f = t.footer, isSol = page === 'sol', h = isSol ? home(l) : '';
-  const langs = LANGS.map(x => x === l ? `<span aria-current="true" lang="${x}">${esc(T[x]._lang)}</span>` : `<a href="${isSol ? solPath(x) : home(x)}" data-setlang="${x}" lang="${x}">${esc(T[x]._lang)}</a>`).join('');
+  const t = T[l], n = t.nav, f = t.footer, isSol = page === 'sol', h = isSol || page === 'mag' ? home(l) : '';
+  const langs = LANGS.map(x => x === l ? `<span aria-current="true" lang="${x}">${esc(T[x]._lang)}</span>` : `<a href="${twinOf(page, x)}" data-setlang="${x}" lang="${x}">${esc(T[x]._lang)}</a>`).join('');
   const cur = ['ILS', 'USD', 'EUR', 'GBP', 'INR'].map(c => `<option value="${c}"${(l === 'he' ? 'ILS' : 'USD') === c ? ' selected' : ''}>${({ ILS: '₪ ILS', USD: '$ USD', EUR: '€ EUR', GBP: '£ GBP', INR: '₹ INR' })[c]}</option>`).join('');
-  return `<footer class="foot${page === "home" ? " flush" : ""}">
+  return `<footer class="foot${page === "home" || page === "mag" ? " flush" : ""}">
   <div class="wrap">
     <div class="grid">
       <div><a class="brand" href="${home(l)}">${MARK()}SINAI GLOBAL</a><p class="tag">${esc(t.hero.h1)}</p></div>
       <div><h2>${esc(f.divisions)}</h2><ul><li><a href="${h}#products">${esc(t.divisions.software)}</a></li><li><a href="${h}#cinema" lang="en">SINAI Cinema</a></li><li><a href="https://sinailifestyle.com/${l}" lang="en">SINAI Lifestyle</a></li></ul></div>
       <div><h2>${esc(f.platforms)}</h2><ul lang="en"><li><a href="https://jasale.app/">JaSale</a></li><li><a href="https://sinaiclub.com/">SINAI Club</a></li><li><a href="${'https://downlinehq.app/' + l}">Downline HQ</a></li><li><a href="https://sinaicinema.com/">SINAI Cinema</a></li></ul></div>
-      <div><h2>${esc(f.company)}</h2><ul>${isSol ? '' : `<li><a href="${solPath(l)}">${esc(n.solutions)}</a></li>`}<li><a href="${h}#about">${esc(n.about)}</a></li><li><a href="${h}#contact">${esc(n.contact)}</a></li></ul></div>
+      <div><h2>${esc(f.company)}</h2><ul>${isSol ? '' : `<li><a href="${solPath(l)}">${esc(n.solutions)}</a></li>`}<li><a href="${magPath(l)}">${esc(n.magazine)}</a></li><li><a href="${h}#about">${esc(n.about)}</a></li><li><a href="${h}#contact">${esc(n.contact)}</a></li></ul></div>
     </div>
     <div class="settings">
       <nav class="langs" aria-label="${esc(n.language)}">${langs}</nav>
@@ -404,6 +410,17 @@ for (const l of LANGS) {
 }
 console.log('built', LANGS.length * 2, 'pages');
 
+// magazine chrome for the Pages Functions: header, footer, fonts and words per language
+{
+  const chrome = Object.fromEntries(LANGS.map(l => [l, {
+    name: T[l]._lang, font: FONTS[l] || FONTS._, og: OG_LOCALE[l], header: header(l, 'mag'), footer: footer(l, 'mag'),
+    t: { mag: T[l].nav.magazine, language: T[l].nav.language, ...T[l].mag }, cta: { h2: T[l].cta.h2, d: T[l].cta.d, b: T[l].cta.b2, href: solPath(l) + '#tell' },
+  }]));
+  fs.mkdirSync(path.join(ROOT, 'server'), { recursive: true });
+  fs.writeFileSync(path.join(ROOT, 'server/mag-chrome.js'), '// generated by build/build.mjs — do not edit\nexport default ' + JSON.stringify({ V, ridge: RIDGE, chrome }) + ';\n');
+  console.log('wrote server/mag-chrome.js');
+}
+
 // sitemap: home + solutions in 10 languages, legacy pages in 9
 {
   const today = new Date().toISOString().slice(0, 10);
@@ -427,7 +444,7 @@ console.log('built', LANGS.length * 2, 'pages');
 {
   const BOTS = ['Googlebot', 'Bingbot', 'Google-Extended', 'GPTBot', 'OAI-SearchBot', 'ChatGPT-User', 'ClaudeBot', 'Claude-SearchBot', 'Claude-User', 'PerplexityBot', 'Applebot-Extended'];
   const robots = BOTS.map(b => `User-agent: ${b}\nAllow: /\n`).join('\n')
-    + `\nUser-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n# llms.txt: ${SITE}/llms.txt\n`;
+    + `\nUser-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\nSitemap: ${SITE}/magazine/sitemap.xml\n# llms.txt: ${SITE}/llms.txt\n`;
   fs.writeFileSync(path.join(ROOT, 'robots.txt'), robots);
 
   const e = T.en, b = e.build, s = e.sol;
@@ -440,6 +457,7 @@ console.log('built', LANGS.length * 2, 'pages');
 ## Pages
 - [SINAI Global — home (English)](${SITE}/): ${one(e.meta.desc)}
 - [Custom development and pricing](${SITE}/solutions/): ${one(e.meta.sol_desc)}
+- [Magazine](${SITE}/magazine): ${one(e.mag.sub)} Every article is listed in ${SITE}/magazine/llms.txt
 ${LANGS.filter(l => l !== 'en').map(l => `- [${T[l]._lang} — home](${SITE}${home(l)}): ${one(T[l].meta.title)}`).join('\n')}
 - [Privacy policy](${SITE}/privacy/)
 - [Terms of use](${SITE}/terms/)

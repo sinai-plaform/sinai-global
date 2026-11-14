@@ -20,7 +20,8 @@
     "close": "Fechar menu",
     "language": "Idioma",
     "currency": "Moeda",
-    "skip": "Pular para o conteúdo"
+    "skip": "Pular para o conteúdo",
+    "magazine": "Revista"
   },
   "intro": {
     "skip": "Pular introdução"
@@ -246,5 +247,23 @@
     "k": "Demo",
     "h2": "Os nossos produtos em menos de um minuto — e o sistema que vamos construir para si.",
     "play": "Ver com som"
+  },
+  "mag": {
+    "title": "IA no negócio, em palavras simples",
+    "sub": "Guias curtos para donos de negócio: onde a IA economiza tempo, quanto custa e como começar sem complicação.",
+    "all": "Todos os artigos",
+    "cat_ai": "IA no negócio",
+    "cat_automation": "Automação",
+    "cat_build": "Desenvolvimento e preços",
+    "cat_growth": "Vendas e clientes",
+    "min": "min de leitura",
+    "by": "Por",
+    "back": "Todos os artigos",
+    "more": "Mais artigos",
+    "bio": "Fundador da SINAI Global. Cria sistemas de IA para empresas e para quem trabalha em campo.",
+    "nf_h": "Artigo não encontrado",
+    "nf_p": "Talvez o link tenha mudado. Todos os artigos estão na revista.",
+    "err_p": "A revista está indisponível agora. Tente de novo em um minuto.",
+    "empty": "Os primeiros artigos estão a caminho."
   }
 }

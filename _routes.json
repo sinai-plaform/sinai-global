@@ -1,0 +1,29 @@
+{
+ "version": 1,
+ "description": "Only the magazine runs through Pages Functions (functions/); everything else stays a static file.",
+ "include": [
+  "/magazine",
+  "/magazine/*",
+  "/he/magazine",
+  "/he/magazine/*",
+  "/en/magazine",
+  "/en/magazine/*",
+  "/ru/magazine",
+  "/ru/magazine/*",
+  "/ar/magazine",
+  "/ar/magazine/*",
+  "/es/magazine",
+  "/es/magazine/*",
+  "/de/magazine",
+  "/de/magazine/*",
+  "/it/magazine",
+  "/it/magazine/*",
+  "/fr/magazine",
+  "/fr/magazine/*",
+  "/pt/magazine",
+  "/pt/magazine/*",
+  "/hi/magazine",
+  "/hi/magazine/*"
+ ],
+ "exclude": []
+}

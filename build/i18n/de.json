@@ -20,7 +20,8 @@
     "close": "Menü schließen",
     "language": "Sprache",
     "currency": "Währung",
-    "skip": "Zum Inhalt springen"
+    "skip": "Zum Inhalt springen",
+    "magazine": "Magazin"
   },
   "intro": {
     "skip": "Intro überspringen"
@@ -246,5 +247,23 @@
     "k": "Demo",
     "h2": "Unsere Produkte in unter einer Minute – und das System, das wir für dich bauen.",
     "play": "Mit Ton ansehen"
+  },
+  "mag": {
+    "title": "KI im Unternehmen, einfach erklärt",
+    "sub": "Kurze Leitfäden für Unternehmer: wo KI Zeit spart, was sie kostet und wie der Einstieg ohne Umwege gelingt.",
+    "all": "Alle Artikel",
+    "cat_ai": "KI im Unternehmen",
+    "cat_automation": "Automatisierung",
+    "cat_build": "Entwicklung & Preise",
+    "cat_growth": "Vertrieb & Kunden",
+    "min": "Min. Lesezeit",
+    "by": "Von",
+    "back": "Alle Artikel",
+    "more": "Weitere Artikel",
+    "bio": "Gründer von SINAI Global. Baut KI-Systeme für Unternehmen und für Menschen, die im Außendienst arbeiten.",
+    "nf_h": "Artikel nicht gefunden",
+    "nf_p": "Vielleicht hat sich der Link geändert. Alle Artikel finden Sie im Magazin.",
+    "err_p": "Das Magazin ist gerade nicht erreichbar. Bitte versuchen Sie es in einer Minute noch einmal.",
+    "empty": "Die ersten Artikel sind unterwegs."
   }
 }

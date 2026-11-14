@@ -20,7 +20,8 @@
     "close": "Cerrar menú",
     "language": "Idioma",
     "currency": "Moneda",
-    "skip": "Saltar al contenido"
+    "skip": "Saltar al contenido",
+    "magazine": "Revista"
   },
   "intro": {
     "skip": "Saltar intro"
@@ -246,5 +247,23 @@
     "k": "Demo",
     "h2": "Nuestros productos en menos de un minuto, y el sistema que construiremos para ti.",
     "play": "Ver con sonido"
+  },
+  "mag": {
+    "title": "IA en la empresa, en palabras claras",
+    "sub": "Guías breves para dueños de negocio: dónde ahorra tiempo la IA, cuánto cuesta y cómo empezar sin complicarse.",
+    "all": "Todos los artículos",
+    "cat_ai": "IA en la empresa",
+    "cat_automation": "Automatización",
+    "cat_build": "Desarrollo y precios",
+    "cat_growth": "Ventas y clientes",
+    "min": "min de lectura",
+    "by": "Por",
+    "back": "Todos los artículos",
+    "more": "Más artículos",
+    "bio": "Fundador de SINAI Global. Crea sistemas de IA para empresas y para quienes trabajan sobre el terreno.",
+    "nf_h": "No encontramos el artículo",
+    "nf_p": "Puede que el enlace haya cambiado. Todos los artículos están en la revista.",
+    "err_p": "La revista no está disponible ahora. Inténtalo de nuevo en un minuto.",
+    "empty": "Los primeros artículos están en camino."
   }
 }
