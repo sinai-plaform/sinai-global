@@ -7,10 +7,8 @@
     diag:{ILS:1500,USD:420,EUR:390,GBP:330,INR:35000},
     site:{ILS:3900,USD:1090,EUR:990,GBP:860,INR:89000},
     auto:{ILS:4900,USD:1350,EUR:1250,GBP:1090,INR:112000},
-    plat:{ILS:9900,USD:2750,EUR:2490,GBP:2190,INR:229000},
     app:{ILS:29000,USD:7900,EUR:7300,GBP:6300,INR:659000},
-    ret:{ILS:[2500,9000],USD:[690,2490],EUR:[640,2290],GBP:[550,1990],INR:[57000,207000]},
-    host:{ILS:350,USD:99,EUR:89,GBP:79,INR:7900}
+    ret:{ILS:[2500,9000],USD:[690,2490],EUR:[640,2290],GBP:[550,1990],INR:[57000,207000]}
   };
   function isIL(){try{return Intl.DateTimeFormat().resolvedOptions().timeZone==='Asia/Jerusalem'}catch(e){return false}}
   function getCur(){var c=null;try{c=localStorage.getItem('sg-cur')}catch(e){}return CUR.indexOf(c)>-1?c:(isIL()?'ILS':'USD')}

@@ -5,7 +5,7 @@
     "desc": "SINAI Global lleva la IA a las empresas: apps inteligentes listas para tu sector (JaSale para ventas, SINAI Club para fútbol, Downline HQ para venta directa) y desarrollo a medida cuando lo necesites.",
     "og": "Productos inteligentes para quienes ya trabajan sobre el terreno. O una solución creada solo para tu negocio.",
     "sol_title": "Desarrollo a medida y precios · SINAI Global",
-    "sol_desc": "IA para tu negocio, con precios claros desde el inicio: diagnóstico con IA, webs inteligentes, automatizaciones con IA, adaptación de plataformas, apps a medida, soporte mensual y hosting."
+    "sol_desc": "IA para tu negocio, con precios claros desde el inicio: diagnóstico con IA, webs inteligentes, automatizaciones con IA, adaptación de plataformas, apps a medida y soporte mensual."
   },
   "nav": {
     "home": "Inicio de SINAI Global",
@@ -174,11 +174,8 @@
     "p5_d": "Una app creada desde cero en torno a cómo funciona tu negocio, para móvil y ordenador.",
     "p6_t": "Soporte mensual (cuota fija)",
     "p6_d": "Un equipo estable para mejoras, nuevas funciones y automatizaciones, cada mes.",
-    "p7_t": "Hosting y mantenimiento",
-    "p7_d": "Servidores, copias de seguridad, actualizaciones y monitorización, para que todo siga funcionando.",
     "from": "Desde {p}",
     "per_process": "Desde {p} por proceso",
-    "setup": "Puesta en marcha desde {p} + suscripción mensual",
     "range_month": "{a}–{b} / mes",
     "from_month": "Desde {p} / mes",
     "steps_h2": "Cómo avanza un proyecto",
@@ -230,7 +227,8 @@
     "t4": "Otro software",
     "t5": "Nada todavía",
     "cg_lead": "Cuéntanos en pocas palabras a qué se dedica tu negocio. Hacemos una o dos preguntas, recomendamos lo que realmente encaja y Liran te contacta.",
-    "f_alt": "¿Prefieres un formulario corto?"
+    "f_alt": "¿Prefieres un formulario corto?",
+    "nosetup": "Sin cuota de alta ni de mantenimiento · solo la suscripción mensual"
   },
   "why": {
     "h2": "Por qué SINAI Global",

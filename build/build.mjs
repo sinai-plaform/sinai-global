@@ -19,7 +19,7 @@ const FONTS = { // friendly typography (Liran 2026-11-01): rounded headings + cl
 };
 // pages that only exist in the original 9 languages
 const LEGACY = new Set(['he', 'en', 'ru', 'ar', 'es', 'de', 'it', 'fr', 'pt']);
-const V = '202611142250';
+const V = '202611150020';
 // brands linked from the site (nav, footer, product cards): JSON-LD subOrganization + llms.txt
 const BRANDS = [
   ['SINAI Club', 'https://sinaiclub.com'],
@@ -32,8 +32,7 @@ const INDEXNOW_KEY = 'de0302ef2ad707c72e38b83829457624'; // IndexNow key, served
 const WA = '972507763923';
 const PRICES = { // must match assets/sg.js; used for the first paint
   diag: { ILS: 1500, USD: 420 }, site: { ILS: 3900, USD: 1090 }, auto: { ILS: 4900, USD: 1350 },
-  plat: { ILS: 9900, USD: 2750 }, app: { ILS: 29000, USD: 7900 }, ret: { ILS: [2500, 9000], USD: [690, 2490] },
-  host: { ILS: 350, USD: 99 },
+  app: { ILS: 29000, USD: 7900 }, ret: { ILS: [2500, 9000], USD: [690, 2490] },
 };
 
 const T = Object.fromEntries(LANGS.map(l => [l, JSON.parse(fs.readFileSync(path.join(ROOT, 'build/i18n', l + '.json'), 'utf8'))]));
@@ -336,8 +335,8 @@ ${footer(l, 'home')}
 function solPage(l) {
   const t = T[l], s = t.sol;
   const items = [
-    ['diag', 'p1', s.from, true], ['site', 'p2', s.from], ['auto', 'p3', s.per_process], ['plat', 'p4', s.setup],
-    ['app', 'p5', s.from], ['ret', 'p6', s.range_month], ['host', 'p7', s.from_month],
+    ['diag', 'p1', s.from, true], ['site', 'p2', s.from], ['auto', 'p3', s.per_process], ['plat', 'p4', null],
+    ['app', 'p5', s.from], ['ret', 'p6', s.range_month],
   ];
   const fld = (n, type = 'text', req = false, ac = '') => `<div class="fld"><label for="f-${n}">${esc(s['f_' + n])}</label>${type === 'area' ? `<textarea id="f-${n}" name="${n}"${req ? ' required' : ''}></textarea>` : `<input id="f-${n}" name="${n}" type="${type}"${ac ? ` autocomplete="${ac}"` : ''}${req ? ' required' : ''}>`}</div>`;
   return `${head(l, 'sol')}
@@ -361,7 +360,7 @@ ${header(l, 'sol')}
       <div class="seg" role="group" aria-label="${esc(t.nav.currency)}">${['ILS', 'USD', 'EUR', 'GBP', 'INR'].map(c => `<button type="button" data-cur="${c}" aria-pressed="${(l === 'he' ? 'ILS' : 'USD') === c}" aria-label="${c}">${({ ILS: '₪', USD: '$', EUR: '€', GBP: '£', INR: '₹' })[c]}</button>`).join('')}</div>
     </div>
     <ul class="plist">
-      ${items.map(([k, p, tpl, lead]) => `<li${lead ? ' class="lead-item"' : ''}><h3>${esc(s[p + '_t'])}</h3><p>${esc(s[p + '_d'])}</p><div class="pr">${price(k, tpl, l)}</div></li>`).join('\n      ')}
+      ${items.map(([k, p, tpl, lead]) => `<li${lead ? ' class="lead-item"' : ''}><h3>${esc(s[p + '_t'])}</h3><p>${esc(s[p + '_d'])}</p><div class="pr">${tpl === null ? `<span class="nofee">${esc(s.nosetup)}</span>` : price(k, tpl, l)}</div></li>`).join('\n      ')}
     </ul>
   </div></section>
 
@@ -476,10 +475,9 @@ ${MAG_LIVE ? `- [Magazine](${SITE}/magazine): ${one(e.mag.sub)} Every article is
 - ${one(s.p1_t)}: ${usd('diag')}. ${one(s.p1_d)}
 - ${one(s.p2_t)}: ${usd('site')}. ${one(s.p2_d)}
 - ${one(s.p3_t)}: ${usd('auto')} per process. ${one(s.p3_d)}
-- ${one(s.p4_t)}: setup ${usd('plat')} + monthly subscription. ${one(s.p4_d)}
+- ${one(s.p4_t)}: no setup fee and no maintenance fee; only the app's own monthly subscription (see each app's pricing page). ${one(s.p4_d)}
 - ${one(s.p5_t)}: ${usd('app')}. ${one(s.p5_d)}
 - ${one(s.p6_t)}: ${usd('ret')}. ${one(s.p6_d)}
-- ${one(s.p7_t)}: ${usd('host')} / month. ${one(s.p7_d)}
 
 ## About
 - Company: SINAI Global, a technology company from Shlomi, northern Israel

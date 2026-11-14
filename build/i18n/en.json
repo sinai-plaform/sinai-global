@@ -5,7 +5,7 @@
     "desc": "SINAI Global brings AI into the business: smart apps ready for your field (JaSale for sales, SINAI Club for football, Downline HQ for direct sales) and custom development when you need it.",
     "og": "Smart products for people who already work in the field. Or a solution built just for your business.",
     "sol_title": "Custom development and pricing · SINAI Global",
-    "sol_desc": "AI for your business, priced up front: AI diagnosis, smart websites, AI automations, platform customization, custom apps, monthly support and hosting."
+    "sol_desc": "AI for your business, priced up front: AI diagnosis, smart websites, AI automations, platform customization, custom apps and monthly support."
   },
   "nav": {
     "home": "SINAI Global home",
@@ -174,11 +174,8 @@
     "p5_d": "An app built from scratch around the way your business works, for phone and computer.",
     "p6_t": "Monthly support (retainer)",
     "p6_d": "A standing team for improvements, new features and automations, every month.",
-    "p7_t": "Hosting and maintenance",
-    "p7_d": "Servers, backups, updates and monitoring, so everything keeps running.",
     "from": "From {p}",
     "per_process": "From {p} per process",
-    "setup": "Setup from {p} + monthly subscription",
     "range_month": "{a}–{b} / month",
     "from_month": "From {p} / month",
     "steps_h2": "How a project runs",
@@ -230,7 +227,8 @@
     "t4": "Other software",
     "t5": "Nothing yet",
     "cg_lead": "Tell us in a few words what your business does. We ask a question or two, recommend what really fits, and Liran gets back to you.",
-    "f_alt": "Prefer a short form?"
+    "f_alt": "Prefer a short form?",
+    "nosetup": "No setup fee, no maintenance fee · just the app's monthly subscription"
   },
   "why": {
     "h2": "Why SINAI Global",

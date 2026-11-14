@@ -4,7 +4,7 @@
 
 ## Pages
 - [SINAI Global — home (English)](https://sinai-global.com/): SINAI Global brings AI into the business: smart apps ready for your field (JaSale for sales, SINAI Club for football, Downline HQ for direct sales) and custom development when you need it.
-- [Custom development and pricing](https://sinai-global.com/solutions/): AI for your business, priced up front: AI diagnosis, smart websites, AI automations, platform customization, custom apps, monthly support and hosting.
+- [Custom development and pricing](https://sinai-global.com/solutions/): AI for your business, priced up front: AI diagnosis, smart websites, AI automations, platform customization, custom apps and monthly support.
 - [Magazine](https://sinai-global.com/magazine): Short guides for business owners: where AI saves time, what it costs and how to start without getting lost. Every article is listed in https://sinai-global.com/magazine/llms.txt
 - [עברית — home](https://sinai-global.com/he/): SINAI Global · תוכנה חכמה שעובדת בשבילך
 - [Русский — home](https://sinai-global.com/ru/): SINAI Global · Умные программы, которые работают на вас
@@ -29,10 +29,9 @@
 - AI diagnosis for your business: from $420. A working session with your team and a written map of where AI saves the most time. Credited toward any project you go ahead with.
 - Smart website or landing page: from $1,090. A fast site in your languages, with a chat that answers customers and leads sent straight to you.
 - AI automation: from $1,350 per process. WhatsApp replies, automatic reports, CRM updates. Priced per process.
-- One of our platforms, fitted to your business: setup from $2,750 + monthly subscription. JaSale, SINAI Club or Downline HQ with your brand, your processes and your fields.
+- One of our platforms, fitted to your business: no setup fee and no maintenance fee; only the app's own monthly subscription (see each app's pricing page). JaSale, SINAI Club or Downline HQ with your brand, your processes and your fields.
 - Fully custom app: from $7,900. An app built from scratch around the way your business works, for phone and computer.
 - Monthly support (retainer): $690–$2,490 / month. A standing team for improvements, new features and automations, every month.
-- Hosting and maintenance: from $99 / month. Servers, backups, updates and monitoring, so everything keeps running.
 
 ## About
 - Company: SINAI Global, a technology company from Shlomi, northern Israel

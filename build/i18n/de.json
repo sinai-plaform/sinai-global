@@ -5,7 +5,7 @@
     "desc": "SINAI Global bringt KI ins Unternehmen: smarte Apps, fertig für Ihre Branche (JaSale für den Vertrieb, SINAI Club für Fußball, Downline HQ für den Direktvertrieb), und individuelle Entwicklung, wenn Sie sie brauchen.",
     "og": "Smarte Produkte für Menschen, die draußen im Einsatz sind. Oder eine Lösung, die speziell für Ihr Unternehmen gebaut wird.",
     "sol_title": "Individuelle Entwicklung und Preise · SINAI Global",
-    "sol_desc": "KI für Ihr Unternehmen, mit Preisen vorab: KI-Analyse, smarte Websites, KI-Automatisierungen, Plattform-Anpassung, individuelle Apps, monatlicher Support und Hosting."
+    "sol_desc": "KI für Ihr Unternehmen, mit Preisen vorab: KI-Analyse, smarte Websites, KI-Automatisierungen, Plattform-Anpassung, individuelle Apps und monatlicher Support."
   },
   "nav": {
     "home": "SINAI Global Startseite",
@@ -174,11 +174,8 @@
     "p5_d": "Eine App von Grund auf, gebaut rund um die Arbeitsweise Ihres Unternehmens – für Smartphone und Computer.",
     "p6_t": "Monatlicher Support (Retainer)",
     "p6_d": "Ein festes Team für Verbesserungen, neue Funktionen und Automatisierungen – jeden Monat.",
-    "p7_t": "Hosting und Wartung",
-    "p7_d": "Server, Backups, Updates und Monitoring, damit alles zuverlässig läuft.",
     "from": "Ab {p}",
     "per_process": "Ab {p} pro Prozess",
-    "setup": "Einrichtung ab {p} + Monatsabo",
     "range_month": "{a}–{b} / Monat",
     "from_month": "Ab {p} / Monat",
     "steps_h2": "So läuft ein Projekt",
@@ -230,7 +227,8 @@
     "t4": "Andere Software",
     "t5": "Noch nichts",
     "cg_lead": "Erzählen Sie uns kurz, was Ihr Unternehmen macht. Wir stellen ein, zwei Fragen, empfehlen, was wirklich passt, und Liran meldet sich bei Ihnen.",
-    "f_alt": "Lieber ein kurzes Formular?"
+    "f_alt": "Lieber ein kurzes Formular?",
+    "nosetup": "Keine Einrichtungs- und keine Wartungsgebühr · nur das Monatsabo der App"
   },
   "why": {
     "h2": "Warum SINAI Global",

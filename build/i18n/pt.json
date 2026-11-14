@@ -5,7 +5,7 @@
     "desc": "A SINAI Global leva a IA para dentro da empresa: apps inteligentes prontos para o seu setor (JaSale para vendas, SINAI Club para futebol, Downline HQ para venda direta) e desenvolvimento sob medida quando você precisar.",
     "og": "Produtos inteligentes para quem já trabalha em campo. Ou uma solução feita sob medida para a sua empresa.",
     "sol_title": "Desenvolvimento sob medida e preços · SINAI Global",
-    "sol_desc": "IA para a sua empresa, com preço definido desde o início: diagnóstico de IA, sites inteligentes, automações com IA, personalização de plataformas, apps sob medida, suporte mensal e hospedagem."
+    "sol_desc": "IA para a sua empresa, com preço definido desde o início: diagnóstico de IA, sites inteligentes, automações com IA, personalização de plataformas, apps sob medida e suporte mensal."
   },
   "nav": {
     "home": "Página inicial da SINAI Global",
@@ -174,11 +174,8 @@
     "p5_d": "Um app criado do zero em torno do jeito que a sua empresa trabalha, para celular e computador.",
     "p6_t": "Suporte mensal (retainer)",
     "p6_d": "Uma equipe fixa para melhorias, novos recursos e automações, todo mês.",
-    "p7_t": "Hospedagem e manutenção",
-    "p7_d": "Servidores, backups, atualizações e monitoramento, para que tudo continue funcionando.",
     "from": "A partir de {p}",
     "per_process": "A partir de {p} por processo",
-    "setup": "Implantação a partir de {p} + assinatura mensal",
     "range_month": "{a}–{b} / mês",
     "from_month": "A partir de {p} / mês",
     "steps_h2": "Como funciona um projeto",
@@ -230,7 +227,8 @@
     "t4": "Outro software",
     "t5": "Nada ainda",
     "cg_lead": "Conte-nos em poucas palavras o que o seu negócio faz. Fazemos uma ou duas perguntas, recomendamos o que realmente serve e o Liran entra em contato.",
-    "f_alt": "Prefere um formulário curto?"
+    "f_alt": "Prefere um formulário curto?",
+    "nosetup": "Sem taxa de implantação nem de manutenção · só a assinatura mensal"
   },
   "why": {
     "h2": "Por que a SINAI Global",

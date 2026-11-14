@@ -474,3 +474,7 @@ html[lang="de"] .hero h1,html[lang="ru"] .hero h1,html[lang="fr"] .hero h1,html[
 @media (prefers-color-scheme:dark){.prod p.plus svg{color:#6cc496}}
 
 @media (max-width:400px){.top .brand{font-size:15px;gap:8px}.top .brand svg{width:26px;height:26px}.top-mag{padding:0 6px;font-size:15px}.top .menu-btn{padding:0 13px}}
+
+/* existing platform: no setup / maintenance fee — a sentence, not a price */
+.pr .nofee{display:block;font-size:16px;font-weight:700;line-height:1.4;white-space:normal;max-width:280px;margin-inline-start:auto}
+@media (max-width:760px){.pr .nofee{margin-inline-start:0;max-width:none}}

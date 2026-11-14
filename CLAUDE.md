@@ -20,3 +20,6 @@ Company site: home + solutions in 10 languages (generated), the magazine (render
 - Pages are cached 10 minutes at Cloudflare; a new article needs no deploy.
 - Local look without the database: `~/Documents/Claude/Projects/SINAI Global/_tools/magazine/` — `render-test.mjs` (static pages into `_magtest/`, delete it afterwards) and `mock-db.mjs` + `npx wrangler pages dev . --binding MAG_DB=http://localhost:8795/`.
 - Articles quote the prices of `/solutions`. When `PRICES` changes, fix the articles that mention them (`select slug, lang from magazine_articles where site = 'global' and body_md ~ '₪|\$'`).
+
+## Pricing rule (Liran, 2026-11-15)
+- Working with an existing app (JaSale, SINAI Club, Downline HQ) has **no setup fee and no maintenance fee** — only the app's own monthly subscription. Never publish "setup from …" or "hosting and maintenance from …" anywhere (site, llms.txt, magazine, concierge knowledge in `core.concierge_sites`).

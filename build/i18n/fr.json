@@ -5,7 +5,7 @@
     "desc": "SINAI Global fait entrer l’IA dans l’entreprise : des applications intelligentes prêtes pour votre métier (JaSale pour la vente, SINAI Club pour le football, Downline HQ pour la vente directe) et du développement sur mesure quand vous en avez besoin.",
     "og": "Des produits intelligents pour ceux qui travaillent déjà sur le terrain. Ou une solution conçue sur mesure pour votre entreprise.",
     "sol_title": "Développement sur mesure et tarifs · SINAI Global",
-    "sol_desc": "L’IA pour votre entreprise, avec des prix annoncés d’avance : diagnostic IA, sites intelligents, automatisations IA, personnalisation de plateformes, applications sur mesure, accompagnement mensuel et hébergement."
+    "sol_desc": "L’IA pour votre entreprise, avec des prix annoncés d’avance : diagnostic IA, sites intelligents, automatisations IA, personnalisation de plateformes, applications sur mesure et accompagnement mensuel."
   },
   "nav": {
     "home": "Accueil SINAI Global",
@@ -174,11 +174,8 @@
     "p5_d": "Une application construite de zéro autour de la façon dont travaille votre entreprise, pour téléphone et ordinateur.",
     "p6_t": "Accompagnement mensuel (forfait)",
     "p6_d": "Une équipe dédiée pour les améliorations, les nouvelles fonctionnalités et les automatisations, chaque mois.",
-    "p7_t": "Hébergement et maintenance",
-    "p7_d": "Serveurs, sauvegardes, mises à jour et surveillance, pour que tout continue de tourner.",
     "from": "À partir de {p}",
     "per_process": "À partir de {p} par processus",
-    "setup": "Mise en place à partir de {p} + abonnement mensuel",
     "range_month": "{a}–{b} / mois",
     "from_month": "À partir de {p} / mois",
     "steps_h2": "Le déroulement d’un projet",
@@ -230,7 +227,8 @@
     "t4": "Un autre logiciel",
     "t5": "Rien pour l’instant",
     "cg_lead": "Dites-nous en quelques mots ce que fait votre entreprise. Une ou deux questions, une recommandation qui vous correspond vraiment, et Liran vous recontacte.",
-    "f_alt": "Vous préférez un court formulaire ?"
+    "f_alt": "Vous préférez un court formulaire ?",
+    "nosetup": "Ni frais d'installation ni frais de maintenance · seulement l'abonnement mensuel"
   },
   "why": {
     "h2": "Pourquoi SINAI Global",
