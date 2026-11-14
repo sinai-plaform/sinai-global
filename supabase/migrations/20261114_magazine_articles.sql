@@ -91,15 +91,21 @@ begin
       from due d group by site
   loop
     n := n + r.c;
-    perform net.http_post(
-      url := 'https://api.indexnow.org/indexnow',
-      body := jsonb_build_object(
-        'host', case r.site when 'club' then 'sinaiclub.com' else 'sinai-global.com' end,
-        'key', case r.site when 'club' then 'f33177f55df3b97bac6af5bcabff77f2' else 'de0302ef2ad707c72e38b83829457624' end,
-        'keyLocation', case r.site when 'club' then 'https://sinaiclub.com/f33177f55df3b97bac6af5bcabff77f2.txt' else 'https://sinai-global.com/de0302ef2ad707c72e38b83829457624.txt' end,
-        'urlList', r.urls),
-      headers := jsonb_build_object('Content-Type', 'application/json; charset=utf-8'),
-      timeout_milliseconds := 15000);
+    -- pg_net accepts only the exact header "application/json" (anything else raises). The ping has its own block:
+    -- a failed ping must never roll the publishing back.
+    begin
+      perform net.http_post(
+        url := 'https://api.indexnow.org/indexnow',
+        body := jsonb_build_object(
+          'host', case r.site when 'club' then 'sinaiclub.com' else 'sinai-global.com' end,
+          'key', case r.site when 'club' then 'f33177f55df3b97bac6af5bcabff77f2' else 'de0302ef2ad707c72e38b83829457624' end,
+          'keyLocation', case r.site when 'club' then 'https://sinaiclub.com/f33177f55df3b97bac6af5bcabff77f2.txt' else 'https://sinai-global.com/de0302ef2ad707c72e38b83829457624.txt' end,
+          'urlList', r.urls),
+        headers := jsonb_build_object('Content-Type', 'application/json'),
+        timeout_milliseconds := 15000);
+    exception when others then
+      raise warning 'magazine_publish_due: IndexNow ping failed for %: %', r.site, sqlerrm;
+    end;
   end loop;
   return n;
 end $$;
