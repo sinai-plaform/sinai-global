@@ -19,7 +19,7 @@ const FONTS = { // friendly typography (Liran 2026-11-01): rounded headings + cl
 };
 // pages that only exist in the original 9 languages
 const LEGACY = new Set(['he', 'en', 'ru', 'ar', 'es', 'de', 'it', 'fr', 'pt']);
-const V = '202611141910';
+const V = '202611142250';
 // brands linked from the site (nav, footer, product cards): JSON-LD subOrganization + llms.txt
 const BRANDS = [
   ['SINAI Club', 'https://sinaiclub.com'],
@@ -131,12 +131,13 @@ function header(l, page) {
 <header class="top${isSol || isMag ? ' solid' : ''}">
   <div class="wrap">
     <a class="brand" href="${home(l)}" aria-label="${esc(n.home)}">${MARK()}SINAI GLOBAL</a>
+    ${MAG_LIVE || isMag ? `<a class="top-mag" href="${magPath(l)}"${isMag ? ' aria-current="page"' : ''}>${esc(n.magazine)}</a>` : ''}
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">${esc(n.menu)}</button>
     <nav class="nav" id="nav" aria-label="${esc(n.main)}">
       <button class="menu-btn nav-close" type="button">${esc(n.close)}</button>
       <a href="${h}#products">${esc(n.products)}</a>
       ${isSol ? '' : `<a href="${solPath(l)}">${esc(n.solutions)}</a>`}
-      ${MAG_LIVE || isMag ? `<a href="${magPath(l)}"${isMag ? ' aria-current="page"' : ''}>${esc(n.magazine)}</a>` : ''}
+      ${MAG_LIVE || isMag ? `<a class="nav-mag" href="${magPath(l)}"${isMag ? ' aria-current="page"' : ''}>${esc(n.magazine)}</a>` : ''}
       <a href="${h}#cinema" lang="en">${esc(n.cinema)}</a>
       <a href="https://sinailifestyle.com/${l}" lang="en">${esc(n.lifestyle)}</a>
       <a href="${h}#about">${esc(n.about)}</a>
